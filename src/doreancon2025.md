@@ -15,21 +15,15 @@ Unite in one conviction: _Scripture is the Word of God, and he has authorized hi
 <VPButton text="Sign the statement" href=""></VPButton>
 
 
-## Livestream
+## Videos
 
-Available from October 6, 2025 onwards.
+<YouTube id='7mBZgr5_RvE'></YouTube>
 
-<YouTube id='bqZSNiD1LYw'></YouTube>
+<YouTube id='tSTTpqmNAGc'></YouTube>
 
-<VPButton text="Watch pre-conference on YouTube" href="https://www.youtube.com/watch?v=bqZSNiD1LYw" theme="alt"></VPButton>
+<YouTube id='jvPM2maWbLk'></YouTube>
 
-<YouTube id='pICi4K2v7Q4'></YouTube>
-
-<VPButton text="Watch day 1 on YouTube" href="https://www.youtube.com/watch?v=pICi4K2v7Q4" theme="alt"></VPButton>
-
-<YouTube id='2Cx0aYaIMQY'></YouTube>
-
-<VPButton text="Watch day 2 on YouTube" href="https://www.youtube.com/watch?v=2Cx0aYaIMQY" theme="alt"></VPButton>
+<YouTube id='aKtNeMAkZRY'></YouTube>
 
 
 ## Articles
