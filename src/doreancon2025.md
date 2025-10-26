@@ -25,6 +25,12 @@ Unite in one conviction: _Scripture is the Word of God, and he has authorized hi
 
 <YouTube id='aKtNeMAkZRY'></YouTube>
 
+<YouTube id='rzm-vdFloUU'></YouTube>
+
+<YouTube id='Lj8FDuWc1i8'></YouTube>
+
+<YouTube id='xfTEmL7BKHU'></YouTube>
+
 
 ## Articles
 These articles were written for the conference, to complement the messages.
