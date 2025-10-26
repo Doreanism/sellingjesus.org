@@ -14,7 +14,9 @@ export const articles_by_category:Record<string, string[]> = {
         'commerce-condemned',
         'sincerity',
         'buying',
+        'adaptation',
         'judas',
+        'balaam',
         'prostitutes-wages',
     ],
     "Specific Passages": [
@@ -26,6 +28,7 @@ export const articles_by_category:Record<string, string[]> = {
     ],
     "History": [
         'simony',
+        'bible-societies',
     ],
     "Application": [
         'should-preachers-be-paid',
@@ -40,6 +43,7 @@ export const articles_by_category:Record<string, string[]> = {
     "Copyright & Licensing": [
         'copyright-jesus-command-to-freely-give',
         'copyright-and-the-bible',
+        'copyright-protect-scripture',
         'abuse',
         'letting-go',
         'copyright-hijacking',
@@ -49,6 +53,7 @@ export const articles_by_category:Record<string, string[]> = {
         'bible-publishers',
         'worship-tax',
         'acbc',
+        'manuscripts',
         'kjv',
         'blood-money',
     ],
