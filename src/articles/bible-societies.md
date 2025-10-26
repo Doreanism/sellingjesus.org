@@ -7,8 +7,6 @@ date: 2025-10-07T00:00:00.000Z
 image: /media/articles/bible-societies.jpg
 ---
 
-___DRAFT___
-
 ## The Rise of the British and Foreign Bible Society
 
 The birth of the Bible societies begins with the story of a simple girl of about 15. Many of you may have heard this before: the almost legendary account of Mary Jones. She was born in 1784 in a small, poor village in Wales. Her parents loved God, but they could not afford a Bible. From the time she was little, Mary wanted one very badly. She learned how to read, and her biggest wish was to read the Bible for herself. But bibles were hard to find and cost a lot of money. Converting prices back then to what they would be now in dollars is tricky, but a rough estimate would be that a modest edition of the Bible in that era might have cost about $150–$300 in today’s fiat currency. This amount seemed an impossible obstacle for Mary; still, she started saving every little coin she could. For six long years she worked hard and kept saving until she finally had enough money to buy a Bible of her own.
