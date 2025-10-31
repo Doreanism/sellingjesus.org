@@ -1,6 +1,6 @@
 ---
-title: The Commercialization of Bible Societies
-title_h2: The Story of the Bible Societies and the First Copyrighted Bible in America
+title: The Rise of the Bible Societies
+title_h1: The Rise of the Bible Societies & the First Copyrighted Bible in America
 description: The story of how Bible societies transformed from charitable missions into commercial enterprises.
 author: Andrew Case
 date: 2025-10-07T00:00:00.000Z
