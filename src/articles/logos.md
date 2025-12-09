@@ -1,7 +1,7 @@
 ---
-title: Logos Bible Software
+title: Reconsider Purchasing Logos Bible Software
 title_h1: Why You Should Reconsider Purchasing Logos Bible Software
-description: Logos is in it for the money, which flows to secular investors.
+description: Logos' primary concern is profit, which flows to secular investors.
 author: Jon Here
 date: 2025-12-10T00:00:00.000Z
 image: /media/articles/logos.jpg
