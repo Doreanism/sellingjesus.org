@@ -53,6 +53,7 @@ export const articles_by_category:Record<string, string[]> = {
     "Contemporary Commerce": [
         'bible-publishers',
         'worship-tax',
+        'logos',
         'acbc',
         'manuscripts',
         'kjv',
