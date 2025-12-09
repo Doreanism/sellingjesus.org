@@ -3,7 +3,7 @@ title: Logos Bible Software
 title_h1: Why You Should Reconsider Purchasing Logos Bible Software
 description: Logos is in it for the money, which flows to secular investors.
 author: Jon Here
-date: 2025-11-26T00:00:00.000Z
+date: 2025-12-10T00:00:00.000Z
 image: /media/articles/logos.jpg
 ---
 
@@ -50,24 +50,17 @@ Faithlife has also received a [substantial amount of criticism](https://www.glas
 
 * “There is tension between its stated mission and its profit driven nature”[^12]
 
-
 * “the trend has continued to be one of make the largest profit margin possible.”[^13]
-
 
 * “They are not a Christian company. They are for profit with the only emphasis being on profit.”[^14]
 
-
 * “They sell a product for Christians, but constantly express it's the business and money that's important.”[^15]
-
 
 * “the new owners of the company only care about money”[^16]
 
-
 * “The dollar is the top line, the bottom line, and everything in between.”[^17]
 
-
 * “Sales team regularly told to lie and manipulate people to get them to buy products they don’t need”[^18]
-
 
 * “it's painfully obvious that their only concern is the bottom line, and that, despite the fact that they're in the business of selling Christian products, genuine Christian ethics are conspicuously absent.”[^19]
 
@@ -82,13 +75,11 @@ Like similar secular products, Logos locks users into their platform, making it 
 
 It’s best if software specifically designed to assist Christian ministry is free and open source, prioritizing access over profit, even if this is not a biblical requirement.[^22] The open source movement has been a remarkable success in the secular world, yet rather than leading the way in generosity, [Christians are lagging behind](https://missionexus.org/the-software-paradigm-all-ministries-should-adopt/). Logos should be collaborating with other Christian developers rather than competing against them.
 
-However, assigning all the blame to Logos would miss a crucial point about Christian publishing. While Logos develops tools for studying Scripture and Christian teaching, they are less involved in creating the content itself,[^23] and it is the sale of this biblical teaching that is forbidden by Scripture (Matt 10:8). In fact, if it weren’t for Bible publishers insisting on royalty payments, the creators of Logos would have published the original version as shareware.[^24] Authors, academics, and Bible translators also choose to commercialize their works and utilize platforms like Logos to do so. They themselves decided to lock down their Christian teaching by signing their rights away to publishers for paychecks. It’s the Bible translators who [agreed to commercialize](https://sellingjesus.org/articles/bible-publishers) their renditions of Scripture, and restrict them from being freely shared. Rather than rely on donations like churches and missionaries, they opted to imitate the world by peddling God’s word (2 Cor 2:17).
+However, assigning all the blame to Logos would miss a crucial point about Christian publishing. While Logos develops tools for studying Scripture and Christian teaching, they are less involved in creating the content itself,[^23] and it is the sale of this biblical teaching that is forbidden by Scripture (2 Cor 2:17). In fact, if it weren’t for Bible publishers insisting on royalty payments, the creators of Logos would have published the original version as shareware.[^24] Authors, academics, and Bible translators also choose to commercialize their works and utilize platforms like Logos to do so.
 
-Since publishers want to maximize profits, they are rarely interested in offering their works through free software that doesn’t actively encourage purchases, which is why Logos has been an ideal partner, and has the widest selection of Christian resources available. Free Bible apps, on the other hand, have far less resources to choose from. Since Christians are usually attached to a particular Bible version, it doesn’t matter how good a Bible app may be, it will still be shunned if it doesn’t include the user’s preferred translation.
+Since publishers want to maximize profits, they are rarely interested in offering their works through free software that doesn’t actively encourage purchases, which is why Logos has been an ideal partner, and has the widest selection of Christian resources available. Free Bible apps, on the other hand, have far less resources to choose from. Since Christians are usually attached to a particular Bible version, it doesn’t matter how good a Bible app may be, it will still be shunned if it [doesn’t include the user’s preferred translation](https://sellingjesus.org/articles/bible-publishers).
 
 Nevertheless, there are good free alternatives to Logos that you should consider to [avoid participating in this trade](https://sellingjesus.org/articles/buying), such as:
-
-
 
 * [Sword Project software](https://crosswire.org/applications/) – various study tools available on multiple platforms
 * [STEP web app](https://www.stepbible.org/) – a web-based study app requiring no installation
@@ -98,6 +89,8 @@ Nevertheless, there are good free alternatives to Logos that you should consider
 * [e-Sword](https://e-sword.net/) – free proprietary Bible software[^25]
 
 If Christians had decided to donate to free alternatives rather than pay for Logos, these initiatives would be even more comprehensive than they are today. The longer users persist in paying for commercial software, the slower a free future will eventuate.
+
+_Logos was sent a draft of this article prior to publication and was invited to give a response that would be published with the article. They did not respond._
 
 
 [^1]: [Cove Hill Partners’ portfolio](https://www.covehillpartners.com/portfolio/logos/).
