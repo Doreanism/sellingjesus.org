@@ -56,7 +56,7 @@ Let me share one last point from the document: “The way a gospel worker handle
 
 ## Ministers selling their teaching
 
-Now, it is indisputable that many Sydney Anglican ministers sell their teaching. This isn’t to accuse anyone of greed,[^1] but to note that their teaching is, in practice, being sold. Someone cannot reasonably obtain their teaching from them without paying for it.[^2] It’s being exchanged for money. This is immediately evident by going to a book publisher like [Matthias Media](https://matthiasmedia.com.au/) (commonly used by Sydney Anglican authors) where anyone can see a list of teaching for sale.
+Now, it is indisputable that many Sydney Anglican ministers sell their teaching. This isn’t to accuse anyone of greed (some authors do not even receive proceeds from their own books),[^1] but to note that their teaching is, in practice, being sold. Someone cannot reasonably obtain their teaching from them without paying for it.[^2] It’s being exchanged for money. This is immediately evident by going to a book publisher like [Matthias Media](https://matthiasmedia.com.au/) (commonly used by Sydney Anglican authors) where anyone can see a list of teaching for sale.
 
 Even very basic teaching is charged for, with titles including:
 
@@ -67,12 +67,6 @@ Even very basic teaching is charged for, with titles including:
 * Growing in Prayer
 
 It might be permissible if it were only the [cost of printing and delivery](https://sellingjesus.org/articles/covering-costs) that is being covered, but even the ebooks—that is, the teaching itself—are sold at cost.
-
-These books are often born out of the minister’s teaching at their own church, such as with a book on prayer (for $9.95 as an ebook). The author says:
-
-> The reason I wrote this book is because last year at the church where I'm a pastor, we wanted to focus on prayer, but as I went looking for resources, I couldn't find the kind of thing I wanted.[^3]
-
-So the minister saw a need in his church, filled that need by teaching on prayer, but decided to charge for the more accessible version of it in book form.
 
 
 ## Selling the gospel
@@ -105,14 +99,12 @@ Whether you are concerned about what I’ve just presented or not, it is surely 
 Despite most Sydney Anglican churches embracing the commercialisation of ministry in one way or another, they are, for the most part, still wonderful churches. That’s why I hope, once they recognise this egregious sin, they will fulfil these words written about pew rents in 1892: “in the house of God at any rate the sound of buying and selling, of hiring and of leasing, shall be forever silenced.”[^26] May that be true not only of pew rents, but of every form of ministry. And I’m grateful to be part of one Sydney Anglican church pursuing that.
 
 
-<small>[_Updated 10 Dec 2025 with minor clarifications, including an additional paragraph on Zachary Barry to make explicit why pew rents are relevant._]</small>
+<small>[_Updated 10 Dec 2025 with minor clarifications, including an additional paragraph on Zachary Barry to make explicit why pew rents are relevant. Updated 23 Jan 2026 to clarify that not all authors receive proceeds from their own books._]</small>
 
 
-[^1]: I’m aware that authors rarely make much money. It’s not the amount or the intent that is being addressed, but the practice of commerce itself.
+[^1]: I’m aware that authors rarely make much money, and some authors choose not to receive any proceeds from their publisher. It’s not the amount or the intent that is being addressed, but the practice of commerce itself.
 
 [^2]: I don’t doubt that many ministers would provide a free copy of their book (or other form of ministry) if asked. But that’s not what is being presented to the public. There are no forms for requesting a free copy, and no clarity on the matter. Furthermore, our experience has shown that authors are often [far less generous](https://www.youtube.com/watch?v=3HFVOzk-VMQ) than might be imagined. When I asked permission to translate training material from one Anglican church, not only did they take 3½ months to get back to me, they flat out denied permission without asking further on the intended purpose.
-
-[^3]: From [a video](https://matthiasmedia.com.au/products/growing-in-prayer) promoting the book.
 
 [^quote]: _The Christian Gospel_, [page 4](https://cdn.shopify.com/s/files/1/0147/1830/4342/files/Christian_Gospel_23_sample_chapter.pdf?v=1683005155).
 
