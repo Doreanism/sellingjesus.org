@@ -8,7 +8,7 @@ aside: false
 
 .custom-block
     p, li
-        font-size: 14px
+        font-size: 16px
 
 h1
     font-size: 80px
