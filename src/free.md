@@ -32,7 +32,7 @@ You do not need to ask the original owner for permission. However, if you modify
 
  * Avoid implying it is endorsed by the author
  * Let people know where they can find the original
- * [Freely give](https://copy.church/licenses/) your modified version
+ * [Freely give](https://copy.church/dedicate/) your modified version
 
 
 
