@@ -2,11 +2,10 @@
 
 ## Freely give your ministry resources
 
-Head over to *['Let's copy, church'](https://copy.church)*, our partner site, for guidance on how to free a resource from copyright and how to publish new works without relying on commercial publishers.
+Head over to *[Freely Giving](https://freely.giving)*, for guidance on how to free a resource from copyright and how to publish new works without relying on commercial publishers.
 
-<VPButton href="https://copy.church/licenses/" text="How to free a resource"></VPButton>
+<VPButton href="https://freely.giving/publish" text="How to free a resource"></VPButton>
 
-For book authors, there is also a detailed guide on [self-publishing a free book](https://copy.church/publish/book/).
 
 ## Spread the word
 
