@@ -48,11 +48,11 @@ import ScripturePassage from './_comp/ScripturePassage.vue'
 import {passages, get_passage, tags, tag_groups } from './_comp/passages'
 
 
-// Read initial filter from URL or default to 'vip'
+// Read initial filter from URL
 const getInitialTag = (): keyof typeof tags | '' => {
     const params = new URLSearchParams(window.location.search)
     const filter = params.get('filter')
-    return (filter as keyof typeof tags) ?? 'vip'
+    return (filter as keyof typeof tags) ?? ''
 }
 
 const selected_tag = ref<keyof typeof tags | ''>(getInitialTag())
