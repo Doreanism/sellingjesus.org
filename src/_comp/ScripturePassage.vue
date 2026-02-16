@@ -9,7 +9,7 @@ div.scripture-passage
                 v-for='tag in passage_data.tags'
                 :key='tag'
                 :tag='tag'
-                :active='selected_tags.includes(tag)'
+                :active='selected_tag === tag'
                 @click='handleTagClick(tag)'
             )
 
@@ -35,7 +35,7 @@ const props = defineProps<{
     passage_data:PassageData
     bible_html: string
     loading?: boolean
-    selected_tags: string[]
+    selected_tag:string
 }>()
 
 const emit = defineEmits<{

@@ -12,7 +12,7 @@ div.scripture-page
                 v-for='tag of group'
                 :key='tag'
                 :tag='tag'
-                :active='selected_tags.includes(tag)'
+                :active='selected_tag === tag'
                 @click='handleTagClick(tag)'
             )
 
@@ -26,11 +26,11 @@ div.scripture-page
             :passage_data='passage'
             :bible_html='fetched_passages.get(passage.key) ?? ""'
             :loading='!fetched_passages.has(passage.key)'
-            :selected_tags='selected_tags'
+            :selected_tag='selected_tag'
             @tag-click='handleTagClick'
         )
 
-        div.clear-filter(v-if='selected_tags.length > 0')
+        div.clear-filter(v-if='selected_tag')
             div.hidden-count {{ passages.length - ordered_passages.length }} passages hidden
             VPButton(@click='clearFilter' text='Show all passages')
 
@@ -39,7 +39,7 @@ div.scripture-page
 
 <script lang='ts' setup>
 
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { PassageReference, books_ordered } from '@gracious.tech/fetch-client'
 
 import PassageTag from './_comp/PassageTag.vue'
@@ -48,17 +48,34 @@ import ScripturePassage from './_comp/ScripturePassage.vue'
 import {passages, get_passage, tags, tag_groups } from './_comp/passages'
 
 
-const selected_tags = ref<string[]>(['vip'])
+// Read initial filter from URL or default to 'vip'
+const getInitialTag = (): keyof typeof tags | '' => {
+    const params = new URLSearchParams(window.location.search)
+    const filter = params.get('filter')
+    return (filter as keyof typeof tags) ?? 'vip'
+}
+
+const selected_tag = ref<keyof typeof tags | ''>(getInitialTag())
 const fetched_passages = ref<Map<string, string>>(new Map())
 
+// Watch: Sync selected tag to URL without adding to browser history
+watch(selected_tag, (newTag) => {
+    const url = new URL(window.location.href)
+    if (newTag) {
+        url.searchParams.set('filter', newTag)
+    } else {
+        url.searchParams.delete('filter')
+    }
+    history.replaceState({}, '', url.toString())
+})
 
-// Computed: Filter passages by selected tags
+// Computed: Filter passages by selected tag
 const filtered_passages = computed(() => {
-    if (selected_tags.value.length === 0) {
+    if (!selected_tag.value) {
         return passages
     }
     return passages.filter(p =>
-        p.tags.some(tag => selected_tags.value.includes(tag))
+        p.tags.includes(selected_tag.value as keyof typeof tags)
     )
 })
 
@@ -88,19 +105,19 @@ const ordered_passages = computed(() => {
 
 
 // Handle tag click from passage component
-function handleTagClick(tag: string) {
+function handleTagClick(tag: keyof typeof tags) {
     // If clicking the currently selected tag, deselect it
-    if (selected_tags.value.includes(tag)) {
-        selected_tags.value = []
+    if (selected_tag.value === tag) {
+        selected_tag.value = ''
     } else {
         // Otherwise, select only this tag
-        selected_tags.value = [tag]
+        selected_tag.value = tag
     }
 }
 
 // Clear all filters
 function clearFilter() {
-    selected_tags.value = []
+    selected_tag.value = ''
     window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
