@@ -7,17 +7,6 @@ div.scripture-page
         p Browse key passages relevant to this topic, using the #[a(href='https://bsb.freely.giving' target='_blank') Berean Standard Bible].
 
     div.controls
-
-        div.sort-toggle
-            button(
-                @click='sort_mode = "category"'
-                :class='{active: sort_mode === "category"}'
-            ) Ordered by topic
-            button(
-                @click='sort_mode = "bible"'
-                :class='{active: sort_mode === "bible"}'
-            ) Ordered by book
-
         div.tag-filter(v-for='group of tag_groups')
             PassageTag.tag(
                 v-for='tag of group'
@@ -27,18 +16,23 @@ div.scripture-page
                 @click='handleTagClick(tag)'
             )
 
+        div.passage-count
+            | Showing {{ ordered_passages.length }} of {{ passages.length }} passages
+
     div.passages-container
-        template(v-for='(category_passages, category) in ordered_passages' :key='category')
-            h2(v-if='category') {{ categories[category] }}
-            ScripturePassage(
-                v-for='passage in category_passages'
-                :key='passage.key'
-                :passage_data='passage'
-                :bible_html='fetched_passages.get(passage.key) ?? ""'
-                :loading='!fetched_passages.has(passage.key)'
-                :selected_tags='selected_tags'
-                @tag-click='handleTagClick'
-            )
+        ScripturePassage(
+            v-for='passage in ordered_passages'
+            :key='passage.key'
+            :passage_data='passage'
+            :bible_html='fetched_passages.get(passage.key) ?? ""'
+            :loading='!fetched_passages.has(passage.key)'
+            :selected_tags='selected_tags'
+            @tag-click='handleTagClick'
+        )
+
+        div.clear-filter(v-if='selected_tags.length > 0')
+            div.hidden-count {{ passages.length - ordered_passages.length }} passages hidden
+            VPButton(@click='clearFilter' text='Show all passages')
 
 </template>
 
@@ -51,11 +45,10 @@ import { PassageReference, books_ordered } from '@gracious.tech/fetch-client'
 import PassageTag from './_comp/PassageTag.vue'
 import ScripturePassage from './_comp/ScripturePassage.vue'
 
-import {passages, get_passage, tags, categories, tag_groups } from './_comp/passages'
+import {passages, get_passage, tags, tag_groups } from './_comp/passages'
 
 
-const selected_tags = ref<string[]>([])
-const sort_mode = ref<'category' | 'bible'>('category')
+const selected_tags = ref<string[]>(['vip'])
 const fetched_passages = ref<Map<string, string>>(new Map())
 
 
@@ -69,8 +62,8 @@ const filtered_passages = computed(() => {
     )
 })
 
-// Computed: Sort all passages by Bible book order
-const passages_bible_order = computed(() => {
+// Computed: Sort passages by Bible book order
+const ordered_passages = computed(() => {
     return [...filtered_passages.value].sort((a, b) => {
 
         // Handle invalid references (shouldn't happen with our data)
@@ -93,30 +86,6 @@ const passages_bible_order = computed(() => {
     })
 })
 
-// Computed: Get passages grouped by category (or single empty category for no grouping)
-// All passages always sorted by Bible order, grouping just adds category headings
-const ordered_passages = computed(() => {
-    if (sort_mode.value === 'category') {
-        // Group by category in the order categories are defined
-        const grouped: Record<string, (typeof passages[number])[]> = {}
-
-        // Initialize groups in category definition order
-        for (const category_key of Object.keys(categories)) {
-            grouped[category_key] = []
-        }
-
-        // Fill groups with passages in Bible order
-        for (const passage of passages_bible_order.value) {
-            grouped[passage.category].push(passage)
-        }
-
-        return grouped
-    } else {
-        // No grouping: single group with empty string key
-        return { '': passages_bible_order.value }
-    }
-})
-
 
 // Handle tag click from passage component
 function handleTagClick(tag: string) {
@@ -127,6 +96,12 @@ function handleTagClick(tag: string) {
         // Otherwise, select only this tag
         selected_tags.value = [tag]
     }
+}
+
+// Clear all filters
+function clearFilter() {
+    selected_tags.value = []
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 // Lifecycle: Fetch Bible text on mount
@@ -154,30 +129,11 @@ onMounted(async () => {
     font-family: var(--vp-font-family-base)
     margin: 32px 0
 
-.sort-toggle
-    display: flex
-    justify-content: center
-    margin-bottom: 36px
-
-    button
-        padding: 4px 16px
-        border-radius: 8px
-        font-size: 16px
-        text-align: center
-        color: var(--vp-c-text-1)
-
-        &:first-child
-            margin-right: 12px
-
-        &:last-child
-            margin-left: 12px
-
-        &:hover
-            text-decoration: none
-            background-color: var(--vp-c-gray-soft)
-
-        &.active
-            background-color: var(--vp-c-brand-soft)
+.passage-count
+    text-align: center
+    margin: 24px 0
+    color: var(--vp-c-text-2)
+    font-size: 18px
 
 .tag-filter
     display: flex
@@ -193,12 +149,18 @@ onMounted(async () => {
 .passages-container
     margin-top: 24px
 
-.category-section
-    margin-bottom: 48px
+.clear-filter
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 48px
+    padding-top: 32px
+    border-top: 1px solid var(--vp-c-divider)
 
-    &:last-child
-        margin-bottom: 0
-
+    .hidden-count
+        margin-bottom: 12px
+        color: var(--vp-c-text-2)
+        font-size: 18px
 
 
 </style>
