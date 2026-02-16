@@ -103,7 +103,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Prov 23:23": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Prov 25:14": {
@@ -111,11 +111,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Isa 5:20": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
+        tags: ['ot', 'reciprocity'],
         notes: "The sale of spiritual things is often regarded as virtuous.",
     },
     "Isa 55:1": {
-        tags: ['ot', 'freely_giving', 'spiritual'],
+        tags: ['ot', 'freely_giving'],
         notes: "",
     },
     "Ezek 22:26": {
@@ -127,7 +127,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Micah 3:11": {
-        tags: ['vip', 'ot', 'reciprocity', 'spiritual'],
+        tags: ['vip', 'ot', 'reciprocity'],
         notes: "While corrupt teachers are in view, the priests are not criticized for anything other than simply charging for their teaching.",
     },
     "Matt 6:2": {
@@ -179,7 +179,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Matt 27:6-9": {
-        tags: ['nt', 'reciprocity', 'spiritual'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "Mark 6:7-11": {
