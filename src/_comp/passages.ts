@@ -24,14 +24,14 @@ export const tags = {
     condemnation: "Condemnation of reciprocity",
     support: "Supporting ministry",
     rights: "Relinquishing rights",
-    other: "Other relevant passages",
+    spiritual: "Spiritual vs. Non-spiritual",
 }
 
 
 export const tag_groups:(keyof typeof tags)[][] = [
     ['vip'],
     ['ot', 'nt', 'jesus', 'paul'],
-    ['freely_giving', 'condemnation', 'support', 'rights'],
+    ['freely_giving', 'condemnation', 'support', 'rights', 'spiritual'],
 ]
 
 
@@ -59,7 +59,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "God ordained portions for priests, demonstrating legitimate support for ministry.",
     },
     "Lev 10:10": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "Ministers must distinguish between sacred ministry and commercial enterprise.",
     },
     "Lev 24:8-9": {
@@ -79,7 +79,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Ministers should find their security in God, not in accumulating wealth.",
     },
     "Num 18:21": {
-        tags: ['ot', 'support'],
+        tags: ['ot', 'support', 'spiritual'],
         notes: "Ministry work deserves support, but as service not business.",
     },
     "Num 18:24": {
@@ -87,7 +87,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "God provides for those who serve Him through different means than worldly wealth.",
     },
     "Num 18:31": {
-        tags: ['ot', 'support'],
+        tags: ['ot', 'support', 'spiritual'],
         notes: "Support for ministry is legitimate compensation, not commercial profit-seeking.",
     },
     "Num 24:13": {
@@ -95,7 +95,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Balaam shows true prophets cannot be bought or influenced by money.",
     },
     "Deut 14:24-26": {
-        tags: ['ot', 'support'],
+        tags: ['ot', 'support', 'spiritual'],
         notes: "Shows practical flexibility in offerings, not commercialization of worship.",
     },
     "Deut 14:27": {
@@ -111,7 +111,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Ministers must never let financial gain compromise their integrity.",
     },
     "Deut 18:1-5": {
-        tags: ['ot', 'support'],
+        tags: ['ot', 'support', 'spiritual'],
         notes: "God provides for ministers through community giving, not commercial enterprise.",
     },
     "Deut 23:18": {
@@ -139,7 +139,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Gehazi's greed contrasts sharply with Elisha's example of freely giving.",
     },
     "2 King 5:26-27": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "Gehazi was cursed with leprosy for commercializing God's work.",
     },
     "Psalm 34:10": {
@@ -159,7 +159,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Generosity is a blessed character trait that God rewards.",
     },
     "Prov 23:23": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "Spiritual truth should not be commodified for profit.",
     },
     "Prov 25:14": {
@@ -183,23 +183,23 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Generous giving without immediate return brings eventual reward.",
     },
     "Isa 5:20": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "Ministers who justify commercializing ministry will face judgment.",
     },
     "Isa 55:1": {
-        tags: ['ot', 'freely_giving'],
+        tags: ['ot', 'freely_giving', 'spiritual'],
         notes: "God's spiritual blessings are offered freely, not sold.",
     },
     "Jer 7:11": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "God condemns turning His house of prayer into commercial exploitation.",
     },
     "Ezek 22:26": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "Ministers must maintain the sanctity of sacred things.",
     },
     "Ezek 44:23": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "Ministers must uphold distinction between holy and common, not commercialize ministry.",
     },
     "Micah 1:7": {
@@ -207,7 +207,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "What is gained through corrupt means will be destroyed.",
     },
     "Micah 3:11": {
-        tags: ['vip', 'ot', 'condemnation'],
+        tags: ['vip', 'ot', 'condemnation', 'spiritual'],
         notes: "Commercializing ministry while claiming God's blessing brings judgment.",
     },
     "Zech 11:4-5": {
@@ -219,7 +219,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Foreshadows Judas betraying Jesus for money.",
     },
     "Zech 14:21": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'condemnation', 'spiritual'],
         notes: "God's eschatological temple will be free from commercial activity.",
     },
     "Mal 3:8-10": {
@@ -235,7 +235,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Giving should be done in secret without seeking recognition or reward.",
     },
     "Matt 6:24": {
-        tags: ['vip', 'nt', 'jesus'],
+        tags: ['vip', 'nt', 'jesus', 'spiritual'],
         notes: "Cannot serve both God and money - ministry and profit are incompatible masters.",
     },
     "Matt 6:31-33": {
@@ -247,7 +247,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "False prophets come in sheep's clothing, often motivated by greed.",
     },
     "Matt 9:37-38": {
-        tags: ['nt', 'jesus'],
+        tags: ['nt', 'jesus', 'spiritual'],
         notes: "The harvest is plentiful but workers are few - ministry is about laborers, not merchants.",
     },
     "Matt 10:7-8": {
@@ -271,7 +271,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Though exempt from temple tax, Jesus paid it to avoid offense, showing humble service.",
     },
     "Matt 21:12-13": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
         notes: "Jesus drove out money changers, condemning commercialization of worship.",
     },
     "Matt 27:3": {
@@ -291,7 +291,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Rich young ruler went away sad, unable to give up wealth for discipleship.",
     },
     "Mark 11:15-17": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
         notes: "Jesus overturned tables of money changers in the temple.",
     },
     "Luke 6:29-30": {
@@ -327,7 +327,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "After doing everything commanded, we are unworthy servants deserving no special reward.",
     },
     "Luke 19:45-46": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
         notes: "Jesus drove out merchants from temple, calling it a den of robbers.",
     },
     "Luke 20:46-47": {
@@ -339,11 +339,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "When sent without provisions, disciples lacked nothing through God's provision.",
     },
     "John 2:14-16": {
-        tags: ['vip', 'nt', 'jesus', 'condemnation'],
+        tags: ['vip', 'nt', 'jesus', 'condemnation', 'spiritual'],
         notes: "Jesus cleared the temple of merchants, forbidding commerce in his Father's house.",
     },
     "John 4:23-24": {
-        tags: ['nt', 'jesus'],
+        tags: ['nt', 'jesus', 'spiritual'],
         notes: "True worship is in spirit and truth, not commercial transactions.",
     },
     "John 7:37": {
@@ -371,7 +371,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Ananias lied about his giving, showing God condemns deception about money in ministry.",
     },
     "Acts 8:18-21": {
-        tags: ['vip', 'nt', 'condemnation'],
+        tags: ['vip', 'nt', 'condemnation', 'spiritual'],
         notes: "Simon tried to buy the Holy Spirit's power with money and was sharply rebuked.",
     },
     "Acts 16:14-15": {
@@ -415,7 +415,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Gaius offered hospitality to Paul and the whole church.",
     },
     "1 Cor 2:12-13": {
-        tags: ['vip', 'nt', 'paul', 'freely_giving'],
+        tags: ['vip', 'nt', 'paul', 'freely_giving', 'spiritual'],
         notes: "Spiritual gifts are freely given by God to be freely shared.",
     },
     "1 Cor 4:1-2": {
@@ -467,7 +467,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Follow Paul's example as he follows Christ in sacrificial service.",
     },
     "1 Cor 12:7": {
-        tags: ['nt', 'paul', 'freely_giving'],
+        tags: ['nt', 'paul', 'freely_giving', 'spiritual'],
         notes: "Spiritual gifts are given for the common good, not personal profit.",
     },
     "1 Cor 16:1-2": {
