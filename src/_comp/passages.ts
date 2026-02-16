@@ -46,67 +46,31 @@ export interface PassageData extends PassageRaw {
 }
 
 const passages_raw: Record<string, PassageRaw> = {
-    "Exo 30:13": {
+    "Exo 30:13-16": {
         tags: ['ot', 'support'],
-        notes: "",
-    },
-    "Lev 2:1-3": {
-        tags: ['ot', 'support'],
-        notes: "",
-    },
-    "Lev 7:33-35": {
-        tags: ['ot', 'support'],
-        notes: "",
+        notes: "This likely later became the two-drachma tax that Jesus and Peter paid in Matt 17:24-27. It was offered to God, yet used to maintain the ministry of the tabernacle/temple.",
     },
     "Lev 10:10": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'spiritual'],
         notes: "",
     },
-    "Lev 24:8-9": {
-        tags: ['ot', 'support', 'spiritual'],
-        notes: "",
-    },
-    "Lev 27:30-33": {
+    "Num 18:19-21": {
         tags: ['ot', 'support'],
-        notes: "",
+        notes: "The Israelites were obligated to make offerings to God, and portions of these were given by God to the Levites to compensate them for their service.",
     },
-    "Num 18:11": {
-        tags: ['ot', 'support'],
-        notes: "",
-    },
-    "Num 18:20": {
+    "Num 18:30-32": {
         tags: ['ot', 'support', 'condemnation'],
-        notes: "",
+        notes: "The Levites were entitled to receive some of the offerings of the Israelites as compensation for their service, but they were not to abuse this (as Eli's sons did in 1 Samuel 2:15-17).",
     },
-    "Num 18:21": {
-        tags: ['ot', 'support', 'spiritual'],
-        notes: "",
-    },
-    "Num 18:24": {
-        tags: ['ot', 'support'],
-        notes: "",
-    },
-    "Num 18:31": {
-        tags: ['ot', 'support', 'spiritual'],
-        notes: "",
-    },
-    "Num 24:13": {
-        tags: ['ot', 'rights'],
-        notes: "",
-    },
-    "Deut 14:24-26": {
-        tags: ['ot', 'support', 'spiritual'],
-        notes: "",
-    },
-    "Deut 14:27": {
-        tags: ['ot', 'support'],
+    "Num 24:10-13": {
+        tags: ['ot', 'condemnation'],
         notes: "",
     },
     "Deut 14:28-29": {
         tags: ['ot', 'support'],
         notes: "",
     },
-    "Deut 16:17-20": {
+    "Deut 16:19": {
         tags: ['ot', 'condemnation'],
         notes: "",
     },
