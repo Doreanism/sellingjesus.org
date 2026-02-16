@@ -21,7 +21,7 @@ export const tags = {
     paul: "Paul",
     // Theme
     freely_giving: "Freely giving",
-    condemnation: "Reciprocity",
+    reciprocity: "Reciprocity",
     support: "Supporting ministry",
     rights: "Relinquishing rights",
     spiritual: "Spiritual things",
@@ -31,7 +31,7 @@ export const tags = {
 export const tag_groups:(keyof typeof tags)[][] = [
     ['vip'],
     ['ot', 'nt', 'jesus', 'paul'],
-    ['freely_giving', 'condemnation', 'support', 'rights', 'spiritual'],
+    ['freely_giving', 'reciprocity', 'support', 'rights', 'spiritual'],
 ]
 
 
@@ -59,11 +59,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "The Israelites were obligated to make offerings to God, and portions of these were given by God to the Levites to compensate them for their service.",
     },
     "Num 18:30-32": {
-        tags: ['ot', 'support', 'condemnation'],
+        tags: ['ot', 'support', 'reciprocity'],
         notes: "The Levites were entitled to receive some of the offerings of the Israelites as compensation for their service, but they were not to abuse this (as Eli's sons did in 1 Samuel 2:15-17).",
     },
     "Num 24:10-13": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Deut 14:28-29": {
@@ -71,7 +71,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Deut 16:19": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Deut 18:1-5": {
@@ -79,11 +79,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Deut 23:18": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "1 Sam 2:15-17": {
-        tags: ['vip', 'ot', 'condemnation'],
+        tags: ['vip', 'ot', 'reciprocity'],
         notes: "",
     },
     "1 Sam 15:22": {
@@ -99,11 +99,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "2 King 5:20": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "2 King 5:26-27": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Psalm 34:10": {
@@ -123,15 +123,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Prov 23:23": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Prov 25:14": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Prov 28:21": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Prov 28:27": {
@@ -147,7 +147,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Isa 5:20": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Isa 55:1": {
@@ -155,27 +155,27 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Jer 7:11": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Ezek 22:26": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Ezek 44:23": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Micah 1:7": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Micah 3:11": {
-        tags: ['vip', 'ot', 'condemnation', 'spiritual'],
+        tags: ['vip', 'ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Zech 11:4-5": {
-        tags: ['ot', 'condemnation'],
+        tags: ['ot', 'reciprocity'],
         notes: "",
     },
     "Zech 11:12-13": {
@@ -183,7 +183,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Zech 14:21": {
-        tags: ['ot', 'condemnation', 'spiritual'],
+        tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Mal 3:8-10": {
@@ -191,7 +191,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Matt 5:48": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'reciprocity'],
         notes: "",
     },
     "Matt 6:2": {
@@ -207,7 +207,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Matt 7:15": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'reciprocity'],
         notes: "",
     },
     "Matt 9:37-38": {
@@ -227,7 +227,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Matt 15:3-6": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'reciprocity'],
         notes: "",
     },
     "Matt 17:25-27": {
@@ -235,15 +235,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Matt 21:12-13": {
-        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
+        tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Matt 27:3": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "Matt 27:6-9": {
-        tags: ['nt', 'condemnation', 'spiritual'],
+        tags: ['nt', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Mark 6:7-11": {
@@ -255,7 +255,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Mark 11:15-17": {
-        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
+        tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Luke 6:29-30": {
@@ -291,11 +291,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Luke 19:45-46": {
-        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
+        tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Luke 20:46-47": {
-        tags: ['nt', 'jesus', 'condemnation', 'spiritual'],
+        tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Luke 22:35-36": {
@@ -303,7 +303,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "John 2:14-16": {
-        tags: ['vip', 'nt', 'jesus', 'condemnation', 'spiritual'],
+        tags: ['vip', 'nt', 'jesus', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "John 4:23-24": {
@@ -315,11 +315,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "John 10:11-13": {
-        tags: ['nt', 'jesus', 'condemnation'],
+        tags: ['nt', 'jesus', 'reciprocity'],
         notes: "",
     },
     "John 12:4-6": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "Acts 2:44-45": {
@@ -331,11 +331,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Acts 5:2-3": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "Acts 8:18-21": {
-        tags: ['vip', 'nt', 'condemnation', 'spiritual'],
+        tags: ['vip', 'nt', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Acts 16:14-15": {
@@ -347,7 +347,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Acts 19:25": {
-        tags: ['nt', 'condemnation', 'spiritual'],
+        tags: ['nt', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Acts 20:33-35": {
@@ -371,7 +371,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Rom 16:18": {
-        tags: ['nt', 'paul', 'condemnation', 'spiritual'],
+        tags: ['nt', 'paul', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "Rom 16:23": {
@@ -387,7 +387,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Cor 4:7": {
-        tags: ['nt', 'paul', 'freely_giving', 'condemnation'],
+        tags: ['nt', 'paul', 'freely_giving', 'reciprocity'],
         notes: "",
     },
     "1 Cor 4:11-12": {
@@ -451,7 +451,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "2 Cor 2:17": {
-        tags: ['vip', 'nt', 'paul', 'condemnation', 'spiritual'],
+        tags: ['vip', 'nt', 'paul', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "2 Cor 5:10": {
@@ -487,7 +487,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Phil 3:19": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "Phil 4:10-14": {
@@ -499,7 +499,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Thes 2:3-5": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "1 Thes 2:9": {
@@ -511,11 +511,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Tim 3:1-3": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "1 Tim 3:8": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "1 Tim 5:17-18": {
@@ -523,11 +523,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Tim 6:3-8": {
-        tags: ['nt', 'paul', 'condemnation', 'spiritual'],
+        tags: ['nt', 'paul', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "1 Tim 6:10": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "2 Tim 2:9": {
@@ -535,23 +535,23 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "2 Tim 3:2": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "2 Tim 3:5": {
-        tags: ['nt', 'paul', 'condemnation', 'spiritual'],
+        tags: ['nt', 'paul', 'reciprocity', 'spiritual'],
         notes: "",
     },
     "2 Tim 3:8": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "Titus 1:7": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "Titus 1:10-11": {
-        tags: ['nt', 'paul', 'condemnation'],
+        tags: ['nt', 'paul', 'reciprocity'],
         notes: "",
     },
     "Titus 3:13": {
@@ -583,23 +583,23 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Pet 5:2": {
-        tags: ['nt', 'condemnation', 'support'],
+        tags: ['nt', 'reciprocity', 'support'],
         notes: "",
     },
     "2 Pet 2:2-3": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "2 Pet 2:15": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "2 Pet 3:16": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "2 John 1:10-11": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "3 John 1:5-8": {
@@ -611,7 +611,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Jude 1:11": {
-        tags: ['nt', 'condemnation'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "Rev 21:6": {
