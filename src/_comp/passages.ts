@@ -64,11 +64,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Num 24:10-13": {
         tags: ['ot', 'reciprocity'],
-        notes: "",
-    },
-    "Deut 14:28-29": {
-        tags: ['ot', 'support'],
-        notes: "",
+        notes: "Balaam is condemned as a false prophet in other passages of Scripture, yet he is not recorded as making false pronouncements. His sin was prophesying in exchange for payment.",
     },
     "Deut 16:19": {
         tags: ['ot', 'reciprocity'],
@@ -76,35 +72,23 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Deut 18:1-5": {
         tags: ['ot', 'support', 'spiritual'],
-        notes: "",
+        notes: "The Israelites were obligated to make offerings to God, and portions of these were given by God to the Levites to compensate them for their service.",
     },
     "Deut 23:18": {
         tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "Ill-gotten gains are not acceptable to be offered to God. Likewise, offering him profits from the sale of spiritual things are unlikely to be pleasing to him.",
     },
     "1 Sam 2:15-17": {
         tags: ['vip', 'ot', 'reciprocity'],
-        notes: "",
-    },
-    "1 Sam 15:22": {
-        tags: ['ot', 'spiritual'],
-        notes: "",
-    },
-    "2 King 4:8-10": {
-        tags: ['ot', 'support', 'freely_giving'],
-        notes: "",
+        notes: "Temple priests were meant to live off portions of sacrifices after they were offered to God, but Eli’s sons demanded the meat beforehand, turning worship into a kind of payment.",
     },
     "2 King 5:15-16": {
         tags: ['ot', 'freely_giving', 'rights'],
-        notes: "",
+        notes: "Elisha refused to receive a gift in exchange for miraculous healing from Naaman, who did not previously worship Yahweh.",
     },
-    "2 King 5:20": {
+    "2 King 5:20-27": {
         tags: ['ot', 'reciprocity'],
-        notes: "",
-    },
-    "2 King 5:26-27": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "Gehazi thought it was foolish of Elisha to not accept a gift for healing Naaman's leprosy. He tried to obtain it instead and was punished with leprosy.",
     },
     "Psalm 34:10": {
         tags: ['ot', 'support'],
@@ -118,10 +102,6 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['ot', 'freely_giving'],
         notes: "",
     },
-    "Prov 22:9": {
-        tags: ['ot', 'freely_giving'],
-        notes: "",
-    },
     "Prov 23:23": {
         tags: ['ot', 'reciprocity', 'spiritual'],
         notes: "",
@@ -130,49 +110,25 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['ot', 'reciprocity'],
         notes: "",
     },
-    "Prov 28:21": {
-        tags: ['ot', 'reciprocity'],
-        notes: "",
-    },
-    "Prov 28:27": {
-        tags: ['ot', 'freely_giving'],
-        notes: "",
-    },
-    "Ecc 2:26": {
-        tags: ['ot', 'spiritual'],
-        notes: "",
-    },
-    "Ecc 11:1": {
-        tags: ['ot', 'freely_giving'],
-        notes: "",
-    },
     "Isa 5:20": {
         tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "The sale of spiritual things is often regarded as virtuous.",
     },
     "Isa 55:1": {
         tags: ['ot', 'freely_giving', 'spiritual'],
         notes: "",
     },
-    "Jer 7:11": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
-    },
     "Ezek 22:26": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
+        tags: ['ot', 'spiritual'],
+        notes: "We must distinguish between that which is spiritual and that which isn't, that which cannot be sold and that which can.",
     },
     "Ezek 44:23": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
-    },
-    "Micah 1:7": {
-        tags: ['ot', 'reciprocity'],
+        tags: ['ot', 'spiritual'],
         notes: "",
     },
     "Micah 3:11": {
         tags: ['vip', 'ot', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "While corrupt teachers are in view, the priests are not criticized for anything other than simply charging for their teaching.",
     },
     "Zech 11:4-5": {
         tags: ['ot', 'reciprocity'],
