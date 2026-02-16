@@ -21,10 +21,10 @@ export const tags = {
     paul: "Paul",
     // Theme
     freely_giving: "Freely giving",
-    condemnation: "Condemnation of reciprocity",
+    condemnation: "Reciprocity",
     support: "Supporting ministry",
     rights: "Relinquishing rights",
-    spiritual: "Spiritual vs. Non-spiritual",
+    spiritual: "Spiritual things",
 }
 
 
