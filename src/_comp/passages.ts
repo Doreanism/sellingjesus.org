@@ -174,10 +174,6 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
         notes: "Jesus notably drives out both buyers and sellers, meaning it was the practice of commerce itself that was his concern, not any exploitative practices that may have been going on.",
     },
-    "Matt 27:3": {
-        tags: ['nt', 'reciprocity'],
-        notes: "",
-    },
     "Matt 27:6-9": {
         tags: ['nt', 'reciprocity'],
         notes: "",
