@@ -130,33 +130,13 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['vip', 'ot', 'reciprocity', 'spiritual'],
         notes: "While corrupt teachers are in view, the priests are not criticized for anything other than simply charging for their teaching.",
     },
-    "Zech 11:4-5": {
-        tags: ['ot', 'reciprocity'],
-        notes: "",
-    },
-    "Zech 11:12-13": {
-        tags: ['ot'],
-        notes: "",
-    },
-    "Zech 14:21": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
-        notes: "",
-    },
-    "Mal 3:8-10": {
-        tags: ['ot', 'support'],
-        notes: "",
-    },
-    "Matt 5:48": {
-        tags: ['nt', 'jesus', 'reciprocity'],
-        notes: "",
-    },
     "Matt 6:2": {
         tags: ['nt', 'jesus', 'freely_giving'],
-        notes: "",
+        notes: "We should seek reward from God rather than from others. Requiring payment for ministry is to explicitly demand a reward from others.",
     },
     "Matt 6:24": {
         tags: ['vip', 'nt', 'jesus', 'spiritual'],
-        notes: "",
+        notes: "Demanding payment in service of God is one of clearest examples of trying to serve both God and money.",
     },
     "Matt 6:31-33": {
         tags: ['nt', 'jesus', 'support'],
@@ -164,35 +144,35 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Matt 7:15": {
         tags: ['nt', 'jesus', 'reciprocity'],
-        notes: "",
+        notes: "Describing false prophets as ravenous wolves implies an underlying motivation of greed.",
     },
     "Matt 9:37-38": {
         tags: ['nt', 'jesus', 'spiritual'],
-        notes: "",
+        notes: "Later references to workers deserving provision (Matt 10:10) must be read in the context of the Lord being the provider, not the recipients of ministry.",
     },
     "Matt 10:7-8": {
         tags: ['vip', 'nt', 'jesus', 'freely_giving', 'spiritual'],
-        notes: "",
+        notes: "Jesus commanded his disciples to freely give their ministry, which here explicitly includes preaching and miracles.",
     },
     "Matt 10:9-10": {
         tags: ['nt', 'jesus', 'support', 'spiritual'],
-        notes: "",
+        notes: "When preaching to existing followers of Yahweh, the disciples were to expect to be provided for and so should not take their own provisions.",
     },
     "Matt 10:11-14": {
         tags: ['nt', 'jesus', 'support', 'spiritual'],
-        notes: "",
+        notes: "The disciples were to accept the hospitality of those they served as provision from their employer (God, see Matt 9:38).",
     },
     "Matt 15:3-6": {
         tags: ['nt', 'jesus', 'reciprocity'],
-        notes: "",
+        notes: "Some people have supposedly righteous motives for withholding ministry from others (such as with copyright restrictions), but by withholding it they nullify the word of God.",
     },
-    "Matt 17:25-27": {
+    "Matt 17:24-27": {
         tags: ['nt', 'jesus', 'rights'],
-        notes: "",
+        notes: "While Jesus shouldn't have had to pay the tax, he was still willing to pay to avoid causing offense.",
     },
     "Matt 21:12-13": {
         tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "Jesus notably drives out both buyers and sellers, meaning it was the practice of commerce itself that was his concern, not any exploitative practices that may have been going on.",
     },
     "Matt 27:3": {
         tags: ['nt', 'reciprocity'],
