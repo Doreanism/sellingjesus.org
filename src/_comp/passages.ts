@@ -71,11 +71,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Deut 18:1-5": {
-        tags: ['ot', 'support', 'spiritual'],
+        tags: ['ot', 'support'],
         notes: "The Israelites were obligated to make offerings to God, and portions of these were given by God to the Levites to compensate them for their service.",
     },
     "Deut 23:18": {
-        tags: ['ot', 'reciprocity', 'spiritual'],
+        tags: ['ot', 'reciprocity'],
         notes: "Ill-gotten gains are not acceptable to be offered to God. Likewise, offering him profits from the sale of spiritual things are unlikely to be pleasing to him.",
     },
     "1 Sam 2:15-17": {
