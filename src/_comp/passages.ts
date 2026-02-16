@@ -24,8 +24,6 @@ export const tags = {
     condemnation: "Condemnation of reciprocity",
     support: "Supporting ministry",
     rights: "Relinquishing rights",
-    sincerity: "Sincerity",
-    greed: "Greed",
     other: "Other relevant passages",
 }
 
@@ -33,7 +31,7 @@ export const tags = {
 export const tag_groups:(keyof typeof tags)[][] = [
     ['vip'],
     ['ot', 'nt', 'jesus', 'paul'],
-    ['freely_giving', 'condemnation', 'support', 'sincerity', 'rights', 'greed'],
+    ['freely_giving', 'condemnation', 'support', 'rights'],
 ]
 
 
@@ -93,7 +91,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Support for ministry is legitimate compensation, not commercial profit-seeking.",
     },
     "Num 24:13": {
-        tags: ['ot', 'sincerity'],
+        tags: ['ot'],
         notes: "Balaam shows true prophets cannot be bought or influenced by money.",
     },
     "Deut 14:24-26": {
@@ -109,7 +107,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Ministry support integrated with caring for the vulnerable.",
     },
     "Deut 16:17-20": {
-        tags: ['ot', 'sincerity', 'greed'],
+        tags: ['ot'],
         notes: "Ministers must never let financial gain compromise their integrity.",
     },
     "Deut 18:1-5": {
@@ -121,11 +119,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Money earned through sinful or exploitative means cannot honor God.",
     },
     "1 Sam 2:15-17": {
-        tags: ['vip', 'ot', 'condemnation', 'greed'],
+        tags: ['vip', 'ot', 'condemnation'],
         notes: "Eli's sons' greed and abuse in ministry was serious sin against God and people.",
     },
     "1 Sam 15:22": {
-        tags: ['ot', 'sincerity'],
+        tags: ['ot'],
         notes: "Religious ritual means nothing without heart obedience to God.",
     },
     "2 King 4:8-10": {
@@ -137,11 +135,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Elisha refused payment for healing, showing true prophets freely give God's gifts.",
     },
     "2 King 5:20": {
-        tags: ['ot', 'greed'],
+        tags: ['ot'],
         notes: "Gehazi's greed contrasts sharply with Elisha's example of freely giving.",
     },
     "2 King 5:26-27": {
-        tags: ['ot', 'condemnation', 'greed'],
+        tags: ['ot', 'condemnation'],
         notes: "Gehazi was cursed with leprosy for commercializing God's work.",
     },
     "Psalm 34:10": {
@@ -165,11 +163,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Spiritual truth should not be commodified for profit.",
     },
     "Prov 25:14": {
-        tags: ['ot', 'sincerity'],
+        tags: ['ot'],
         notes: "False promises of generosity or ministry are worthless.",
     },
     "Prov 28:21": {
-        tags: ['ot', 'sincerity', 'greed'],
+        tags: ['ot'],
         notes: "Ministers must not compromise integrity for any financial gain.",
     },
     "Prov 28:27": {
@@ -177,7 +175,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Generosity toward the needy is rewarded by God's provision.",
     },
     "Ecc 2:26": {
-        tags: ['ot', 'greed'],
+        tags: ['ot'],
         notes: "True fulfillment comes from pleasing God, not accumulating wealth.",
     },
     "Ecc 11:1": {
@@ -209,15 +207,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "What is gained through corrupt means will be destroyed.",
     },
     "Micah 3:11": {
-        tags: ['vip', 'ot', 'condemnation', 'greed'],
+        tags: ['vip', 'ot', 'condemnation'],
         notes: "Commercializing ministry while claiming God's blessing brings judgment.",
     },
     "Zech 11:4-5": {
-        tags: ['ot', 'condemnation', 'greed'],
+        tags: ['ot', 'condemnation'],
         notes: "God condemns shepherds who exploit His flock for financial gain.",
     },
     "Zech 11:12-13": {
-        tags: ['ot', 'greed'],
+        tags: ['ot'],
         notes: "Foreshadows Judas betraying Jesus for money.",
     },
     "Zech 14:21": {
@@ -229,15 +227,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Bringing tithes ensures provision for ministry and God's house.",
     },
     "Matt 5:48": {
-        tags: ['nt', 'jesus', 'sincerity'],
+        tags: ['nt', 'jesus'],
         notes: "God's perfect standard challenges ministers to pursue holiness, not profit.",
     },
     "Matt 6:2": {
-        tags: ['nt', 'jesus', 'sincerity'],
+        tags: ['nt', 'jesus'],
         notes: "Giving should be done in secret without seeking recognition or reward.",
     },
     "Matt 6:24": {
-        tags: ['vip', 'nt', 'jesus', 'greed'],
+        tags: ['vip', 'nt', 'jesus'],
         notes: "Cannot serve both God and money - ministry and profit are incompatible masters.",
     },
     "Matt 6:31-33": {
@@ -245,7 +243,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Seeking God's kingdom first brings all needed provision.",
     },
     "Matt 7:15": {
-        tags: ['nt', 'jesus', 'greed'],
+        tags: ['nt', 'jesus'],
         notes: "False prophets come in sheep's clothing, often motivated by greed.",
     },
     "Matt 9:37-38": {
@@ -277,7 +275,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Jesus drove out money changers, condemning commercialization of worship.",
     },
     "Matt 27:3": {
-        tags: ['nt', 'greed'],
+        tags: ['nt'],
         notes: "Judas's remorse for betraying Jesus for money.",
     },
     "Matt 27:6-9": {
@@ -289,7 +287,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Disciples sent out with nothing, relying on hospitality not commerce.",
     },
     "Mark 10:22": {
-        tags: ['nt', 'jesus', 'greed'],
+        tags: ['nt', 'jesus'],
         notes: "Rich young ruler went away sad, unable to give up wealth for discipleship.",
     },
     "Mark 11:15-17": {
@@ -321,7 +319,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Faithful manager gives others their portion at proper time, not hoarding.",
     },
     "Luke 16:13": {
-        tags: ['nt', 'jesus', 'greed'],
+        tags: ['nt', 'jesus'],
         notes: "Cannot serve both God and money.",
     },
     "Luke 17:10": {
@@ -333,7 +331,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Jesus drove out merchants from temple, calling it a den of robbers.",
     },
     "Luke 20:46-47": {
-        tags: ['nt', 'jesus', 'condemnation', 'greed'],
+        tags: ['nt', 'jesus', 'condemnation'],
         notes: "Teachers of law who devour widows' houses while making long prayers will be punished.",
     },
     "Luke 22:35-36": {
@@ -345,7 +343,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Jesus cleared the temple of merchants, forbidding commerce in his Father's house.",
     },
     "John 4:23-24": {
-        tags: ['nt', 'jesus', 'sincerity'],
+        tags: ['nt', 'jesus'],
         notes: "True worship is in spirit and truth, not commercial transactions.",
     },
     "John 7:37": {
@@ -353,11 +351,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Jesus offers living water freely to all who are thirsty.",
     },
     "John 10:11-13": {
-        tags: ['nt', 'jesus', 'greed'],
+        tags: ['nt', 'jesus'],
         notes: "Hired hands flee when danger comes because they care only for wages, not the sheep.",
     },
     "John 12:4-6": {
-        tags: ['nt', 'greed'],
+        tags: ['nt'],
         notes: "Judas objected to expensive worship not from care for the poor but because he was a thief.",
     },
     "Acts 2:44-45": {
@@ -369,11 +367,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Believers shared everything, giving freely to meet each other's needs.",
     },
     "Acts 5:2-3": {
-        tags: ['nt', 'condemnation', 'sincerity', 'greed'],
+        tags: ['nt', 'condemnation'],
         notes: "Ananias lied about his giving, showing God condemns deception about money in ministry.",
     },
     "Acts 8:18-21": {
-        tags: ['vip', 'nt', 'condemnation', 'greed'],
+        tags: ['vip', 'nt', 'condemnation'],
         notes: "Simon tried to buy the Holy Spirit's power with money and was sharply rebuked.",
     },
     "Acts 16:14-15": {
@@ -409,7 +407,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Phoebe had been a benefactor to many including Paul through her hospitality.",
     },
     "Rom 16:18": {
-        tags: ['nt', 'paul', 'condemnation', 'greed'],
+        tags: ['nt', 'paul', 'condemnation'],
         notes: "False teachers serve their own appetites, not Christ, deceiving through smooth talk.",
     },
     "Rom 16:23": {
@@ -421,7 +419,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Spiritual gifts are freely given by God to be freely shared.",
     },
     "1 Cor 4:1-2": {
-        tags: ['nt', 'paul', 'sincerity'],
+        tags: ['nt', 'paul'],
         notes: "Ministers are stewards of God's mysteries, required to be faithful.",
     },
     "1 Cor 4:7": {
@@ -493,7 +491,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Paul did not peddle God's word for profit like many others.",
     },
     "2 Cor 5:10": {
-        tags: ['nt', 'paul', 'sincerity'],
+        tags: ['nt', 'paul'],
         notes: "All will give account before Christ's judgment seat for deeds done.",
     },
     "2 Cor 9:6": {
@@ -521,11 +519,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Students should share all good things with their instructors.",
     },
     "Phil 1:17-18": {
-        tags: ['nt', 'paul', 'sincerity'],
+        tags: ['nt', 'paul'],
         notes: "Some preach from selfish ambition, but what matters is that Christ is proclaimed.",
     },
     "Phil 3:19": {
-        tags: ['nt', 'paul', 'condemnation', 'greed'],
+        tags: ['nt', 'paul', 'condemnation'],
         notes: "False teachers' god is their stomach and glory is in their shame.",
     },
     "Phil 4:10-14": {
@@ -537,7 +535,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Philippians' gifts to Paul were a fragrant offering pleasing to God.",
     },
     "1 Thes 2:3-5": {
-        tags: ['nt', 'paul', 'sincerity', 'greed'],
+        tags: ['nt', 'paul'],
         notes: "Paul's ministry was not from error, impurity, or greed with flattery as a mask.",
     },
     "1 Thes 2:9": {
@@ -549,11 +547,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Paul worked for his food as an example, though he had right to support.",
     },
     "1 Tim 3:1-3": {
-        tags: ['nt', 'paul', 'greed'],
+        tags: ['nt', 'paul'],
         notes: "Overseers must not be lovers of money or greedy for gain.",
     },
     "1 Tim 3:8": {
-        tags: ['nt', 'paul', 'greed'],
+        tags: ['nt', 'paul'],
         notes: "Deacons must not pursue dishonest gain.",
     },
     "1 Tim 5:17-18": {
@@ -561,11 +559,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Elders who direct well are worthy of double honor, especially those who preach and teach.",
     },
     "1 Tim 6:3-8": {
-        tags: ['nt', 'paul', 'condemnation', 'greed'],
+        tags: ['nt', 'paul', 'condemnation'],
         notes: "False teachers think godliness is a means to financial gain, but godliness with contentment is great gain.",
     },
     "1 Tim 6:10": {
-        tags: ['nt', 'paul', 'greed'],
+        tags: ['nt', 'paul'],
         notes: "Love of money is a root of all kinds of evil.",
     },
     "2 Tim 2:9": {
@@ -573,11 +571,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Paul suffered for the gospel even to the point of chains.",
     },
     "2 Tim 3:2": {
-        tags: ['nt', 'paul', 'greed'],
+        tags: ['nt', 'paul'],
         notes: "In last days people will be lovers of money rather than lovers of God.",
     },
     "2 Tim 3:5": {
-        tags: ['nt', 'paul', 'sincerity'],
+        tags: ['nt', 'paul'],
         notes: "False teachers have form of godliness but deny its power.",
     },
     "2 Tim 3:8": {
@@ -585,11 +583,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "False teachers oppose the truth with depraved minds.",
     },
     "Titus 1:7": {
-        tags: ['nt', 'paul', 'greed'],
+        tags: ['nt', 'paul'],
         notes: "Overseers must not be greedy for dishonest gain.",
     },
     "Titus 1:10-11": {
-        tags: ['nt', 'paul', 'condemnation', 'greed'],
+        tags: ['nt', 'paul', 'condemnation'],
         notes: "False teachers ruin whole households by teaching for shameful gain.",
     },
     "Titus 3:13": {
@@ -601,19 +599,19 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "God will not forget the work and love shown in serving His people.",
     },
     "James 2:1-4": {
-        tags: ['nt', 'greed'],
+        tags: ['nt'],
         notes: "Showing favoritism to the rich over the poor is sin.",
     },
     "James 2:5": {
-        tags: ['nt', 'greed'],
+        tags: ['nt'],
         notes: "God chose the poor to be rich in faith and inherit the kingdom.",
     },
     "James 2:8-11": {
-        tags: ['nt', 'greed'],
+        tags: ['nt'],
         notes: "Showing favoritism breaks the royal law to love your neighbor.",
     },
     "James 3:1": {
-        tags: ['nt', 'sincerity'],
+        tags: ['nt'],
         notes: "Teachers will be judged more strictly, so not many should become teachers.",
     },
     "1 Pet 4:10-11": {
@@ -621,15 +619,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Use your gifts to serve others as faithful stewards of God's grace.",
     },
     "1 Pet 5:2": {
-        tags: ['nt', 'greed', 'sincerity'],
+        tags: ['nt'],
         notes: "Shepherd God's flock willingly and eagerly, not for dishonest gain.",
     },
     "2 Pet 2:2-3": {
-        tags: ['nt', 'condemnation', 'greed'],
+        tags: ['nt', 'condemnation'],
         notes: "False teachers exploit people with fabricated stories in their greed.",
     },
     "2 Pet 2:15": {
-        tags: ['nt', 'condemnation', 'greed'],
+        tags: ['nt', 'condemnation'],
         notes: "False teachers follow the way of Balaam, who loved the wages of wickedness.",
     },
     "2 Pet 3:16": {
@@ -645,11 +643,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Show hospitality to traveling workers who went out without accepting help from pagans.",
     },
     "3 John 1:9-10": {
-        tags: ['nt', 'greed'],
+        tags: ['nt'],
         notes: "Diotrephes loved to be first and refused to welcome traveling workers.",
     },
     "Jude 1:11": {
-        tags: ['nt', 'condemnation', 'greed'],
+        tags: ['nt', 'condemnation'],
         notes: "False teachers have rushed for profit into Balaam's error.",
     },
     "Rev 21:6": {
