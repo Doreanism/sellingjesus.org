@@ -29,6 +29,8 @@ __colabor__ &mdash; Originally defined in _The Dorean Principle_ as "Support (ma
 
 __reciprocity__ &mdash; Originally defined in _The Dorean Principle_ as "Support (material or otherwise) given to a minister out of a sense of direct obligation for his ministry of the gospel." This usually takes the form of payment for ministry, and is opposed by this movement.
 
+__mediated obligation__ &mdash; Where believers are to support ministry, not out of obligation to the minister, but out of obligation to God.
+
 
 ## Other Relevant Terms
 
