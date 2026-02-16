@@ -11,14 +11,6 @@ export async function get_passage(reference:PassageReference):Promise<string>{
 }
 
 
-export const categories = {
-    freely_giving: "Freely giving",
-    condemnation: "Condemnation of reciprocity",
-    support: "Supporting ministry",
-    rights: "Relinquishing rights",
-    other: "Other relevant passages",
-}
-
 export const tags = {
     // VIP
     vip: "Very Important Passages",
@@ -28,10 +20,13 @@ export const tags = {
     jesus: "Jesus",
     paul: "Paul",
     // Theme
-    ...categories,
+    freely_giving: "Freely giving",
+    condemnation: "Condemnation of reciprocity",
+    support: "Supporting ministry",
+    rights: "Relinquishing rights",
     sincerity: "Sincerity",
-    rights: "Rights",
     greed: "Greed",
+    other: "Other relevant passages",
 }
 
 
