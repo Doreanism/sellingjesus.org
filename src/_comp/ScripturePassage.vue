@@ -4,7 +4,7 @@
 div.scripture-passage
     div.reference-header
         h3.reference(@click='open_app') {{ title }}
-        div.tags
+        div.tags(:class='{ "has-filter": selected_tag }')
             PassageTag(
                 v-for='tag in passage_data.tags'
                 :key='tag'
@@ -90,6 +90,11 @@ function open_app(){
         flex-wrap: wrap
         gap: 6px
         font-family: var(--vp-font-family-base)
+
+        // Hide tags on mobile when a filter is active to save space
+        &.has-filter
+            @media (max-width: 768px)
+                display: none
 
     .fetch-bible
         font-size: 20px !important
