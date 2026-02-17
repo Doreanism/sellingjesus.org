@@ -85,10 +85,12 @@ const filtered_passages = computed(() => {
             && !p.tags.includes('support')
             && !p.tags.includes('rights')
             && !p.tags.includes('spiritual')
+            && !p.tags.includes('provision')
+            && !p.tags.includes('greed')
         )
     }
     return passages.filter(p =>
-        p.tags.includes(selected_tag.value as keyof typeof tags)
+        p.tags.includes(selected_tag.value)
     )
 })
 

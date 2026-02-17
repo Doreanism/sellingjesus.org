@@ -24,7 +24,9 @@ export const tags = {
     // Topics
     freely_giving: "Freely giving",
     reciprocity: "Reciprocity",
+    greed: "Greed",
     support: "Supporting ministry",
+    provision: "God's provision & stewardship",
     rights: "Relinquishing rights",
     spiritual: "Spiritual things",
     other_topics: "Other topics",
@@ -34,7 +36,7 @@ export const tags = {
 export const tag_groups:(keyof typeof tags)[][] = [
     ['vip'],
     ['ot', 'nt', 'jesus', 'paul', 'other_people'],
-    ['freely_giving', 'reciprocity', 'support', 'rights', 'spiritual', 'other_topics'],
+    ['freely_giving', 'support', 'provision', 'reciprocity', 'greed', 'rights', 'spiritual', 'other_topics'],
 ]
 
 
@@ -74,7 +76,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Balaam is condemned as a false prophet in other passages of Scripture, yet he is not recorded as making false pronouncements. His sin was prophesying in exchange for payment.",
     },
     "Deut 16:19": {
-        tags: ['ot', 'reciprocity'],
+        tags: ['ot', 'greed'],
         notes: "",
     },
     "Deut 18:1-5": {
@@ -86,7 +88,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Ill-gotten gains are not acceptable to be offered to God. Likewise, offering him profits from the sale of spiritual things are unlikely to be pleasing to him.",
     },
     "1 Sam 2:15-17": {
-        tags: ['vip', 'ot', 'reciprocity'],
+        tags: ['vip', 'ot', 'reciprocity', 'greed'],
         notes: "Temple priests were meant to live off portions of sacrifices after they were offered to God, but Eli’s sons demanded the meat beforehand, turning worship into a kind of payment.",
     },
     "2 King 5:15-16": {
@@ -94,19 +96,19 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Elisha refused to receive a gift in exchange for miraculous healing from Naaman, who did not previously worship Yahweh.",
     },
     "2 King 5:20-27": {
-        tags: ['ot', 'reciprocity'],
+        tags: ['ot', 'reciprocity', 'greed'],
         notes: "Gehazi thought it was foolish of Elisha to not accept a gift for healing Naaman's leprosy. He tried to obtain it instead and was punished with leprosy.",
     },
     "Psalm 34:10": {
-        tags: ['ot'],
+        tags: ['ot', 'provision'],
         notes: "",
     },
     "Prov 11:24": {
-        tags: ['ot', 'freely_giving', 'reciprocity'],
+        tags: ['ot', 'freely_giving', 'greed'],
         notes: "",
     },
     "Prov 11:25-26": {
-        tags: ['ot'],
+        tags: ['ot', 'provision'],
         notes: "",
     },
     "Prov 23:23": {
@@ -146,15 +148,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Demanding payment in service of God is one of clearest examples of trying to serve both God and money.",
     },
     "Matt 6:31-33": {
-        tags: ['nt', 'jesus', 'support'],
+        tags: ['nt', 'jesus', 'provision'],
         notes: "",
     },
     "Matt 7:15": {
-        tags: ['nt', 'jesus', 'reciprocity'],
+        tags: ['nt', 'jesus', 'greed'],
         notes: "Describing false prophets as ravenous wolves implies an underlying motivation of greed.",
     },
     "Matt 9:37-38": {
-        tags: ['nt', 'jesus', 'support'],
+        tags: ['nt', 'jesus', 'provision'],
         notes: "Later references to workers deserving provision (Matt 10:10) must be read in the context of the Lord being the provider, not the recipients of ministry.",
     },
     "Matt 10:7-8": {
@@ -162,7 +164,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Jesus commanded his disciples to freely give their ministry, which here explicitly includes preaching and miracles.",
     },
     "Matt 10:9-10": {
-        tags: ['nt', 'jesus', 'support'],
+        tags: ['nt', 'jesus', 'support', 'provision'],
         notes: "When preaching to existing followers of Yahweh, the disciples were to expect to be provided for and so should not take their own provisions.",
     },
     "Matt 10:11-14": {
@@ -182,11 +184,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "Jesus notably drives out both buyers and sellers, meaning it was the practice of commerce itself that was his concern, not any exploitative practices that may have been going on.",
     },
     "Matt 27:6-9": {
-        tags: ['nt', 'reciprocity'],
+        tags: ['nt', 'greed'],
         notes: "",
     },
     "Mark 6:7-11": {
-        tags: ['nt', 'jesus', 'support'],
+        tags: ['nt', 'jesus', 'support', 'provision'],
         notes: "",
     },
     "Mark 10:22": {
@@ -206,7 +208,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Luke 9:1-5": {
-        tags: ['nt', 'jesus', 'support'],
+        tags: ['nt', 'jesus', 'support', 'provision'],
         notes: "",
     },
     "Luke 9:49-50": {
@@ -214,11 +216,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Luke 10:2-7": {
-        tags: ['nt', 'jesus', 'support', 'reciprocity'],
+        tags: ['nt', 'jesus', 'support', 'reciprocity', 'provision'],
         notes: "",
     },
     "Luke 12:42-44": {
-        tags: ['nt', 'jesus'],
+        tags: ['nt', 'jesus', 'provision'],
         notes: "",
     },
     "Luke 17:10": {
@@ -234,7 +236,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Luke 22:35-36": {
-        tags: ['nt', 'jesus', 'support'],
+        tags: ['nt', 'jesus', 'support', 'provision'],
         notes: "",
     },
     "John 2:14-16": {
@@ -250,7 +252,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "John 12:4-6": {
-        tags: ['nt'],
+        tags: ['nt', 'greed'],
         notes: "",
     },
     "Acts 2:44-45": {
@@ -258,11 +260,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Acts 4:32-35": {
-        tags: ['nt', 'freely_giving', 'support'],
+        tags: ['nt', 'freely_giving', 'support', 'provision'],
         notes: "",
     },
     "Acts 5:2-3": {
-        tags: ['nt'],
+        tags: ['nt', 'greed'],
         notes: "",
     },
     "Acts 8:18-21": {
@@ -278,7 +280,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Acts 19:25-27": {
-        tags: ['nt'],
+        tags: ['nt', 'greed'],
         notes: "",
     },
     "Acts 20:33-35": {
@@ -302,7 +304,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Rom 16:18": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "Rom 16:23": {
@@ -314,15 +316,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Cor 4:1-2": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'provision'],
         notes: "",
     },
     "1 Cor 4:7": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'rights'],
         notes: "",
     },
     "1 Cor 4:11-12": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'provision'],
         notes: "",
     },
     "1 Cor 6:1-7": {
@@ -342,7 +344,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Cor 9:13-14": {
-        tags: ['nt', 'paul', 'support'],
+        tags: ['nt', 'paul', 'support', 'provision'],
         notes: "",
     },
     "1 Cor 9:15": {
@@ -358,7 +360,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Cor 11:1": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'rights'],
         notes: "",
     },
     "1 Cor 12:7": {
@@ -386,11 +388,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "2 Cor 5:10": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'provision'],
         notes: "",
     },
     "2 Cor 9:6": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'provision'],
         notes: "",
     },
     "2 Cor 9:7": {
@@ -418,11 +420,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Phil 3:19": {
-        tags: ['nt', 'paul', 'reciprocity'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "Phil 4:10-14": {
-        tags: ['nt', 'paul', 'support'],
+        tags: ['nt', 'paul', 'support', 'provision'],
         notes: "",
     },
     "Phil 4:15-18": {
@@ -442,11 +444,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Tim 3:1-3": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "1 Tim 3:8": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "1 Tim 5:17-18": {
@@ -454,23 +456,23 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Tim 6:3-8": {
-        tags: ['nt', 'paul', 'reciprocity', 'support'],
+        tags: ['nt', 'paul', 'reciprocity', 'provision'],
         notes: "",
     },
     "1 Tim 6:10": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "2 Tim 2:9": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'rights'],
         notes: "",
     },
     "2 Tim 3:2-5": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "Titus 1:7": {
-        tags: ['nt', 'paul'],
+        tags: ['nt', 'paul', 'greed', 'provision'],
         notes: "",
     },
     "Titus 1:10-11": {
@@ -482,7 +484,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Heb 6:10": {
-        tags: ['nt'],
+        tags: ['nt', 'provision'],
         notes: "",
     },
     "James 2:1-4": {
@@ -490,15 +492,15 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "James 2:5": {
-        tags: ['nt'],
+        tags: ['nt', 'provision'],
         notes: "",
     },
     "James 2:8-9": {
-        tags: ['nt'],
+        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "James 3:1": {
-        tags: ['nt'],
+        tags: ['nt', 'provision'],
         notes: "",
     },
     "1 Pet 4:10-11": {
@@ -506,11 +508,11 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "1 Pet 5:2": {
-        tags: ['nt', 'reciprocity', 'freely_giving'],
+        tags: ['nt', 'greed', 'freely_giving'],
         notes: "",
     },
     "2 Pet 2:2-3": {
-        tags: ['nt', 'reciprocity'],
+        tags: ['nt', 'greed'],
         notes: "",
     },
     "2 Pet 2:15": {
@@ -521,16 +523,12 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['nt', 'rights'],
         notes: "",
     },
-    "2 John 1:10-11": {
-        tags: ['nt'],
-        notes: "",
-    },
     "3 John 1:5-8": {
         tags: ['vip', 'nt', 'support', 'freely_giving'],
         notes: "",
     },
     "3 John 1:9-10": {
-        tags: ['nt'],
+        tags: ['nt', 'support'],
         notes: "",
     },
     "Jude 1:11": {
