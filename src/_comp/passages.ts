@@ -14,24 +14,27 @@ export async function get_passage(reference:PassageReference):Promise<string>{
 export const tags = {
     // VIP
     vip: "Very Important Passages",
-    // Source
+    // Testament
     ot: "Old Testament",
     nt: "New Testament",
+    // Person
     jesus: "Jesus",
     paul: "Paul",
-    // Theme
+    other_people: "Other people",
+    // Topics
     freely_giving: "Freely giving",
     reciprocity: "Reciprocity",
     support: "Supporting ministry",
     rights: "Relinquishing rights",
     spiritual: "Spiritual things",
+    other_topics: "Other topics",
 }
 
 
 export const tag_groups:(keyof typeof tags)[][] = [
     ['vip'],
-    ['ot', 'nt', 'jesus', 'paul'],
-    ['freely_giving', 'reciprocity', 'support', 'rights', 'spiritual'],
+    ['ot', 'nt', 'jesus', 'paul', 'other_people'],
+    ['freely_giving', 'reciprocity', 'support', 'rights', 'spiritual', 'other_topics'],
 ]
 
 
@@ -195,7 +198,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Luke 8:1-3": {
-        tags: ['nt', 'support', 'freely_giving'],
+        tags: ['nt', 'jesus', 'support', 'freely_giving'],
         notes: "",
     },
     "Luke 9:1-5": {
@@ -212,10 +215,6 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Luke 12:42-44": {
         tags: ['nt', 'jesus', 'freely_giving'],
-        notes: "",
-    },
-    "Luke 16:13": {
-        tags: ['nt', 'jesus', 'spiritual'],
         notes: "",
     },
     "Luke 17:10": {
@@ -271,7 +270,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Acts 16:14-15": {
-        tags: ['nt', 'support', 'freely_giving'],
+        tags: ['nt', 'paul', 'support', 'freely_giving'],
         notes: "",
     },
     "Acts 18:1-5": {
@@ -547,7 +546,7 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Rev 21:6": {
-        tags: ['nt', 'freely_giving'],
+        tags: ['nt', 'jesus', 'freely_giving'],
         notes: "",
     },
     "Rev 22:17": {
