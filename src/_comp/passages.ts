@@ -38,8 +38,12 @@ export const tag_groups:(keyof typeof tags)[][] = [
 ]
 
 
+// Cannot add the other filters as tags
+export type TagId = Exclude<keyof typeof tags, 'other_people'|'other_topics'>
+
+
 interface PassageRaw {
-    tags: (keyof typeof tags)[]
+    tags: TagId[]
     notes: string
 }
 
