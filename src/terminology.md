@@ -23,9 +23,9 @@ __doreanism__ &mdash; Anything pertaining to _the dorean principle_.
 
 __The Dorean Principle__ &mdash; A book by Conley Owens that first coined the term _the dorean principle_, and originally defined it as follows: "In the context of gospel proclamation, accepting support as anything other than an act of _colabor_ compromises the sincerity of ministry." (See below for the broader use of the term today.)
 
-__the dorean principle__ &mdash; The biblical principle that spiritual things must be freely given, and any receipt of support must be in the form of _colabor_ rather than _reciprocity_. An easy-to-understand approximation of this principle that is frequently expressed is: "Ministry should be supported, not sold."
+__the dorean principle__ &mdash; The biblical principle that spiritual things must be freely given, and any receipt of support must be in the form of _co-labor_ rather than _reciprocity_. An easy-to-understand approximation of this principle that is frequently expressed is: "Ministry should be supported, not sold."
 
-__colabor__ &mdash; Originally defined in _The Dorean Principle_ as "Support (material or otherwise) given by man to a minister out of a sense of obligation to God, to honor or aid in the proclamation of the gospel." This usually takes the form of donations to persons or organizations involved in ministry, and is considered appropriate by this movement.
+__co-labor__ &mdash; Originally defined in _The Dorean Principle_ as "Support (material or otherwise) given by man to a minister out of a sense of obligation to God, to honor or aid in the proclamation of the gospel." This usually takes the form of donations to persons or organizations involved in ministry, and is considered appropriate by this movement.
 
 __reciprocity__ &mdash; Originally defined in _The Dorean Principle_ as "Support (material or otherwise) given to a minister out of a sense of direct obligation for his ministry of the gospel." This usually takes the form of payment for ministry, and is opposed by this movement.
 
@@ -43,3 +43,5 @@ __open licensing__ &mdash; Removing the most restrictive conditions of copyright
 __public domain__ &mdash; Intellectual property that has fallen into, or been dedicated to, the public domain. Such resources are not owned by anyone and have no copyright restrictions.
 
 __simony__ &mdash; The buying and selling of spiritual things. It is named in reference to Simon the magician's attempt to purchase the power of the Holy Spirit in Acts 8.
+
+__the Jesus trade__ &mdash; The commercialization of Christianity, highlighting how selling the sacred has become normalized, much like the historical normalization of the slave trade.
