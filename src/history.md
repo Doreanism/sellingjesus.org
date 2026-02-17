@@ -21,12 +21,14 @@ __2022__ — [Let’s copy, church](https://copy.church/) — Jon Here created a
 
 __2023__ — [Selling Jesus](https://sellingjesus.org/) — Andrew Case launched a website to confront the commercialization of Christianity, with Conley Owens and Jon Here contributing content.
 
-__2023__ — [Berean Standard Bible](https://berean.bible/) — Bible Hub et al. relinquished copyright of the BSB, making it the first modern English translation from the original languages to be public domain.
+__2023__ — [Berean Standard Bible](https://berean.bible/) — Bible Hub et al. relinquished copyright of the BSB, making it the first modern English translation of the original languages to be public domain.
 
-__2025__ — [Abolish the Jesus Trade](https://sellingjesus.org/book) — Case, Owens, & Here published a collection of articles produced over the previous three years to confront the commercialization of Christianity.
+__2025__ — [Abolish the Jesus Trade](https://sellingjesus.org/book) — Case, Here, & Owens published a collection of articles produced over the previous three years to confront the commercialization of Christianity.
 
 __2025__ — [The Sunnyvale Statement](https://copy.church/statement/) — A statement on the stewardship of Scripture was signed at the first Doreancon conference in Sunnyvale, California.
 
+__2026__ — [Freely Giving](https://freely.giving) — Jon Here created a website for discovering and publishing freely given resources.
+
 &nbsp;
 
-_Events are included if they are significant attempts to resist the commercialization of ministry and/or pioneer the free giving of a form of Scripture._
+_Events are included if they are significant attempts to resist the commercialization of Christianity and/or pioneer the free giving of a form of Scripture._
