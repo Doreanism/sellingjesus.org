@@ -12,7 +12,7 @@ Find all the content presented at the conference here. For conference logistics,
 
 Unite in one conviction: _Scripture is the Word of God, and he has authorized his people to use, copy, distribute, translate, and adapt it regardless of man’s consent._
 
-<VPButton text="Sign the statement" href=""></VPButton>
+<VPButton text="Sign the statement" href="https://copy.church/statement/"></VPButton>
 
 
 ## Videos
