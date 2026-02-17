@@ -54,6 +54,8 @@ export default {
                             history.replaceState({scrollPosition: window.scrollY}, '')
                         },
                     })
+                    // Provide enhancer to all components
+                    ctx.app.provide('enhancer', enhancer)
                 }
 
                 // Detect references only within the content part of the page

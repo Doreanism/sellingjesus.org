@@ -32,6 +32,8 @@ Follow any of our social accounts to read and discuss new material as we release
 <VPButton href='https://www.instagram.com/selling.jesus/' text="Instagram" theme='alt'></VPButton>
 <VPButton href='https://twitter.com/Selling_Jesus' text="X/Twitter" theme='alt'></VPButton>
 
+<iframe class='zeffy-form' src='https://www.zeffy.com/en-US/embed/newsletter-form/send-me-monthly-updates'></iframe>
+
 We also have two groups you can join to discuss this topic with others:
 
  * [Discord server](https://discord.gg/TwZUsT2nJ7)

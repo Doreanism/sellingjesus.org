@@ -51,3 +51,5 @@ While we affirm the right to support for ministry, we are choosing not to reques
 ## Contact
 
 You can reach us on any of our social channels, or email us at info@sellingjesus.org
+
+<iframe class='zeffy-form' src='https://www.zeffy.com/en-US/embed/newsletter-form/send-me-monthly-updates'></iframe>
