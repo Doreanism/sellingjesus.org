@@ -8,7 +8,7 @@ image: /media/articles/response-dr-b.jpg
 
 Uma [publicação recente no blog](https://mgseminary.com/exegetical-practices-a-response-to-the-dorean-principle)[^1] do Seminário Mindanao Grace, escrita pelo pseudônimo “Dr. B”[^2], oferece algumas críticas ao meu livro, _[O Princípio Dorean: Uma Resposta Bíblica à Comercialização do Cristianismo](https://thedoreanprinciple.org/)_ (TDP). Sou grato pela interação; obviamente este é um tema importante no qual ambos temos interesse.
 
-Muito foi dito no artigo, e responder a tudo parece contraproducente, então, juntamente com o Dr. B, “Minha intenção não é arrancar ever[sic] folha, nem cortar cada galho, mas atacar a raiz da proposição.”
+Muito foi dito no artigo, e responder a tudo parece contraproducente, então, juntamente com o Dr. B, “Minha intenção não é arrancar toda folha, nem cortar cada galho, mas atacar a raiz da proposição.”
 
 
 ## Novidade
