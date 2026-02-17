@@ -50,7 +50,7 @@ Não sei por onde começar a responder às críticas de exegese quando nenhuma d
 
 O Dr. B também parece nutrir algumas suspeitas quanto à minha abordagem aos estudos bíblicos como um todo.
 
-> Deve-se notar que o autor faz argumentos de estudo de palavras na tentativa de fazer distinções entre certos tipos de doação. Muitas vezes vemos isso em pessoas que não conseguem ler o texto grego, mas têm acesso a um dicionário ou léxico. Essa abordagem se presta à rootword[sic]/word search fallacy e nunca é a maneira como provaríamos uma doutrina.
+> Deve-se notar que o autor faz argumentos de estudo de palavras na tentativa de fazer distinções entre certos tipos de doação. Muitas vezes vemos isso em pessoas que não conseguem ler o texto grego, mas têm acesso a um dicionário ou léxico. Essa abordagem se presta à falácia da palavra-raiz ou da busca de palavras, e nunca é a maneira como provaríamos uma doutrina.
 
 Meu objetivo aqui não é defender minhas habilidades em grego; eu simplesmente não sei como alguém poderia objetar a fornecermos breves estudos de palavras ao examinarmos o texto. Qual é a alternativa? Que, ao considerarmos finanças, não reconheçamos as implicações financeiras das palavras “propempo” e “timao”?
 
