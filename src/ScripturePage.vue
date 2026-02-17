@@ -78,17 +78,6 @@ const filtered_passages = computed(() => {
         return passages.filter(p =>
             !p.tags.includes('jesus') && !p.tags.includes('paul'))
     }
-    if (selected_tag.value === 'other_topics'){
-        return passages.filter(p =>
-            !p.tags.includes('freely_giving')
-            && !p.tags.includes('reciprocity')
-            && !p.tags.includes('support')
-            && !p.tags.includes('rights')
-            && !p.tags.includes('spiritual')
-            && !p.tags.includes('provision')
-            && !p.tags.includes('greed')
-        )
-    }
     return passages.filter(p =>
         p.tags.includes(selected_tag.value)
     )

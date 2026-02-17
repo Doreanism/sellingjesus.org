@@ -29,19 +29,18 @@ export const tags = {
     provision: "God's provision & stewardship",
     rights: "Relinquishing rights",
     spiritual: "Spiritual things",
-    other_topics: "Other topics",
 }
 
 
 export const tag_groups:(keyof typeof tags)[][] = [
     ['vip'],
     ['ot', 'nt', 'jesus', 'paul', 'other_people'],
-    ['freely_giving', 'support', 'provision', 'reciprocity', 'greed', 'rights', 'spiritual', 'other_topics'],
+    ['freely_giving', 'support', 'provision', 'reciprocity', 'greed', 'rights', 'spiritual'],
 ]
 
 
 // Cannot add the other filters as tags
-export type TagId = Exclude<keyof typeof tags, 'other_people'|'other_topics'>
+export type TagId = Exclude<keyof typeof tags, 'other_people'>
 
 
 interface PassageRaw {
