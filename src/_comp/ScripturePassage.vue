@@ -6,10 +6,11 @@ div.scripture-passage
         h3.reference(@click='open_app') {{ title }}
         div.tags(:class='{ "has-filter": selected_tag }')
             PassageTag(
-                v-for='tag in passage_data.tags'
+                v-for='tag in passage_data.tags.filter(t => !["nt", "ot"].includes(t))'
                 :key='tag'
                 :tag='tag'
                 :active='selected_tag === tag'
+                :vip='tag === "vip"'
                 @click='handleTagClick(tag)'
             )
 

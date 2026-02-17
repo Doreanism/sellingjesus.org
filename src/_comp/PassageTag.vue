@@ -3,7 +3,7 @@
 
 Badge.passage-tag(
     :type='active ? "tip" : "info"'
-    :text='tags[tag]'
+    :text='text'
     @click='$emit("click")'
 )
 
@@ -12,16 +12,23 @@ Badge.passage-tag(
 
 <script lang='ts' setup>
 
+import {computed} from 'vue'
+
 import { tags } from './passages'
 
-defineProps<{
+const {tag, vip} = defineProps<{
     tag: keyof typeof tags
     active?: boolean
+    vip?:boolean
 }>()
 
 defineEmits<{
     'click': []
 }>()
+
+const text = computed(() => {
+    return vip ? "VIP" : tags[tag]
+})
 
 </script>
 
