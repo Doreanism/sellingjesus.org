@@ -144,7 +144,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Matt 6:24": {
         tags: ['vip', 'nt', 'jesus', 'reciprocity'],
-        notes: "Demanding payment in service of God is one of clearest examples of trying to serve both God and money.",
+        notes: "Demanding payment in service of God is one of the clearest examples of trying to serve both God and money.",
     },
     "Matt 6:31-33": {
         tags: ['nt', 'jesus', 'provision'],
@@ -232,7 +232,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Luke 22:35-36": {
         tags: ['nt', 'jesus', 'support', 'provision'],
-        notes: "In contrast with their previous experiences, the disciples were to expect increased opposition to the gospel during the next period of their ministry. And so were to bring their own provisions for when they could not find anyone who would welcome them.",
+        notes: "In contrast with their previous experiences, the disciples were to expect increased opposition to the gospel during the next period of their ministry. And so they were to bring their own provisions for when they could not find anyone who would welcome them.",
     },
     "John 2:14-16": {
         tags: ['vip', 'nt', 'jesus', 'reciprocity', 'spiritual'],
@@ -252,11 +252,11 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Acts 2:44-45": {
         tags: ['nt', 'freely_giving'],
-        notes: "The 'all rights reserved' attitude is opposite that of the early church.",
+        notes: "The 'all rights reserved' attitude is the opposite of that of the early church.",
     },
     "Acts 4:32-35": {
         tags: ['nt', 'freely_giving', 'support', 'provision'],
-        notes: "The 'all rights reserved' attitude is opposite that of the early church.",
+        notes: "The 'all rights reserved' attitude is the opposite of that of the early church.",
     },
     "Acts 5:2-3": {
         tags: ['nt', 'greed'],
@@ -336,7 +336,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Cor 9:12": {
         tags: ['vip', 'nt', 'paul', 'rights', 'reciprocity'],
-        notes: "Paul explains that the right to support is not neutral, it can hinder the gospel depending on how it is exercised.",
+        notes: "Paul explains that the right to support is not neutral; it can hinder the gospel depending on how it is exercised.",
     },
     "1 Cor 9:13-14": {
         tags: ['nt', 'paul', 'support', 'provision'],
@@ -348,7 +348,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Cor 9:17-18": {
         tags: ['nt', 'paul', 'rights', 'freely_giving', 'provision'],
-        notes: "Paul's ministry is not voluntary, rather he has a responsibility to steward what God has entrusted to him. Rather than receive a worldly reward, he preaches free of charge, as otherwise he would be abusing his authority (\"not use up my rights\" is better translated as \"not abuse my authority\").",
+        notes: "Paul's ministry is not voluntary; rather he has a responsibility to steward what God has entrusted to him. Rather than receive a worldly reward, he preaches free of charge, as otherwise he would be abusing his authority (\"not use up my rights\" is better translated as \"not abuse my authority\").",
     },
     "1 Cor 10:23": {
         tags: ['nt', 'paul', 'rights'],
@@ -496,7 +496,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Pet 4:10-11": {
         tags: ['nt', 'freely_giving', 'spiritual'],
-        notes: "Ministry is spiritual in nature, such gifts have been freely given to us by God, and are to be used to serve others.",
+        notes: "Ministry is spiritual in nature; such gifts have been freely given to us by God, and are to be used to serve others.",
     },
     "1 Pet 5:2": {
         tags: ['nt', 'reciprocity', 'greed'],
@@ -512,7 +512,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "2 Pet 3:16": {
         tags: ['nt', 'rights'],
-        notes: "The apostles had to deal with people manipulating their words. But they dealt with this through speach, rebuking such people. We should do the same rather than threaten legal consequences with copyright.",
+        notes: "The apostles had to deal with people manipulating their words. But they dealt with this through speech, rebuking such people. We should do the same rather than threaten legal consequences with copyright.",
     },
     "3 John 1:5-8": {
         tags: ['vip', 'nt', 'support', 'freely_giving'],
