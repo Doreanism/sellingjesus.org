@@ -39,13 +39,18 @@ div.scripture-page
 
 <script lang='ts' setup>
 
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch, inject } from 'vue'
 import { PassageReference, books_ordered } from '@gracious.tech/fetch-client'
 
 import PassageTag from './_comp/PassageTag.vue'
 import ScripturePassage from './_comp/ScripturePassage.vue'
 
 import {passages, get_passage, tags, tag_groups } from './_comp/passages'
+
+import type {BibleEnhancer} from '@gracious.tech/fetch-enhancer'
+
+
+const enhancer = inject<BibleEnhancer>('enhancer')
 
 
 // Read initial filter from URL
@@ -67,6 +72,17 @@ watch(selected_tag, (newTag) => {
         url.searchParams.delete('filter')
     }
     history.replaceState({}, '', url.toString())
+
+    // Need to redetect references when filter changes
+    // NOTE VitePress seems to have a bug where page not mounted yet
+    //      on first load during dev,
+    //      and nextTick didn't work, so resorting to setTimeout
+    setTimeout(() => {
+        const doc:HTMLElement|null = document.querySelector('.VPDoc > .container > .content')
+        if (doc && enhancer){
+            enhancer.discover_bible_references(doc)
+        }
+    }, 1)
 })
 
 // Computed: Filter passages by selected tag
