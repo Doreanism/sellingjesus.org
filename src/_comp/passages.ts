@@ -156,19 +156,15 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Matt 9:37-38": {
         tags: ['nt', 'jesus', 'provision'],
-        notes: "Later references to workers deserving provision (Matt 10:10) must be read in the context of the Lord being the provider, not the recipients of ministry.",
+        notes: "The later reference to workers deserving provision (Matt 10:10) must be read in the context of the Lord being the provider, not the recipients of ministry.",
     },
     "Matt 10:7-8": {
         tags: ['vip', 'nt', 'jesus', 'freely_giving', 'spiritual'],
         notes: "Jesus commanded his disciples to freely give their ministry, which here explicitly includes preaching and miracles.",
     },
-    "Matt 10:9-10": {
+    "Matt 10:9-14": {
         tags: ['nt', 'jesus', 'support', 'provision'],
-        notes: "When preaching to existing followers of Yahweh, the disciples were to expect to be provided for and so should not take their own provisions.",
-    },
-    "Matt 10:11-14": {
-        tags: ['nt', 'jesus', 'support'],
-        notes: "The disciples were to accept the hospitality of those they served as provision from their employer (God, see Matt 9:38).",
+        notes: "The disciples were to expect hospitality from those they served as God's way of providing for his workers (Matt 9:38), and so need not bring their own provisions.",
     },
     "Matt 15:3-6": {
         tags: ['nt', 'jesus', 'rights'],
@@ -188,19 +184,19 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Mark 6:7-11": {
         tags: ['nt', 'jesus', 'support', 'provision'],
-        notes: "",
+        notes: "The disciples were to expect hospitality from those they served as God's way of providing for his workers (Matt 9:38), and so need not bring their own provisions.",
     },
-    "Mark 10:22": {
+    "Mark 10:21-22": {
         tags: ['nt', 'jesus', 'rights'],
-        notes: "",
+        notes: "People who sell ministry are not being told to sell everything they own, but to merely rely on donations rather than sales. Yet they still often respond this way or worse.",
     },
     "Mark 11:15-17": {
         tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "Jesus notably drives out both buyers and sellers, meaning it was the practice of commerce itself that was his concern, not any exploitative practices that may have been going on.",
     },
     "Luke 6:29-30": {
         tags: ['nt', 'jesus', 'freely_giving', 'rights'],
-        notes: "",
+        notes: "If we are not to demand back what is taken from us, how much more should we not demand back resources that are merely copied and not even taken away.",
     },
     "Luke 8:1-3": {
         tags: ['nt', 'jesus', 'support'],
@@ -208,15 +204,15 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Luke 9:1-5": {
         tags: ['nt', 'jesus', 'support', 'provision'],
-        notes: "",
+        notes: "The disciples were to expect hospitality from those they served as God's way of providing for his workers (Luke 10:2), and so need not bring their own provisions.",
     },
     "Luke 9:49-50": {
         tags: ['nt', 'jesus', 'rights'],
-        notes: "",
+        notes: "Christian ministries will often stop people from sharing their resources, or even threaten to sue them, in direct contrast to the behavior Jesus encourages here.",
     },
     "Luke 10:2-7": {
         tags: ['nt', 'jesus', 'support', 'reciprocity', 'provision'],
-        notes: "",
+        notes: "The disciples were to expect hospitality from those they served as God's way of providing for his workers, and so need not bring their own provisions. But they were not to take advantage of this; they were to stay at the same house in each village rather than receive provision from everyone they ministered to.",
     },
     "Luke 12:42-44": {
         tags: ['nt', 'jesus', 'provision'],
@@ -224,23 +220,23 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Luke 17:10": {
         tags: ['nt', 'jesus', 'rights'],
-        notes: "",
+        notes: "Claiming personal ownership of ministry resources suggests we are not servants but our own masters.",
     },
     "Luke 19:45-46": {
         tags: ['nt', 'jesus', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "There is a more detailed account of this same event in Mark 11:15-17.",
     },
     "Luke 20:46-47": {
         tags: ['nt', 'jesus', 'rights'],
-        notes: "",
+        notes: "Many authors unashamedly insist on being credited for their work and some even threaten legal action for copying without attribution.",
     },
     "Luke 22:35-36": {
         tags: ['nt', 'jesus', 'support', 'provision'],
-        notes: "",
+        notes: "In contrast with their previous experiences, the disciples were to expect increased opposition to the gospel during the next period of their ministry. And so were to bring their own provisions for when they could not find anyone who would welcome them.",
     },
     "John 2:14-16": {
         tags: ['vip', 'nt', 'jesus', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "While many commentators guess what Jesus was offended by from external evidence, the internal evidence is straightforward: \"How dare you turn My Father’s house into a marketplace!\"",
     },
     "John 7:37": {
         tags: ['nt', 'jesus', 'freely_giving'],
@@ -248,7 +244,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "John 10:11-13": {
         tags: ['nt', 'jesus', 'reciprocity'],
-        notes: "",
+        notes: "False shepherds may appear committed, but when serving becomes costly rather than advantageous, they withdraw.",
     },
     "John 12:4-6": {
         tags: ['nt', 'greed'],
@@ -256,11 +252,11 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Acts 2:44-45": {
         tags: ['nt', 'freely_giving'],
-        notes: "",
+        notes: "The 'all rights reserved' attitude is opposite that of the early church.",
     },
     "Acts 4:32-35": {
         tags: ['nt', 'freely_giving', 'support', 'provision'],
-        notes: "",
+        notes: "The 'all rights reserved' attitude is opposite that of the early church.",
     },
     "Acts 5:2-3": {
         tags: ['nt', 'greed'],
@@ -268,15 +264,15 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Acts 8:18-21": {
         tags: ['vip', 'nt', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "Simon regarded the power to give the Holy Spirit as something that can be sold. The purchase or sale of any spiritual thing freely given by God constitutes a sin of like character.",
     },
     "Acts 16:14-15": {
         tags: ['nt', 'paul', 'support'],
-        notes: "",
+        notes: "Paul was willing to accept support when he was sure it wouldn't call his sincerity into question, such as only after they showed signs of Christian maturity.",
     },
     "Acts 18:1-5": {
         tags: ['nt', 'paul', 'support'],
-        notes: "",
+        notes: "Paul worked to support himself when necessary, but resumed full-time ministry when support from others was available.",
     },
     "Acts 19:25-27": {
         tags: ['nt', 'greed'],
@@ -284,7 +280,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Acts 20:33-35": {
         tags: ['nt', 'paul', 'freely_giving', 'reciprocity', 'rights'],
-        notes: "",
+        notes: "Paul did not seek support when there was a chance it might raise questions about his sincerity.",
     },
     "Rom 12:13": {
         tags: ['nt', 'paul', 'support'],
@@ -294,9 +290,9 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['nt', 'paul', 'support'],
         notes: "",
     },
-    "Rom 15:25-29": {
+    "Rom 15:25-27": {
         tags: ['nt', 'paul', 'support'],
-        notes: "",
+        notes: "Paul points out the appropriateness of supporting those who have shared spiritual blessings, in this case the Jews to the Gentiles.",
     },
     "Rom 16:2": {
         tags: ['nt', 'paul', 'support'],
@@ -312,7 +308,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Cor 2:12-13": {
         tags: ['vip', 'nt', 'paul', 'freely_giving', 'spiritual'],
-        notes: "",
+        notes: "All forms of ministry are spiritual in nature, and are the product of spiritual truths that have been freely given to us.",
     },
     "1 Cor 4:1-2": {
         tags: ['nt', 'paul', 'provision'],
@@ -320,7 +316,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Cor 4:7": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Most authors would like to say that the Spirit has guided them in their work, yet then still insist that it is their own and does not need to be freely shared.",
     },
     "1 Cor 4:11-12": {
         tags: ['nt', 'paul', 'provision'],
@@ -328,47 +324,47 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Cor 6:1-7": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Paul says it is better for the gospel when we don’t bring grievances before secular authorities. Yet many wish to keep this option open by holding onto copyright privileges.",
     },
     "1 Cor 6:12-15": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "The word for 'permissible' here can also be translated as a 'right,' similar to the 'right' to support in 1 Cor 9.",
     },
     "1 Cor 8:9": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "The word translated 'freedom' here is the same word translated as 'right' in reference to support in 1 Cor 9.",
     },
     "1 Cor 9:12": {
         tags: ['vip', 'nt', 'paul', 'rights', 'reciprocity'],
-        notes: "",
+        notes: "Paul explains that the right to support is not neutral, it can hinder the gospel depending on how it is exercised.",
     },
     "1 Cor 9:13-14": {
         tags: ['nt', 'paul', 'support', 'provision'],
-        notes: "",
+        notes: "Paul explains that the way ministry was funded in the priestly system is the same way it should be funded today, by receiving provisions that are offered to God in worship.",
     },
     "1 Cor 9:15": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Paul demonstrates how he gives up his 'rights' as a Christian to set an example for the Corinthians to follow in giving up their 'right' to eat food when it has been sacrificed to an idol.",
     },
     "1 Cor 9:17-18": {
-        tags: ['nt', 'paul', 'rights', 'freely_giving'],
-        notes: "",
+        tags: ['nt', 'paul', 'rights', 'freely_giving', 'provision'],
+        notes: "Paul's ministry is not voluntary, rather he has a responsibility to steward what God has entrusted to him. Rather than receive a worldly reward, he preaches free of charge, as otherwise he would be abusing his authority (\"not use up my rights\" is better translated as \"not abuse my authority\").",
     },
     "1 Cor 10:23": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "The word for 'permissible' here has a similar meaning to the word for the 'right' to support in 1 Cor 9.",
     },
     "1 Cor 11:1": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "While many commentators insist we don't have to give up our rights like Paul does in 1 Cor 9, Paul explicitly calls the Corinthians to follow his example.",
     },
     "1 Cor 12:7": {
         tags: ['nt', 'paul', 'freely_giving', 'spiritual'],
-        notes: "",
+        notes: "Spiritual insights are supposed to be shared, not commercialized.",
     },
     "1 Cor 16:1-2": {
         tags: ['nt', 'paul', 'support'],
-        notes: "",
+        notes: "This was to help poor believers in Jerusalem.",
     },
     "1 Cor 16:6": {
         tags: ['nt', 'paul', 'support'],
@@ -384,7 +380,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "2 Cor 2:17": {
         tags: ['vip', 'nt', 'paul', 'reciprocity', 'spiritual'],
-        notes: "",
+        notes: "The phrase \"for profit\" is not in the Greek, and \"peddle\" simply means \"to sell\", so a translation that is less prone to misinterpretation would be: \"For we are not like so many others, who sell the word of God.\"",
     },
     "2 Cor 5:10": {
         tags: ['nt', 'paul', 'provision'],
@@ -396,7 +392,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "2 Cor 9:7": {
         tags: ['nt', 'paul', 'support'],
-        notes: "",
+        notes: "While this refers to supporting poor Christians in Jerusalem, the principles are still relevant to all forms of giving.",
     },
     "2 Cor 9:11-12": {
         tags: ['nt', 'paul', 'support'],
@@ -404,11 +400,11 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "2 Cor 11:7-9": {
         tags: ['vip', 'nt', 'paul', 'freely_giving', 'rights', 'support'],
-        notes: "",
+        notes: "Paul reveals that he was supported by other churches while preaching 'free of charge' to the Corinthians, to avoid burdening them. This was a wisdom decision based on the circumstances of that church at the time.",
     },
     "2 Cor 12:13-17": {
         tags: ['nt', 'paul', 'freely_giving', 'rights'],
-        notes: "",
+        notes: "Paul would not receive any support from the Corinthians as long as it would in any way burden them.",
     },
     "Gal 6:6": {
         tags: ['nt', 'paul', 'support'],
@@ -416,7 +412,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Phil 1:17-18": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Many people keep copyright restrictions on their works out of fear someone else may profit from them, but Paul calls us to rejoice when Christ is preached, regardless of the motives.",
     },
     "Phil 3:19": {
         tags: ['nt', 'paul', 'greed'],
@@ -424,23 +420,23 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "Phil 4:10-14": {
         tags: ['nt', 'paul', 'support', 'provision'],
-        notes: "",
+        notes: "Paul commends the Philippians for supporting him, but does so in reference to God's provision.",
     },
     "Phil 4:15-18": {
         tags: ['vip', 'nt', 'paul', 'support'],
-        notes: "",
+        notes: "Paul interprets the support of the Philippians as an act of worship, and notably doesn't thank them directly himself.",
     },
     "1 Thes 2:3-5": {
-        tags: ['nt', 'paul', 'freely_giving'],
+        tags: ['nt', 'paul', 'greed'],
         notes: "",
     },
     "1 Thes 2:9": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Paul would not receive any kind of support when it would burden those he served, especially when they were not yet mature Christians.",
     },
     "2 Thes 3:6-10": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Paul would not receive any kind of support when it would burden those he served.",
     },
     "1 Tim 3:1-3": {
         tags: ['nt', 'paul', 'greed'],
@@ -452,11 +448,11 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Tim 5:17-18": {
         tags: ['nt', 'paul', 'support'],
-        notes: "",
+        notes: "Honor is clearly financial in application, given the context of financially honoring widows prior to it, and the subsequent quotes (ox, wages).",
     },
     "1 Tim 6:3-8": {
         tags: ['nt', 'paul', 'reciprocity', 'provision'],
-        notes: "",
+        notes: "Paul warns Timothy about false teachers who seek to financially gain from their ministry beyond their actual needs.",
     },
     "1 Tim 6:10": {
         tags: ['nt', 'paul', 'greed'],
@@ -464,7 +460,7 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "2 Tim 2:9": {
         tags: ['nt', 'paul', 'rights'],
-        notes: "",
+        notes: "Christian publishers try to use copyright to chain the Word, but it is illegitimate.",
     },
     "2 Tim 3:2-5": {
         tags: ['nt', 'paul', 'greed'],
@@ -475,8 +471,8 @@ const passages_raw: Record<string, PassageRaw> = {
         notes: "",
     },
     "Titus 1:10-11": {
-        tags: ['nt', 'paul', 'reciprocity'],
-        notes: "",
+        tags: ['nt', 'paul', 'reciprocity', 'greed'],
+        notes: "False teachers seek to profit from their work in ways Paul here describes as 'dishonorable.'",
     },
     "Titus 3:13": {
         tags: ['nt', 'paul', 'support'],
@@ -488,14 +484,10 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "James 2:1-4": {
         tags: ['nt', 'reciprocity'],
-        notes: "",
+        notes: "The poor are frequently excluded from benefiting from Christian resources and attending Christian events due to paywalls.",
     },
     "James 2:5": {
         tags: ['nt', 'provision'],
-        notes: "",
-    },
-    "James 2:8-9": {
-        tags: ['nt', 'reciprocity'],
         notes: "",
     },
     "James 3:1": {
@@ -504,11 +496,11 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "1 Pet 4:10-11": {
         tags: ['nt', 'freely_giving', 'spiritual'],
-        notes: "",
+        notes: "Ministry is spiritual in nature, such gifts have been freely given to us by God, and are to be used to serve others.",
     },
     "1 Pet 5:2": {
-        tags: ['nt', 'greed', 'freely_giving'],
-        notes: "",
+        tags: ['nt', 'reciprocity', 'greed'],
+        notes: "The words translated as \"greed\" here have the same base as those translated as \"dishonorable gain\" in Titus 1:11.",
     },
     "2 Pet 2:2-3": {
         tags: ['nt', 'greed'],
@@ -516,23 +508,23 @@ const passages_raw: Record<string, PassageRaw> = {
     },
     "2 Pet 2:15": {
         tags: ['nt', 'reciprocity'],
-        notes: "",
+        notes: "Balaam is condemned as a false prophet, yet he only said what God wanted him to say. His sin was prophesying in exchange for payment.",
     },
     "2 Pet 3:16": {
         tags: ['nt', 'rights'],
-        notes: "",
+        notes: "The apostles had to deal with people manipulating their words. But they dealt with this through speach, rebuking such people. We should do the same rather than threaten legal consequences with copyright.",
     },
     "3 John 1:5-8": {
         tags: ['vip', 'nt', 'support', 'freely_giving'],
-        notes: "",
+        notes: "Gospel workers accept nothing from people yet to believe, and should be supported by those who do believe. Supporting such people makes us co-laborers ('fellow workers') in the ministry.",
     },
     "3 John 1:9-10": {
         tags: ['nt', 'support'],
-        notes: "",
+        notes: "It can be sinful to refuse to support gospel workers who teach faithfully.",
     },
     "Jude 1:11": {
         tags: ['nt', 'reciprocity'],
-        notes: "",
+        notes: "Balaam is condemned as a false prophet, yet he only said what God wanted him to say. His sin was prophesying in exchange for payment.",
     },
     "Rev 21:6": {
         tags: ['nt', 'jesus', 'freely_giving'],
