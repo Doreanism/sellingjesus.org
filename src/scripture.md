@@ -1,6 +1,7 @@
 ---
 aside: false
-titleTemplate: What does Scripture say about selling Jesus?
+title: What does Scripture say about selling Jesus?
+titleTemplate: false
 description: A list of passages relevant for confronting the commercialization of Christianity.
 image: /_assets/social_scripture.jpg
 ---
