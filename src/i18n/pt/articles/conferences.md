@@ -22,7 +22,7 @@ Indo direto ao ponto: creio que conferências cristãs devem ser gratuitas. Em c
 É importante definirmos tanto “conferências cristãs” quanto “gratuitas”.
 
 
-### "Conferências Cristãs"
+### "Conferências cristãs"
 
 Por “conferências cristãs”, quero dizer encontros em que a atividade principal em destaque é a proclamação da Palavra de Deus. Não me refiro a conferências sobre assuntos não religiosos (negócios, educação domiciliar, etc.) que sejam especialmente para cristãos. Estou tratando de uma categoria de eventos que muitas vezes são rotulados como “conferências do evangelho”.
 
@@ -75,7 +75,7 @@ Acaso a proibição de parcialidade de Tiago não proíbe claramente a venda de 
 Há várias objeções que se poderia levantar. Algumas respondem ao uso das passagens acima; outras vêm de uma perspectiva pragmática.
 
 
-### “Conferências Cristãs Não São Culto Religioso”
+### “Conferências cristãs não são culto religioso”
 
 __Tiago 2 trata de cultos da igreja, não de conferências. Seria pecado cobrar pelo acesso a um culto, mas conferências não são cultos.__
 
@@ -84,7 +84,7 @@ Tiago 2:2-4 dá o exemplo de cultos como uma aplicação de Tiago 2:1 (“não f
 É correto fazer distinções entre culto religioso e outros ambientes de ensino cristão, mas essa distinção não tem nenhuma relação com o pecado de cobrar pelo acesso. Paulo não disse que é aceitável vender a palavra desde que seja fora de um culto da igreja.
 
 
-### “Conferências Cristãs Não São Obrigatórias”
+### “Conferências cristãs não são obrigatórias”
 
 __Ninguém é obrigado a ir a uma conferência. Não é como o culto, ao qual Deus nos requer que compareçamos.__
 
@@ -95,14 +95,14 @@ Além disso, os cristãos são obrigados a buscar a verdade mesmo fora dos culto
 Adicionalmente, alguém poderia fazer o mesmo argumento para justificar cobrar por cultos, dizendo: “ninguém está obrigando você a vir para a minha igreja; você pode ir a outra igreja.” Pode haver liberdade de escolha para os que seriam ensinados, mas isso não implica licença para os professores cobrarem.
 
 
-### “Conferências Cristãs Muitas Vezes Disponibilizam as Mensagens Online”
+### “Conferências cristãs muitas vezes disponibilizam as mensagens online”
 
 __Muitas conferências transmitem online ou disponibilizam o material depois gratuitamente. Elas não estão cobrando pela mensagem.__
 
 Tiago 2 proíbe a parcialidade baseada em finanças até mesmo na acomodação dos assentos. Dizer ao que está disposto a pagar, “você sente-se aqui”, e dizer ao que não está disposto a pagar, “você sente-se em casa”, não vos tornastes juízes de intenções malignas?
 
 
-### “Conferências Cristãs Não Praticam Mais Parcialidade do que Outros Meios de Ensino”
+### “Conferências cristãs não praticam mais parcialidade do que outros meios de ensino”
 
 __Considere um livro. Pode-se oferecer o conteúdo gratuitamente, mas cobrar pelo papel e pela tinta. Em que isso difere de cobrar pelo assento enquanto se transmite online gratuitamente? Quem paga tem uma experiência premium.__
 
@@ -119,7 +119,7 @@ Então, o que torna cobrar por um ingresso diferente de cobrar por um livro fís
 É claro que alguém pode disponibilizar uma conferência apenas online—nesse ponto, contornou-se a preocupação com a parcialidade. Além disso, administradores de locais terceirizados podem cobrar dos participantes pelo acesso a esse espaço, mas seria a parcialidade baseada em finanças deles, e não do anfitrião.
 
 
-### “Conferências Cristãs Não Oferecem Um Falso Evangelho”
+### “Conferências cristãs não oferecem um falso evangelho”
 
 __2 Coríntios 2:17 trata de corromper a mensagem, não de vendê-la.__
 
@@ -128,7 +128,7 @@ Há traduções de 2 Coríntios 2:17 que se referem a “corromper” a palavra 
 Além disso, quem vende a palavra implicitamente corrompe a mensagem porque um meio corrupto (que não é gratuito) carrega a mensagem (que é uma oferta gratuita).
 
 
-### “Conferências Cristãs Não Ensinam Apenas o Evangelho”
+### “Conferências cristãs não ensinam apenas o evangelho”
 
 __Talvez seja errado cobrar pelo evangelho, mas conferências cristãs muitas vezes ensinam sobre outros temas. Seria aceitável cobrar por esses.__
 
@@ -137,49 +137,49 @@ Paulo proíbe vender a palavra. Tiago fala de manter a fé. Nenhum desses versí
 Ao mesmo tempo, todo ensino bíblico, corretamente entendido, se relaciona ao evangelho (Lucas 24:44-45; 1 Coríntios 2:2). Assim, nenhum ensino cristão deve ser tão ausente do evangelho que possa ser chamado de sem evangelho. Se o seu ensino está desprovido do evangelho, vá em frente e cobre, mas não o chame de ensino cristão.
 
 
-### “Conferências Cristãs São Para Cristãos”
+### “Conferências cristãs são para cristãos”
 
 __Pode ser um problema cobrar dos incrédulos para ouvirem o ensino cristão, mas, se alguém já tem o evangelho, então você não está cobrando pelo evangelho, e sim por verdades adicionais.__
 
 O cristão igualmente necessita do evangelho (Romanos 1:15). Considere que muitos daqueles para os quais Jesus enviou os doze discípulos [já eram regenerados](https://sellingjesus.org/articles/freely-give-today#objection-3-freely-give-only-applies-to-missions-to-the-lost-not-teaching-the-saved), e ainda assim precisavam ouvir a mensagem do reino, e ele ainda ordenou “de graça dai” (Mateus 10:8).
 
 
-### “Conferências Cristãs Oferecem Algo de Valor”
+### “Conferências cristãs oferecem algo de valor”
 
 __Se o ensino é verdadeiro, ele tem valor, e é razoável cobrar por isso.__
 
 O ensino cristão não é apenas valioso, é inestimável. Além disso, ele pertence a Deus. Ele é quem define seu preço, e o disponibilizou sem custo (Isaías 55:1)!
 
 
-### “Conferências Cristãs Frequentemente Têm Programas de Bolsas”
+### “Conferências cristãs frequentemente têm programas de bolsas”
 
 __Se você realmente precisa, as conferências muitas vezes lhe darão um ingresso grátis.__
 
 Isso ainda é parcialidade baseada em finanças. Quando a bolsa é baseada em necessidade, os abastados ainda só podem participar se estiverem dispostos a dar algum benefício financeiro ao anfitrião. E os que têm menos são obrigados a passar por etapas especiais e revelar sua situação financeira.
 
 
-### “Conferências Cristãs Muitas Vezes Só Cobram Para Cobrir Custos”
+### “Conferências cristãs muitas vezes só cobram para cobrir custos”
 
 __Seria um problema se conferências cristãs vendessem ingressos para lucrar, mas, se vendem ingressos para cobrir custos, tudo bem.__
 
 Embora algumas traduções de 2 Coríntios 2:17 digam “vender... para lucro”, [a palavra grega “καπηλεύω” refere-se a vender em geral](https://sellingjesus.org/articles/commercializing-gods-word), não apenas ao tipo de venda que gera lucro. Além disso, isso nada resolve quanto ao problema dos motivos ulteriores. Dar ensino a uma pessoa e não a outra, com base no benefício recebido, é agir com parcialidade para com elas.
 
 
-### “Conferências Cristãs Podem Cobrar Sem Motivos Gananciosos”
+### “Conferências cristãs podem cobrar sem motivos gananciosos”
 
 __Você diz que organizadores de conferências que cobram têm um motivo financeiro ulterior, mas isso não é afirmar que você pode ver o coração deles? Muitos só querem que o evangelho avance o máximo possível, e julgaram que cobrar ingressos é a melhor forma de alcançar isso porque garantirá que o trabalho seja suficientemente financiado.__
 
 Embora eu use a palavra “ulterior”, minha afirmação não é tanto sobre o coração quanto sobre os motivos declarados. Se a pessoa A e a pessoa B desejam ambas participar da conferência, e o organizador admite uma mas não a outra, deve haver alguma razão para isso. Se a razão declarada é que uma estava disposta a pagar pelo ingresso e a outra não, podemos avaliar com segurança que se trata de um motivo adicional além do desejo de que outros ouçam o ensino. Pode-se argumentar que mais pessoas ouvirão o ensino dessa forma, assumindo que as finanças sirvam para possibilitar mais ministério. Mas a preocupação de Tiago é quais pessoas o ouvirão.
 
 
-### “Conferências Cristãs Precisam Sustentar os Trabalhadores”
+### “Conferências cristãs precisam sustentar os trabalhadores”
 
 __O trabalhador é digno do seu salário. Isso inclui tanto os organizadores quanto os palestrantes da conferência. É preciso cobrar para que sejam pagos.__
 
 Concordo que palestrantes e organizadores devem ser sustentados no trabalho que estão fazendo. Isso pode acontecer de muitas formas que não sejam a venda de ingressos. Ou seja, há muitas maneiras para o povo de Deus exercer generosidade e reunir seus recursos financeiros. O mais simples deles seria o mecanismo que já existe nas ofertas semanais da igreja. Muitas igrejas têm amplo espaço em seus orçamentos para promover conferências gratuitas sem sequer buscar ajuda externa.
 
 
-### “Conferências Cristãs Não Aconteceriam se Não Cobrassem”
+### “Conferências cristãs não aconteceriam se não cobrassem”
 
 __Essas conferências são um empreendimento substancial e seria impossível financiá-las se não cobrassem. Como você espera que elas aconteçam de outra forma?__
 

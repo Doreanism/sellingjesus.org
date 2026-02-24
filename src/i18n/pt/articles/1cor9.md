@@ -9,12 +9,12 @@ date: 2024-02-06T00:00:00.000Z
 ---
 
 
-1 Coríntios 9 é comumente sustentado como prova de que é ok vender ministério, já que nele Paulo argumenta vigorosamente a favor do direito ao sustento material no ministério. E é verdade. Paulo _de fato_ fundamenta minuciosamente o direito ao sustento material com numerosos exemplos, referência à Lei e a declaração conclusiva de que "os que anunciam o evangelho vivam do evangelho" (9:14).
+1 Coríntios 9 é comumente sustentado como prova de que é correto vender ministério, já que nele Paulo argumenta vigorosamente a favor do direito ao sustento material no ministério. E é verdade. Paulo _de fato_ fundamenta minuciosamente o direito ao sustento material com numerosos exemplos, referência à Lei e a declaração conclusiva de que "os que anunciam o evangelho vivam do evangelho" (9:14).
 
 No entanto, há dois grandes erros que muitos intérpretes de 1 Coríntios 9 cometem:
 
- 1. Presumir que o direito ao sustento material justifica _vender_ o ministério
- 2. Presumir que o direito ao sustento material é o ponto do capítulo
+ 1. Presumir que o direito ao sustento material justifica _vender_ o ministério;
+ 2. Presumir que o direito ao sustento material é o ponto do capítulo.
 
 Muitos têm lido 1 Coríntios 9 de cabeça para baixo. Paulo não está elevando o direito ao sustento material para endossar seu uso, mas para que seja ainda mais dramático quando ele mesmo o _renuncia_ ("Mas nós não usamos desse direito"!) Ele chega a fazê-lo duas vezes para sublinhar o ponto.
 
@@ -27,7 +27,7 @@ Embora Paulo reconheça que temos o "direito" de comer o que quisermos, ele admo
 
 Os seguintes termos são usados no capítulo 9 sem muita clarificação de Paulo quanto ao que se referem, por isso é importante lê-los no contexto geral da carta:
 
- * __"livre" / ἐλεύθερος__ &mdash; Esta palavra grega para "livre" refere-se à liberdade, ao passo que mais adiante, em 9:18, ἀδάπανον é usado para "de graça" em termos de pagamento. Paulo usa ἐλεύθερος anteriormente na carta para referir-se a escravos livres de seus senhores (7:21) e a uma mulher livre para casar (7:39). Assim, quando usado em 9:1 e 9:19, Paulo não está se referindo à sua salvação, mas à sua liberdade de obrigação para com outros, liberdade para fazer o que quiser.[^free] Paulo mais tarde deixará claro que, embora possa ser livre dos outros, não é livre do Senhor (9:17).
+ * __"livre" / ἐλεύθερος__ &mdash; Esta palavra grega para "livre" refere-se à liberdade, ao passo que mais adiante, em 9:18, *ἀδάπανον* é usado para "de graça" em termos de pagamento. Paulo usa *ἐλεύθερος* anteriormente na carta para referir-se a escravos livres de seus senhores (7:21) e a uma mulher livre para casar (7:39). Assim, quando usado em 9:1 e 9:19, Paulo não está se referindo à sua salvação, mas à sua liberdade de obrigação para com outros, liberdade para fazer o que quiser.[^free] Paulo mais tarde deixará claro que, embora possa ser livre dos outros, não é livre do Senhor (9:17).
 
  * __"direito" / ἐξουσία__ &mdash; Esta palavra é mais frequentemente traduzida no Novo Testamento como "autoridade", algo a ser administrado, e não algum tipo de direito moral inato. Criticar o conceito de "direitos" faz parte do propósito da carta de Paulo. Em capítulos anteriores, ele deixa claro que exercer o próprio "direito/autoridade" nem sempre é justificado e pode ser prejudicial ao evangelho, no que diz respeito à imoralidade sexual (6:12) e às comidas sacrificadas a ídolos (8:9).
 
@@ -105,7 +105,7 @@ Essa nuance é facilmente observada quando consideramos outros temas que Paulo t
 
 E assim também:
 
- - O direito ao sustento material
+ - O direito ao sustento material.
 
 É necessário [consultar o restante das Escrituras](https://thedoreanprinciple.org/) para desenvolver melhor como se parece um sustento apropriado ou inapropriado, mas já podemos ver o padrão emergindo desta passagem. Segundo o exemplo de Paulo, que ele espera que seus leitores sigam, o ministério deve ser gratuito e não deve ser impedido por qualquer exigência de sustento material.
 
@@ -127,7 +127,7 @@ Portanto, todas essas outras interpretações se mostram inadequadas e não expl
 
 Há uma forma de sustento material conspicuamente ausente neste capítulo. Paulo cobre uma variedade de ocupações: apóstolos, soldados, vinhateiros, pastores, bois, lavradores, debulhadores, semeadores e sacerdotes. Contudo, a ocupação comum de um mercador no mercado está ausente — e por boa razão.
 
-Todos os exemplos que Paulo dá são de pessoas que recebem sustento _indireto_, por meio de hospitalidade, salários de um senhor ou participação no que é produzido. Isso contrasta com um mercador que troca algo diretamente por dinheiro. Volte por todo o capítulo e notarás que Paulo nem sequer usa as palavras "dinheiro" ou "pagamento"!
+Todos os exemplos que Paulo dá são de pessoas que recebem sustento _indireto_, por meio de hospitalidade, salários de um senhor ou participação no que é produzido. Isso contrasta com um mercador que troca algo diretamente por dinheiro. Volte por todo o capítulo e notarás que Paulo nem sequer usa as palavras "dinheiro" ou "pagamento".
 
 Trocar diretamente coisas espirituais por dinheiro é exatamente o tipo de financiamento que "põe impedimento ao evangelho de Cristo". Vender o ministério é negar às pessoas o acesso a ele a menos que paguem. É também o tipo de financiamento explicitamente condenado por Miqueias (Mq 3:11) e por Paulo em sua segunda carta aos coríntios (2 Co 2:17).
 

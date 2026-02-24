@@ -14,10 +14,10 @@ Em 1 Coríntios 9, Paulo usa repetidamente a palavra grega “exousia” (ἐξ�
 | Ocorrências de “exousia” em 1 Co 9 (BLB) | Explicação
 | -     | -
 | __v4__ Não temos autoridade para comer e beber? | Comer e beber, neste contexto, é receber sustento material; Paulo alude à discussão sobre comer no capítulo anterior.
-| __v5__ Não temos autoridade para levar conosco uma crente como esposa, assim como também os outros apóstolos, e os irmãos do Senhor, e Cefas? | Sustentar uma família enquanto se plantam igrejas requer sustento material
-| __v6__ Ou apenas eu e Barnabé não temos autoridade para não trabalhar? | Cessar dos trabalhos seculares requer sustento material
-| __v12__ Se outros exercem autoridade sobre vós, porventura não mais nós? Mas não usamos desse direito. Antes, suportamos tudo, para não pormos obstáculo ao evangelho de Cristo. | O sustento material viria daqueles cristãos que se beneficiam do ministério de Paulo
-| __v18__ Qual, pois, é a minha recompensa? Que, ao pregar o evangelho, eu o ofereça gratuitamente, para não esgotar o meu direito no evangelho. | Ao pregar o evangelho gratuitamente, Paulo não recebe coisas materiais em troca
+| __v5__ Não temos autoridade para levar conosco uma crente como esposa, assim como também os outros apóstolos, e os irmãos do Senhor, e Cefas? | Sustentar uma família enquanto se plantam igrejas requer sustento material.
+| __v6__ Ou apenas eu e Barnabé não temos autoridade para não trabalhar? | Cessar dos trabalhos seculares requer sustento material.
+| __v12__ Se outros exercem autoridade sobre vós, porventura não mais nós? Mas não usamos desse direito. Antes, suportamos tudo, para não pormos obstáculo ao evangelho de Cristo. | O sustento material viria daqueles cristãos que se beneficiam do ministério de Paulo.
+| __v18__ Qual, pois, é a minha recompensa? Que, ao pregar o evangelho, eu o ofereça gratuitamente, para não esgotar o meu direito no evangelho. | Ao pregar o evangelho gratuitamente, Paulo não recebe coisas materiais em troca.
 
 
 De todas as passagens das Escrituras dedicadas ao cruzamento entre dinheiro e ministério, 1 Coríntios 9 é de longe a mais extensa. Naturalmente, quaisquer conclusões interpretativas conduzem a implicações substanciais. Em que medida os destinatários do ministério devem retribuição? Pode um ministro sempre receber sustento material no contexto do ministério?
@@ -30,7 +30,7 @@ __B.__ uma autoridade plenária para receber sustento material, ou
 
 __C.__ uma autoridade limitada para receber sustento material.
 
-O objetivo deste artigo é defender __C__ como o entendimento correto. Apresentarei argumentos para isso em seguida, mas, antes, algumas palavras de esclarecimento.
+O objetivo deste artigo é defender "__C__" como o entendimento correto. Apresentarei argumentos para isso em seguida, mas, antes, algumas palavras de esclarecimento.
 
 __A__: Quando Paulo fala de seu direito, ele não tem em mente principalmente sua reivindicação ao sustento material ou o dever ou pagamento que lhe é devido. Certamente, o fato de que algo lhe é devido é repetidamente afirmado nesta passagem (por exemplo, 1 Co 9:11). Além disso, [isso é claramente declarado em outro lugar nas Escrituras](https://sellingjesus.org/articles/should-preachers-be-paid) (1 Tm 5:18; Gl 6:6). Contudo, minha alegação é que esse não é seu ênfase ao usar a palavra “direito”, como alguém poderia falar de “um direito a um julgamento justo”.
 
@@ -41,11 +41,11 @@ __C__: Quando Paulo fala de seu direito, ele indica uma autoridade limitada para
 Qual, então, é o limite da autoridade de Paulo? Como representante de Cristo, o apóstolo só pode receber sustento material que seja legitimamente oferecido a Cristo. Receber qualquer coisa além disso seria um abuso de sua autoridade. Especificamente, ao pregar gratuitamente (1 Co 9:18; 2 Co 11:7), Paulo rejeita toda reciprocidade que sugeriria que ele deve ser honrado como a fonte do evangelho. Enquanto aceita de bom grado o que é oferecido ao Senhor em gratidão, ele rejeita qualquer troca por sua mensagem.[^1]
 
 
-## “Exousia” Indica Autoridade
+## “Exousia” indica autoridade
 
 “Exousia” indica uma autoridade ou poder de controlar. O Léxico de Bauer (BDAG) dá uma faixa semântica de sete possíveis significados, todos sendo variações de noções de autoridade ou poder, nenhum referindo-se ao estado de algo ser devido, como muitas vezes pensamos na palavra “direito”. Isso não quer dizer que “direito” seja uma tradução ruim; muitas vezes a palavra “direito” indica poder ou autoridade, como em “direito de portar armas”. Porém, quer dizer que “direito” tem o potencial de insinuar um significado não indicado pela palavra “exousia”: algo que é devido por outro, como na frase “direito a um julgamento justo”. Note que direitos vêm em duas variedades: direitos negativos são coisas que não devem ser tiradas (por exemplo, direitos de propriedade) e direitos positivos são coisas que devem ser dadas (por exemplo, direitos de saúde).[^2]
 
-Embora versões bíblicas em inglês frequentemente traduzam “exousia” (ἐξουσία) como “right” em 1 Coríntios 9, na grande maioria das vezes ela é simplesmente traduzida como “authority”. Por exemplo, embora a palavra apareça 102 vezes nas Escrituras, fora de 1 Coríntios 9 e 2 Tessalonicenses 3:9 (que trata do mesmo tema da arrecadação de Paulo), a Berean Literal Bible (BLB) a traduz como “right” apenas uma vez, e a New American Standard Bible (NASB) a traduz como “right” apenas três vezes. Em cada uma dessas ocorrências, a palavra “right” poderia ser substituída por “power”, “authority” ou “access”, e frequentemente o é em outras versões.
+Embora versões bíblicas em inglês frequentemente traduzam “exousia” (ἐξουσία) como “direito” em 1 Coríntios 9, na grande maioria das vezes ela é simplesmente traduzida como “autoridade”. Por exemplo, embora a palavra apareça 102 vezes nas Escrituras, fora de 1 Coríntios 9 e 2 Tessalonicenses 3:9 (que trata do mesmo tema da arrecadação de Paulo), a *Berean Literal Bible* (BLB) a traduz como “direito” apenas uma vez, e a *New American Standard Bible* (NASB) a traduz como “direito” apenas três vezes. Em cada uma dessas ocorrências, a palavra “direito” poderia ser substituída por “poder”, “autoridade” ou “acesso”, e frequentemente o é em outras versões.
 
 
 <table><tbody>
@@ -54,24 +54,24 @@ Embora versões bíblicas em inglês frequentemente traduzam “exousia” (ἐ�
    <td></td>
   </tr>
   <tr>
-   <td>1 Corinthians 8:9</td>
-   <td>Mas tende cuidado, para que, de algum modo, este <strong>direito</strong> vosso não se torne tropeço para os fracos</td>
+   <td>1 Coríntios 8:9</td>
+   <td>Mas tende cuidado, para que, de algum modo, este <strong>direito</strong> vosso não se torne tropeço para os fracos.</td>
   </tr>
   <tr>
    <td><strong>NASB</strong></td>
    <td></td>
   </tr>
   <tr>
-   <td>John 1:12</td>
-   <td>aos quais deu o <strong>direito</strong> de se tornarem filhos de Deus</td>
+   <td>João 1:12</td>
+   <td>aos quais deu o <strong>direito</strong> de se tornarem filhos de Deus.</td>
   </tr>
   <tr>
-   <td>Hebrews 13:10</td>
+   <td>Hebreus 13:10</td>
    <td>Temos um altar do qual os que servem o tabernáculo não têm <strong>direito</strong> de comer.</td>
   </tr>
   <tr>
-   <td>Revelation 22:14</td>
-   <td>terão o <strong>direito</strong> à árvore da vida</td>
+   <td>Apocalipse 22:14</td>
+   <td>terão o <strong>direito</strong> à árvore da vida.</td>
   </tr>
 </tbody></table>
 
@@ -79,7 +79,7 @@ Embora versões bíblicas em inglês frequentemente traduzam “exousia” (ἐ�
 Esses exemplos falam de uma liberdade de acesso, e não de algo que é devido por outra pessoa.
 
 
-## As Analogias de Paulo Indicam uma Autoridade Limitada
+## As analogias de Paulo indicam uma autoridade limitada
 
 Em 1 Coríntios 9, Paulo emprega um conjunto de analogias para descrever seu direito ao sustento material. Em outro lugar, [já analisamos a natureza dessas analogias](https://sellingjesus.org/articles/colabor), mas vale a pena apontar que todas indicam uma autoridade limitada.
 
@@ -98,7 +98,7 @@ O mesmo é verdade para a analogia mais direta: a do sacerdócio.
 Os levitas recebiam dos dízimos e ofertas dados pelo povo em Israel. Como frequentemente indicado em Números 18, “o Senhor é a sua herança” (Dt 18:2). Isto é, eles tinham autoridade para receber contribuições e sacrifícios que eram feitos a Deus. Contudo, isso não era uma autoridade plenária para receber qualquer coisa que lhes fosse oferecida no contexto do ministério. Se alguém oferecesse sacrifício diretamente a eles, e não ao Senhor, seria idolatria. Os filhos de Eli cometeram grande pecado ao receber carne que não fora oferecida ao Senhor (1 Sm 2:12-17). Se não consideraríamos que os sacerdotes tinham uma autoridade plenária para qualquer tipo de sustento, não devemos considerar que Paulo tenha esse tipo de autoridade.
 
 
-## O Ponto Principal de Paulo é o Uso Limitado de Sua Autoridade
+## O ponto principal de Paulo é o uso limitado de sua autoridade
 
 Paulo inicia 1 Coríntios 9 estabelecendo seu “direito” ou autoridade. No entanto, ele parte desse fundamento para destacar [o contraste entre sua autoridade e seu uso apropriado](https://sellingjesus.org/articles/1cor9).
 
@@ -117,7 +117,7 @@ Como essa observação se relaciona com a questão de se o direito de Paulo é u
 Até mesmo a extensão do capítulo acrescenta peso ao juízo de que a autoridade de Paulo é limitada. Isto é, um entendimento bem desenvolvido das Escrituras deve reconhecer que um discurso substancialmente longo sobre ética tenderia para aquilo que tem aplicação direta. Porque a Escritura é destinada à edificação (2 Tm 3:16), considerações pessoais ou hipercontextuais normalmente são relegadas a perícopes mais curtas. Todavia, os que veriam o direito de Paulo como uma autoridade plenária consideram a limitação de seu uso como resultado de tais considerações.
 
 
-## A Mordomia de Paulo Indica uma Autoridade Limitada
+## A mordomia de Paulo indica uma autoridade limitada
 
 A razão de Paulo para rejeitar sustento material está centrada na noção de mordomia.
 
@@ -160,7 +160,7 @@ Essa mordomia se conecta à glória e à recompensa de Paulo. Se ele agisse com 
 
 
 
-## 1 Coríntios 8 e 10 Expressam uma Autoridade Limitada
+## 1 Coríntios 8 e 10 expressam uma autoridade limitada
 
 Talvez o argumento mais forte a ser feito venha do contexto mais amplo da epístola. Muito insight pode ser extraído dos capítulos ao redor, que tratam da questão das carnes sacrificadas a ídolos. De fato, o capítulo 9 serve como ilustração para a consideração desses capítulos adjacentes. Ali, ele fala do “direito” dos coríntios de comer.
 
@@ -177,7 +177,7 @@ Além disso, a conexão com Romanos 14 não é tão direta quanto parece numa pr
 Se o direito dos coríntios em 1 Coríntios 8 e 10 não é uma reivindicação de propriedade sobre comida nem uma autoridade plenária para comer, então o direito de Paulo em 1 Coríntios 9 — que serve como ilustração para os capítulos adjacentes — deve ter forma semelhante. Ao argumentar que um direito de comer não implica licença permissiva para comer em todas as circunstâncias (cf. 1 Co 6:13), ele aponta para seu próprio ministério. Seu direito de receber sustento material não implica licença permissiva para receber em todas as circunstâncias.
 
 
-## A Noção Associada de Licitude Expressa uma Autoridade Limitada
+## A noção associada de licitude expressa uma autoridade limitada
 
 Explorando o contexto mais amplo de 1 Coríntios, devemos observar a palavra grega “exestin” (ἔξεστιν), normalmente traduzida como “lícito”. Em inglês, “right” e “lawful” parecem e soam muito diferentes, mas “exousia” e “exestin” estão etimologicamente muito relacionadas.
 
@@ -189,9 +189,9 @@ Explorando o contexto mais amplo de 1 Coríntios, devemos observar a palavra gre
    <td>ἐστιν</td>
   </tr>
   <tr>
-   <td><strong>parsing</strong></td>
-   <td>particípio presente feminino do verbo eimi (εἰμί)</td>
-   <td>presente do indicativo, terceira pessoa do singular, do verbo eimi (εἰμί)</td>
+   <td><strong>análise sintática</strong></td>
+   <td>particípio presente feminino do verbo "eimi" (εἰμί)</td>
+   <td>presente do indicativo, terceira pessoa do singular, do verbo "eimi" (εἰμί)</td>
   </tr>
   <tr>
    <td><strong>significado</strong></td>
