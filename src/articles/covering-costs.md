@@ -23,7 +23,7 @@ But what about when a physical copy _is_ desirable? That is the situation we’l
 
 It is good to first acknowledge that this is a matter of wisdom, not absolutes. If a Christian resource has been freed from copyright and made available in some form for free, then we are not so much talking about the sale of ministry but more _the sale of paper and ink_. Rather than a matter of simony, it is a matter of _generosity_, which should not be legislated (2 Cor 9:7).
 
-So, with the common example of a self-published book: If it is easily accessible in digital form and public domain, then well-intentioned authors should not feel guilty if they sell printed copies. When using a [print-on-demand service](https://copy.church/publish/book/), this allows them to focus on their ministry and not have to store inventory, fund large orders, or deal with unreasonable requests. If anyone truly wants to benefit from the resource, the quickest means of access will be the free digital copy.
+So, with the common example of a self-published book: If it is easily accessible in digital form and public domain, then well-intentioned authors should not feel guilty if they sell printed copies. When using a [print-on-demand service](https://freely.giving/publish?type=books), this allows them to focus on their ministry and not have to store inventory, fund large orders, or deal with unreasonable requests. If anyone truly wants to benefit from the resource, the quickest means of access will be the free digital copy.
 
 That being said, giving all forms of a resource for free is commendable, and may even be warranted in certain situations, such as when a digital copy is insufficient. Let’s first think through what free giving would have looked like before the digital age.
 

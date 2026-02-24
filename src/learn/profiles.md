@@ -16,7 +16,7 @@ Second, Joe wrongly believes that the only way Christian writers can care for th
 
 Third, Joe has been deceived by promises of renown and acclaim if he publishes with a big-name publisher. Although he knows that he could distribute his book for free online digitally, and self-publish a paper version without receiving any profit, the lure of being perceived as a “legitimate” or “real” author because of the imprint of a well-known publisher prevailed. However, he covers up this desire for prestige by telling himself that a big publisher will reach more people. This may or may not be so, since he has never tried the alternative, but it doesn’t matter. God does not measure success in numbers of copies distributed, but rather in obedience. And obedience would mean giving his writing away, and supporting his ability to write by some other means than selling it. Joe is unintentionally living the lie that reaching more people with his writing is more important than obeying God. For him, the ends justify the means.
 
-<VPButton text="How to self-publish a free book" href="https://copy.church/publish/book/"></VPButton>
+<VPButton text="How to self-publish a free book" href="https://freely.giving/publish?type=books"></VPButton>
 
 ![](/media/jane-the-free-thinker.jpg)
 
