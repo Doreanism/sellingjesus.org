@@ -62,7 +62,7 @@ div.book
             h2(id="chapter-convo-general") Conversations about Selling Jesus
             div(class="author") Andrew Case
 
-        p The following two chapters depict a fictional conversation between a young man named Tim and his pastor. Their conversational format and style is intended to help to make them more readable. We hope it serves as a simple introduction to some of the foundational topics of this book. Formal articles will follow, examining Scripture at greater depth.
+        p The following two chapters are fictional conversations. The first is between a young man named Tim and his pastor. Their conversational format and style is intended to help to make them more readable. We hope it serves as a simple introduction to some of the foundational topics of this book. Formal articles will follow, examining Scripture at greater depth.
         InstantMessages(file_id='conversations' :topics='convo_general.topics' book)
 
         div(class="titles break")

@@ -30,7 +30,6 @@ const target = computed(() => {
 const zeroes = computed(() => props.number ? '000'.slice(props.number.toString().length) : '')
 const num_title = computed(() => props.number ? `${props.number}: ${props.title}` : props.title)
 
-const image = computed(() => props.image || '/_assets/default_social.jpg')
 const desc_clipped = computed(() => {
     // Clip desc based on total length of title and desc (title double since takes more space)
     const total = props.title.length*2 + props.desc.length

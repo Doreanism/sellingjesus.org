@@ -25,10 +25,5 @@ features:
         title: Common Objections
         details: While it may be tempting to have a knee-jerk reaction to this topic, we encourage you to carefully consider what Scripture has to say.
         link: /learn/objections
-    -   title: Sign the Statement
-        link: https://copy.church/statement/
-        target: statement
-        icon: 📝
-        details: The Statement on the Stewardship of Scripture affirms that God has authorized his people to freely share his Word.
 
 ---

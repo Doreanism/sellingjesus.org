@@ -84,6 +84,10 @@ You can supply a printing service such as [Lulu](https://www.lulu.com/) with the
 <VPButton text="Download cover (Lulu)" href="/book/Abolish-cover-lulu.pdf" target='_blank'></VPButton>
 <VPButton text="Download cover (KDP)" href="/book/Abolish-cover-kdp.pdf" target='_blank'></VPButton>
 
+If you'd like to print the book with a home printer, it will be best to print it in parts due to its size. The following files are designed for home printing and should be printed two pages per side (landscape). You'll need software that can print booklet style, so that the pages are in the correct order when folded.
+
+<VPButton text="A4 (2 pages landscape)" href="/book/Abolish-half-A4.pdf" target='_blank'></VPButton>
+<VPButton text="US Letter (2 pages landscape)" href="/book/Abolish-half-Letter.pdf" target='_blank'></VPButton>
 
 ## Translations and adaptations
 

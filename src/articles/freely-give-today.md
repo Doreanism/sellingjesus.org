@@ -19,7 +19,7 @@ We have an obligation to follow Scripture to its logical conclusions.  Consider
 
 While it may seem a bit backwards, I’d like to start with objections and then afterward build a positive case for the idea that Jesus’ command regulates ministry today.  That is, I’m going to begin by defending the face value meaning of Matthew 10:8 before positively arguing for it.  I’ll proceed in this way because I truly believe that the burden of proof lies on those who would reject its face value meaning—that when Jesus said we should “freely give,” it means we should “freely give.”
 
-## Objection 1: “Freely give” only applies to miracles, not preaching or teaching
+## Objection #1: “Freely give” only applies to miracles, not preaching or teaching
 
 In full, Matthew 10:8 says, "Heal the sick, raise the dead, cleanse the lepers, drive out demons. Freely you have received; freely give."  The rest of the imperatives in this verse are commands to perform miracles.  It would seem that the command "freely give" or "give without pay" speaks specifically of miracles, not preaching or other forms of ministry.
 
@@ -27,7 +27,7 @@ For the sake of transparency, it’s probably worth mentioning that there are a 
 
 Matthew 10:8 does indeed speak of miracles, but Jesus’ instructions to the disciples do not begin there.  Rather, he explains their activity in the preceding verse, “As you go, preach this message: ‘The kingdom of heaven is near’” (Matt 10:7).  While it has a different nature than the various commands to perform miracles, it belongs in the same list.  The disciples are to freely do all of the above.  Just as they are to freely perform miracles, they are to freely proclaim the kingdom of heaven.  In other words, they are to freely proclaim the gospel.
 
-## Objection 2: “Freely give” only applies to the first mission, not subsequent ones
+## Objection #2: “Freely give” only applies to the first mission, not subsequent ones
 
 Many have stated that this command of Christ is only for the first mission of the disciples.
 

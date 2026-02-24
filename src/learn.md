@@ -109,10 +109,13 @@ We're a group of pastors and disciples of Jesus, who love him and want everyone 
         title="Common Objections" desc="Have your concerns answered."></FeaturePreview>
     <FeaturePreview url='/learn/resources' image='/_assets/learn/resources.jpg'
         title="Books and Other Resources" desc="Dive deeper into the historical, practical, exegetical, and theological matters related to the commercialization of Christianity."></FeaturePreview>
+    <FeaturePreview url='/scripture?filter=vip' image='/_assets/social_scripture.jpg'
+        title="Browse Scripture" desc="See all the passages relevant to this topic in one place."></FeaturePreview>
 </div>
 
 &nbsp;
 
 <div style='text-align: center;'>
-    <VPButton href="/act" text="Take Action"></VPButton>
+    <VPButton href="/terminology" text="Terminology"></VPButton>
+    <VPButton href="/history" text="History of the movement"></VPButton>
 </div>

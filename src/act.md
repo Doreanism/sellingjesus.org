@@ -2,11 +2,10 @@
 
 ## Freely give your ministry resources
 
-Head over to *['Let's copy, church'](https://copy.church)*, our partner site, for guidance on how to free a resource from copyright and how to publish new works without relying on commercial publishers.
+Head over to *[Freely Giving](https://freely.giving)*, for guidance on how to free a resource from copyright and how to publish new works without relying on commercial publishers.
 
-<VPButton href="https://copy.church/licenses/" text="How to free a resource"></VPButton>
+<VPButton href="https://freely.giving/publish" text="How to free a resource"></VPButton>
 
-For book authors, there is also a detailed guide on [self-publishing a free book](https://copy.church/publish/book/).
 
 ## Spread the word
 
@@ -33,9 +32,12 @@ Follow any of our social accounts to read and discuss new material as we release
 <VPButton href='https://www.instagram.com/selling.jesus/' text="Instagram" theme='alt'></VPButton>
 <VPButton href='https://twitter.com/Selling_Jesus' text="X/Twitter" theme='alt'></VPButton>
 
-If you use Facebook, you can also [join this discussion group](https://www.facebook.com/groups/doreanism). You should read at least some of [The Dorean Principle](https://thedoreanprinciple.org/) before joining, so you understand the arguments being put forward.
+<iframe class='zeffy-form' src='https://www.zeffy.com/en-US/embed/newsletter-form/send-me-monthly-updates'></iframe>
 
-You may also like to start your own group with friends who are interested in this topic.
+We also have two groups you can join to discuss this topic with others:
+
+ * [Discord server](https://discord.gg/TwZUsT2nJ7)
+ * [Facebook group](https://www.facebook.com/groups/doreanism)
 
 
 ## Attend Doreancon

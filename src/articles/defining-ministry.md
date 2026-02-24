@@ -281,7 +281,7 @@ When we think about how ministry should be done, we must ask ourselves, “Am I 
 
 Consider a scenario to help illustrate what a _betrayal_ of ministerial stewardship would look like. This example emphasizes that stewardship involves managing and distributing gifts and resources in alignment with the _giver’s_ intentions, particularly when those gifts are meant to be free. Selling what was entrusted freely not only betrays the confidence of the giver but also undermines the intended blessing for others. In Christian ministry this principle is crucial, ensuring that the grace and gifts received from God for the common good are shared generously and without cost, reflecting the nature of God’s free grace and intention.
 
-_The Financial Manager_
+#### The Financial Manager
 
 Alex was hired as a financial manager by Mr. G, a philanthropic billionaire. Mr. G tasked Alex with managing a fund dedicated to providing free educational resources to underprivileged communities. Mr. G emphasized that these resources were gifts to be distributed freely, and that Alex was merely a steward, not the owner of the fund.
 
@@ -306,7 +306,7 @@ If Christian ministry must be done in a way that honors the Giver of grace, and 
 
 Let’s suppose you’re leading a group in studying the Bible, providing insights, explanations, and facilitating discussion.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -320,7 +320,7 @@ Conclusion: Leading a Bible study is ministry. And Ephesians 4:11-12 lists teach
 
 Let’s suppose you work in the buying and selling of stocks and other securities on behalf of clients.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -336,7 +336,7 @@ Conclusion: While the Bible speaks to principles of stewardship and investment (
 
 Let’s suppose that you provide counseling services based on Scripture to help individuals find healing from non-medical problems.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -350,7 +350,7 @@ Conclusion: Yes, biblical counseling is ministry.
 
 Let’s suppose you produce videos focused on cooking techniques and recipes.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -364,7 +364,7 @@ Conclusion: While the Bible acknowledges the importance and value of food and ho
 
 Let’s suppose you lead your local congregation in worship through music and singing.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -379,7 +379,7 @@ Conclusion: Worship leading is ministry.
 
 Let’s suppose you’re the principal of a private high school that provides academic education with a biblical worldview and operates according to biblical principles.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -393,7 +393,7 @@ Conclusion: Running a Christian high school is not as easy to categorize as thin
 
 Let’s suppose you’re a Christian plumber and you help fix your church’s plumbing.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -407,7 +407,7 @@ Conclusion: Plumbing work, even if done for a church, is not ministry, but it mi
 
 Let’s suppose you’re a Christian web developer who volunteers to set up your church’s website.
 
-Litmus Test:
+#### Litmus Test:
 
 
 
@@ -421,7 +421,7 @@ Conclusion: Designing a website for your church (without creating biblical-instr
 
 Let’s suppose you have a print shop that prints tracts and other Christian literature on occasion in addition to other non-Christian content. In other words, Christians sometimes come to your shop with biblical content that they or others have written, and they want to have it reproduced in physical form.
 
-Litmus Test:
+#### Litmus Test:
 
 
 

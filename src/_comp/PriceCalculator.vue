@@ -9,7 +9,7 @@ div.calculator
             VPButton(v-if='!clicked' @click="clicked = true" text="Calculate"
                 :disabled='!validInput')
             VPButton(v-else @click="reset" text="Reset" theme='alt')
-        div.analysis(v-if='clicked')
+        div.analysis(v-if='clicked && validInput')
             div.silverPrice
                 div.row
                     div.key Current Price of Silver per Ounce
