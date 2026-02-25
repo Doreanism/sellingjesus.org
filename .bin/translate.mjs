@@ -62,9 +62,11 @@ async function translate_json(content) {
 }
 
 
-// Replace test locale paths with target locale paths
+// Fix paths for translated/copied files
 function fix_paths(content) {
-    return content.replaceAll('i18n/test/', `i18n/${language}/`)
+    content = content.replaceAll('i18n/test/', `i18n/${language}/`)
+    content = content.replaceAll('/articles/', `/i18n/${language}/articles/`)
+    return content
 }
 
 
@@ -158,6 +160,6 @@ for (const dir of dirs){
         // Translate file
         const content = fs.readFileSync(in_file, 'utf8')
         const translated = await translate_md(content)
-        fs.writeFileSync(out_file, translated + '\n', 'utf8')
+        fs.writeFileSync(out_file, fix_paths(translated) + '\n', 'utf8')
     }
 }
