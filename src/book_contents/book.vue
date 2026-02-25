@@ -5,68 +5,74 @@ div.book
 
     div.first-page
         //- So space is preserved
-        h1 #[span Abolish] #[br] #[span the Jesus Trade]
+        h1 #[span {{strings.title_line1}}] #[br] #[span {{strings.title_line2}}]
 
     div.second-page(class='break')
-        p #[em Abolish the Jesus Trade: Spread the Joy of Freely Giving]
-        p By Andrew Case, Conley Owens, Jon Here, and other contributors
+        p #[em {{strings.subtitle}}]
+        p {{strings.authors}}
         p &nbsp;
-        p Published by #[em Selling Jesus]
+        p {{strings.publisher_prefix}} #[em {{strings.publisher_name}}]
         p sellingjesus.org
-        p First edition (2025)
+        p {{strings.edition}}
         //- ISBN for Amazon KDP
         //- p ISBN: ?
         p &nbsp;
-        p This book is freely given to the glory of God and dedicated to the public domain. It may be copied, translated, adapted, in whole or in part, without needing to ask permission. You can also access this content online at sellingjesus.org.
+        p {{strings.license_text}}
         img(src='/book_contents/pd.png' alt="Public domain")
 
     div.third-page(class='break')
-        p Its leaders give judgment for a bribe;<br>its priests teach for a price;<br>its prophets practice divination for money.
-        p Yet they lean on Yahweh and say,<br>“Is not Yahweh in our midst?<br>No disaster shall come upon us.”
-        p &mdash; Micah 3:11
+        p
+            template(v-for='(line, i) in lines(strings.quote1_stanza1)')
+                br(v-if='i > 0')
+                | {{line}}
+        p
+            template(v-for='(line, i) in lines(strings.quote1_stanza2)')
+                br(v-if='i > 0')
+                | {{line}}
+        p &mdash; {{strings.quote1_ref}}
         p &nbsp;
-        p For we are not, like so many, peddlers of God’s word, but as men of sincerity, as commissioned by God, in the sight of God we speak in Christ.
-        p &mdash; 2 Corinthians 2:17
+        p {{strings.quote2_body}}
+        p &mdash; {{strings.quote2_ref}}
 
     div.toc(class='break')
-        h3.toc-title Contents
+        h3.toc-title {{strings.toc_title}}
         div
-            a.toc-chapter(@click='goto("chapter-foreword")' href='#chapter-foreword') Foreword
+            a.toc-chapter(@click='goto("chapter-foreword")' href='#chapter-foreword') {{strings.toc_foreword}}
         div
-            a.toc-chapter(@click='goto("chapter-intro")' href='#chapter-intro') Introduction
+            a.toc-chapter(@click='goto("chapter-intro")' href='#chapter-intro') {{strings.toc_intro}}
         template(v-for='section of toc')
             h4 {{ section.title }}
             div(v-for='chapter of section.chapters')
                 a.toc-chapter(@click='goto(chapter.id)' :href='"#" + chapter.id')
                     | {{ chapter.title }}
         div.toc-conclusion
-            a.toc-chapter(@click='goto("chapter-conclusion")' href='#chapter-conclusion') Conclusion
+            a.toc-chapter(@click='goto("chapter-conclusion")' href='#chapter-conclusion') {{strings.toc_conclusion}}
 
     div.foreword(class='break')
         div.titles
-            h2(id="chapter-foreword") Foreword
+            h2(id="chapter-foreword") {{strings.foreword_title}}
         div(v-html='foreword_html')
 
     div.intro(class='break')
         div.titles
-            h2(id="chapter-intro") Introduction
-            div(class="subtitle") A Christian Dystopia?
+            h2(id="chapter-intro") {{strings.intro_title}}
+            div(class="subtitle") {{strings.intro_subtitle}}
             div(class="author") Andrew Case
         div(v-html='intro_html')
 
     div(class='section break')
-        h1 Conversations
+        h1 {{strings.section_conversations}}
 
     div.convos
         div(class="titles break")
-            h2(id="chapter-convo-general") Conversations about Selling Jesus
+            h2(id="chapter-convo-general") {{strings.convo_general_title}}
             div(class="author") Andrew Case
 
-        p The following two chapters are fictional conversations. The first is between a young man named Tim and his pastor. Their conversational format and style is intended to help to make them more readable. We hope it serves as a simple introduction to some of the foundational topics of this book. Formal articles will follow, examining Scripture at greater depth.
+        p {{strings.convo_general_intro}}
         InstantMessages(file_id='conversations' :topics='convo_general.topics' book)
 
         div(class="titles break")
-            h2(id="chapter-convo-corinthians") Conversations between Paul and the Corinthians
+            h2(id="chapter-convo-corinthians") {{strings.convo_corinthians_title}}
             div(class="author") Conley Owens
 
         div(v-html='convo_corinthians.intro')
@@ -76,7 +82,7 @@ div.book
 
     div.conclusion(class='break')
         div.titles
-            h2(id="chapter-conclusion") Conclusion
+            h2(id="chapter-conclusion") {{strings.conclusion_title}}
             div(class="author") Andrew Case
         div(v-html='conclusion_html')
 
@@ -92,8 +98,6 @@ import {data as articles_data} from './book_articles.data'
 import {data as pages_data} from './pages.data'
 import {markup_references} from './markup'
 import {articles_by_category, article_ids} from '@/_comp/articles'
-import convo_general from '@/learn/conversations_processed.json'
-import convo_corinthians from '@/learn/corinthians_processed.json'
 
 import styles from '../../book/styles_pdf.sass?inline'
 
@@ -102,16 +106,60 @@ import styles from '../../book/styles_pdf.sass?inline'
 const EPUB = import.meta.env.VITE_BOOK === 'epub'
 
 
-// Delete descriptions of convo sections since only a couple have them and better to be consistent
-for (const convo of convo_general.topics){
-    convo.description = ""
-}
-
-
 // Need to manually inject book styles into shadow DOM
 defineOptions({
     styles: [styles],
 })
+
+
+interface ConvoData {
+    topics: any[]
+    intro?: string
+}
+
+interface BookStrings {
+    title_line1: string
+    title_line2: string
+    subtitle: string
+    authors: string
+    publisher_prefix: string
+    publisher_name: string
+    edition: string
+    license_text: string
+    quote1_stanza1: string
+    quote1_stanza2: string
+    quote1_ref: string
+    quote2_body: string
+    quote2_ref: string
+    toc_title: string
+    toc_foreword: string
+    toc_intro: string
+    toc_conclusion: string
+    foreword_title: string
+    intro_title: string
+    intro_subtitle: string
+    section_conversations: string
+    convo_general_title: string
+    convo_general_intro: string
+    convo_corinthians_title: string
+    profiles_title_text: string
+    conclusion_title: string
+}
+
+const props = defineProps<{
+    convo_general: ConvoData
+    convo_corinthians: ConvoData
+    strings: BookStrings
+}>()
+
+const strings = props.strings
+const convo_corinthians = props.convo_corinthians
+
+// Delete descriptions of convo sections since only a couple have them and better to be consistent
+const convo_general = {...props.convo_general, topics: props.convo_general.topics.map((t:any) => ({...t}))}
+for (const convo of convo_general.topics){
+    convo.description = ""
+}
 
 
 // Unpack pages (order defined in imported file)
@@ -119,6 +167,12 @@ const page_conclusion = pages_data[0]
 const page_foreword = pages_data[1]
 const page_intro = pages_data[2]
 const page_profiles = pages_data[3]
+
+
+// Split a string on newlines (for rendering with <br> in template)
+function lines(text:string){
+    return text.split('\n')
+}
 
 
 // Random id generator
@@ -284,7 +338,7 @@ const conclusion_html = bookify_html(page_conclusion.html)
 // Prepare profiles HTML
 const profiles_title = `
     <div class="titles">
-        <h2 id="chapter-profiles">Christians Who Sell Jesus</h2>
+        <h2 id="chapter-profiles">${strings.profiles_title_text}</h2>
         <div class="author">Andrew Case</div>
     </div>
 `
@@ -373,8 +427,8 @@ interface OutlineSection {
 
 const toc:OutlineSection[] = [
     {title: "Conversations", chapters: [
-        {id: "chapter-convo-general", title: "Conversations about Selling Jesus"},
-        {id: "chapter-convo-corinthians", title: "Conversations between Paul and the Corinthians"},
+        {id: "chapter-convo-general", title: strings.convo_general_title},
+        {id: "chapter-convo-corinthians", title: strings.convo_corinthians_title},
     ]},
 ]
 
