@@ -7,7 +7,7 @@ lang="${1:-}"
 
 # Read book title from BookContents
 vue_file="../src/${book_src}/BookContents.vue"
-title=$(grep -oP "title: '\K[^']+" "$vue_file")
+title=$(grep -m1 -oP "title: '\K[^']+" "$vue_file")
 new_head="<head><meta charset=\"utf-8\"><title>$title</title></head>"
 
 # Build HTML
