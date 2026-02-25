@@ -12,9 +12,7 @@ if (language.length !== 2){
 }
 
 
-async function translate_md(content) {
-    const sys_prompt = `Translate all human text into ${language}, but preserve all Markdown and HTML formatting. These are Christian theological articles. Translate quotes and Bible verses. Translate the text contents of any HTML, including within tables. Translate link text but don't change the URLs. Never translate Greek or Hebrew.`
-
+async function call_llm(sys_prompt, content) {
     const response = await fetch('https://api.openai.com/v1/responses', {
         method: 'POST',
         headers: {
@@ -40,10 +38,103 @@ async function translate_md(content) {
 }
 
 
-// Translate dirs
+async function translate_md(content) {
+    return call_llm(
+        `Translate all human text into ${language}, but preserve all Markdown, YAML, and HTML formatting. These are Christian theological writings. Translate quotes and Bible verses. Translate the text contents of any HTML, including within tables. Translate link text but don't change the URLs. Never translate Greek or Hebrew.`,
+        content,
+    )
+}
+
+
+async function translate_ts(content) {
+    return call_llm(
+        `Translate all human-readable string values into ${language} in this TypeScript/Vue file. Preserve all code, syntax, variable names, import paths, and formatting exactly. Only translate string literals that contain visible human-readable text. Never translate code identifiers, URLs, file paths, or technical values.`,
+        content,
+    )
+}
+
+
+async function translate_json(content) {
+    return call_llm(
+        `Translate all human-readable string values into ${language} in this JSON. Preserve all JSON structure, keys, newlines, and non-text values exactly. These are Christian theological writings.`,
+        content,
+    )
+}
+
+
+// Replace test locale paths with target locale paths
+function fix_paths(content) {
+    return content.replaceAll('/i18n/test/', `/i18n/${language}/`)
+}
+
+
+// Files in i18n/test to process
+// Types: 'md' | 'ts' | 'json' | 'copy' (text, no translation) | 'binary'
+const test_files = [
+    {path: 'i18n.ts',                              type: 'ts'},
+    {path: 'about.md',                             type: 'md'},
+    {path: 'index.md',                             type: 'md'},
+    {path: 'learn.md',                             type: 'copy'},
+    {path: 'articles.data.ts',                     type: 'copy'},
+    {path: 'book_contents/BookContents.vue',       type: 'ts'},
+    {path: 'book_contents/foreword.md',            type: 'md'},
+    {path: 'book_contents/intro.md',               type: 'md'},
+    {path: 'book_contents/conclusion.md',          type: 'md'},
+    {path: 'book_contents/index.md',               type: 'copy'},
+    {path: 'book_contents/book_articles.data.ts',  type: 'copy'},
+    {path: 'book_contents/pages.data.ts',          type: 'copy'},
+    {path: 'book_contents/pd.png',                 type: 'binary'},
+    {path: 'learn/conversations.json',             type: 'json'},
+    {path: 'learn/corinthians.json',               type: 'json'},
+    {path: 'learn/conversations.md',               type: 'copy'},
+    {path: 'learn/corinthians.md',                 type: 'copy'},
+    {path: 'learn/profiles.md',                    type: 'md'},
+]
+
+
+for (const file of test_files) {
+    const in_file = path.join('i18n', 'test', file.path)
+    const out_file = path.join('i18n', language, file.path)
+
+    fs.mkdirSync(path.dirname(out_file), {recursive: true})
+
+    if (fs.existsSync(out_file)){
+        console.log(`Already exists: ${out_file}`)
+        continue
+    }
+
+    if (file.type === 'binary'){
+        console.log(`Copying: ${in_file} → ${out_file}`)
+        fs.copyFileSync(in_file, out_file)
+        continue
+    }
+
+    const content = fs.readFileSync(in_file, 'utf8')
+
+    if (file.type === 'copy'){
+        console.log(`Copying: ${in_file} → ${out_file}`)
+        fs.writeFileSync(out_file, fix_paths(content), 'utf8')
+        continue
+    }
+
+    console.log(`Translating: ${in_file} → ${out_file}`)
+
+    let translated
+    if (file.type === 'md'){
+        translated = await translate_md(content)
+    } else if (file.type === 'ts'){
+        translated = await translate_ts(content)
+    } else if (file.type === 'json'){
+        translated = await translate_json(content)
+    }
+
+    fs.writeFileSync(out_file, fix_paths(translated) + '\n', 'utf8')
+}
+
+
+// Translate articles dir
 const lang_dir = path.join('i18n', language)
 const dirs = ['articles']
-
 
 for (const dir of dirs){
 
