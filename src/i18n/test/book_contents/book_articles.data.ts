@@ -2,6 +2,6 @@
 import {createContentLoader} from 'vitepress'
 
 
-export default createContentLoader('articles/*.md', {
+export default createContentLoader('i18n/test/articles/*.md', {
     render: true,
 })
