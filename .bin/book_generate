@@ -9,6 +9,7 @@ if [[ "$1" != "--skip" ]]; then
 
     # Build HTML
     cd ..
+    .bin/process_conversations
     export VITE_EXTRA_EXTENSIONS=docx
     VITE_BOOK=pdf node_modules/.bin/vitepress build --outDir book/shared/dist_pdf
     VITE_BOOK=epub node_modules/.bin/vitepress build --outDir book/shared/dist_epub
