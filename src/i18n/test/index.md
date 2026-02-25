@@ -7,6 +7,6 @@ hero:
     actions:
         -   theme: brand
             text: Start Here
-            link: /learn
+            link: /i18n/test/learn
 
 ---
