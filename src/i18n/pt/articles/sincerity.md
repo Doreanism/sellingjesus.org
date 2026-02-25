@@ -80,7 +80,7 @@ Embora Paulo se defenda ao longo da carta, nas partes finais ele particularmente
 
 Se a sinceridade é incompatível com todos esses comportamentos, então cada um deles procede de um coração insincero.
 
-![Um coração corrupto com vários comportamentos pecaminosos](/_assets/sinceridade/heart.svg)
+![Um coração corrupto com vários comportamentos pecaminosos](/_assets/sincerity/heart.svg)
 
 Se imaginar-se fora da presença de Deus leva a uma transgressão, levará a outras. Embora um coração insincero não manifeste _toda_ ação insincera, Paulo não fala dessas manifestações individuais como presentes apenas em alguns, mas como existentes em “muitos” (2 Coríntios 2:17). Considere o seguinte silogismo:
 
@@ -148,7 +148,7 @@ Cada um desses sete versículos fala de um comportamento insincero diferente. Co
 
 Ainda assim, __todos podem discernir quando a Palavra está sendo vendida__. É evidente; nada fica oculto quando alguém oferece instrução bíblica em alguma troca recíproca direta.
 
-![Um coração corrupto com "Vendendo Instrução Bíblica" destacado](/_assets/sinceridade/heartpie.svg)
+![Um coração corrupto com "Vendendo Instrução Bíblica" destacado](/_assets/sincerity/heartpie.svg)
 
 É por isso que Paulo escolhe este como o principal sinal pelo qual se distingue dos superapóstolos.
 
