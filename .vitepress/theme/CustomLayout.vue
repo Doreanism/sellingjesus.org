@@ -49,7 +49,11 @@ const route = useRoute()
 
 const page_id = computed(() => {
     // Place a custom page id on layout element so can customise whole page per route
-    let id = 'route' + route.path.replace(/\//g, '_')
+
+    // Remove /i18n/lang prefix if any
+    const route_path = route.path.replace(/^\/i18n\/[^/]+/, '')
+
+    let id = 'route' + route_path.replace(/\//g, '_')
     if (id.endsWith('_index')){
         // For some reason the path includes 'index' in production (e.g. '/index')
         id = id.slice(0, 'index'.length*-1)  // WARN Don't remove the '_'
