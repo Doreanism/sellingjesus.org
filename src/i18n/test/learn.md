@@ -1,5 +1,6 @@
 ---
 aside: false
+title: ''
 ---
 
 <script lang='ts' setup>

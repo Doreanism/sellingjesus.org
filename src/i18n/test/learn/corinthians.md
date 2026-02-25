@@ -1,6 +1,7 @@
 ---
 image: /_assets/learn/corinthians.jpg
 sidebar: false
+title: ''
 ---
 
 <script lang='ts' setup>
