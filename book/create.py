@@ -1,8 +1,13 @@
 
+import os
 import subprocess
 
 from weasyprint import HTML, CSS
 from weasyprint.text.fonts import FontConfiguration
+
+
+title = os.environ.get('BOOK_TITLE', 'Abolish the Jesus Trade')
+slug = title.replace(' ', '-')
 
 
 def create_pdf():
@@ -20,7 +25,7 @@ def create_pdf():
         '-dPDFSETTINGS=/prepress',
         '-dNOPAUSE',
         '-dBATCH',
-        '-sOutputFile=shared/Abolish-the-Jesus-Trade.pdf',
+        f'-sOutputFile=shared/{slug}.pdf',
         'shared/book_pre_gs.pdf',
     ], check=True)
 
@@ -28,9 +33,9 @@ def create_pdf():
 def create_epub():
     subprocess.run(
         [
-            'ebook-convert', 'book.html', '../Abolish-the-Jesus-Trade.epub',
+            'ebook-convert', 'book.html', f'../{slug}.epub',
             # Add metadata
-            '--title', "Abolish the Jesus Trade",
+            '--title', title,
             '--authors', "Andrew Case & Conley Owens & Jon Here",
             '--cover', 'epub_cover.jpg',
             # Include custom stylesheet

@@ -90,4 +90,4 @@ cp epub_cover.jpg shared/dist_epub/epub_cover.jpg
 
 # Render to PDF/EPUB
 sudo docker build -t sj_book .
-sudo docker run --rm --network=host -v "$PWD/shared":/home/app/shared sj_book
+sudo docker run --rm --network=host -v "$PWD/shared":/home/app/shared -e "BOOK_TITLE=$title" sj_book
