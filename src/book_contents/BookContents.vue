@@ -1,14 +1,14 @@
 
 <template lang='pug'>
 
-Book(:strings='strings' :convo_general='convo_general' :convo_corinthians='convo_corinthians')
+BookBase(:strings='strings' :convo_general='convo_general' :convo_corinthians='convo_corinthians')
 
 </template>
 
 
 <script lang='ts' setup>
 
-import Book from './book.vue'
+import BookBase from './BookBase.vue'
 import convo_general from '@/learn/conversations_processed.json'
 import convo_corinthians from '@/learn/corinthians_processed.json'
 

@@ -6,7 +6,7 @@ layout: false
 
 import {defineCustomElement} from 'vue'
 
-import VueBook from './BookEnglish.vue'
+import VueBook from './BookContents.vue'
 
 
 // Use custom element/shadow DOM to exclude site's CSS during development
