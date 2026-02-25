@@ -6,13 +6,14 @@ sidebar: false
 <script lang='ts' setup>
 
 import InstantMessages from '@/_comp/InstantMessages.vue'
+import {i18n_strings} from '../i18n'
 
 import {topics, intro} from './corinthians_processed.json'
 
 </script>
 
 
-# Conversations between Paul and the Corinthians
+# {{ i18n_strings.learn.convo_corinthians_title }}
 
 <div v-html='intro'></div>
 

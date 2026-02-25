@@ -5,55 +5,67 @@ aside: false
 <script lang='ts' setup>
 
 import {articles_by_category} from '@/_comp/articles'
+import {data as i18n_articles} from './articles.data'
+import {i18n_strings} from './i18n'
+import ResourcePreview from '@/_comp/ResourcePreview.vue'
 
+const article_map = Object.fromEntries(
+    i18n_articles.map(a => [a.url.split('/').pop()!, a])
+)
 
 </script>
 
 
-# Ministry should be supported, not sold.
-We're a group of pastors and disciples of Jesus, who love him and want everyone to have free access to truth about him. The commercialization of ministry deeply concerns us, practically and theologically. We hope you'll take a moment to carefully consider God's Word on this matter.
+# {{ i18n_strings.learn.title }}
+{{ i18n_strings.learn.intro }}
 
-## Conversations
+## {{ i18n_strings.learn.conversations }}
 
 <div class='conversations'>
     <FeaturePreview url='/i18n/test/learn/conversations' image='/_assets/learn/conversations.jpg'
-        title="Conversations about Selling Jesus" desc="Learn more about foundational issues around the Jesus-trade through a series of conversations between Tim and his pastor."></FeaturePreview>
+        :title='i18n_strings.learn.convo_general_title' :desc='i18n_strings.learn.convo_general_desc'></FeaturePreview>
     <FeaturePreview url='/i18n/test/learn/corinthians' image='/_assets/learn/corinthians.jpg'
-        title="Conversations between Paul and the Corinthians" desc="Follow the flow of Paul's teaching on finance to the Corinthians across his letters to them."></FeaturePreview>
+        :title='i18n_strings.learn.convo_corinthians_title' :desc='i18n_strings.learn.convo_corinthians_desc'></FeaturePreview>
 </div>
 
 
-## Christians Who Sell Jesus
+## {{ i18n_strings.learn.christians_who_sell }}
 
 <div class='profiles'>
     <a href='/i18n/test/learn/profiles#joe-the-author'>
         <img src='/media/joe-the-author.jpg'>
-        Joe the Author
+        {{ i18n_strings.learn.profile_joe }}
     </a>
     <a href='/i18n/test/learn/profiles#steve-the-biblical-counselor'>
         <img src='/media/steve-the-biblical-counselor.jpg'>
-        Steve the Biblical Counselor
+        {{ i18n_strings.learn.profile_steve }}
     </a>
     <a href='/i18n/test/learn/profiles#james-the-worship-composer'>
         <img src='/media/james-the-worship-composer.jpg'>
-        James the Worship Composer
+        {{ i18n_strings.learn.profile_james }}
     </a>
     <a href='/i18n/test/learn/profiles#susan-the-bible-study-author'>
         <img src='/media/susan.jpg'>
-        Susan the Bible Study Author
+        {{ i18n_strings.learn.profile_susan }}
     </a>
     <a href='/i18n/test/learn/profiles'>
         <img src='/_assets/learn/profiles.jpg'>
-        10 more ...
+        {{ i18n_strings.learn.profiles_more }}
     </a>
 </div>
 
 
-## Articles
+## {{ i18n_strings.articles }}
 
 <div class='categories'>
-    <div v-for='[category, articles] in Object.entries(articles_by_category)'>
-        <h3>{{ category }}</h3>
-        <ArticlePreview v-for='(article, i) of articles' :id='article' :short='i !== 0'></ArticlePreview>
+    <div v-for='[category, ids] in Object.entries(articles_by_category)' :key='category'>
+        <h3>{{ i18n_strings.categories[category] }}</h3>
+        <template v-for='(id, i) in ids' :key='id'>
+            <ResourcePreview v-if='article_map[id]'
+                :url='article_map[id].url' :image='article_map[id].frontmatter.image'
+                :title='article_map[id].frontmatter.title' :desc='article_map[id].frontmatter.description'
+                :short='i !== 0'>
+            </ResourcePreview>
+        </template>
     </div>
 </div>
