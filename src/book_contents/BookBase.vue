@@ -94,8 +94,6 @@ div.book
 import {useShadowRoot} from 'vue'
 
 import InstantMessages from '@/_comp/InstantMessages.vue'
-import {data as articles_data} from './book_articles.data'
-import {data as pages_data} from './pages.data'
 import {markup_references} from './markup'
 import {articles_by_category, article_ids} from '@/_comp/articles'
 
@@ -118,6 +116,7 @@ interface ConvoData {
 }
 
 interface BookStrings {
+    title: string
     title_line1: string
     title_line2: string
     subtitle: string
@@ -150,10 +149,14 @@ const props = defineProps<{
     convo_general: ConvoData
     convo_corinthians: ConvoData
     strings: BookStrings
+    articles_data: any[]
+    pages_data: any[]
 }>()
 
 const strings = props.strings
 const convo_corinthians = props.convo_corinthians
+const articles_data = props.articles_data
+const pages_data = props.pages_data
 
 // Delete descriptions of convo sections since only a couple have them and better to be consistent
 const convo_general = {...props.convo_general, topics: props.convo_general.topics.map((t:any) => ({...t}))}

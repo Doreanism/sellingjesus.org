@@ -2,10 +2,16 @@
 set -e
 cd "$(dirname "$(dirname "$0")")/book"
 
-new_head='<head><meta charset="utf-8"><title>Abolish the Jesus Trade</title></head>'
+lang="${1:-}"
+[[ "$lang" ]] && book_src="i18n/$lang/book_contents" || book_src="book_contents"
+
+# Read book title from BookContents
+vue_file="../src/${book_src}/BookContents.vue"
+title=$(grep -oP "title: '\K[^']+" "$vue_file")
+new_head="<head><meta charset=\"utf-8\"><title>$title</title></head>"
 
 # Build HTML
-if [[ "$1" != "--skip" ]]; then
+if [[ "$2" != "--skip" ]]; then
 
     # Build HTML
     cd ..
@@ -17,8 +23,8 @@ if [[ "$1" != "--skip" ]]; then
 
     # Copy HTML to dist root for easier url resolution
     # NOTE This overwrites the existing book.html page which isn't needed anyway
-    cp shared/dist_pdf/book_contents/index.html shared/dist_pdf/book.html
-    cp shared/dist_epub/book_contents/index.html shared/dist_epub/book.html
+    cp shared/dist_pdf/${book_src}/index.html shared/dist_pdf/book.html
+    cp shared/dist_epub/${book_src}/index.html shared/dist_epub/book.html
 
     # Remove site assets and meta from <head>
     perl -i -0777 -pe "s|<head>.+?</head>|$new_head|gis" shared/dist_pdf/book.html
