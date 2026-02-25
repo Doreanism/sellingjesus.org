@@ -318,26 +318,27 @@ sup, sub
         border-radius: 4px
 
 
-.vp-doc._learn_profiles, .vp-doc._about
+.route_about, .route_learn_profiles
+    .vp-doc
 
-    h2
-        border-style: none
-        padding-top: 0
+        h2
+            border-style: none
+            padding-top: 0
 
-    p > img  // To avoid matching any old img (e.g. in person-bio)
-        border-radius: 50%
-        margin-top: 36px
-        width: 100%
-        aspect-ratio: 1 / 1
+        p > img  // To avoid matching any old img (e.g. in person-bio)
+            border-radius: 50%
+            margin-top: 36px
+            width: 100%
+            aspect-ratio: 1 / 1
 
-        @media (min-width: 600px)
-            float: left
-            max-width: 200px
-            margin-right: 24px
-            margin-bottom: 12px
+            @media (min-width: 600px)
+                float: left
+                max-width: 200px
+                margin-right: 24px
+                margin-bottom: 12px
 
 
-.vp-doc._learn_funding
+.route_learn_funding .vp-doc
     img
         object-fit: cover
         aspect-ratio: 16 / 9

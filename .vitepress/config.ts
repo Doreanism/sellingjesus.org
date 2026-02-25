@@ -11,6 +11,8 @@ import videos_humor from '../src/videos_humor.json'
 import videos_reactions from '../src/videos_reactions.json'
 import {episodes as pods} from '../src/podcast.json'
 
+import {config_test} from '../src/i18n/test/config.ts'
+
 
 const videos_sidebar = [
     {
@@ -86,13 +88,22 @@ export default defineConfig({
     },
     locales: {
         root: {
-            label: "English",
             lang: 'en',
+            label: "English",
         },
-        pt: {
-            label: "Portuguese",
-            lang: 'pt',
-            link: '/i18n/pt',
+        test: {
+            lang: 'test',
+            link: '/i18n/test',
+            label: config_test.language,
+            title: config_test.title,
+            description: config_test.description,
+            themeConfig: {
+                nav: [
+                    {text: config_test.articles, link: '/i18n/test/learn', activeMatch: '/(learn|articles)'},
+                    {text: config_test.videos, link: 'https://www.youtube.com/@SellingJesus'},
+                    {text: config_test.about, link: '/i18n/test/about', activeMatch: '/about'},
+                ],
+            },
         },
     },
     markdown: {
