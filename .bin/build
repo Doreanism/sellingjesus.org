@@ -13,8 +13,7 @@ cd "$(dirname "$(dirname "$0")")"
 
 # Convert raw data to useable formats
 .bin/process_resources
-.bin/process_conversations conversations
-.bin/process_conversations corinthians
+.bin/process_conversations
 
 # Build actual site
 # NOTE VitePress will treat file.docx as page unless specify

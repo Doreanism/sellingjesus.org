@@ -1,6 +1,16 @@
 #!/bin/bash
 # Process conversations data
 set -e
-cd "$(dirname "$(dirname "$0")")"
+ROOT="$(dirname "$(dirname "$0")")"
+SCRIPT="$ROOT/.bin/process_conversations.mjs"
 
-node .bin/process_conversations.mjs "$@"
+cd "$ROOT/src/learn"
+node "$SCRIPT" conversations
+node "$SCRIPT" corinthians
+
+for dir in "$ROOT"/src/i18n/*/learn; do
+    [ -d "$dir" ] || continue
+    cd "$dir"
+    node "$SCRIPT" conversations
+    node "$SCRIPT" corinthians
+done

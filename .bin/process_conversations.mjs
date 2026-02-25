@@ -9,7 +9,7 @@ const file_id = process.argv[2]
 if (!file_id){
     throw new Error("Arg should be conversations|corinthians")
 }
-const data = JSON.parse(readFileSync(`src/learn/${file_id}.json`, {encoding: 'utf8'}))
+const data = JSON.parse(readFileSync(`${file_id}.json`, {encoding: 'utf8'}))
 
 
 const markdowner = new MarkdownIt({linkify: true, typographer: true, html: true})
@@ -65,4 +65,4 @@ data.topics = data.topics.map(topic => {
     }
 })
 
-writeFileSync(`src/learn/${file_id}_processed.json`, JSON.stringify(data), {encoding: 'utf8'})
+writeFileSync(`${file_id}_processed.json`, JSON.stringify(data), {encoding: 'utf8'})
