@@ -6,7 +6,7 @@ sidebar: false
 
 <script lang='ts' setup>
 
-import InstantMessages from '../_comp/InstantMessages.vue'
+import InstantMessages from '@/_comp/InstantMessages.vue'
 
 import {topics, intro} from './corinthians_processed.json'
 
