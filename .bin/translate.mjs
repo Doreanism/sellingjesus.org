@@ -64,7 +64,7 @@ async function translate_json(content) {
 
 // Replace test locale paths with target locale paths
 function fix_paths(content) {
-    return content.replaceAll('/i18n/test/', `/i18n/${language}/`)
+    return content.replaceAll('i18n/test/', `i18n/${language}/`)
 }
 
 

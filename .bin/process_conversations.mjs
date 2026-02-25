@@ -25,7 +25,7 @@ data.topics = data.topics.map(topic => {
     let name1 = ''
     let name2 = ''
     for (const line of lines){
-        const match = /^(\w+): /.exec(line)
+        const match = /^([\p{L}]+): /u.exec(line)
         if (match){
             if (!name1){
                 name1 = match[1]

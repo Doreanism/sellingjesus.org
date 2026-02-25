@@ -1,6 +1,6 @@
 #!/bin/bash
 # Process conversations data
-set -e
+set -ex
 ROOT="$(realpath "$(dirname "${BASH_SOURCE[0]}")/..")"
 SCRIPT="$ROOT/.bin/process_conversations.mjs"
 
