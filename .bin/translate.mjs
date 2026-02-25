@@ -65,7 +65,8 @@ async function translate_json(content) {
 // Fix paths for translated/copied files
 function fix_paths(content) {
     content = content.replaceAll('i18n/test/', `i18n/${language}/`)
-    content = content.replaceAll('/articles/', `/i18n/${language}/articles/`)
+    content = content.replaceAll('sellingjesus.org/articles/', `sellingjesus.org/i18n/${language}/articles/`)
+    content = content.replace(/(?<=\W)\/articles\//g, `/i18n/${language}/articles/`)
     return content
 }
 

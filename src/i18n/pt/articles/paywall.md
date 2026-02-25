@@ -8,15 +8,15 @@ image: /media/articles/paywall.jpg
 
 O artigo a seguir é para aqueles que foram convencidos do [princípio dorean](https://sellingjesus.org/videos/documentary/DUsAO3B3tu0), de que a instrução bíblica não deve ser vendida. Se isso não descreve você, por favor vá conferir [nossos inúmeros artigos](https://sellingjesus.org/learn) que argumentam a favor desse princípio, e espero que o encontremos de volta aqui mais tarde!
 
-Além disso, este artigo é para professores — sejam clérigos ou leigos — que desejam, em toda santidade, navegar o ministério em um mundo cheio da comercialização do cristianismo. Reconhecemos que [nem todos são chamados ao mesmo nível de abstinência dos sistemas corruptos que existem](https://sellingjesus.org/articles/buying#when-is-purchasing-biblical-teaching-unwise). Ao mesmo tempo, a Escritura dá alguns absolutos sobre o assunto para que nunca sejamos culpados de vender a sua palavra (2 Cor 2:17).
+Além disso, este artigo é para professores — sejam clérigos ou leigos — que desejam, em toda santidade, navegar o ministério em um mundo cheio da comercialização do cristianismo. Reconhecemos que [nem todos são chamados ao mesmo nível de abstinência dos sistemas corruptos que existem](https://sellingjesus.org/i18n/pt/articles/buying#when-is-purchasing-biblical-teaching-unwise). Ao mesmo tempo, a Escritura dá alguns absolutos sobre o assunto para que nunca sejamos culpados de vender a sua palavra (2 Cor 2:17).
 
 Com esse objetivo, eu gostaria de fazer uma aplicação que não é óbvia para todos e nem sempre foi óbvia para mim: __Não ensine atrás de um paywall__.
 
 Talvez você seja o tipo de pessoa que jamais receberia pagamento em uma troca recíproca pela mensagem,[^1] mas, por seu zelo pela propagação do evangelho, você se juntou a outros que são culpados nesse ponto. Tais atividades incluem:
 
-* escrever um capítulo em [um livro que será vendido](https://sellingjesus.org/articles/covering-costs),
+* escrever um capítulo em [um livro que será vendido](https://sellingjesus.org/i18n/pt/articles/covering-costs),
 * publicar um artigo em uma revista que exige uma taxa para acessar,
-* pregar em [uma conferência que exige compra de ingressos dos participantes](https://sellingjesus.org/articles/conferences),
+* pregar em [uma conferência que exige compra de ingressos dos participantes](https://sellingjesus.org/i18n/pt/articles/conferences),
 * ensinar em um seminário que cobra mensalidade, ou
 * falar em uma gravação em vídeo de instrução bíblica que será oferecida por algum custo.
 
@@ -27,7 +27,7 @@ Em nome de Cristo, eu lhe imploro que desista. Por favor, ouça-me; começarei c
 
 Em algum momento, quando eu estava formando minhas convicções sobre dinheiro e ministério — creio que eu estava prestes a publicar [O Princípio Dorean](https://thedoreanprinciple.org/) — recebi um convite para ser professor adjunto em um seminário. Fiquei honrado com a oportunidade, mas também preocupado porque o seminário estava fazendo a transição de um modelo sem mensalidade para exigir alguma taxa dos alunos. Em comparação com outros seminários, era uma taxa modesta. Alguém poderia até chamá-la de “acessível”, se quisesse usar o vocabulário padrão de marketing que os seminários empregam. De todo modo, eu não queria ser culpado de cobrar de alguém pelo meu ensino (Mt 10:8).
 
-Como muitas das passagens do Novo Testamento sobre esse tema dizem respeito à ganância, eu raciocinei que poderia evitar o dilema ético simplesmente abrindo mão do pagamento que me foi oferecido. Eu mesmo não estaria [tratando palavras capacitadas pelo Espírito como vendáveis](https://sellingjesus.org/articles/simony) (1 Cor 2:12-13; At 8:20). Eu não estaria agindo por constrangimento — estando contratualmente vinculado pelo pagamento a retribuir com ensino — mas voluntariamente (1 Pe 5:2).
+Como muitas das passagens do Novo Testamento sobre esse tema dizem respeito à ganância, eu raciocinei que poderia evitar o dilema ético simplesmente abrindo mão do pagamento que me foi oferecido. Eu mesmo não estaria [tratando palavras capacitadas pelo Espírito como vendáveis](https://sellingjesus.org/i18n/pt/articles/simony) (1 Cor 2:12-13; At 8:20). Eu não estaria agindo por constrangimento — estando contratualmente vinculado pelo pagamento a retribuir com ensino — mas voluntariamente (1 Pe 5:2).
 
 No entanto, depois que eu havia concordado formalmente em ocupar a posição e meu nome e foto até já estavam em destaque no site, minha consciência continuou a me incomodar. Mesmo que eu tivesse conseguido contornar as questões diretas de motivo, eu ainda estaria ensinando atrás de um paywall. Eu ainda estaria oferecendo instrução bíblica com parcialidade em favor daqueles que estivessem dispostos a pagar.
 
@@ -66,7 +66,7 @@ Além disso, somos ordenados à pureza em nossas parcerias. Considere as passage
 
 Em cada uma delas, ser cooperador está em vista. Devemos ser cooperadores da verdade e nunca de obras más.
 
-Para aquele que se junta aos que vendem a palavra, ele não faz parceria em sua perversidade ao assisti-los diretamente e visivelmente endossá-la? Talvez você tenha dificuldade em usar a palavra “perversa” para descrever a atividade de irmãos que estão apenas equivocados em sua abordagem; afinal, 2 João fala de falsos mestres. Contudo, mesmo que nenhuma falsa doutrina seja ensinada, a atividade de vender ensino é a marca de um falso mestre (2 Cor 11:7,12). As profecias de Balaão nunca se desviaram da verdade e, ainda assim, [sua venda da palavra é condenada do mesmo modo](https://sellingjesus.org/articles/balaam) (2 Pe 2:15; Jd 11).
+Para aquele que se junta aos que vendem a palavra, ele não faz parceria em sua perversidade ao assisti-los diretamente e visivelmente endossá-la? Talvez você tenha dificuldade em usar a palavra “perversa” para descrever a atividade de irmãos que estão apenas equivocados em sua abordagem; afinal, 2 João fala de falsos mestres. Contudo, mesmo que nenhuma falsa doutrina seja ensinada, a atividade de vender ensino é a marca de um falso mestre (2 Cor 11:7,12). As profecias de Balaão nunca se desviaram da verdade e, ainda assim, [sua venda da palavra é condenada do mesmo modo](https://sellingjesus.org/i18n/pt/articles/balaam) (2 Pe 2:15; Jd 11).
 
 E qual é a medida que João nos dá para fazer parceria com outros? Eles não devem aceitar nada dos gentios (3 Jo 7) — isto é, não devem trocar sua mensagem por coisa alguma com aqueles a quem foram enviados para ensinar. Os que pedem que você se junte a eles para ensinar atrás de um paywall não atendem a essa qualificação.
 
@@ -80,4 +80,4 @@ Meu apelo aqui é simples: __Não ensine atrás de um paywall__. Se isso é algo
 Recuse-se a ensinar com parcialidade. Recuse-se a ensinar em segredo. Recuse-se a fazer parceria na obra perversa de vender a palavra. Esta é uma das melhores maneiras que você tem não apenas de amar aqueles que receberiam a mensagem da verdade, mas igualmente de amar seus irmãos que erram em seus métodos de financiar o ministério. Cobrem-nos com amor!
 
 
-[^1]: [Isto não é para rejeitar honorários ou cargos assalariados!](https://sellingjesus.org/articles/should-preachers-be-paid) Lembrar: colabor é permitido, enquanto a reciprocidade é proibida.
+[^1]: [Isto não é para rejeitar honorários ou cargos assalariados!](https://sellingjesus.org/i18n/pt/articles/should-preachers-be-paid) Lembrar: colabor é permitido, enquanto a reciprocidade é proibida.

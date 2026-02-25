@@ -17,4 +17,4 @@ Mesmo à parte da tradução, programas de estudo bíblico muitas vezes não con
 
 A ação da Crossway é um lembrete de que a Palavra de Deus não está presa—ela deve avançar livremente para toda nação, tribo e língua (Mt 10:8; 2Co 2:17). Isto é realmente um motivo de gratidão, ou pelo menos seria se estivéssemos anunciando isso em qualquer outro dia do ano.
 
-Para entender por que a Palavra de Deus deve ser distribuída sem restrições de direitos autorais, veja _[Editoras de Bíblias - Mordomos ou Porteiros?](https://sellingjesus.org/articles/bible-publishers)_ Para uma tradução moderna das Escrituras em domínio público que já está disponível, confira a [Bíblia Padrão Bereana](https://bsb.freely.giving/).
+Para entender por que a Palavra de Deus deve ser distribuída sem restrições de direitos autorais, veja _[Editoras de Bíblias - Mordomos ou Porteiros?](https://sellingjesus.org/i18n/pt/articles/bible-publishers)_ Para uma tradução moderna das Escrituras em domínio público que já está disponível, confira a [Bíblia Padrão Bereana](https://bsb.freely.giving/).

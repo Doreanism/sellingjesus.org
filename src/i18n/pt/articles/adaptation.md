@@ -7,7 +7,7 @@ date: 2025-10-07T00:00:00.000Z
 image: /media/articles/adaptation.jpg
 ---
 
-A Palavra de Deus deve ser livre. Positivamente, Deus chamou cada um de seus filhos a compartilhar sua Palavra em suas diversas capacidades (Cl 3:16). Negativamente, [ele condenou a venda desta Palavra](https://sellingjesus.org/articles/commercializing-gods-word) em qualquer capacidade. Conduzidos pelo Espírito, os apóstolos falaram as palavras do próprio Deus, e nunca venderam esta revelação divina. De fato, essa prática de dar gratuitamente sua mensagem os distinguia de seus oponentes.
+A Palavra de Deus deve ser livre. Positivamente, Deus chamou cada um de seus filhos a compartilhar sua Palavra em suas diversas capacidades (Cl 3:16). Negativamente, [ele condenou a venda desta Palavra](https://sellingjesus.org/i18n/pt/articles/commercializing-gods-word) em qualquer capacidade. Conduzidos pelo Espírito, os apóstolos falaram as palavras do próprio Deus, e nunca venderam esta revelação divina. De fato, essa prática de dar gratuitamente sua mensagem os distinguia de seus oponentes.
 
 > Pois não somos como tantos outros, que mercadejam a palavra de Deus. Pelo contrário, em Cristo falamos diante de Deus com sinceridade, como homens enviados de Deus. (2 Coríntios 2:17; cf. 2 Cor 10:7, 12).
 

@@ -70,4 +70,4 @@ Portanto, junte-se a nós no confronto ao mercado bíblico, que trata a Palavra 
 
 [^7]: Para saber mais sobre a história da KJV, veja [_O Direito Autoral da KJV – Uma Sórdida História de Intriga e Avareza_](https://kjbhistory.com/the-kjv-copyright-a-sordid-tale-of-intrigue-and-avarice/) de Timothy Berg, 27 de mar. de 2020.
 
-[^8]: Veja nosso artigo *[Editoras de Bíblias: Mordomos ou Porteiros?](https://sellingjesus.org/articles/bible-publishers)*
+[^8]: Veja nosso artigo *[Editoras de Bíblias: Mordomos ou Porteiros?](https://sellingjesus.org/i18n/pt/articles/bible-publishers)*

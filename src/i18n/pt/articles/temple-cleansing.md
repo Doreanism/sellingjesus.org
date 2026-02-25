@@ -101,7 +101,7 @@ Entretanto, devemos evitar aplicar este princípio de forma legalista. Por exemp
 
 Jesus se ofendeu com o comércio acontecendo num local de adoração, e ainda assim tudo o que era vendido no templo era comum: ovelhas, pombas e diferentes moedas. Imagine o que ele pensaria se não fossem apenas animais comuns sendo vendidos, mas o próprio ministério! O que acontece hoje não é apenas a venda de coisas comuns, mas de coisas espirituais: ensino, canções de louvor, sermões, aconselhamento bíblico etc.
 
-Sabemos o que Jesus pensaria porque ele [proíbe claramente vender ministério](https://sellingjesus.org/articles/freely-give-today) em Mateus 10:8 (“De graça recebestes, de graça dai”), e temos o testemunho de [outras passagens](https://sellingjesus.org/articles/commerce-condemned) também. A purificação do templo revela quão seriamente Jesus trata essa questão.
+Sabemos o que Jesus pensaria porque ele [proíbe claramente vender ministério](https://sellingjesus.org/i18n/pt/articles/freely-give-today) em Mateus 10:8 (“De graça recebestes, de graça dai”), e temos o testemunho de [outras passagens](https://sellingjesus.org/i18n/pt/articles/commerce-condemned) também. A purificação do templo revela quão seriamente Jesus trata essa questão.
 
 
 ### 3. Devemos evitar participar da comercialização do cristianismo

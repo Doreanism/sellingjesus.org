@@ -30,7 +30,7 @@ Neste artigo, quero mostrar três coisas principais:
 
 Vejamos primeiro alguns exemplos concretos de como tentativas humanas de monopolizar a Palavra não tiveram sucesso em protegê-la contra corrupção.
 
-Como [já escrevi em outro lugar](https://sellingjesus.org/articles/bible-societies), a KJV nasceu em uma época _anterior à lei moderna de direitos autorais_, mas caiu vítima de um monopólio de impressão decretado pela Coroa que fazia essencialmente a mesma coisa que o copyright. Ninguém tinha permissão para imprimi-la além de algumas gráficas privilegiadas. Isso garantiu bíblias perfeitas? De modo algum.
+Como [já escrevi em outro lugar](https://sellingjesus.org/i18n/pt/articles/bible-societies), a KJV nasceu em uma época _anterior à lei moderna de direitos autorais_, mas caiu vítima de um monopólio de impressão decretado pela Coroa que fazia essencialmente a mesma coisa que o copyright. Ninguém tinha permissão para imprimi-la além de algumas gráficas privilegiadas. Isso garantiu bíblias perfeitas? De modo algum.
 
 Você provavelmente já ouviu falar da “Bíblia Perversa” (“Wicked Bible”) de 1631. Foi uma edição oficial da KJV que acabou com um erro tipográfico escandaloso: a palavra “não” foi omitida acidentalmente do sétimo mandamento e ficou assim: “Cometerás adultério.” O erro passou pelos revisores, e milhares de cópias circularam antes que alguém percebesse. Claramente, o sistema da Coroa não impediu que um texto corrompido fosse publicado nesse caso. Como a história demonstrou repetidas vezes, controle central não é garantia de perfeição.
 

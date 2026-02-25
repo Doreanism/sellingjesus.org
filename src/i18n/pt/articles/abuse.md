@@ -18,7 +18,7 @@ Como analogia, como seria se adotássemos uma abordagem semelhante aos cultos da
 
 Também raramente se reconhece que obras cristãs já podem ser mal utilizadas sob as leis existentes de uso justo (*fair use*). Paródias de obras são legais, o que significa que qualquer recurso cristão pode ser transformado em zombaria satânica, independentemente de direitos autorais. Mesmo assim, estaríamos pressupondo que todos os copiadores do recurso obedecem à lei. Aqueles com más intenções estarão inclinados a simplesmente ignorar a lei de direitos autorais por completo, especialmente os que vivem em países que raramente a aplicam.
 
-O movimento de software de código aberto já demonstrou que os temores de abuso são irracionais,[^1] visto que os benefícios de compartilhar recursos livremente superam em muito quaisquer riscos envolvidos na renúncia às restrições de direitos autorais. Isso também foi claramente demonstrado pela publicação gratuita da tradução da __Bíblia KJV__ em domínio público [na maioria dos países](https://sellingjesus.org/articles/kjv), o que não resultou em corrupção generalizada do texto.
+O movimento de software de código aberto já demonstrou que os temores de abuso são irracionais,[^1] visto que os benefícios de compartilhar recursos livremente superam em muito quaisquer riscos envolvidos na renúncia às restrições de direitos autorais. Isso também foi claramente demonstrado pela publicação gratuita da tradução da __Bíblia KJV__ em domínio público [na maioria dos países](https://sellingjesus.org/i18n/pt/articles/kjv), o que não resultou em corrupção generalizada do texto.
 
 Mas abusos ocasionalmente acontecem; então, como devemos responder se acontecerem?
 

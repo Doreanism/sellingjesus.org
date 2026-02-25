@@ -24,7 +24,7 @@ Isso pode ser dividido sob os títulos complementares de dever e bênção.
 
 Provérbios 11:24 contrasta dar livremente e reter o que é justo. Literalmente, recomenda “espalhar” (פָזַר), um termo idiomático que, no contexto, se refere à generosidade (cf. Sl 112:9). Além disso, condena reter “o que é justo” (BSB, CSB, LSB)—como em algumas traduções, o que é “devido com justiça” (NASB). A pergunta que deve ser respondida aqui é: “O que é justo?” ou “O que é devido com justiça?”
 
-Mateus 10:8 nos dá uma aplicação direta quando Jesus ordena aos discípulos “deem de graça” o que foi “recebido de graça”. O que exatamente foi recebido de graça? A proclamação do reino dos céus (Mt 10:7), o ensino do Espírito (1Co 2:12). Não seria correto reter essas coisas a menos que uma taxa fosse paga. Isso não é apenas um mandamento para os primeiros discípulos, mas [um princípio que se aplica a nós hoje](https://sellingjesus.org/articles/freely-give-today).
+Mateus 10:8 nos dá uma aplicação direta quando Jesus ordena aos discípulos “deem de graça” o que foi “recebido de graça”. O que exatamente foi recebido de graça? A proclamação do reino dos céus (Mt 10:7), o ensino do Espírito (1Co 2:12). Não seria correto reter essas coisas a menos que uma taxa fosse paga. Isso não é apenas um mandamento para os primeiros discípulos, mas [um princípio que se aplica a nós hoje](https://sellingjesus.org/i18n/pt/articles/freely-give-today).
 
 Se temos um dever (isto é, algo que é devido com justiça), a obrigatoriedade da questão está resolvida. A correção do assunto não pode ser anulada por outra consideração, como “se parece prático”.
 

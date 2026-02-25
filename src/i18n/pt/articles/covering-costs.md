@@ -40,7 +40,7 @@ Como os recursos cristãos _teriam_ sido distribuídos naquela época?[^1]
 4. Crentes menos alfabetizados poderiam ter contratado um escriba para fazer cópias para eles
 5. Os crentes poderiam ter compartilhado uma única cópia
 
-Nenhum desses meios de distribuição envolve cobrar alguém pelo _acesso_ ao conteúdo ministerial. Todo o conteúdo era “domínio público”, sem restrições legais à cópia. Portanto, seria uma questão de simonia apenas se o _acesso_ ao texto fosse condicionado ao pagamento. Dada a [condenação] geral das Escrituras à comercialização do ministério (https://sellingjesus.org/articles/commerce-condemned), podemos estar confiantes de que isso não teria sido permitido.
+Nenhum desses meios de distribuição envolve cobrar alguém pelo _acesso_ ao conteúdo ministerial. Todo o conteúdo era “domínio público”, sem restrições legais à cópia. Portanto, seria uma questão de simonia apenas se o _acesso_ ao texto fosse condicionado ao pagamento. Dada a [condenação] geral das Escrituras à comercialização do ministério (https://sellingjesus.org/i18n/pt/articles/commerce-condemned), podemos estar confiantes de que isso não teria sido permitido.
 
 Se alguém permitisse a leitura de manuscritos e cobrasse pelas cópias, seria uma situação semelhante à que estamos agora discutindo. O destinatário do ministério é cobrado, mas apenas pelo papiro e tinta, não pelo acesso ao conteúdo. Assim, dar gratuitamente foi possível por séculos antes do advento da distribuição digital. Em outras palavras, é possível dar gratuitamente sem a tecnologia moderna; a era da internet apenas tornou isso mais conveniente.
 
@@ -118,7 +118,7 @@ Alguns editores podem desejar produzir formatos de alto padrão, como edições 
 Pode surgir uma situação em que alguém queira pedir produtos em grande quantidade, mas você simplesmente não tem fundos para produzi-los. Nesse caso, você poderia informá-los de que não será possível sem financiamento, e perguntar se poderiam fornecê-lo. Para evitar transformar isso numa transação comercial por ministério, você precisaria garantir que:
 
 1. O conteúdo do ministério em si está disponível gratuitamente. Você poderia fornecer-lhes uma cópia digital e instruções de como imprimi-la por meio de outro serviço de impressão, se assim desejassem.
-2. Você não está comprometendo a sinceridade do seu ministério. Você deve ser aberto e honesto sobre os custos e garantir que o arranjo esteja sendo entendido como [colabor](https://sellingjesus.org/articles/colabor) – uma parceria ministerial – em vez de uma venda. Um desejo mútuo de ver o ministério florescer, sem tentar obter qualquer vantagem financeira um sobre o outro.
+2. Você não está comprometendo a sinceridade do seu ministério. Você deve ser aberto e honesto sobre os custos e garantir que o arranjo esteja sendo entendido como [colabor](https://sellingjesus.org/i18n/pt/articles/colabor) – uma parceria ministerial – em vez de uma venda. Um desejo mútuo de ver o ministério florescer, sem tentar obter qualquer vantagem financeira um sobre o outro.
 
 
 ## Estudos de caso

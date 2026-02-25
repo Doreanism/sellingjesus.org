@@ -70,7 +70,7 @@ Embora as atividades do dia a dia da igreja local em grande parte permaneçam de
 
 
 
-O uso de proteção de direitos autorais não apenas tem potencial para violar o princípio dorean, mas, na maioria dos casos, constitui a violação mais direta concebível. Independentemente da intenção dos responsáveis por tais ministérios, exigir pagamento em troca de educação religiosa é adotar práticas condenadas tanto pelas Escrituras quanto pela [igreja primitiva](https://sellingjesus.org/articles/simony).
+O uso de proteção de direitos autorais não apenas tem potencial para violar o princípio dorean, mas, na maioria dos casos, constitui a violação mais direta concebível. Independentemente da intenção dos responsáveis por tais ministérios, exigir pagamento em troca de educação religiosa é adotar práticas condenadas tanto pelas Escrituras quanto pela [igreja primitiva](https://sellingjesus.org/i18n/pt/articles/simony).
 
 
 

@@ -24,7 +24,7 @@ Ainda assim, isso realmente alcança o objetivo pretendido de alinhar-se com pri
 
 ## O Problema de Doar os Lucros de Vendas Ministeriais
 
-O problema com essa abordagem é bastante simples: o Senhor proibiu toda venda de ensino cristão. O mandamento de “[dai de graça](https://sellingjesus.org/articles/freely-give-today)” (Mt 10:8) e a denúncia dos “[mercadores da Palavra de Deus](https://sellingjesus.org/articles/commercializing-gods-word)” (2Co 2:17) não são advertências abstratas contra a cobiça; são proibições concretas contra a comercialização da instrução bíblica. Nenhuma atividade subsequente justifica essas transações. Saul achou que seu saque dos amalequitas seria justificado contanto que oferecesse tudo ao Senhor, mas, como explica o profeta Samuel, obedecer é melhor do que sacrificar (1Sm 15:22).
+O problema com essa abordagem é bastante simples: o Senhor proibiu toda venda de ensino cristão. O mandamento de “[dai de graça](https://sellingjesus.org/i18n/pt/articles/freely-give-today)” (Mt 10:8) e a denúncia dos “[mercadores da Palavra de Deus](https://sellingjesus.org/i18n/pt/articles/commercializing-gods-word)” (2Co 2:17) não são advertências abstratas contra a cobiça; são proibições concretas contra a comercialização da instrução bíblica. Nenhuma atividade subsequente justifica essas transações. Saul achou que seu saque dos amalequitas seria justificado contanto que oferecesse tudo ao Senhor, mas, como explica o profeta Samuel, obedecer é melhor do que sacrificar (1Sm 15:22).
 
 Além disso, a Escritura fala de tais ofertas como detestáveis. Isto é, ele não aceita dinheiro adquirido de forma errada.
 

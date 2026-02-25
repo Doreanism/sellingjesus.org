@@ -32,7 +32,7 @@ __C.__ uma autoridade limitada para receber sustento material.
 
 O objetivo deste artigo é defender "__C__" como o entendimento correto. Apresentarei argumentos para isso em seguida, mas, antes, algumas palavras de esclarecimento.
 
-__A__: Quando Paulo fala de seu direito, ele não tem em mente principalmente sua reivindicação ao sustento material ou o dever ou pagamento que lhe é devido. Certamente, o fato de que algo lhe é devido é repetidamente afirmado nesta passagem (por exemplo, 1 Co 9:11). Além disso, [isso é claramente declarado em outro lugar nas Escrituras](https://sellingjesus.org/articles/should-preachers-be-paid) (1 Tm 5:18; Gl 6:6). Contudo, minha alegação é que esse não é seu ênfase ao usar a palavra “direito”, como alguém poderia falar de “um direito a um julgamento justo”.
+__A__: Quando Paulo fala de seu direito, ele não tem em mente principalmente sua reivindicação ao sustento material ou o dever ou pagamento que lhe é devido. Certamente, o fato de que algo lhe é devido é repetidamente afirmado nesta passagem (por exemplo, 1 Co 9:11). Além disso, [isso é claramente declarado em outro lugar nas Escrituras](https://sellingjesus.org/i18n/pt/articles/should-preachers-be-paid) (1 Tm 5:18; Gl 6:6). Contudo, minha alegação é que esse não é seu ênfase ao usar a palavra “direito”, como alguém poderia falar de “um direito a um julgamento justo”.
 
 __B__: Quando Paulo fala de seu direito, ele também não indica uma autoridade plenária para receber tudo o que lhe for oferecido. Isto é, não é o tipo de autoridade em que suas ações podem permanecer sem estar sujeitas a exame. Meu ponto não é meramente que Paulo terá de prestar contas de suas ações no dia do juízo (2 Co 5:10), mas que, ainda nesta vida, há limites claros para o uso adequado de sua autoridade.
 
@@ -81,7 +81,7 @@ Esses exemplos falam de uma liberdade de acesso, e não de algo que é devido po
 
 ## As analogias de Paulo indicam uma autoridade limitada
 
-Em 1 Coríntios 9, Paulo emprega um conjunto de analogias para descrever seu direito ao sustento material. Em outro lugar, [já analisamos a natureza dessas analogias](https://sellingjesus.org/articles/colabor), mas vale a pena apontar que todas indicam uma autoridade limitada.
+Em 1 Coríntios 9, Paulo emprega um conjunto de analogias para descrever seu direito ao sustento material. Em outro lugar, [já analisamos a natureza dessas analogias](https://sellingjesus.org/i18n/pt/articles/colabor), mas vale a pena apontar que todas indicam uma autoridade limitada.
 
 As várias analogias agrícolas são as menos diretas, mas nem o boi (1 Co 9:9), nem o vinhateiro (1 Co 9:7b), nem o pastor (1 Co 9:7c) têm autoridade direta para tomar do produto. Em cada uma dessas situações, eles recebem sob a direção do proprietário.
 
@@ -100,7 +100,7 @@ Os levitas recebiam dos dízimos e ofertas dados pelo povo em Israel. Como frequ
 
 ## O ponto principal de Paulo é o uso limitado de sua autoridade
 
-Paulo inicia 1 Coríntios 9 estabelecendo seu “direito” ou autoridade. No entanto, ele parte desse fundamento para destacar [o contraste entre sua autoridade e seu uso apropriado](https://sellingjesus.org/articles/1cor9).
+Paulo inicia 1 Coríntios 9 estabelecendo seu “direito” ou autoridade. No entanto, ele parte desse fundamento para destacar [o contraste entre sua autoridade e seu uso apropriado](https://sellingjesus.org/i18n/pt/articles/1cor9).
 
 > Se outros participam da autoridade sobre vós, __porventura__ não mais nós? Mas não usamos desse direito. Antes, suportamos tudo, para não pormos nenhum impedimento ao evangelho de Cristo. (1 Co 9:12)
 

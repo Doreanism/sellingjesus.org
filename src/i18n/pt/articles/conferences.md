@@ -40,7 +40,7 @@ Há várias coisas que alguém poderia imaginar que eu esteja dizendo, mas que n
 3. evitar agir como intermediários para quaisquer custos que possam ser incorridos pelo participante—por exemplo, coletar dinheiro dos participantes para fazer reservas de hotel em seu nome.
 4. evitar todos os locais que imporiam sua própria parcialidade baseada em finanças na participação—por exemplo, realizar o evento em um acampamento privado que impõe sua própria taxa de entrada.
 5. evitar restringir a participação com base em quaisquer outras formas de parcialidade—por exemplo, proibir indivíduos que constituam uma ameaça à segurança ou aplicar um prazo de RSVP.
-6. recusar um honorário aos palestrantes da conferência—em muitos casos, [eles deveriam dar um](https://sellingjesus.org/articles/should-preachers-be-paid).
+6. recusar um honorário aos palestrantes da conferência—em muitos casos, [eles deveriam dar um](https://sellingjesus.org/i18n/pt/articles/should-preachers-be-paid).
 
 Isso não quer dizer que essas atividades seriam desprezíveis ou neutras. Em situações típicas, várias das acima seriam profundamente imprudentes. A Escritura proíbe a venda de ensino cristão em parte porque isso compromete a sinceridade da mensagem (2 Coríntios 2:17). Aqueles que assumem simultaneamente as posições de ministro e vendedor secular—por exemplo, ensinar de graça, mas vender comida—correm o risco de sugerir motivos ulteriores para seu ministério. Aqueles que são displicentes quanto às dificuldades financeiras impostas pelo local—por exemplo, fazer o evento em um cruzeiro—correm o risco de sugerir que o evangelho não é oferecido gratuitamente a todos. Contudo, essas atividades constituem áreas cinzentas porque não minam necessariamente a sinceridade da mensagem; nenhuma dessas atividades é tecnicamente vender acesso ao ensino.
 
@@ -52,7 +52,7 @@ Vários argumentos poderiam ser apresentados aqui,[^1] mas, para escolher um e a
 
 ### 2 Coríntios 2:17
 
-Paulo proíbe [comercializar a palavra de Deus](https://sellingjesus.org/articles/commercializing-gods-word#_2-corinthians-2-17-%E2%80%94-commercializing-the-word-of-god) porque isso demonstra um motivo ulterior; isto é, falta de sinceridade.
+Paulo proíbe [comercializar a palavra de Deus](https://sellingjesus.org/i18n/pt/articles/commercializing-gods-word#_2-corinthians-2-17-%E2%80%94-commercializing-the-word-of-god) porque isso demonstra um motivo ulterior; isto é, falta de sinceridade.
 
 
 > Porque não somos, como tantos outros, os que vendem a palavra de Deus; ao contrário, em Cristo falamos diante de Deus com sinceridade, como homens enviados da parte de Deus. (2 Coríntios 2:17)
@@ -108,7 +108,7 @@ __Considere um livro. Pode-se oferecer o conteúdo gratuitamente, mas cobrar pel
 
 Isso pode parecer uma objeção de peso, mas sua força reside na dificuldade mental de manter as qualificações dadas na declaração de posição. Se pudermos recapitular algumas delas, deveria ser evidente que cobrar por um livro físico é diferente de cobrar por um ingresso de conferência. Comecemos com três semelhanças entre conferências e livros impressos que a Escritura não condena.
 
-Primeiro, já reconhecemos que anfitriões de conferências não necessariamente pecam ao escolher um local onde um terceiro cobra pelo acesso. De fato, dado que a maioria dos países cobra taxas de visto, toda conferência presencial implica algum tipo de custo para um teórico participante estrangeiro. De modo semelhante, se um editor terceirizado vende um livro físico, [isso não necessariamente reflete mal sobre o autor](https://sellingjesus.org/articles/covering-costs).
+Primeiro, já reconhecemos que anfitriões de conferências não necessariamente pecam ao escolher um local onde um terceiro cobra pelo acesso. De fato, dado que a maioria dos países cobra taxas de visto, toda conferência presencial implica algum tipo de custo para um teórico participante estrangeiro. De modo semelhante, se um editor terceirizado vende um livro físico, [isso não necessariamente reflete mal sobre o autor](https://sellingjesus.org/i18n/pt/articles/covering-costs).
 
 Segundo, reconhecemos que anfitriões de conferências não necessariamente pecam ao atuar como intermediários para um terceiro que cobraria por conveniências relacionadas à conferência. Isso seria análogo ao autor cristão que mantém uma loja para seus próprios livros, mas, nos bastidores, usa algum serviço de impressão sob demanda.
 
@@ -123,7 +123,7 @@ Então, o que torna cobrar por um ingresso diferente de cobrar por um livro fís
 
 __2 Coríntios 2:17 trata de corromper a mensagem, não de vendê-la.__
 
-Há traduções de 2 Coríntios 2:17 que se referem a “corromper” a palavra em vez de “vendê-la”. Eu sustentaria que [isso é uma tradução equivocada](https://sellingjesus.org/articles/commercializing-gods-word). De todo modo, mesmo que 2 Coríntios 2:17 trate de corromper a mensagem, ainda exige sinceridade—falta de motivo ulterior. Mas vender a palavra é expor um motivo ulterior de benefício, independentemente de alguém ensinar falsamente ou não.
+Há traduções de 2 Coríntios 2:17 que se referem a “corromper” a palavra em vez de “vendê-la”. Eu sustentaria que [isso é uma tradução equivocada](https://sellingjesus.org/i18n/pt/articles/commercializing-gods-word). De todo modo, mesmo que 2 Coríntios 2:17 trate de corromper a mensagem, ainda exige sinceridade—falta de motivo ulterior. Mas vender a palavra é expor um motivo ulterior de benefício, independentemente de alguém ensinar falsamente ou não.
 
 Além disso, quem vende a palavra implicitamente corrompe a mensagem porque um meio corrupto (que não é gratuito) carrega a mensagem (que é uma oferta gratuita).
 
@@ -141,7 +141,7 @@ Ao mesmo tempo, todo ensino bíblico, corretamente entendido, se relaciona ao ev
 
 __Pode ser um problema cobrar dos incrédulos para ouvirem o ensino cristão, mas, se alguém já tem o evangelho, então você não está cobrando pelo evangelho, e sim por verdades adicionais.__
 
-O cristão igualmente necessita do evangelho (Romanos 1:15). Considere que muitos daqueles para os quais Jesus enviou os doze discípulos [já eram regenerados](https://sellingjesus.org/articles/freely-give-today#objection-3-freely-give-only-applies-to-missions-to-the-lost-not-teaching-the-saved), e ainda assim precisavam ouvir a mensagem do reino, e ele ainda ordenou “de graça dai” (Mateus 10:8).
+O cristão igualmente necessita do evangelho (Romanos 1:15). Considere que muitos daqueles para os quais Jesus enviou os doze discípulos [já eram regenerados](https://sellingjesus.org/i18n/pt/articles/freely-give-today#objection-3-freely-give-only-applies-to-missions-to-the-lost-not-teaching-the-saved), e ainda assim precisavam ouvir a mensagem do reino, e ele ainda ordenou “de graça dai” (Mateus 10:8).
 
 
 ### “Conferências cristãs oferecem algo de valor”
@@ -162,7 +162,7 @@ Isso ainda é parcialidade baseada em finanças. Quando a bolsa é baseada em ne
 
 __Seria um problema se conferências cristãs vendessem ingressos para lucrar, mas, se vendem ingressos para cobrir custos, tudo bem.__
 
-Embora algumas traduções de 2 Coríntios 2:17 digam “vender... para lucro”, [a palavra grega “καπηλεύω” refere-se a vender em geral](https://sellingjesus.org/articles/commercializing-gods-word), não apenas ao tipo de venda que gera lucro. Além disso, isso nada resolve quanto ao problema dos motivos ulteriores. Dar ensino a uma pessoa e não a outra, com base no benefício recebido, é agir com parcialidade para com elas.
+Embora algumas traduções de 2 Coríntios 2:17 digam “vender... para lucro”, [a palavra grega “καπηλεύω” refere-se a vender em geral](https://sellingjesus.org/i18n/pt/articles/commercializing-gods-word), não apenas ao tipo de venda que gera lucro. Além disso, isso nada resolve quanto ao problema dos motivos ulteriores. Dar ensino a uma pessoa e não a outra, com base no benefício recebido, é agir com parcialidade para com elas.
 
 
 ### “Conferências cristãs podem cobrar sem motivos gananciosos”

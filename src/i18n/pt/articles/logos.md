@@ -76,9 +76,9 @@ Como produtos seculares semelhantes, o Logos prende os usuários à sua platafor
 
 No entanto, atribuir toda a culpa ao Logos deixaria passar um ponto crucial sobre a publicação cristã. Embora o Logos desenvolva ferramentas para estudar as Escrituras e o ensino cristão, ele é menos envolvido na criação do conteúdo em si,[^23] e é a venda desse ensino bíblico que é proibida pelas Escrituras (2 Cor 2:17). De fato, se não fosse por editoras bíblicas insistindo em pagamentos de royalties, os criadores do Logos teriam publicado a versão original como shareware.[^24] Autores, acadêmicos e tradutores da Bíblia também escolhem comercializar suas obras e utilizar plataformas como o Logos para fazê-lo.
 
-Como as editoras querem maximizar lucros, elas raramente têm interesse em oferecer suas obras por meio de software gratuito que não incentive ativamente compras, razão pela qual o Logos tem sido um parceiro ideal e tem a mais ampla seleção de recursos cristãos disponível. Apps de Bíblia gratuitos, por outro lado, têm muito menos recursos para escolher. Como cristãos normalmente são apegados a uma versão específica da Bíblia, não importa quão bom um app de Bíblia possa ser: ele ainda será rejeitado se [não incluir a tradução preferida do usuário](https://sellingjesus.org/articles/bible-publishers).
+Como as editoras querem maximizar lucros, elas raramente têm interesse em oferecer suas obras por meio de software gratuito que não incentive ativamente compras, razão pela qual o Logos tem sido um parceiro ideal e tem a mais ampla seleção de recursos cristãos disponível. Apps de Bíblia gratuitos, por outro lado, têm muito menos recursos para escolher. Como cristãos normalmente são apegados a uma versão específica da Bíblia, não importa quão bom um app de Bíblia possa ser: ele ainda será rejeitado se [não incluir a tradução preferida do usuário](https://sellingjesus.org/i18n/pt/articles/bible-publishers).
 
-Ainda assim, existem boas alternativas gratuitas ao Logos que você deveria considerar para [evitar participar desse comércio](https://sellingjesus.org/articles/buying), tais como:
+Ainda assim, existem boas alternativas gratuitas ao Logos que você deveria considerar para [evitar participar desse comércio](https://sellingjesus.org/i18n/pt/articles/buying), tais como:
 
 * [Software do Sword Project](https://crosswire.org/applications/) – várias ferramentas de estudo disponíveis em múltiplas plataformas
 * [Aplicativo web STEP](https://www.stepbible.org/) – um app de estudo baseado na web que não requer instalação
@@ -134,7 +134,7 @@ _O Logos recebeu um rascunho deste artigo antes da publicação e foi convidado 
 
 [^21]: De um comentário no vídeo do YouTube _[Welcome Video from Bill McCarthy, CEO](https://www.youtube.com/watch?v=JEERqYD_zeQ)._
 
-[^22]: Software [não é uma forma de ministério cristão](https://sellingjesus.org/articles/defining-ministry), e portanto não está sujeito ao princípio do dorean. Contudo, outras éticas cristãs são relevantes, como generosidade, mordomia e evitar parcialidade.
+[^22]: Software [não é uma forma de ministério cristão](https://sellingjesus.org/i18n/pt/articles/defining-ministry), e portanto não está sujeito ao princípio do dorean. Contudo, outras éticas cristãs são relevantes, como generosidade, mordomia e evitar parcialidade.
 
 [^23]: Eles têm estado envolvidos na criação de Bíblias de estudo, textos críticos, traduções e outros recursos por meio da Lexham Press (que foi [recentemente vendida](https://bakerpublishinggroup.com/pages/baker-publishing-group-acquires-lexham-press-strengthening-partnership-in-christian-publishing) para o Baker Publishing Group).
 

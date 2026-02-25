@@ -65,7 +65,7 @@ Mesmo dentro das sociedades, alguns líderes passaram a reconhecer o problema. A
 
 ## Direitos autorais e controle proprietário
 
-Em meio a esse crescente enredamento com mecanismos de mercado, surgiu a questão da propriedade intelectual. As primeiras sociedades bíblicas operavam em uma zona cinzenta legal. O texto da Bíblia King James, sua principal versão, não era protegido pela lei de direitos autorais americana, embora permanecesse sob os [direitos autorais da Coroa](https://sellingjesus.org/articles/kjv) no Reino Unido. Isso autorizava os americanos a imprimir o texto das Escrituras sem royalties e a doá-lo sem restrições. Mas a publicação de bíblias sem direitos autorais logo seguiria o caminho de toda carne.
+Em meio a esse crescente enredamento com mecanismos de mercado, surgiu a questão da propriedade intelectual. As primeiras sociedades bíblicas operavam em uma zona cinzenta legal. O texto da Bíblia King James, sua principal versão, não era protegido pela lei de direitos autorais americana, embora permanecesse sob os [direitos autorais da Coroa](https://sellingjesus.org/i18n/pt/articles/kjv) no Reino Unido. Isso autorizava os americanos a imprimir o texto das Escrituras sem royalties e a doá-lo sem restrições. Mas a publicação de bíblias sem direitos autorais logo seguiria o caminho de toda carne.
 
 O livro _Faith in Reading_[^23] mostra o crescente uso de mecanismos de controle proprietário pela ABS no século XIX, como as próprias chapas estereotípicas. Essas chapas onerosas efetivamente prendiam outras sociedades em relações de dependência, porque só aqueles com acesso podiam imprimir edições padronizadas. As chapas funcionavam como uma espécie de direitos autorais analógicos.[^24]
 
@@ -95,7 +95,7 @@ No final do século XX, não era incomum ouvir críticos afirmando que novas ver
 
 Defensores da prática contra-argumentam que projetos de tradução custam milhões e, sem direitos autorais, poucas editoras poderiam arcar com tal trabalho. E a proliferação de versões, cada uma com seus próprios direitos autorais, reforçou a noção de que propriedade intelectual é e deve ser parte normal da publicação bíblica.
 
-Quando o ministério de produzir traduções bíblicas passou a ser financiado por vendas, em vez da generosidade livre do povo de Deus, isso [sabota a sinceridade](https://thedoreanprinciple.org/#c6) de todas as instituições envolvidas. Além disso, cometeram dois pecados: o pecado de parcialidade (Tg 2:1-7) e o [pecado de simonia](https://sellingjesus.org/articles/simony) (At 8:18-19). O que começou como uma missão para dar a Bíblia de graça evoluiu para um modelo de negócios que exigia impedir outros de fazê-lo livremente.
+Quando o ministério de produzir traduções bíblicas passou a ser financiado por vendas, em vez da generosidade livre do povo de Deus, isso [sabota a sinceridade](https://thedoreanprinciple.org/#c6) de todas as instituições envolvidas. Além disso, cometeram dois pecados: o pecado de parcialidade (Tg 2:1-7) e o [pecado de simonia](https://sellingjesus.org/i18n/pt/articles/simony) (At 8:18-19). O que começou como uma missão para dar a Bíblia de graça evoluiu para um modelo de negócios que exigia impedir outros de fazê-lo livremente.
 
 
 ## O legado da comercialização
@@ -168,7 +168,7 @@ O legado dessa transformação continua hoje. Sociedades bíblicas modernas depe
 
 [^27]: _A Nova Aliança, Comumente chamada de Novo Testamento de nosso Senhor e Salvador Jesus Cristo_. _Revised Standard Version_ (Nova York: Thomas Nelson & Sons, 1946), “Prefácio,” iii-iv.
 
-[^28]: Maurice A. Robinson, [_A Servidão da Palavra: Direitos Autorais e a Bíblia_](https://sellingjesus.org/articles/copyright-and-the-bible) (1996), acessado em 20 de maio de 2025.
+[^28]: Maurice A. Robinson, [_A Servidão da Palavra: Direitos Autorais e a Bíblia_](https://sellingjesus.org/i18n/pt/articles/copyright-and-the-bible) (1996), acessado em 20 de maio de 2025.
 
 [^29]: Doug Kutilek, _[A KJV é uma Tradução com Direitos Autorais](https://www.beacon-ministries.org/?subpages/The-KJV--is-a-Copyrighted-Version.shtml)_, acessado em 20 de maio de 2025.
 

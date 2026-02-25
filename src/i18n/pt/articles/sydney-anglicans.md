@@ -66,12 +66,12 @@ Até mesmo ensino muito básico é cobrado, com títulos incluindo:
 * The Path to Godliness
 * Growing in Prayer
 
-Poderia ser permissível se fosse apenas o [custo de impressão e entrega](https://sellingjesus.org/articles/covering-costs) que estivesse sendo coberto, mas até mesmo os ebooks — isto é, o ensino em si — são vendidos pelo valor.
+Poderia ser permissível se fosse apenas o [custo de impressão e entrega](https://sellingjesus.org/i18n/pt/articles/covering-costs) que estivesse sendo coberto, mas até mesmo os ebooks — isto é, o ensino em si — são vendidos pelo valor.
 
 
 ## Vendendo o evangelho
 
-Agora, você pode estar pensando: _OK, tudo bem, o ensino está sendo vendido. Mas isso não é o mesmo que vender o evangelho._ Primeiro, tal visão se desviaria das Escrituras, porque as Escrituras condenam vender [todas as formas de ministério](https://sellingjesus.org/articles/defining-ministry), não apenas o que poderia ser definido de maneira restrita como “o evangelho”. Mas, pelo bem do argumento, sim, a mensagem básica do evangelho ___está___ sendo vendida. Tomemos como exemplo este livro: _The Christian Gospel_, “A short account of the momentous news about Jesus Christ.” Preço? US$ 7,95 para o ebook. Para quem é este livro? O autor escreve:
+Agora, você pode estar pensando: _OK, tudo bem, o ensino está sendo vendido. Mas isso não é o mesmo que vender o evangelho._ Primeiro, tal visão se desviaria das Escrituras, porque as Escrituras condenam vender [todas as formas de ministério](https://sellingjesus.org/i18n/pt/articles/defining-ministry), não apenas o que poderia ser definido de maneira restrita como “o evangelho”. Mas, pelo bem do argumento, sim, a mensagem básica do evangelho ___está___ sendo vendida. Tomemos como exemplo este livro: _The Christian Gospel_, “A short account of the momentous news about Jesus Christ.” Preço? US$ 7,95 para o ebook. Para quem é este livro? O autor escreve:
 
 > Para todos [os que acabamos de mencionar], em termos práticos, o cristianismo desempenha pouca ou nenhuma parte nas decisões e prioridades de sua vida diária. É este o seu caso? Se sim, não importa sua idade ou cultura, estou escrevendo este pequeno livro pensando em você. Quero explicar a você, tão simples e claramente quanto eu puder, o que é o evangelho cristão.[^quote]
 
@@ -81,7 +81,7 @@ Se isso ainda não convenceu você de que os anglicanos de Sydney precisam escla
 
 > Se você gostaria de registrar seu interesse para o nosso próximo Grupo de Batismo, por favor preencha este formulário online de Registro do Grupo de Batismo e um membro da nossa equipe de ministério entrará em contato em breve. Observe que há uma taxa administrativa de US$ 50 para Batismos, a ser paga no momento da inscrição via formulário online. Isso cobre o custo do Curso de Preparação e se aplica independentemente de você prosseguir ou não com o Batismo. Também inclui o custo de uma nova bíblia infantil para você ler com seu filho por muitos anos![^4]
 
-Independentemente da desculpa (mesmo que seja apenas para cobrir custos administrativos) isso historicamente tem sido condenado como _[simonia](https://sellingjesus.org/articles/simony)_. Tomás de Aquino, no século 13, escreveu: “Quem quer que consagre alguém por dinheiro, seja cortado do sacerdócio.”[^5] Além disso, cobrar pelo batismo foi declarado ilegal na Igreja da Inglaterra pelo [Baptismal Fees Act de 1872](https://www.legislation.gov.uk/ukpga/Vict/35-36/36/introduction/enacted), que notavelmente também proibiu taxas administrativas para registrar o batismo.[^6]
+Independentemente da desculpa (mesmo que seja apenas para cobrir custos administrativos) isso historicamente tem sido condenado como _[simonia](https://sellingjesus.org/i18n/pt/articles/simony)_. Tomás de Aquino, no século 13, escreveu: “Quem quer que consagre alguém por dinheiro, seja cortado do sacerdócio.”[^5] Além disso, cobrar pelo batismo foi declarado ilegal na Igreja da Inglaterra pelo [Baptismal Fees Act de 1872](https://www.legislation.gov.uk/ukpga/Vict/35-36/36/introduction/enacted), que notavelmente também proibiu taxas administrativas para registrar o batismo.[^6]
 
 
 ## Lugares reservados na igreja

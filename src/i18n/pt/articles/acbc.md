@@ -5,7 +5,7 @@ author: Sarah Owens
 date: 2023-11-29T00:00:00.000Z
 image: /media/articles/acbc.jpg
 ---
-[Como introdução a este artigo, leia *[O Aconselhamento Bíblico Deve Ser Gratuito](https://sellingjesus.org/articles/biblical-counseling)*.]
+[Como introdução a este artigo, leia *[O Aconselhamento Bíblico Deve Ser Gratuito](https://sellingjesus.org/i18n/pt/articles/biblical-counseling)*.]
 
 Nosso Mestre nos ordenou que “ensinemos e admoestemos uns aos outros” (Col 3:16) e que “admoestemos os insubmissos” (1 Tess 5:14) como parte do nosso dever cristão. No entanto, em vez de falarem a verdade e a sabedoria aos outros gratuitamente, como as receberam de Deus, alguns vendem seu conselho bíblico como se tivesse se originado de si mesmos.[^1] Pela graça de Deus, esta não é a prática da maioria dos conselheiros bíblicos, mas, infelizmente, é disseminada, mesmo entre organizações de aconselhamento bíblico altamente conceituadas, como a Association of Certified Biblical Counselors (ACBC), como este artigo demonstrará.
 
@@ -81,7 +81,7 @@ Aqui estão alguns dos resultados de som absurda que ocorrem quando centros de a
 
 Concordo com o ex-diretor executivo da ACBC, Heath Lambert, quando diz: “O fato é que aconselhamento é ministério, e ministério é aconselhamento. Os dois são termos equivalentes.”[^15] Mais uma vez, as Escrituras são claras de que o ministério cristão deve ser sustentado, mas nunca vendido.[^16] A ACBC deve assumir uma posição firme sobre essa questão, alterando seus “Padrões de Conduta” para refletir uma ética bíblica de captação de recursos ao exigir que seus membros ofereçam aconselhamento bíblico gratuitamente. Minha esperança é que um ministério que amo e admiro possa um dia refletir verdadeiramente a generosidade radical e a graça gratuita de Deus a um mundo quebrado, e condenar inequivocamente o comércio da Palavra de Deus (2 Cor 2:17, Miquéias 3:11).
 
-[^1]: Veja nosso artigo introdutório ["O Aconselhamento Bíblico Deve Ser Gratuito"](https://sellingjesus.org/articles/biblical-counseling).
+[^1]: Veja nosso artigo introdutório ["O Aconselhamento Bíblico Deve Ser Gratuito"](https://sellingjesus.org/i18n/pt/articles/biblical-counseling).
 
 [^2]: Heath Lambert e Stuart Scott, Counseling the Hard Cases: True Stories Illustrating the Sufficiency of God's Resources in Scripture (B&H Academic, 2015), 27.
 

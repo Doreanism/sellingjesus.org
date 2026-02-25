@@ -121,7 +121,7 @@ O papa Pio IV, em 1584, relutantemente permitiu traduções na língua vernácul
 
 As editoras hoje, da mesma forma, acreditam que lhes foi confiada por Deus a tarefa de administrar sua Palavra e que não podem confiar em crentes comuns para imprimi-la ou publicá-la por si mesmos. Em vez disso, qualquer um que deseje fazê-lo deve receber permissão delas.
 
-Para ser realmente livre, todas as traduções da Bíblia deveriam ser de domínio público, confiando à igreja a manutenção do bom ensino em vez de a tribunais seculares.[^copyright] No entanto, para argumento, se essas organizações realmente quisessem garantir a "pureza do texto", poderiam fazer uso da popular [licença Creative Commons Atribuição–NãoComercial–SemDerivações](https://creativecommons.org/licenses/by-nc-nd/4.0/).[^by-nc-nd] Essa licença significaria que qualquer pessoa pode compartilhar livremente as Escrituras desde que não as modifique nem as comercialize. Nenhuma dessas editoras bíblicas optou por usá-la.[^cc] É perfeitamente justo concluir, então, que elas não estão apenas preocupadas com a pureza do texto, mas sim com o _controle_ do texto. Como o Dr. Maurice Robinson coloca em seu artigo de 1996 _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](/articles/copyright-and-the-bible#_3-other-modern-translations)_:
+Para ser realmente livre, todas as traduções da Bíblia deveriam ser de domínio público, confiando à igreja a manutenção do bom ensino em vez de a tribunais seculares.[^copyright] No entanto, para argumento, se essas organizações realmente quisessem garantir a "pureza do texto", poderiam fazer uso da popular [licença Creative Commons Atribuição–NãoComercial–SemDerivações](https://creativecommons.org/licenses/by-nc-nd/4.0/).[^by-nc-nd] Essa licença significaria que qualquer pessoa pode compartilhar livremente as Escrituras desde que não as modifique nem as comercialize. Nenhuma dessas editoras bíblicas optou por usá-la.[^cc] É perfeitamente justo concluir, então, que elas não estão apenas preocupadas com a pureza do texto, mas sim com o _controle_ do texto. Como o Dr. Maurice Robinson coloca em seu artigo de 1996 _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](/i18n/pt/articles/copyright-and-the-bible#_3-other-modern-translations)_:
 
 > Não é a "pureza do texto" que precisa ser protegida, mas a _libertação_ desse texto daquelas entidades não eclesiásticas que desejam lucrar injustamente ao comercializar a palavra de Deus de volta ao povo de Deus
 
@@ -184,11 +184,11 @@ A característica mais importante de uma tradução é, claro, a precisão, mas 
 
 [^boast]: Citado da FAQ "Como você levantará o dinheiro?" de [A Bíblia em Vídeo](https://videobible.com/about)
 
-[^aloud]: Veja a nota de rodapé 24 em _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](https://sellingjesus.org/articles/copyright-and-the-bible#fn24)_.
+[^aloud]: Veja a nota de rodapé 24 em _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](https://sellingjesus.org/i18n/pt/articles/copyright-and-the-bible#fn24)_.
 
 [^wwutt]: Veja o [episódio 2295 do WWUTT Podcast](https://wwutt.podbean.com/e/wwutt-2295-qa-parenting-resources-the-genealogies-of-jesus-contemporary-christian-music/) a partir de 13:24.
 
-[^criticism]: Veja a nota de rodapé 15 em _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](https://sellingjesus.org/articles/copyright-and-the-bible#fn15)_.
+[^criticism]: Veja a nota de rodapé 15 em _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](https://sellingjesus.org/i18n/pt/articles/copyright-and-the-bible#fn15)_.
 
 [^compensation]: Esta informação vem da [declaração de impostos de acesso público](https://apps.irs.gov/app/eos/) mais recente disponível (à época da publicação) de "Good News Publishers", que comercialmente usa o nome "Crossway".
 
@@ -202,7 +202,7 @@ A característica mais importante de uma tradução é, claro, a precisão, mas 
 
 [^translators]: Como a [unfoldingWord](https://www.unfoldingword.org/), a [Bible Hub](https://bereanbibles.com/) e inúmeros tradutores da Bíblia para outros idiomas.
 
-[^reluctant]: Veja a nota de rodapé 14 em _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](https://sellingjesus.org/articles/copyright-and-the-bible#fn14)_.
+[^reluctant]: Veja a nota de rodapé 14 em _[A Escravidão da Palavra: Direitos Autorais e a Bíblia](https://sellingjesus.org/i18n/pt/articles/copyright-and-the-bible#fn14)_.
 
 [^jore]: Veja _[Letting Go](https://www.unfoldingword.org/publications/letting-go)_ de Tim Jore para mais argumentos sobre por que direitos autorais fazem mais mal do que bem. Jore argumenta que uma licença CompartilhaIgual é uma opção melhor; contudo, a motivação para tal licença tem a mesma falha da abordagem "todos os direitos reservados": a saber, "o medo de coisas ruins acontecerem com conteúdo bom". Dedicar ao domínio público é a conclusão lógica de resistir a tal medo irracional.
 

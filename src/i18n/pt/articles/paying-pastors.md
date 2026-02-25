@@ -7,7 +7,7 @@ date: 2024-06-01T00:00:00.000Z
 ---
 
 
-Algumas pessoas ficaram tão incomodadas com a comercialização do ministério que passaram a questionar se pastores deveriam ser pagos. Já argumentamos que [pastores devem ser pagos](https://sellingjesus.org/articles/should-preachers-be-paid). Neste artigo, gostaria de tratar especificamente das objeções levantadas quanto ao apoio financeiro a pastores. Farei isso à luz do _[princípio dorean](https://thedoreanprinciple.org/)_, de que o ministério deve ser sustentado, mas não vendido.
+Algumas pessoas ficaram tão incomodadas com a comercialização do ministério que passaram a questionar se pastores deveriam ser pagos. Já argumentamos que [pastores devem ser pagos](https://sellingjesus.org/i18n/pt/articles/should-preachers-be-paid). Neste artigo, gostaria de tratar especificamente das objeções levantadas quanto ao apoio financeiro a pastores. Farei isso à luz do _[princípio dorean](https://thedoreanprinciple.org/)_, de que o ministério deve ser sustentado, mas não vendido.
 
 
 ## Objeção 1 – Pastores estão atrás do seu dinheiro
@@ -68,7 +68,7 @@ O Novo Testamento foi escrito em uma época em que havia relativamente poucas ig
 
 O contexto dessa passagem é claramente a igreja local, com presbíteros que servem à congregação. _Honra_ é claramente de aplicação financeira, dado o contexto de honrar _financeiramente_ as viúvas antes disso, e as citações subsequentes (boi, salário).[^7]
 
-Quando você recebe bens espirituais por meio de um ministro do evangelho, torna-se ainda mais apropriado assegurar que tal ministério seja sustentado como forma de responder à provisão de Deus para você por meio dele. Parte do argumento de Paulo pelo direito de ser sustentado em 1 Coríntios 9 baseia-se na adequação de sustentar aqueles de quem você mesmo foi beneficiado espiritualmente: “Se semeamos entre vós as coisas espirituais, será muito recolhermos de vós bens materiais? Se outros têm sobre vós esse direito, por que não muito mais nós?” (1 Co 9:11-12).[^8] Paulo prossegue explicando [por que não exerceu tal direito](https://sellingjesus.org/articles/1cor9) quando esteve com os coríntios, mas seu raciocínio é sólido. Receber ministério de alguém não torna _menos_ apropriado sustentá-lo; torna _mais_ apropriado.
+Quando você recebe bens espirituais por meio de um ministro do evangelho, torna-se ainda mais apropriado assegurar que tal ministério seja sustentado como forma de responder à provisão de Deus para você por meio dele. Parte do argumento de Paulo pelo direito de ser sustentado em 1 Coríntios 9 baseia-se na adequação de sustentar aqueles de quem você mesmo foi beneficiado espiritualmente: “Se semeamos entre vós as coisas espirituais, será muito recolhermos de vós bens materiais? Se outros têm sobre vós esse direito, por que não muito mais nós?” (1 Co 9:11-12).[^8] Paulo prossegue explicando [por que não exerceu tal direito](https://sellingjesus.org/i18n/pt/articles/1cor9) quando esteve com os coríntios, mas seu raciocínio é sólido. Receber ministério de alguém não torna _menos_ apropriado sustentá-lo; torna _mais_ apropriado.
 
 
 ## Conclusão

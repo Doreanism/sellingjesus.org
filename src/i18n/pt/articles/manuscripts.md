@@ -194,7 +194,7 @@ Como a falsa acusação tenta causar dano real de propriedade ao próximo, seria
 
 ### Textos Críticos
 
-Se textos críticos pretendem realmente restaurar as palavras dos profetas e apóstolos, então claramente isso não pode estar sujeito à propriedade humana. A palavra de Deus foi dada como dom e [não pode ser possuída ou vendida](https://sellingjesus.org/articles/commerce-condemned) (2 Cor 2:17). Mesmo medidas de imprecisão na restauração não mudam essa realidade. Mesmo reivindicar um direito de atribuição vai além do que pode ser concedido biblicamente, como no caso do SBLGNT.
+Se textos críticos pretendem realmente restaurar as palavras dos profetas e apóstolos, então claramente isso não pode estar sujeito à propriedade humana. A palavra de Deus foi dada como dom e [não pode ser possuída ou vendida](https://sellingjesus.org/i18n/pt/articles/commerce-condemned) (2 Cor 2:17). Mesmo medidas de imprecisão na restauração não mudam essa realidade. Mesmo reivindicar um direito de atribuição vai além do que pode ser concedido biblicamente, como no caso do SBLGNT.
 
 Da mesma forma, a própria verdade não é algo que possa ser possuído. Mesmo aquelas organizações que fazem reivindicações mínimas sobre metadados associados a textos críticos reivindicam demais. Por exemplo, a Open Scriptures afirma que os dados de lema e morfologia que publica junto com o OSHB são licenciados sob CC BY, mas estes são meramente avaliações factuais de sintaxe e gramática, não obras criativas.
 

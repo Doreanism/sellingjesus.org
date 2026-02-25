@@ -8,7 +8,7 @@ date: 2023-02-21T00:00:00.000Z
 
 Quando entregamos ofertas na igreja, a quem as estamos entregando? Em termos práticos, estamos entregando a uma entidade legal (uma igreja local) que então reúne o que é “ofertado” para pagar aluguel, salários e outras despesas. Mas o fato de usarmos o termo “oferta” e não apenas “doação” deve nos lembrar que há uma dimensão espiritual em curso, mesmo que o mundo secular não a enxergue.
 
-No meu artigo [_O Mandamento de Dar Gratuitamente_](/articles/freely-give), estabelece-se que:
+No meu artigo [_O Mandamento de Dar Gratuitamente_](/i18n/pt/articles/freely-give), estabelece-se que:
  1. Jesus ordenou a dádiva gratuita no contexto do ministério
  2. Paulo endossou o sustento financeiro para o ministério, não o comércio
  3. O próprio Paulo modelou a dádiva gratuita
@@ -43,7 +43,7 @@ Deus é o empregador, e é ele quem provê para os seus trabalhadores, o que mui
 
 
 ## Ministério gratuito
-De acordo com [a ética de dar gratuitamente](/articles/freely-give), o ministro nunca cobrará pelo serviço e a oferta é voluntária. Aqueles que sustentam financeiramente o ministro podem ou não ser beneficiários do serviço. Por exemplo, membros de uma congregação seriam beneficiários do ministério que financiam, ao passo que os que sustentam missionários não o seriam.
+De acordo com [a ética de dar gratuitamente](/i18n/pt/articles/freely-give), o ministro nunca cobrará pelo serviço e a oferta é voluntária. Aqueles que sustentam financeiramente o ministro podem ou não ser beneficiários do serviço. Por exemplo, membros de uma congregação seriam beneficiários do ministério que financiam, ao passo que os que sustentam missionários não o seriam.
 
 ![O ministro ministra gratuitamente](/_assets/biblical-funding/diagram_colabor3.svg)
 

@@ -19,7 +19,7 @@ Certamente, deve haver séria preocupação quanto à novidade doutrinária. Com
 
 Minha posição não é que o princípio dorean seja realmente novo, mas, como tem acontecido com muitas verdades, diferentes eras produzem vários desafios que exigem maior clareza na formulação doutrinária. Nossa própria era enfrentou as mudanças de direitos autorais e royalties desde o século XVIII e de publicação digital desde o século XX, ambos requerendo que a igreja considere como a doutrina deve ser reformulada e/ou aplicada. Por exemplo, não devemos nos contentar com os escritos de Lutero sobre as indulgências como se fossem a palavra final sobre a venda de coisas espirituais. Embora suas objeções fossem suficientes para tais transgressões óbvias, os desafios que enfrentamos hoje exigem maior precisão.
 
-Vale ressaltar que, desde a publicação do TDP, boa parte da minha pesquisa tem se concentrado particularmente em identificar as formas mais incipientes dessa ética na história, especialmente sob o título de [simonia](https://sellingjesus.org/articles/simony). Espero escrever mais sobre isso no futuro.
+Vale ressaltar que, desde a publicação do TDP, boa parte da minha pesquisa tem se concentrado particularmente em identificar as formas mais incipientes dessa ética na história, especialmente sob o título de [simonia](https://sellingjesus.org/i18n/pt/articles/simony). Espero escrever mais sobre isso no futuro.
 
 
 ## Anacronismo
@@ -28,7 +28,7 @@ O Dr. B também tem preocupações com o anacronismo. Ou seja, ele afirma que o 
 
 Em certo ponto, ele diz, acerca de conferências, livrarias e seminários: “Paulo não poderia estar preocupado com tais coisas, pois elas não existiam em seu tempo.” Ninguém está sugerindo que Paulo tinha essas instituições exatas em mente, mas certamente as instituições modernas não estão imunes à regulamentação de princípios bíblicos. Por exemplo, Paulo conhecia a internet? Parece improvável, mas suas exortações sobre a fala apropriada devem orientar a comunicação digital assim como a analógica.
 
-Para o leitor interessado, abordei preocupações relacionadas ao anacronismo [aqui](https://sellingjesus.org/articles/freely-give-today).
+Para o leitor interessado, abordei preocupações relacionadas ao anacronismo [aqui](https://sellingjesus.org/i18n/pt/articles/freely-give-today).
 
 
 ## Interpretação
@@ -75,6 +75,6 @@ Eu estaria aberto a outras sugestões de temas que o senhor possa propor também
 
 [^2]: Fui informado de que o Dr. B é [Barry Carpenter](https://x.com/BarryGCarpenter).
 
-[^3]: No entanto, a purificação do templo se aplica de forma mais direta ao princípio dorean. Jon Here escreveu um [artigo](https://sellingjesus.org/articles/temple-cleansing) sobre isso.
+[^3]: No entanto, a purificação do templo se aplica de forma mais direta ao princípio dorean. Jon Here escreveu um [artigo](https://sellingjesus.org/i18n/pt/articles/temple-cleansing) sobre isso.
 
 [^4]: [Informações de Matrícula do Seminário Mindanao Grace](https://assets.zyrosite.com/mp86aMOyBxSWV5Pe/mgsstudentguide.3-mk3D17P7V9H8V54G.pdf)
