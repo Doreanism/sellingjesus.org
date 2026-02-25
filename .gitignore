@@ -5,9 +5,6 @@ node_modules/
 /.env
 /.vitepress/cache/
 /.vitepress/.temp/
-/src/learn/resources_processed.json
-/src/learn/conversations_processed.json
-/src/learn/corinthians_processed.json
 
 /podcast/audio.*
 /podcast/image.*
@@ -16,3 +13,9 @@ node_modules/
 /podcast/episodes/
 
 /book/shared/
+
+
+# Anywhere (especially for i18n)
+resources_processed.json
+conversations_processed.json
+corinthians_processed.json
