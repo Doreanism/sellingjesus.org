@@ -12,6 +12,9 @@ if (language.length !== 2){
 }
 
 
+const no_fences = 'Return only the raw file content, with no code fences.'
+
+
 async function call_llm(sys_prompt, content) {
     const response = await fetch('https://api.openai.com/v1/responses', {
         method: 'POST',
@@ -40,7 +43,7 @@ async function call_llm(sys_prompt, content) {
 
 async function translate_md(content) {
     return call_llm(
-        `Translate all human text into ${language}, but preserve all Markdown, YAML, and HTML formatting. These are Christian theological writings. Translate quotes and Bible verses. Translate the text contents of any HTML, including within tables. Translate link text but don't change the URLs. Never translate Greek or Hebrew.`,
+        `Translate all human text into ${language}, but preserve all Markdown, YAML, and HTML formatting. These are Christian theological writings. Translate quotes and Bible verses. Translate the text contents of any HTML, including within tables. Translate link text but don't change the URLs. Never translate Greek or Hebrew. ${no_fences}`,
         content,
     )
 }
@@ -48,7 +51,7 @@ async function translate_md(content) {
 
 async function translate_ts(content) {
     return call_llm(
-        `Translate all human-readable string values into ${language} in this TypeScript/Vue file. Preserve all code, syntax, variable names, import paths, and formatting exactly. Only translate string literals that contain visible human-readable text. Never translate code identifiers, URLs, file paths, or technical values.`,
+        `Translate all human-readable string values into ${language} in this TypeScript/Vue file. Preserve all code, syntax, variable names, import paths, and formatting exactly. Only translate string literals that contain visible human-readable text. Never translate code identifiers, URLs, file paths, or technical values. ${no_fences}`,
         content,
     )
 }
@@ -56,7 +59,7 @@ async function translate_ts(content) {
 
 async function translate_json(content) {
     return call_llm(
-        `Translate all human-readable string values into ${language} in this JSON. Preserve all JSON structure, keys, newlines, and non-text values exactly. These are Christian theological writings.`,
+        `Translate all human-readable string values into ${language} in this JSON. Preserve all JSON structure, keys, newlines, and non-text values exactly. These are Christian theological writings. ${no_fences}`,
         content,
     )
 }
