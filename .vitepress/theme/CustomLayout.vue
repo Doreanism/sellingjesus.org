@@ -11,7 +11,7 @@ Layout(:class='page_id')
             TranslateButton.translate-menu
     template(#doc-before)
         div.vp-doc
-            ArticleIntro(v-if='page.relativePath.startsWith("articles/")')
+            ArticleIntro(v-if='page.relativePath.includes("articles/")')
     template(#doc-footer-before)
         PersonBio(v-if='frontmatter.author' :name='frontmatter.author')
     template(#doc-bottom)
