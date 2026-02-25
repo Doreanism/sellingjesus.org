@@ -432,7 +432,7 @@ interface OutlineSection {
 }
 
 const toc:OutlineSection[] = [
-    {title: "Conversations", chapters: [
+    {title: strings.section_conversations, chapters: [
         {id: "chapter-convo-general", title: strings.convo_general_title},
         {id: "chapter-convo-corinthians", title: strings.convo_corinthians_title},
     ]},
