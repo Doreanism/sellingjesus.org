@@ -84,6 +84,17 @@ export default defineConfig({
             ],
         },
     },
+    locales: {
+        root: {
+            label: "English",
+            lang: 'en',
+        },
+        pt: {
+            label: "Portuguese",
+            lang: 'pt',
+            link: '/i18n/pt',
+        },
+    },
     markdown: {
         typographer: true,
         anchor: {
