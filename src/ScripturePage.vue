@@ -55,6 +55,9 @@ const enhancer = inject<BibleEnhancer>('enhancer')
 
 // Read initial filter from URL
 const getInitialTag = (): keyof typeof tags | '' => {
+    if (import.meta.env.SSR){
+        return ''
+    }
     const params = new URLSearchParams(window.location.search)
     const filter = params.get('filter')
     return (filter as keyof typeof tags) ?? ''
