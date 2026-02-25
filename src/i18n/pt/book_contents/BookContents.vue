@@ -13,8 +13,10 @@ import convo_general from '../learn/conversations_processed.json'
 import convo_corinthians from '../learn/corinthians_processed.json'
 import {data as articles_data} from './book_articles.data'
 import {data as pages_data} from './pages.data'
+import {i18n_strings} from '../i18n'
 
 const strings = {
+    categories: i18n_strings.categories,
     title: 'Abolir o Comércio de Jesus',
     title_line1: 'Abolir',
     title_line2: 'o Comércio de Jesus',

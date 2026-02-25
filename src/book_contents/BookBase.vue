@@ -143,6 +143,8 @@ interface BookStrings {
     convo_corinthians_title: string
     profiles_title_text: string
     conclusion_title: string
+    categories?: Record<string, string>
+    online_version_text?: string
 }
 
 const props = defineProps<{
@@ -362,7 +364,8 @@ console.warn(`No category for articles: ${no_cat.join(', ')}`)
 let articles_html = ''
 for (const category in articles_by_category){
 
-    articles_html += `<div class='section break'><h1>${category}</h1></div>`
+    const category_title = strings.categories?.[category] ?? category
+    articles_html += `<div class='section break'><h1>${category_title}</h1></div>`
 
     // Include 'bible-societies' in book but not site yet
     const articles_for_category = [...articles_by_category[category]]
@@ -391,7 +394,7 @@ for (const category in articles_by_category){
         articles_html += bookify_html(demote_headings(article.html)).trim()
 
         // Since printed book won't have links, insert final footnote with article URL
-        if (!EPUB){
+        if (!EPUB && strings.online_version_text){
 
             // Detect what tags article ends with so can insert a final footnote
             let end_tags = articles_html.match(/<\/p>$/)?.[0]
@@ -405,7 +408,7 @@ for (const category in articles_by_category){
             articles_html = articles_html.slice(0, end_tags.length * -1)
 
             // Add url footnote
-            articles_html += `<span class='footnote-item online'>An online version of this article, with links to any sources, is available at:<br>sellingjesus.org/articles/${article_id}</span>`
+            articles_html += `<span class='footnote-item online'>${strings.online_version_text}<br>sellingjesus.org/articles/${article_id}</span>`
             articles_html += end_tags
         }
     }

@@ -42,6 +42,7 @@ const strings = {
     convo_corinthians_title: 'Conversations between Paul and the Corinthians',
     profiles_title_text: 'Christians Who Sell Jesus',
     conclusion_title: 'Conclusion',
+    online_version_text: 'An online version of this article, with links to any sources, is available at:',
 }
 
 </script>
