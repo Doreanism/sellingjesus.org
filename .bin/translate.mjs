@@ -20,7 +20,7 @@ async function call_llm(sys_prompt, content) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            model: 'gpt-5',  // GPT5 has issues but has a massively larger context window / limit
+            model: 'gpt-5.2',  // GPT5 has issues but has a massively larger context window / limit
             instructions: sys_prompt,
             input: content,
         }),
