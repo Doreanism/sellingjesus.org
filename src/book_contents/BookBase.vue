@@ -376,6 +376,9 @@ for (const category in articles_by_category){
     for (const article_id of articles_for_category){
         const article = articles[article_id]
 
+        // Skip if article not available (e.g. not yet translated)
+        if (!article) continue
+
         // Exclude if not public domain
         if (article.frontmatter.license){
             continue
