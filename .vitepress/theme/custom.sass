@@ -278,6 +278,45 @@ sup, sub
         > .content
             max-width: none !important
 
+    @media (min-width: 1300px)
+        .categories, .conversations, .study
+            display: grid
+            grid-template-columns: 1fr 1fr
+            column-gap: 48px
+
+    .profiles
+        display: flex
+        justify-content: space-around
+        margin-top: 24px
+
+        a
+            flex-grow: 1
+            flex-basis: 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            img
+                width: 120px
+                height: 120px
+                border-radius: 50%
+                object-fit: cover
+                margin-bottom: 12px
+
+        @media (max-width: 800px)
+            a
+                font-size: 14px
+                line-height: 1.25
+                img
+                    width: 60px
+                    height: 60px
+
+    .categories > div > h3
+        text-transform: uppercase
+        background-color: hsl(50, 100%, 50%, 0.25)
+        padding: 8px
+        border-radius: 4px
+
 
 .vp-doc._learn_profiles, .vp-doc._about
 
