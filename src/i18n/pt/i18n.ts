@@ -1,6 +1,6 @@
 
 export const i18n_strings = {
-    language: "ALTERE-ME",
+    language: "Português",
     title: "Vendendo Jesus",
     description: "Enfrentando a comercialização do cristianismo e celebrando a generosidade do coração de Deus.",
     articles: "Artigos",
