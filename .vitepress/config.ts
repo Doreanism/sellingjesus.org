@@ -11,7 +11,7 @@ import videos_humor from '../src/videos_humor.json'
 import videos_reactions from '../src/videos_reactions.json'
 import {episodes as pods} from '../src/podcast.json'
 
-import {i18n_strings as i18n_test} from '../src/i18n/test/i18n.ts'
+import {i18n_strings as i18n_pt} from '../src/i18n/pt/i18n.ts'
 
 
 const videos_sidebar = [
@@ -91,17 +91,17 @@ export default defineConfig({
             lang: 'en',
             label: "English",
         },
-        test: {
-            lang: 'test',
-            link: '/i18n/test',
-            label: i18n_test.language,
-            title: i18n_test.title,
-            description: i18n_test.description,
+        pt: {
+            lang: 'pt',
+            link: '/i18n/pt',
+            label: i18n_pt.language,
+            title: i18n_pt.title,
+            description: i18n_pt.description,
             themeConfig: {
                 nav: [
-                    {text: i18n_test.articles, link: '/i18n/test/learn', activeMatch: '/(learn|articles)'},
-                    {text: i18n_test.videos, link: 'https://www.youtube.com/@SellingJesus'},
-                    {text: i18n_test.about, link: '/i18n/test/about', activeMatch: '/about'},
+                    {text: i18n_pt.articles, link: '/i18n/pt/learn', activeMatch: '/(learn|articles)'},
+                    {text: i18n_pt.videos, link: 'https://www.youtube.com/@SellingJesus'},
+                    {text: i18n_pt.about, link: '/i18n/pt/about', activeMatch: '/about'},
                 ],
             },
         },
