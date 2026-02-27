@@ -6,6 +6,7 @@ date: 2025-10-08T00:00:00.000Z
 image: /media/articles/balaam.jpg
 ---
 
+<podcast-player id="5xiO6I1zVmKrZxPQGz4JaH"></podcast-player>
 
 Though a relatively obscure Old Testament character, the New Testament makes a number of references to Balaam. Peter, Jude, and John all mention him explicitly; Paul likewise alludes to him. Consider these verses:
 
