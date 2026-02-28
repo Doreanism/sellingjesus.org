@@ -6,6 +6,8 @@ date: 2025-11-23T00:00:00.000Z
 image: /media/articles/paywall.jpg
 ---
 
+<podcast-player id="3w4UbszjPs5DYCwQLQC44y"></podcast-player>
+
 This following article is for those who have been convinced of [the dorean principle](https://sellingjesus.org/videos/documentary/DUsAO3B3tu0), that biblical instruction should not be sold. If this doesn’t describe you, please go check out [our numerous articles](https://sellingjesus.org/learn) that argue for this principle, and I hope we’ll find you back here later!
 
 Additionally, this article is for teachers—whether clergy or lay—who desire in all holiness to navigate ministry in a world full of the commercialization of Christianity. We recognize that [not all are called to the same level of abstinence from the corrupt systems that exist](https://sellingjesus.org/articles/buying#when-is-purchasing-biblical-teaching-unwise). At the same time, Scripture gives some absolutes on the matter in order that we never be guilty of selling his word (2 Cor 2:17).
