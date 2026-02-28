@@ -86,6 +86,10 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['ot', 'reciprocity'],
         notes: "Ill-gotten gains are not acceptable to be offered to God. Likewise, offering him profits from the sale of spiritual things are unlikely to be pleasing to him.",
     },
+    "Judges 17:9-12": {
+        tags: ['ot', 'reciprocity'],
+        notes: "The Levite accepts pay to exclusively serve the house of one man, assisting him in the worship of idols.",
+    },
     "1 Sam 2:15-17": {
         tags: ['vip', 'ot', 'reciprocity', 'greed'],
         notes: "Temple priests were meant to live off portions of sacrifices after they were offered to God, but Eli’s sons demanded the meat beforehand, turning worship into a kind of payment.",
