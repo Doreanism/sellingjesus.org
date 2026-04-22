@@ -2,7 +2,6 @@
 import {writeFileSync, readFileSync} from 'fs'
 
 import linkify from 'linkify-string'
-import {google} from 'googleapis'
 
 import settings from '../settings.json' with {type: 'json'}
 
@@ -13,26 +12,32 @@ const json_path = `src/videos_${playlist_type}.json`
 const existing_videos = JSON.parse(readFileSync(json_path, 'utf8'))
 
 
-// Auth
-const auth = google.auth.fromAPIKey(process.env.YOUTUBE_API_KEY)
-
-
 // Keep listing videos until all fetched
+const api_key = process.env.YOUTUBE_API_KEY
+const playlist_id = settings[`youtube_playlist_${playlist_type}`]
 const videos = []
 let next_token = null
 while (true){
 
-    // Send request
-    const resp = await google.youtube('v3').playlistItems.list({
-        auth,
+    // Fetch playlist items from YouTube Data API v3
+    const params = new URLSearchParams({
         part: 'snippet,status',
-        playlistId: settings[`youtube_playlist_${playlist_type}`],
-        maxResults: 50,
-        pageToken: next_token,
+        playlistId: playlist_id,
+        maxResults: '50',
+        key: api_key,
     })
+    if (next_token) {
+        params.set('pageToken', next_token)
+    }
+    const resp = await fetch(
+        `https://www.googleapis.com/youtube/v3/playlistItems?${params}`)
+    if (!resp.ok) {
+        throw new Error(`YouTube API error: ${resp.status} ${await resp.text()}`)
+    }
+    const data = await resp.json()
 
     // Only list public videos
-    const items = resp.data.items.filter(item => item.status.privacyStatus === "public")
+    const items = data.items.filter(item => item.status.privacyStatus === 'public')
 
     // Add videos to the list
     for (const item of items){
@@ -55,10 +60,10 @@ while (true){
     }
 
     // Finish if no more items to get
-    if (!resp.data.nextPageToken){
+    if (!data.nextPageToken){
         break
     }
-    next_token = resp.data.nextPageToken
+    next_token = data.nextPageToken
 }
 
 
