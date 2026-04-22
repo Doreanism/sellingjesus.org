@@ -11,4 +11,4 @@ Many consider this a command that only applies to the first disciples. Many cons
 
 Please take 5 minutes to consider this short video and how we ought to freely give. δωρεὰν δότε.
 
-<VideoPlayer address='https://d2dho1yua3fd92.cloudfront.net/introduction.mp4.dash/'></VideoPlayer>
+<VideoPlayer address='https://d3g603zk1tyzgn.cloudfront.net/introduction.mp4.dash/'></VideoPlayer>

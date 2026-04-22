@@ -26,7 +26,7 @@ Layout(:class='page_id')
             div
                 a(href='/ianal') We do not give legal advice.
     template(#home-hero-image)
-        VideoPlayer(address='https://d2dho1yua3fd92.cloudfront.net/introduction.mp4.dash/')
+        VideoPlayer(address='https://d3g603zk1tyzgn.cloudfront.net/introduction.mp4.dash/')
 
 </template>
 
