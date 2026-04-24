@@ -7,7 +7,7 @@ date: 2023-05-22T12:00:23.317Z
 image: /media/articles/sharealike.jpg
 ---
 
-<podcast-player id="7BNpzOmBycft0q2HpxmdkY"></podcast-player>
+<podcast-player id="4a8c0eea-a903-4e75-84fc-90a1738cb3b3"></podcast-player>
 
 
 For those interested in disseminating ministry materials at no cost, Creative Commons licenses have provided a standard alternative to full copyright. Any license in this suite of licenses ensures that material may be distributed to anyone without royalties. In particular, the [Creative Commons Attribution-ShareAlike License (CC BY-SA)](https://creativecommons.org/licenses/by-sa/4.0/) has been a favorite among many. Unlike many other Creative Commons licenses, which require explicit permission from the copyright holder to make derivatives or use them in potentially commercial settings, works under CC BY-SA may be used without friction between the copyright holder and the user of the copyrighted work.

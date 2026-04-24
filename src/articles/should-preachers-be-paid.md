@@ -8,7 +8,7 @@ date: 2023-10-03T00:19:04.001Z
 image: /media/articles/preacher.jpg
 ---
 
-<podcast-player id="1wpCgDM5Xk97RKrNg0Tefa"></podcast-player>
+<podcast-player id="fe0082bf-5d51-44e9-a119-5f280d2ca34e"></podcast-player>
 
 
 Jesus was clear that the preached word should be freely given (Matt 10:8) and Paul spoke against being a peddler of the Word (2 Cor 2:17). Given these embargos on commercial exchanges in ministry, one who desires to follow a biblical ethic may wonder whether a minister—in particular, a preacher—may even be paid at all. Out of such concern, some have forgone a reliable income in the work of the gospel to live as tent-makers,[^1] and others have gone as far as abandoning ministry altogether, unable to navigate the difficulty.

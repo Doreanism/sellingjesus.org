@@ -6,7 +6,7 @@ date: 2025-01-27T00:00:00.000Z
 image: /media/articles/kjv.jpg
 ---
 
-<podcast-player id="3FiR9triviUgym7Uu79WR8"></podcast-player>
+<podcast-player id="eb775457-9f6f-4a33-ae9b-8cf769485315"></podcast-player>
 
 One of the common misconceptions about the *King James Version* (KJV) of the Bible is that it is a *universally* public domain work—something many tout as a feature of its superiority to modern copyrighted translations. But most don’t realize that *it is still under a special perpetual copyright of the Crown in the United Kingdom*.
 

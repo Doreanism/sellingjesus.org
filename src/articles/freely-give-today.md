@@ -7,7 +7,7 @@ date: 2023-08-23T00:00:00.000Z
 image: /media/articles/freely-give-today.jpg
 ---
 
-<podcast-player id="3Zx16pQ1QsIFW3mhgOaZEA"></podcast-player>
+<podcast-player id="8daae40d-5723-4a45-97be-349ee8187b25"></podcast-player>
 
 In Matthew 10:8, Jesus said “freely you received, freely give.”  One modern translation says, “you received without paying, give without pay.”  Many, including myself, have taken this as a clear indication that no minister should ever charge for ministry.  More particularly, this command continues to regulate biblical instruction today, forbidding teachers from selling biblical teaching.  I do not limit this to sermons, but believe it extends to gospel conferences, seminaries, Christian literature, etc. That is not to say that ministry shouldn’t be financially supported.  In the next two verses Jesus explains that ministers are to be supported, “a worker is worthy of his food.”  However, this support is to come through generous partners rather than sales of biblical teaching.  In the case of those initial disciples, it was to come through a “worthy house” (Matt 10:11-12) or a “son of peace” (Luke 10:6-7) rather than from hearers in exchange for kingdom proclamation.
 

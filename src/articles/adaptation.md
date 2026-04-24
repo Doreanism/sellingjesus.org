@@ -7,7 +7,7 @@ date: 2025-10-07T00:00:00.000Z
 image: /media/articles/adaptation.jpg
 ---
 
-<podcast-player id="6bXzJZSMjBdd1y20WovxdJ"></podcast-player>
+<podcast-player id="a4fa43fd-028f-4b33-b50e-aef689d0a647"></podcast-player>
 
 The Word of God must be free. Positively, God has called each of his children to share his Word in their various capacities (Col 3:16). Negatively, [he has condemned the sale of this Word](https://sellingjesus.org/articles/commercializing-gods-word) in any capacity. Carried along by the Spirit, the apostles spoke the words of God himself, and they never sold this divine revelation. In fact, this approach of freely giving their message distinguished themselves from their opponents.
 

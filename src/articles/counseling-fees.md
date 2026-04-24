@@ -11,7 +11,7 @@ image: /media/articles/counseling-fees.jpg
 ---
 <Badge type='warning' text="Republished"></Badge> <small>*This was originally published by [Christian Discernment Publications Ministry, Inc.](https://www.christiandiscernment.com) (© 2007) and has been republished by permission, due to its valuable insights. The author's views are her own.*</small>
 
-<podcast-player id="4XA92C0gZzNiypotmNvvMK"></podcast-player>
+<podcast-player id="c348851b-02d2-4ac2-bfcc-dad61fb1fbd2"></podcast-player>
 
 Should a ministry ***relationship***, either in its initiation or
 continuation, ever be conditioned on the payment of a fee?

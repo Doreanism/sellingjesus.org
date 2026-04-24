@@ -8,7 +8,7 @@ image: /media/articles/bondage.jpg
 
 <Badge type='warning' text="Republished"></Badge> <small>_This was originally published by Maurice A. Robinson in 1996,[^1] and is public domain. Dr. Robinson served for many years as senior professor of New Testament and Greek at Southeastern Baptist Theological Seminary. His views are his own._</small>
 
-<podcast-player id="2DTufxVYwEGNYZc0hRbdbE"></podcast-player>
+<podcast-player id="849bb483-0438-41ac-8471-74f6b3e331c2"></podcast-player>
 
 ---
 

@@ -6,6 +6,7 @@ date: 2025-10-08T00:00:00.000Z
 image: /media/articles/copyright-protect-scripture.jpg
 ---
 
+<podcast-player id="622c46c0-3850-43e1-b93c-e532456e2831"></podcast-player>
 
 Martin Luther said the following in a sermon in Wittenberg on March 10, 1522:
 

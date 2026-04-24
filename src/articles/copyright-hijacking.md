@@ -6,7 +6,7 @@ date: 2024-05-28T00:00:00.000Z
 image: /media/articles/copyright-hijacking.jpg
 ---
 
-<podcast-player id="5FqR5Z4mqlSPltMXhHJSsw"></podcast-player>
+<podcast-player id="54e71f18-3501-493d-8add-f19dc6a62d6b"></podcast-player>
 
 Here at _Selling Jesus_, we advocate that ministries [release their content into the public domain](https://copy.church/licenses/).[^1] Among other reasons, we believe this to be [the most consistent approach](https://sellingjesus.org/articles/copyright-jesus-command-to-freely-give) to Jesus’s command to “freely give” in Matthew 10:8.
 

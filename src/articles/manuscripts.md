@@ -6,7 +6,7 @@ date: 2025-10-07T00:00:00.000Z
 image: /media/articles/manuscripts.jpg
 ---
 
-<podcast-player id="2bPSmjJ7iCKCmCtIferqsa"></podcast-player>
+<podcast-player id="55aab26c-dae0-46f7-a9ce-be69a1c66a5b"></podcast-player>
 
 Who owns the Bible? By “the Bible,” I’m not speaking of the English translation you might typically use; I’m speaking of the Hebrew Old Testament and the Greek New Testament. Even then, the question may not be clear because the text of the Bible comes to us in different stages.
 

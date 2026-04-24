@@ -7,6 +7,7 @@ date: 2025-06-13T00:00:00.000Z
 image: /media/articles/prostitutes-wages.jpg
 ---
 
+<podcast-player id="837ef3f3-dcc5-4f3c-bb87-c9583df17f76"></podcast-player>
 
 The Bible is replete with commands regarding the intersection of money and ministry: “Freely give” (Matt 10:8), don’t be “peddlers of God’s Word” (2 Cor 2:17), “you cannot serve God and money” (Matt 6:24), etc. Clearly, ministry is a task fraught with danger; it is no wonder James warns that not many should become teachers (James 3:1).
 

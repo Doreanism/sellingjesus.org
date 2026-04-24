@@ -10,7 +10,7 @@ date: 2023-11-18T00:00:00.000Z
 image: /media/articles/commercializing-gods-word.jpg
 ---
 
-<podcast-player id="7f0ve26n33gJQxi0OaHiq5"></podcast-player>
+<podcast-player id="303c4b8a-79db-429a-9d01-6d87f2dc6a27"></podcast-player>
 
 In 2 Corinthians, Paul speaks of false apostles (the “super apostles”) who, in comparison to Paul, charged for their preaching (2 Cor 11:7,12-13). The first indication in the epistle that the false apostles wrongly accepted money from the Corinthians is in 2:17, but bibles differ on how best to translate this verse. The ESV renders it as:
 

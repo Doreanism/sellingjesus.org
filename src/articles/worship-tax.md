@@ -7,7 +7,7 @@ date: 2024-04-07T00:00:00.000Z
 image: /media/articles/worship-tax.jpg
 ---
 
-<podcast-player id="0TlgKCxLPSX93JMWHOFRpD"></podcast-player>
+<podcast-player id="73f4c367-bed7-4129-b7f7-2edebdc51ef0"></podcast-player>
 
 
 You’re at church and it comes time to pray together. The person assigned to pray has decided to recite a lovely piece by another author. They display it on the screen for everyone to read. At the end of the prayer you notice the following:

@@ -10,7 +10,7 @@ Our purpose here is to highlight and exalt the radical generosity of God’s hea
 
 Andrew is a graduate of The Southern Baptist Theological Seminary and the Canada Institute of Linguistics. He serves as a Bible translation consultant, and produces a podcast about his field called *[Working for the Word](https://workingfortheword.com/)*. He spent seven years doing Bible translation work in Equatorial Guinea (Central Africa), and now he and his wife Bethany work in Mexico. Together they founded [freehebrew.online](https://freehebrew.online/) where they teach Hebrew to the world. They have two children. Listen to the music he produces and read his books over at his [personal website](https://hismagnificence.com/).
 
-[Hear Andrew's journey](/podcast/1eydXApYJwbTQ0McN0yjfa) to freely giving.
+[Hear Andrew's journey](/podcast/65438cbb-5d4a-4f45-bf46-c00d7b3a7e20) to freely giving.
 
 ![Profile picture of Conley Owens](/media/people/conley_owens.jpg)
 
@@ -18,7 +18,7 @@ Andrew is a graduate of The Southern Baptist Theological Seminary and the Canada
 
 Conley is a software engineer, a pastor at [Silicon Valley Reformed Baptist Church](https://svrbc.org/), and the father of nine kids and counting. He is the author of *[The Dorean Principle: A Biblical Response to the Commercialization of Christianity](https://thedoreanprinciple.org/)*, and lives with his family in Sunnyvale, California.
 
-[Hear Conley's journey](/podcast/0C0fmdUdkuXPvogoKhEXeG) to clarity on what Scripture teaches about money and ministry.
+[Hear Conley's journey](/podcast/2589e2f5-d61b-4427-9980-9e6ccc1b2c37) to clarity on what Scripture teaches about money and ministry.
 
 ![Profile picture of Jon](/media/people/jon_here.jpg)
 
@@ -26,7 +26,7 @@ Conley is a software engineer, a pastor at [Silicon Valley Reformed Baptist Chur
 
 Jon is the founder of [Gracious Tech](https://gracious.tech), a company that produces apps for global mission. He also serves as a pastor part-time, and completed his MDiv at [Sydney Missionary & Bible College](https://www.smbc.edu.au/). While serving as a missionary in south-east Asia, he discovered just how commercialized Scripture had become and created *[Let's copy, church](https://copy.church)* in response, to advocate for the free giving of Scripture and other ministry resources.
 
-[Hear Jon's journey](/podcast/4ka49JooCIDoy0kvs15bBK) to confronting the commercialization of Scripture.
+[Hear Jon's journey](/podcast/e33e2d60-9a45-44f5-9611-9fc73efcae44) to confronting the commercialization of Scripture.
 
 ## Beliefs
 

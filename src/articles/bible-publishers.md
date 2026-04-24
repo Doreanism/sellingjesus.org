@@ -8,7 +8,7 @@ date: 2023-10-30T00:00:00.000Z
 image: /media/articles/bible-publishers.jpg
 ---
 
-<podcast-player id="4AP8F95P9k9OkQ7ABBfKvF"></podcast-player>
+<podcast-player id="a2c419e1-157f-484d-ae90-6ddebe605ea5"></podcast-player>
 
 
 Let's imagine that your pastor gets up one Sunday morning and announces: "If anyone wants to share passages from the Bible they need to ask me for permission first. I have to do this in order to carefully steward God’s Word, because people might abuse it. That said, I'll be very generous in giving permission. I'll even let you share it for free if you’re only using small portions. But if you use large portions, I'll expect some payment to cover the costs of carefully stewarding God’s Word." How would you feel?

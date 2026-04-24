@@ -18,11 +18,11 @@ const {params} = useData()
 
 <style lang='sass' scoped>
 
-h1:nth-child(1)
+h1:nth-of-type(1)
     font-size: 20px
     opacity: 0.6
 
-h1:nth-child(2)
+h1:nth-of-type(2)
     font-size: 30px
     margin-bottom: 36px
 
@@ -33,16 +33,16 @@ iframe
 </style>
 
 
-<template v-if='$params.id === "1VkgBKphxLjycbjvF8iYUZ"'>
+# Podcast episode {{ $params.number }}
+# {{ $params.title }}
+
+
+<template v-if='$params.id === "9619af84-423f-4859-a1b9-82a1f45cc79e"'>
     <div style='margin-bottom: 48px'>
         <strong>Looking for the book?</strong>
         <VPButton text="Abolish the Jesus Trade (book)" href="/book" size="medium"></VPButton>
     </div>
 </template>
-
-
-# Podcast episode {{ $params.number }}
-# {{ $params.title }}
 
 <PodcastPlayer :id='$params.id'></PodcastPlayer>
 

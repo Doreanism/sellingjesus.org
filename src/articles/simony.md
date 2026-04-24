@@ -6,7 +6,7 @@ date: 2024-01-29T00:00:00.000Z
 image: /media/articles/simony.jpg
 ---
 
-<podcast-player id="7khsg3C4fa7TqSrT1O2QGM"></podcast-player>
+<podcast-player id="19a5263a-0d7f-46e3-af57-c6f4c9435fbc"></podcast-player>
 
 In the past, the church was often plagued with crooked deals for power and prestige.  For a price, one could purchase ecclesiastical office, whether it be an episcopal see or some title of lesser rank.  These were positions that came not only with power but with prebend, a regular stipend that was substantial and secure.  For the shrewd and unscrupulous, the upfront investment was small compared to the payoff.
 

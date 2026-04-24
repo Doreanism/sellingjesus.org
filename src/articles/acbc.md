@@ -11,7 +11,7 @@ image: /media/articles/acbc.jpg
 ---
 [As an introduction to this article, please read *[Biblical Counseling Should Be Free](https://sellingjesus.org/articles/biblical-counseling)*.]
 
-<podcast-player id="0mlGn035cWD2X4CxCez9Vo"></podcast-player>
+<podcast-player id="f23d827f-22d5-4af9-aa53-c41739ef6669"></podcast-player>
 
 Our Master has commanded us to “teach and admonish one another” (Col 3:16) and to “warn those that are unruly” (1 Thess 5:14) as part of our Christian duty. Yet rather than speaking truth and wisdom to others freely, as they received it from God, some sell their biblical counsel as though it had originated from themselves.[^1] By God’s grace, this is not the practice of a majority of biblical counselors, but it is unfortunately widespread, even among highly reputable biblical counseling organizations such as the Association of Certified Biblical Counselors (ACBC), as this article will demonstrate.
 

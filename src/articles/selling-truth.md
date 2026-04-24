@@ -8,7 +8,7 @@ author: Andrew Case
 date: 2023-03-22T00:00:00.000Z
 ---
 
-<podcast-player id="1HtmH71xlOF51CELJPtsJU"></podcast-player>
+<podcast-player id="f7adaacd-7dd3-4064-be86-d8f1e9af1476"></podcast-player>
 
 
 “Everything’s for sale in the 21st century,” sang Derek Webb in his song *Ballad in Plain Red* (2003). Hyperbole? As I look around, I see Christian speakers charging fees for conferences, pastors requiring payment for digital sermon downloads, biblical commentaries and books about the gospel being sold, Christian bloggers monetizing their writing about Jesus through paid subscriptions and advertising, and worship artists selling the rights to sing their songs to God in church.

@@ -6,7 +6,7 @@ date: 2024-08-05T00:00:00.000Z
 image: /media/articles/judas.jpg
 ---
 
-<podcast-player id="1qlc2qYsevGtIGE3CmkdPk"></podcast-player>
+<podcast-player id="ec73b837-3a1b-4181-ad92-2e8533911c78"></podcast-player>
 
 Judas betrayed Jesus for a mere 30 pieces of silver. This is widely regarded as one of the greatest sins ever committed. Is there an analogous sin that exists today?
 

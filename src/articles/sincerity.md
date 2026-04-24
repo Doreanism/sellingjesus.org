@@ -8,7 +8,7 @@ date: 2025-05-20T00:00:00.000Z
 image: /media/articles/sincerity.jpg
 ---
 
-<podcast-player id="2RVf3VJxy5dpqDiXYs2h5S"></podcast-player>
+<podcast-player id="a5798333-d347-45cc-bfc7-23bebb5c00a2"></podcast-player>
 
 2 Corinthians is replete with remarks regarding sincerity. It would be rightly said that the theme of the whole book is _The Sincerity of the Kingdom of God_. This underlying concern flows from the first chapter where Paul responds to suspicions about his motives (2 Cor 1:17), to his appeal for the Corinthians’ sincere love (2 Cor 6:11), to his denunciation of the integrity of the “super apostles” (2 Cor 11:13), all the way to his final claim that he cannot do anything against the truth (2 Cor 13:8).
 

@@ -6,7 +6,7 @@ author: Andrew Case
 date: 2024-10-31T00:00:00.000Z
 ---
 
-<podcast-player id="4h9rh8M1t5JjJDeahxEP3x"></podcast-player>
+<podcast-player id="89c62d2c-0f3b-4868-b3a4-6f8084437063"></podcast-player>
 
 
 When someone needs a blood transfusion, should you sell your blood to them, or give it freely? How much is blood worth? What is the price of human life? These are questions most haven't thought much about, but the landmark 1970 book *The Gift Relationship: From Human Blood to Social Policy* explores them deeply. The author, British sociologist Richard Titmuss, carefully considers the moral, ethical, and practical implications of turning human blood into merchandise. Through his comparative study of the blood donation systems in the United States and Britain, he exposes the troubling consequences of commercializing blood. And he's not alone. Many others have been wrestling with the issue of whether or not parts of the human body can be turned into products. So the main question I want to raise in this article is: if even unbelievers are questioning the propriety of selling the sacred, why aren't Christians questioning the propriety of selling parts of the body of Christ (i.e. ministry)?

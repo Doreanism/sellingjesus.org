@@ -6,7 +6,7 @@ date: 2025-11-23T00:00:00.000Z
 image: /media/articles/paywall.jpg
 ---
 
-<podcast-player id="3w4UbszjPs5DYCwQLQC44y"></podcast-player>
+<podcast-player id="3556edba-34ba-4ad7-9fd7-6eba60603327"></podcast-player>
 
 This following article is for those who have been convinced of [the dorean principle](https://sellingjesus.org/videos/documentary/DUsAO3B3tu0), that biblical instruction should not be sold. If this doesn’t describe you, please go check out [our numerous articles](https://sellingjesus.org/learn) that argue for this principle, and I hope we’ll find you back here later!
 

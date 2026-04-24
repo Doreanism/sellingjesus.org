@@ -6,6 +6,7 @@ date: 2025-06-29T00:00:00.000Z
 image: /media/articles/conferences.jpg
 ---
 
+<podcast-player id="ac7ea341-5cbc-41a9-a7db-c32c9c7b905b"></podcast-player>
 
 Christian conferences often sell tickets at substantial prices; these days often in excess of $300. On one hand, these events are expensive to host, but given that the gospel itself is free (Isa 55:1), ought they charge anything at all?
 

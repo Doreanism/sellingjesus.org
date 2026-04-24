@@ -7,7 +7,7 @@ date: 2023-11-09T00:00:00.000Z
 image: /media/articles/ads.jpg
 ---
 
-<podcast-player id="4WvUndZW0Dh29Wu7dUbE2x"></podcast-player>
+<podcast-player id="fdc35bf4-c8a7-4d24-81bd-0794ce42e5a5"></podcast-player>
 
 The 1998 movie *The Truman Show* is a film about a man named Truman Burbank who—unaware—lived his entire life inside a simulated reality TV show. In order to pay for the show, the producers filled Truman’s world with cleverly placed ads of all kinds, even within conversations that Truman had with his wife (who was really a paid actress). At one point Truman and his wife are in the middle of an intense conversation, and she suddenly holds up a product and says with fake chipperness: “Why don’t you let me fix you some of this new Mococoa drink. All natural cocoa beans from the upper slopes of Mount Nicaragua, no artificial sweeteners!” This would be unsettling to most of us, especially in the context of something sacred like a marriage relationship. We instinctively feel that there are certain things too holy to pollute with ads of any kind. Some things in life require honor and respect, but when those things are turned into advertising opportunities, honor and respect are stripped away.
 

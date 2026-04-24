@@ -6,7 +6,7 @@ author: Andrew Case
 date: 2023-11-20T00:00:00.000Z
 ---
 
-<podcast-player id="6JIfqRTIHeN2jhXLGVlUZx"></podcast-player>
+<podcast-player id="5789cb7c-a3e5-428e-8f1b-a7fed7a78b73"></podcast-player>
 
 The biblical counseling movement was founded on the conviction that the Bible is sufficient for solving all non-medical problems that humans face. The central figure behind this return to Scripture was Jay Adams, who shocked the world with a bold and controversial claim “that the task of counseling was a theological enterprise that should be primarily informed by a commitment to God’s Word.”[^1] While this claim draws fire from both inside and outside the Church, its truth has been proven by both Scripture and experience. Biblical counseling continues to bring hope, peace, freedom, healing, and joy to thousands of suffering people through the power of Christ and his Word–people with conditions like anorexia, bipolar disorder, postpartum depression, and dissociative identity disorder. People who struggle with homosexuality, anxiety, rage, and much more.[^2] Commenting on 2 Peter 1:3-5, Ed Bulkley writes:
 
