@@ -105,9 +105,17 @@
           "description": "German economic historian Eckhard Höffner argues that the near absence of copyright law in 18th and 19th century Germany laid the groundwork for the country’s enormous wave of economic growth during that time. Höffner contends that this lack of copyright law led to authors being paid better, and an “incomparable mass of reading material” being produced in Germany by the 1830s, including works on crucial subjects such as physics, chemistry, biology, and steel production. In contrast, Britain saw “deplorable progress” during this time due to stronger copyright guarantees, which led to poorly paid authors, a weaker book market, and hindered the dissemination of useful knowledge. Höffner’s theory suggests that this difference in copyright law played a significant role in Germany’s rapid catch-up to become an equally developed industrial nation by 1900."
         },
         {
+          "title": "Walled Culture: How Big Content Uses Technology and the Law to Lock Down Culture and Keep Creators Poor",
+          "paywall": false,
+          "authors": "Glyn Moody",
+          "description": "Walled Culture is the first book to provide a compact, non-technical history of digital copyright and its problems over the last 30 years, including the social, economic, and technological implications. Moody traces how big content companies have used technology and the law to lock down culture and keep creators poor. The book is released under a CC0 license, placing it in the public domain.",
+          "image": "/media/resources/walled-culture.jpg",
+          "file": "https://walledculture.org/the-book/"
+        },
+        {
           "title": "Against Intellectual Property",
           "paywall": false,
-          "authors": "Stephan N. Kinsella ",
+          "authors": "Stephan N. Kinsella",
           "description": "This essay will change the way you think about patents and copyrights. Few essays written in the last decades have caused so much fundamental rethinking. It is essential that libertarians get this issue right and understand the arguments on all sides. Kinsella's piece here is masterful in making a case against IP that turns out to be more rigorous and thorough than any written on the left, right, or anything in between. Would a libertarian society recognize patents as legitimate? What about copyright? In Against Intellectual Property, Stephan Kinsella, a patent attorney of many years’ experience, offers his response to these questions. Kinsella is altogether opposed to intellectual property, and he explains his position in this brief but wide-ranging book.",
           "image": "/media/resources/against-ip.jpg",
           "file": "https://mises.org/library/against-intellectual-property-0"
