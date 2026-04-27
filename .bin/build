@@ -6,7 +6,7 @@ set +a
 cd "$(dirname "$(dirname "$0")")"
 
 # Auto-detect missing episodes
-# TODO spotify requires paid account so switch to RSS feed .bin/update_podcast
+.bin/update_podcast
 .bin/update_videos doc
 .bin/update_videos humor
 .bin/update_videos reactions
