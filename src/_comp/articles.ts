@@ -57,6 +57,7 @@ export const articles_by_category:Record<string, string[]> = {
         'acbc',
         'manuscripts',
         'kjv',
+        'christ-alone',
         'blood-money',
         'sydney-anglicans',
     ],
