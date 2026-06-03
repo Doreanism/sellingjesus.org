@@ -49,6 +49,7 @@ export const articles_by_category:Record<string, string[]> = {
         'letting-go',
         'copyright-hijacking',
         'sharealike',
+        'statements',
     ],
     "Contemporary Commerce": [
         'bible-publishers',
