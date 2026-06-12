@@ -68,7 +68,7 @@ It is our hope and prayer that those who oversee contemporary Christian statemen
 
 #### About the Author
 
-<small>Brantley works in Internal Auditing within the Banking and Financial Services industry. He is a Reformed Baptist and the founder of ReformedWiki.org. He also administers several Reformed Baptist resource websites and online communities. Through his work, he encountered the dorean principle and became aware of the implications of default copyright practices, including the use of “All Rights Reserved” notices on ministry websites. In response, he has transitioned these resources, including 1689.com, to the public domain.</small>
+<small>Brantley works in Internal Auditing within the Banking and Financial Services industry. He is a Reformed Baptist and the founder of ReformedWiki .org. He has founded and administered various Reformed/Baptist resource websites and online communities. Through his work, he encountered the dorean principle and became aware of the implications of default copyright practices, including the use of “All Rights Reserved” notices on ministry websites. In response, he has transitioned these resources to the public domain.</small>
 
 
 [^1]: One example is the [Prophetic Standards Statement](https://propheticstandards.com), facilitated by the ministry of Michael Brown.
