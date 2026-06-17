@@ -121,6 +121,22 @@
           "file": "https://mises.org/library/against-intellectual-property-0"
         },
         {
+          "title": "You Can't Own Ideas: Essays on Intellectual Property",
+          "paywall": false,
+          "authors": "Stephan Kinsella",
+          "description": "A free collection of Kinsella's previously-published writings on intellectual property, spanning 1995–2023 and covering the full range of his thought on the subject. Kinsella makes the case that ideas cannot and should not be treated as ownable property, systematically dismantling the philosophical and economic justifications used to defend patents and copyrights.",
+          "image": "/media/resources/papinian-press.jpg",
+          "file": "https://stephankinsella.com/wp-content/uploads/publications/kinsella-ycoi-combo-8-may-23.pdf"
+        },
+        {
+          "title": "The Anti-IP Reader: Free Market Critiques of Intellectual Property",
+          "paywall": false,
+          "authors": "Stephan Kinsella (editor)",
+          "description": "A curated online anthology of critical writings on intellectual property from a free-market perspective. Its 42 chapters are organized thematically—covering the history of IP, abolitionist arguments, early opposition, economic critiques, and reform proposals—with links to online versions of each work. Kinsella focuses on thinkers who oppose IP on principled grounds rooted in property rights.",
+          "image": "/media/resources/papinian-press.jpg",
+          "file": "https://stephankinsella.com/ip-reader/"
+        },
+        {
           "file": "https://thepublicdomain.org/thepublicdomain1.pdf",
           "title": "The Public Domain: Enclosing the Commons of the Mind",
           "paywall": false,
