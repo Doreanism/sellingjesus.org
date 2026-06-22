@@ -17,8 +17,7 @@ import {ref, computed, onMounted, onUnmounted} from 'vue'
 
 // CONFIG
 const name = "Doreancon"
-const event_time = new Date('2025-10-06T15:00:00-07:00')  // Beginning of event
-const takedown_time = new Date('2025-11-06T15:30:00-07:00')  // Hide widget 1 month after event
+const event_time = new Date('2026-09-28T15:00:00-07:00')  // Beginning of event
 
 
 // Current time
@@ -34,14 +33,15 @@ const diff_in_ms = computed(() => event_time.getTime() - now.value.getTime())
 
 // Whether should takedown widget (event finished a while ago)
 const takedown = computed(() => {
-    const remaining = takedown_time.getTime() - now.value.getTime()
-    return remaining < 0
+    const month_in_ms = 30 * 24 * 60 * 60 * 1000
+    return now.value.getTime() - event_time.getTime() > month_in_ms
 })
 
 
 // Change URL when event starts
 const url = computed(() => {
-    return countdown.value ? 'https://doreancon.org/' : 'https://sellingjesus.org/doreancon2025'
+    const year = event_time.getFullYear()
+    return countdown.value ? 'https://doreancon.org/' : `https://sellingjesus.org/doreancon${year}`
 })
 
 
