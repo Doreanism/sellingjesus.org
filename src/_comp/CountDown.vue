@@ -41,7 +41,7 @@ const takedown = computed(() => {
 // Change URL when event starts
 const url = computed(() => {
     const year = event_time.getFullYear()
-    return countdown.value ? 'https://doreancon.org/' : `https://sellingjesus.org/doreancon${year}`
+    return countdown.value ? 'https://doreancon.org/' : `https://archive.doreancon.org/${year}`
 })
 
 
