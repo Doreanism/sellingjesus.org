@@ -96,7 +96,7 @@ If you'd like to translate or adapt the book in an editable format, there are se
  * Edit [the EPUB](/book/Abolish-the-Jesus-Trade.epub) using software like [Sigil](https://sigil-ebook.com/sigil/)
  * Edit [this Word document](/book/Abolish-the-Jesus-Trade.docx) (though the formatting is not as accurate as the PDF/EPUB)
  * Copy and paste from [our website](/learn) which has all the articles
- * Software developers can also edit [the original Markdown](https://github.com/shadow-light/sellingjesus.org/tree/main/src/articles) the book is generated from
+ * Software developers can also edit [the original Markdown](https://github.com/Doreanism/sellingjesus.org/tree/main/src/articles) the book is generated from
 
 If you plan to translate the whole book, please [contact us](/about#contact) so we can guide you in doing it in a way that will be easily publishable when complete.
 

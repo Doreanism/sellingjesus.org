@@ -40,7 +40,7 @@ This website and all its contents is [dedicated to the public domain](/free). Yo
 
 We do include some third-party content, so please consult their terms of use when something is attributed to a third-party.
 
-You can find the original source for this site and its contents [on GitHub](https://github.com/shadow-light/sellingjesus.org).
+You can find the original source for this site and its contents [on GitHub](https://github.com/Doreanism/sellingjesus.org).
 
 ## Funding
 
