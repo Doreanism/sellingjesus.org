@@ -1,6 +1,6 @@
 # About
 
-Our purpose here is to highlight and exalt the radical generosity of God's heart, confront the commercialization of Christianity, and promote the biblical teaching that ministry should be supported but never sold. We want to explore the history of how we've gotten to the point where it's the respectable default to monetize ministry, and take a deep dive into the Scripture's teaching on the subject. We believe our evangelical cultural moment has a serious blind spot in this area, and we hope to be a voice of reform. Overall, we seek to take seriously what Jesus commanded in Matthew 10:8: "Freely you have received; freely give."
+Our purpose here is to highlight and exalt the radical generosity of God’s heart, confront the commercialization of Christianity, and promote the biblical teaching that ministry should be supported but never sold. We want to explore the history of how we've gotten to the point where it's the respectable default to monetize ministry, and take a deep dive into the Scripture’s teaching on the subject. We believe our evangelical cultural moment has a serious blind spot in this area, and we hope to be a voice of reform. Overall, we seek to take seriously what Jesus commanded in Matthew 10:8: “Freely you have received; freely give.”
 
 ## Who we are
 
@@ -8,7 +8,7 @@ Our purpose here is to highlight and exalt the radical generosity of God's heart
 
 ### Andrew Case
 
-Andrew is a graduate of The Southern Baptist Theological Seminary and the Canada Institute of Linguistics. He serves as a Bible translation consultant, and produces a podcast about his field called *[Working for the Word](https://workingfortheword.com/)*. He spent seven years doing Bible translation work in Equatorial Guinea (Central Africa), and now he and his wife Bethany work in Mexico. Together they founded [freehebrew.online](https://freehebrew.online/) where they teach Hebrew to the world. They have two children. Listen to the music he produces and read his books over at his [personal website](https://hismagnificence.com/).
+Andrew is a graduate of The Southern Baptist Theological Seminary and the Canada Institute of Linguistics. He serves as a Bible translation consultant, and produces a podcast about his field called *[Working for the Word](https://workingfortheword.com/)*. He spent seven years doing Bible translation work in Equatorial Guinea (Central Africa), and now he and his wife Bethany work in Mexico. Together they founded [freehebrew.online](https://freehebrew.online/) where they teach Hebrew to the world. They have two children. Listen to the music he produces and read his books over at his [personal website](https://hismagnificence.com/).
 
 [Hear Andrew's journey](/podcast/65438cbb-5d4a-4f45-bf46-c00d7b3a7e20) to freely giving.
 
@@ -16,7 +16,7 @@ Andrew is a graduate of The Southern Baptist Theological Seminary and the Canada
 
 ### Conley Owens
 
-Conley is a software engineer, a pastor at [Silicon Valley Reformed Baptist Church](https://svrbc.org/), and the father of ten kids. He is the author of *[The Dorean Principle: A Biblical Response to the Commercialization of Christianity](https://thedoreanprinciple.org/)*, and lives with his family in Sunnyvale, California.
+Conley is a software engineer, a pastor at [Silicon Valley Reformed Baptist Church](https://svrbc.org/), and the father of nine kids and counting. He is the author of *[The Dorean Principle: A Biblical Response to the Commercialization of Christianity](https://thedoreanprinciple.org/)*, and lives with his family in Sunnyvale, California.
 
 [Hear Conley's journey](/podcast/2589e2f5-d61b-4427-9980-9e6ccc1b2c37) to clarity on what Scripture teaches about money and ministry.
 
@@ -44,9 +44,9 @@ You can find the original source for this site and its contents [on GitHub](http
 
 ## Funding
 
-This project is funded entirely by our volunteers. In accordance with Scripture, we will never charge fees, display ads, monetize content, or exploit your personal information. While some platforms rely on ads or subscription fees, we believe that good content about biblical truth should be freely available.
+This project is funded entirely by our volunteers. In accordance with Scripture, we will never charge fees, display ads, monetize content, or exploit your personal information. While some platforms that host our content might display ads (like YouTube or Spotify), they are outside of our control. We will never run our own ads or monetize our content in any way, and our content is always available on other ad-free platforms as well.
 
-While we affirm the right to support for ministry, we are choosing not to request it for this project. We don't want to risk any confusion on the sincerity of the message we're trying to share with you.
+While we affirm the right to support for ministry, we are choosing not to request it for this project. We don’t want to risk any confusion on the sincerity of the message we’re trying to share.
 
 ## Contact
 
