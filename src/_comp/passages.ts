@@ -106,6 +106,10 @@ const passages_raw: Record<string, PassageRaw> = {
         tags: ['ot', 'provision'],
         notes: "",
     },
+    "Prov 3:27-28": {
+        tags: ['ot', 'provision', 'freely_giving'],
+        notes: "",
+    },
     "Prov 11:24": {
         tags: ['ot', 'freely_giving', 'greed'],
         notes: "",
