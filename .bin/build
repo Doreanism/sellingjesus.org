@@ -5,11 +5,14 @@ set -a
 set +a
 cd "$(dirname "$(dirname "$0")")"
 
-# Auto-detect missing episodes
-.bin/update_podcast
-.bin/update_videos doc
-.bin/update_videos humor
-.bin/update_videos reactions
+# Refresh podcast/video data from remote APIs, but only when run as `.bin/build --fetch`
+# (e.g. in CI); otherwise the committed JSON is used as-is to avoid burning API quota
+if [ "$1" = --fetch ]; then
+    .bin/update_podcast
+    .bin/update_videos doc
+    .bin/update_videos humor
+    .bin/update_videos reactions
+fi
 
 # Convert raw data to useable formats
 .bin/process_resources
