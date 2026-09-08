@@ -10,3 +10,7 @@ export const api_url = import.meta.env.DEV
 export const turnstile_sitekey = import.meta.env.DEV
     ? '1x00000000000000000000AA'
     : '0x4AAAAAAErj2_LTvyVUUn0B'
+
+// OAuth web client id for the orders dashboard's Google sign-in (public, not a secret)
+// WARN Must match GOOGLE_CLIENT_ID in the function's env, and list this site as an origin
+export const google_client_id = '1091066458547-2scoc9kmirg5bgfvipgqc5seqbffqeb9.apps.googleusercontent.com'

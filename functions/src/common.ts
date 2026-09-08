@@ -17,17 +17,6 @@ export const allowed_domains = [
 ]
 
 
-// Escape text so it is safe to embed in HTML
-export function escape_html(value:string):string{
-    return value
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#39;')
-}
-
-
 // Turnstile token validation
 export async function validate_turnstile(ip:string, token:string, secret:string):Promise<boolean>{
 

@@ -13,10 +13,6 @@ export interface Product {
 }
 
 
-// Countries where every book has an Amazon listing, so orders are fulfilled by hand not via Lulu
-export const MANUAL_COUNTRIES = ['US', 'AU', 'PH']
-
-
 export const PRODUCTS = {
     abolish: {
         title: "Abolish the Jesus Trade",
@@ -43,10 +39,4 @@ export type ProductId = keyof typeof PRODUCTS
 // Whether the given value is a known product id
 export function is_product_id(value:string):value is ProductId{
     return Object.hasOwn(PRODUCTS, value)
-}
-
-
-// Whether an order to the given country is fulfilled by hand rather than via Lulu
-export function is_manual_fulfilment(country:string):boolean{
-    return MANUAL_COUNTRIES.includes(country)
 }

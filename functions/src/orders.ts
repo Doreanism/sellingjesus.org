@@ -1,12 +1,11 @@
 
 import {TURNSTILE_SECRET} from './config.js'
 import {book_db, validate_turnstile} from './common.js'
-import {sign_order_id} from './confirm.js'
 import {estimate_delivery, get_lulu_access_token, validate_order} from './lulu.js'
 import {PRODUCTS, is_product_id} from './products.js'
 import {notify_order} from './notify.js'
 import type {ProductId} from './products.js'
-import type {Order, OrderBooks} from './types.js'
+import type {Order, OrderBooks, OrderSummary} from './types.js'
 import region_data from './data/regions.json' with {type: 'json'}
 
 
@@ -42,7 +41,7 @@ function parse_books(value:unknown):string|OrderBooks{
 
 
 // Record a new order, returning an error message for the user, or null for success
-export async function record_order(body:Record<string, unknown>, ip:string, confirm_base:string)
+export async function record_order(body:Record<string, unknown>, ip:string)
         :Promise<string|null>{
 
     // Ensure input types correct
@@ -160,16 +159,60 @@ export async function record_order(body:Record<string, unknown>, ip:string, conf
     // Add new record to db
     const record = await book_db.collection('book_orders').add(order_data)
 
-    // The confirm link is signed, so it can't be edited to target a different order
-    const signature = sign_order_id(record.id)
-    const confirm_url = `${confirm_base}/confirm`
-        + `?id=${encodeURIComponent(record.id)}&sig=${encodeURIComponent(signature)}`
-
     // Tell whoever fulfils this region
-    await notify_order(order_data, confirm_url, ip_total)
+    await notify_order(record.id, order_data)
 
     // Return no error for success
     return null
+}
+
+
+// Every order, newest first, flattened to JSON-safe values for the dashboard
+export async function list_orders():Promise<OrderSummary[]>{
+
+    const snapshot = await book_db.collection('book_orders').orderBy('datetime', 'desc').get()
+
+    return snapshot.docs.map(doc => {
+        const order = doc.data() as Order
+
+        // Books are stored as an id->options map, but the dashboard wants a titled list
+        const books = Object.entries(order.books).map(([id, options]) => ({
+            id,
+            title: PRODUCTS[id as ProductId].title,
+            quantity: options.quantity,
+        }))
+
+        return {
+            id: doc.id,
+            datetime: to_iso(order.datetime),
+            ip: order.ip,
+            name: order.name,
+            email: order.email,
+            books,
+            country: order.address.country,
+            city: order.address.city,
+            postcode: order.address.postcode,
+            street1: order.address.street1,
+            street2: order.address.street2,
+            phone: order.address.phone,
+            region: order.address.state,
+            tax_id: order.address.tax_id,
+            status: order.state.status,
+            confirmed_at: order.state.confirmed_at ? to_iso(order.state.confirmed_at) : null,
+            lulu_id: order.state.lulu_id,
+            cost: order.state.cost,
+            currency: order.state.currency,
+        }
+    })
+}
+
+
+// Firestore returns Timestamp objects for date fields, so normalise to an ISO string
+function to_iso(value:unknown):string{
+    if (value instanceof Date){
+        return value.toISOString()
+    }
+    return (value as {toDate():Date}).toDate().toISOString()
 }
 
 

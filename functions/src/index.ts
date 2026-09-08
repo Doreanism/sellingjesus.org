@@ -6,28 +6,13 @@ import {onRequest} from 'firebase-functions/v2/https'
 import type {HttpsFunction, Request} from 'firebase-functions/v2/https'
 import type {Response} from 'express'
 
-import {ALL_SECRETS, API_BASE_URL, DEV} from './config.js'
+import {ALL_SECRETS} from './config.js'
 import {allowed_domains} from './common.js'
-import {do_confirm, render_message_page, show_confirm_page} from './confirm.js'
-import {estimate_order_delivery, record_order} from './orders.js'
-
-
-// The base URL of this function, for building links back to it
-// NOTE The emulator serves functions under a /<project>/<region>/<name> prefix, prod at the root
-function api_base_url(request:Request):string{
-
-    // An explicit override wins, for if the URL shape ever stops matching what's derived below
-    const configured = API_BASE_URL.value()
-    if (configured){
-        return configured.replace(/\/+$/, '')
-    }
-
-    const host = request.get('host') ?? 'localhost'
-    const url_path = (request.originalUrl.split('?')[0] ?? '').replace(/\/+$/, '')
-    const route = request.path.replace(/\/+$/, '')
-    const prefix = url_path.slice(0, url_path.length - route.length)
-    return `${DEV ? 'http' : 'https'}://${host}${prefix}`
-}
+import {AuthError, require_admin} from './auth.js'
+import {add_admin, list_admins, remove_admin, set_admin_notify} from './admins.js'
+import {get_order_lulu_cost, perform_order_action} from './order_actions.js'
+import type {OrderAction} from './order_actions.js'
+import {estimate_order_delivery, list_orders, record_order} from './orders.js'
 
 
 // Single endpoint for the whole ordering flow, routed by path
@@ -38,18 +23,19 @@ export const api:HttpsFunction = onRequest({
 
     const route = request.path.replace(/\/+$/, '')
 
-    // Anything unexpected still needs a sensible reply, especially for pages a person is viewing
+    // Anything unexpected still needs a sensible reply
     try {
         await handle_route(request, response, route)
     } catch (caught){
-        console.error(caught)
-        if (response.headersSent){
+        // A failed admin check is expected, so respond with its status rather than logging
+        if (caught instanceof AuthError){
+            if (!response.headersSent){
+                response.status(caught.status).send({error: caught.message})
+            }
             return
         }
-        if (route === '/confirm'){
-            send_html(response, render_message_page("Error",
-                "Something went wrong. Nothing has been changed, so it's safe to try again."))
-        } else {
+        console.error(caught)
+        if (!response.headersSent){
             response.status(500).send({error: "Something went wrong, please try again"})
         }
     }
@@ -63,7 +49,7 @@ async function handle_route(request:Request, response:Response, route:string):Pr
     if (route === '/order' && request.method === 'POST'){
         const ip = request.ip || 'localhost'  // ip not available in emulator
         const body = request.body as Record<string, unknown>
-        const error = await record_order(body, ip, api_base_url(request))
+        const error = await record_order(body, ip)
         response.status(200).send({error})
         return
     }
@@ -82,37 +68,70 @@ async function handle_route(request:Request, response:Response, route:string):Pr
         return
     }
 
-    // Opening a confirm link
-    // SECURITY Must not change anything, since link scanners will fetch it
-    if (route === '/confirm' && request.method === 'GET'){
-        const html = await show_confirm_page(
-            String(request.query['id'] ?? ''),
-            String(request.query['sig'] ?? ''),
-        )
-        send_html(response, html)
+    // Admin dashboard: list every order
+    if (route === '/admin/orders' && request.method === 'GET'){
+        await require_admin(request)
+        response.status(200).send({orders: await list_orders()})
         return
     }
 
-    // Actually confirming or cancelling an order
-    if (route === '/confirm' && request.method === 'POST'){
+    // Admin dashboard: what Lulu would charge to fulfil an order
+    if (route === '/admin/orders/lulu-cost' && request.method === 'POST'){
+        await require_admin(request)
         const body = request.body as Record<string, unknown>
-        const html = await do_confirm(
-            String(body['id'] ?? ''),
-            String(body['sig'] ?? ''),
-            String(body['action'] ?? ''),
-        )
-        send_html(response, html)
+        response.status(200).send(await get_order_lulu_cost(String(body['id'] ?? '')))
+        return
+    }
+
+    // Admin dashboard: act on an order
+    if (route === '/admin/orders/action' && request.method === 'POST'){
+        await require_admin(request)
+        const body = request.body as Record<string, unknown>
+        const action = String(body['action'] ?? '')
+        if (action !== 'manual' && action !== 'lulu' && action !== 'cancel'){
+            response.status(400).send({error: "Unknown action"})
+            return
+        }
+        const result = await perform_order_action(String(body['id'] ?? ''), action as OrderAction)
+        response.status(200).send(result)
+        return
+    }
+
+    // Admin dashboard: list the admins
+    if (route === '/admin/admins' && request.method === 'GET'){
+        await require_admin(request)
+        response.status(200).send({admins: await list_admins()})
+        return
+    }
+
+    // Admin dashboard: add or remove an admin, or change their notify countries
+    if (route === '/admin/admins/action' && request.method === 'POST'){
+        await require_admin(request)
+        const body = request.body as Record<string, unknown>
+        const action = String(body['action'] ?? '')
+        const email = String(body['email'] ?? '')
+
+        // Run whichever change was asked for, collecting any user-facing error
+        let error:string|null
+        if (action === 'add'){
+            error = await add_admin(email, body['notify'])
+        } else if (action === 'remove'){
+            error = await remove_admin(email)
+        } else if (action === 'notify'){
+            error = await set_admin_notify(email, body['notify'])
+        } else {
+            response.status(400).send({error: "Unknown action"})
+            return
+        }
+
+        // Hand back the refreshed list so the dashboard can just replace its state
+        if (error){
+            response.status(200).send({error})
+        } else {
+            response.status(200).send({admins: await list_admins()})
+        }
         return
     }
 
     response.status(404).send("Not found")
-}
-
-
-// Send an HTML page that should never be cached or indexed
-function send_html(response:Response, html:string):void{
-    response.set('Content-Type', 'text/html; charset=utf-8')
-    response.set('Cache-Control', 'no-store')
-    response.set('X-Robots-Tag', 'noindex')
-    response.status(200).send(html)
 }

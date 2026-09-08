@@ -34,10 +34,38 @@ export interface Order {
 
     // State
     state:{
-        status:'new'|'sent_lulu'|'sent_manually'|'cancelled'
+        status:OrderStatus
         confirmed_at:Date|null
         lulu_id:null|number
         cost:number
         currency:string
     }
+}
+
+
+// The lifecycle of an order
+export type OrderStatus = 'new'|'sent_lulu'|'sent_manually'|'cancelled'
+
+
+// An order flattened to JSON-safe values for the admin dashboard
+export interface OrderSummary {
+    id:string
+    datetime:string  // ISO
+    ip:string
+    name:string
+    email:string
+    books:{id:string, title:string, quantity:number}[]
+    country:string
+    city:string
+    postcode:string
+    street1:string
+    street2:string
+    phone:string
+    region:string  // State/province, named to avoid clashing with order status
+    tax_id:string
+    status:OrderStatus
+    confirmed_at:string|null  // ISO
+    lulu_id:number|null
+    cost:number
+    currency:string
 }

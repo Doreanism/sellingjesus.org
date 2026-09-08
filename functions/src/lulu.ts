@@ -1,5 +1,5 @@
 
-import {DEV, LULU_AUTH_PROD, LULU_AUTH_SANDBOX, ORDERS_EMAIL_TO} from './config.js'
+import {DEV, LULU_AUTH_PROD, LULU_AUTH_SANDBOX, LULU_CONTACT_EMAIL} from './config.js'
 import {PRODUCTS} from './products.js'
 import type {ProductId} from './products.js'
 import type {Order, OrderBooks} from './types.js'
@@ -94,7 +94,7 @@ function books_to_line_items(books:OrderBooks, validation:boolean){
 function order_to_lulu_request(id:string, order:Order, validation:boolean){
     return {
         external_id: id,
-        contact_email: ORDERS_EMAIL_TO.value(),
+        contact_email: LULU_CONTACT_EMAIL.value(),
         production_delay: PRODUCTION_DELAY,  // Can't cancel once sent to production
         shipping_level: 'MAIL',  // Cheapest option
         line_items: books_to_line_items(order.books, validation),
