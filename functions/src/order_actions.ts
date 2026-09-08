@@ -1,7 +1,12 @@
 
 import {book_db} from './common.js'
 import {get_lulu_access_token, submit_order, validate_order} from './lulu.js'
-import type {Order} from './types.js'
+import {PRODUCTS, is_product_id} from './products.js'
+import type {Order, OrderBooks} from './types.js'
+
+
+// Most copies of a single book an admin can put in one order (a guard against fat-fingering)
+const MAX_BOOK_QUANTITY = 10
 
 
 // What an admin can do to an order from the dashboard
@@ -134,4 +139,71 @@ export async function perform_order_action(order_id:string, action:OrderAction)
         'state.lulu_id': lulu_id,
     })
     return {status: 'sent_lulu'}
+}
+
+
+// Turn submitted {id: quantity} data into a validated OrderBooks map (or a user-facing error)
+function parse_order_books(value:unknown):string|OrderBooks{
+
+    if (typeof value !== 'object' || value === null || Array.isArray(value)){
+        return "No books were given"
+    }
+
+    // Keep only positive quantities, rejecting unknown books or nonsense numbers
+    const books:OrderBooks = {}
+    for (const [id, raw_quantity] of Object.entries(value as Record<string, unknown>)){
+        if (!is_product_id(id) || !PRODUCTS[id].enabled){
+            return "That book is not available"
+        }
+        const quantity = typeof raw_quantity === 'number' ? raw_quantity : Number(raw_quantity)
+        if (!Number.isInteger(quantity) || quantity < 0){
+            return "Invalid book quantity"
+        }
+        if (quantity > MAX_BOOK_QUANTITY){
+            return `Limited to ${MAX_BOOK_QUANTITY} copies of each book`
+        }
+        if (quantity > 0){
+            books[id] = {quantity}
+        }
+    }
+
+    // The order must still contain at least one copy of at least one book
+    if (!Object.keys(books).length){
+        return "An order must keep at least one book"
+    }
+
+    return books
+}
+
+
+// Replace the books on a new order, re-checking the print price with Lulu
+export async function set_order_books(order_id:string, books_input:unknown)
+        :Promise<{status:string}|{error:string}>{
+
+    const books = parse_order_books(books_input)
+    if (typeof books === 'string'){
+        return {error: books}
+    }
+
+    const result = await load_actionable_order(order_id)
+    if (typeof result === 'string'){
+        return {error: result}
+    }
+
+    // Price the new selection before saving anything, so a bad edit changes nothing
+    const access_token = await get_lulu_access_token()
+    if (!access_token){
+        return {error: "Couldn't connect to Lulu, please try again"}
+    }
+    const validation = await validate_order(access_token, {...result.order, books})
+    if (typeof validation === 'string'){
+        return {error: validation}
+    }
+
+    await book_db.collection('book_orders').doc(order_id).update({
+        books,
+        'state.cost': validation.cost,
+        'state.currency': validation.currency,
+    })
+    return {status: 'new'}
 }

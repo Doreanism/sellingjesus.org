@@ -11,7 +11,7 @@ import {allowed_domains} from './common.js'
 import {AuthError, require_admin} from './auth.js'
 import {add_admin, list_admins, remove_admin, set_admin_notify} from './admins.js'
 import {create_session_token} from './session.js'
-import {get_order_lulu_cost, perform_order_action} from './order_actions.js'
+import {get_order_lulu_cost, perform_order_action, set_order_books} from './order_actions.js'
 import type {OrderAction} from './order_actions.js'
 import {estimate_order_delivery, list_orders, record_order} from './orders.js'
 
@@ -89,6 +89,14 @@ async function handle_route(request:Request, response:Response, route:string):Pr
         await require_admin(request)
         const body = request.body as Record<string, unknown>
         response.status(200).send(await get_order_lulu_cost(String(body['id'] ?? '')))
+        return
+    }
+
+    // Admin dashboard: change which books are in a new order
+    if (route === '/admin/orders/books' && request.method === 'POST'){
+        await require_admin(request)
+        const body = request.body as Record<string, unknown>
+        response.status(200).send(await set_order_books(String(body['id'] ?? ''), body['books']))
         return
     }
 

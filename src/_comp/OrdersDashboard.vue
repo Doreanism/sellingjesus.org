@@ -103,6 +103,7 @@ div(class='dashboard')
                                         button(type='button' class='menu-toggle' :disabled='busy'
                                             aria-label="More actions" @click='toggle_menu(o.id)') ⋮
                                         div(v-if='menu_open === o.id' class='menu-pop')
+                                            button(type='button' :disabled='busy' @click='open_books(o)') Edit books
                                             button(type='button' :disabled='busy' @click='secondary_send(o)')
                                                 | {{ manual_country(o.country) ? "Send with Lulu" : "Send manually" }}
                                             button(type='button' :disabled='busy' class='danger'
@@ -215,6 +216,30 @@ div(v-if="dialog?.kind === 'lulu'" class='overlay' @click.self='close_dialog')
                     | {{ busy ? "Sending…" : "Confirm & send" }}
                 button(type='button' :disabled='busy' @click='close_dialog') Back
 
+//- Edit which books are in a new order, keeping at least one copy overall
+div(v-if="dialog?.kind === 'books'" class='overlay' @click.self='close_dialog')
+    div(class='modal')
+        h2 Edit books
+        p(class='books-for') Order for {{ dialog.order.name }}
+        div(class='bookedit')
+            div(v-for='p of PRODUCT_LIST' :key='p.id' class='bookedit-row')
+                span(class='be-title') {{ p.title }}
+                div(class='be-step')
+                    button(type='button' :disabled='busy || dialog.quantities[p.id] <= 0'
+                        @click='step_book(p.id, -1)') −
+                    span(class='be-qty') {{ dialog.quantities[p.id] }}
+                    button(type='button'
+                        :disabled='busy || dialog.quantities[p.id] >= MAX_BOOK_QUANTITY'
+                        @click='step_book(p.id, 1)') +
+        p(class='be-total') Total copies: {{ books_total }}
+        p(class='be-note') The print price is rechecked with Lulu when you save.
+        p(v-if='dialog.error' class='error') {{ dialog.error }}
+        div(class='modal-actions')
+            button(type='button' class='primary'
+                :disabled='busy || !books_total || !books_changed' @click='save_books')
+                | {{ busy ? "Saving…" : "Save books" }}
+            button(type='button' :disabled='busy' @click='close_dialog') Cancel
+
 //- Notify preferences: all countries, or a hand-picked list
 div(v-if='admin_dialog' class='overlay' @click.self='admin_dialog = null')
     div(class='modal')
@@ -242,6 +267,8 @@ div(v-if='admin_dialog' class='overlay' @click.self='admin_dialog = null')
 import {computed, nextTick, onBeforeUnmount, onMounted, ref} from 'vue'
 
 import {api_url, google_client_id} from './api.js'
+import {PRODUCTS} from './products.js'
+import type {ProductId} from './products.js'
 import regions_data from './regions.json'
 
 
@@ -301,6 +328,7 @@ type Dialog =
     {kind:'manual', order:OrderSummary, fields:{label:string, value:string}[], error:string}
     | {kind:'lulu', order:OrderSummary, loading:boolean, cost:number|null, currency:string,
         error:string}
+    | {kind:'books', order:OrderSummary, quantities:Record<string, number>, error:string}
 
 
 // Country code -> display name, for turning stored codes into readable labels
@@ -328,6 +356,14 @@ const SHORT_BOOK_TITLES:Record<string, string> = {
 
 // Destinations we fulfil by hand through Amazon rather than Lulu
 const MANUAL_COUNTRIES = new Set(['US', 'AU', 'PH'])
+
+// Most copies of a single book an admin can put in one order (matches the function's guard)
+const MAX_BOOK_QUANTITY = 10
+
+// Every orderable book as {id, title}, for the edit-books picker
+const PRODUCT_LIST = (Object.keys(PRODUCTS) as ProductId[])
+    .filter(id => PRODUCTS[id].enabled)
+    .map(id => ({id, title: PRODUCTS[id].title}))
 
 // localStorage key holding the session token, so a reload or a return days later stays signed in
 const SESSION_KEY = 'sj_orders_session'
@@ -946,6 +982,80 @@ async function confirm_lulu():Promise<void>{
             dialog.value.error = message
         }
     })
+}
+
+// Open the edit-books dialog, seeded with the order's current quantities
+function open_books(o:OrderSummary):void{
+    menu_open.value = ''
+    const quantities:Record<string, number> = {}
+    for (const p of PRODUCT_LIST){
+        quantities[p.id] = o.books.find(b => b.id === p.id)?.quantity ?? 0
+    }
+    dialog.value = {kind: 'books', order: o, quantities, error: ''}
+}
+
+// Nudge one book's quantity within the allowed range
+function step_book(id:string, delta:number):void{
+    if (dialog.value?.kind !== 'books'){
+        return
+    }
+    const next = (dialog.value.quantities[id] ?? 0) + delta
+    dialog.value.quantities[id] = Math.max(0, Math.min(MAX_BOOK_QUANTITY, next))
+}
+
+// Total copies across every book in the open edit dialog
+const books_total = computed(() => {
+    const d = dialog.value
+    if (d?.kind !== 'books'){
+        return 0
+    }
+    return Object.values(d.quantities).reduce((sum, n) => sum + n, 0)
+})
+
+// Whether the edit dialog's selection differs from the order as stored
+const books_changed = computed(() => {
+    const d = dialog.value
+    if (d?.kind !== 'books'){
+        return false
+    }
+    return PRODUCT_LIST.some(p => {
+        const current = d.order.books.find(b => b.id === p.id)?.quantity ?? 0
+        return current !== d.quantities[p.id]
+    })
+})
+
+// Send the edited book selection to the server, then reload on success
+async function save_books():Promise<void>{
+    const d = dialog.value
+    if (d?.kind !== 'books'){
+        return
+    }
+    const books:Record<string, number> = {}
+    for (const [id, quantity] of Object.entries(d.quantities)){
+        if (quantity > 0){
+            books[id] = quantity
+        }
+    }
+    if (!Object.keys(books).length){
+        d.error = "Keep at least one copy of one book"
+        return
+    }
+    busy.value = true
+    d.error = ''
+    try {
+        const result = await api_call<{status?:string, error?:string}>(
+            '/admin/orders/books', {id: d.order.id, books})
+        if (result.error || !result.status){
+            d.error = result.error || "That didn't work"
+            return
+        }
+        close_dialog()
+        await load_orders()
+    } catch (caught){
+        d.error = (caught as Error).message
+    } finally {
+        busy.value = false
+    }
 }
 
 // Reject an order after a confirm prompt
@@ -1575,6 +1685,48 @@ button
 
     .sub-value
         word-break: break-word
+
+.books-for
+    color: var(--vp-c-text-2)
+    font-size: 14px
+
+.bookedit
+    display: flex
+    flex-direction: column
+    gap: 8px
+    margin: 16px 0
+
+.bookedit-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 12px
+
+    .be-title
+        font-size: 14px
+
+.be-step
+    display: flex
+    align-items: center
+    gap: 8px
+
+    button
+        width: 32px
+        padding: 6px 0
+        text-align: center
+
+    .be-qty
+        min-width: 20px
+        text-align: center
+        font-variant-numeric: tabular-nums
+
+.be-total
+    font-size: 14px
+    font-weight: 600
+
+.be-note
+    font-size: 13px
+    color: var(--vp-c-text-2)
 
 .modal-actions
     display: flex
