@@ -19,7 +19,6 @@ npm install
 ## Publishing podcast episodes
 
  1. `.bin/update_podcast` to add the new episode to podcast.json which can then be committed
-    * This allows editing it via the CMS and reduces amount of work for each site build
  2. Add transcript if desired
  3. `.bin/podcast_to_video` to publish to Youtube
 

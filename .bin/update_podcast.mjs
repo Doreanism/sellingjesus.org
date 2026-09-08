@@ -3,7 +3,6 @@
     * Updates episodes present in RSS feed
     * Will add new episodes
     * Retains previously fetched episodes no longer in feed
-    * Most fields editable via CMS
 */
 
 import {writeFileSync} from 'fs'

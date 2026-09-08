@@ -78,7 +78,7 @@ for (const subpath of readdirSync(media_dir, {recursive: true})){
 // Update urls in markdown files
 for (let path of readdirSync('src', {recursive: true})){
     path = join('src', path)
-    if (path.endsWith('.md') || path.endsWith('.json')){  // CMS editable files
+    if (path.endsWith('.md') || path.endsWith('.json')){
         const contents = readFileSync(path, {encoding: 'utf8'})
         let new_contents = contents
         for (const [old_url, new_url] of renames){
