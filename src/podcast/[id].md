@@ -40,7 +40,7 @@ iframe
 <template v-if='$params.id === "9619af84-423f-4859-a1b9-82a1f45cc79e"'>
     <div style='margin-bottom: 48px'>
         <strong>Looking for the book?</strong>
-        <VPButton text="Abolish the Jesus Trade (book)" href="/book" size="medium"></VPButton>
+        <VPButton text="Abolish the Jesus Trade (book)" href="/abolish-the-jesus-trade" size="medium"></VPButton>
     </div>
 </template>
 

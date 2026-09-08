@@ -2,4 +2,4 @@
 set -e
 cd "$(dirname "$(dirname "$0")")"
 
-node_modules/.bin/vitepress
+VITE_EXTRA_EXTENSIONS=docx node_modules/.bin/vitepress

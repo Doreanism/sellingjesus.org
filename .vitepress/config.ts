@@ -47,7 +47,7 @@ const videos_sidebar = [
 const more_menu_items = [
     {text: "Podcast", link: '/podcast', activeMatch: '/podcast'},
     {text: "Graphics", link: '/graphics', activeMatch: '/graphics'},
-    {text: "Book", link: '/book', activeMatch: '/book'},
+    {text: "Books", link: '/book', activeMatch: '/(book|abolish-the-jesus-trade|word-not-bound)'},
     {text: "Take Action", link: '/act', activeMatch: '/act'},
     {text: "About", link: '/about', activeMatch: '/about'},
 ]

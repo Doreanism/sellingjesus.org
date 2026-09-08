@@ -23,7 +23,7 @@ __2023__ — [Selling Jesus](https://sellingjesus.org/) — Andrew Case launched
 
 __2023__ — [Berean Standard Bible](https://berean.bible/) — Bible Hub et al. relinquished copyright of the BSB, making it the first modern English translation of the original languages to be public domain.
 
-__2025__ — [Abolish the Jesus Trade](https://sellingjesus.org/book) — Case, Here, & Owens published a collection of articles produced over the previous three years to confront the commercialization of Christianity.
+__2025__ — [Abolish the Jesus Trade](https://sellingjesus.org/abolish-the-jesus-trade) — Case, Here, & Owens published a collection of articles produced over the previous three years to confront the commercialization of Christianity.
 
 __2025__ — [The Sunnyvale Statement](https://copy.church/statement/) — A statement on the stewardship of Scripture was signed at the first Doreancon conference in Sunnyvale, California.
 
