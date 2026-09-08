@@ -101,7 +101,7 @@ div(class='dashboard')
                                         | {{ manual_country(o.country) ? "Send manually" : "Send with Lulu" }}
                                     div(class='menu')
                                         button(type='button' class='menu-toggle' :disabled='busy'
-                                            aria-label="More actions" @click='toggle_menu(o.id)') ⋯
+                                            aria-label="More actions" @click='toggle_menu(o.id)') ⋮
                                         div(v-if='menu_open === o.id' class='menu-pop')
                                             button(type='button' :disabled='busy' @click='secondary_send(o)')
                                                 | {{ manual_country(o.country) ? "Send with Lulu" : "Send manually" }}
@@ -110,9 +110,13 @@ div(class='dashboard')
                                             button(type='button' :disabled='busy' class='danger'
                                                 @click='delete_order(o)') Delete
                                 template(v-else-if="o.status === 'cancelled'")
-                                    button(type='button' :disabled='busy' @click='restore(o)') Restore
-                                    button(type='button' :disabled='busy' class='danger'
-                                        @click='delete_order(o)') Delete
+                                    div(class='menu')
+                                        button(type='button' class='menu-toggle' :disabled='busy'
+                                            aria-label="More actions" @click='toggle_menu(o.id)') ⋮
+                                        div(v-if='menu_open === o.id' class='menu-pop')
+                                            button(type='button' :disabled='busy' @click='restore(o)') Restore
+                                            button(type='button' :disabled='busy' class='danger'
+                                                @click='delete_order(o)') Delete
                         tr(v-if='expanded === o.id' class='detail')
                             td(colspan='7')
                                 div(class='detail-grid')
@@ -964,6 +968,7 @@ async function delete_order(o:OrderSummary):Promise<void>{
 
 // Put a rejected order back to "new" so it can be actioned again
 async function restore(o:OrderSummary):Promise<void>{
+    menu_open.value = ''
     if (!window.confirm(`Restore the order for ${o.name} to new?`)){
         return
     }
