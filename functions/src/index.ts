@@ -88,7 +88,8 @@ async function handle_route(request:Request, response:Response, route:string):Pr
         await require_admin(request)
         const body = request.body as Record<string, unknown>
         const action = String(body['action'] ?? '')
-        if (action !== 'manual' && action !== 'lulu' && action !== 'cancel'){
+        if (action !== 'manual' && action !== 'lulu' && action !== 'cancel'
+                && action !== 'delete'){
             response.status(400).send({error: "Unknown action"})
             return
         }

@@ -29,26 +29,20 @@ div(class='dashboard')
         //- Orders view
         template(v-if="view === 'orders' && !loading")
 
-            //- Narrow the whole view to one book
-            div(class='bookfilter')
-                button(type='button' :class="{active: filter_book === 'abolish'}"
-                    @click="filter_book = 'abolish'") Abolish
-                button(type='button' :class="{active: filter_book === 'bound'}"
-                    @click="filter_book = 'bound'") God's Word
-                button(type='button' :class="{active: filter_book === ''}"
-                    @click="filter_book = ''") All
-
             //- Headline numbers, grouped by theme, following whatever the filters currently show
             div(class='stats')
-                div(v-for='g of stat_groups' :key='g.title' class='statgroup')
-                    div(class='statgroup-title') {{ g.title }}
-                    div(class='statgroup-tiles')
-                        div(v-for='s of g.tiles' :key='s.label' class='stat'
-                            :class='{accent: s.accent}')
-                            div(class='num') {{ s.value }}
-                            div(class='label') {{ s.label }}
+                div(class='statgroups')
+                    div(v-for='g of stat_groups' :key='g.title' class='statgroup')
+                        div(class='statgroup-title') {{ g.title }}
+                        div(class='statgroup-tiles')
+                            div(v-for='s of g.tiles' :key='s.label' class='stat'
+                                :class='{accent: s.accent, danger: s.danger}')
+                                div(class='num') {{ s.value }}
+                                div(class='label') {{ s.label }}
                 div(class='statgroup countries')
-                    div(class='statgroup-title') Top countries
+                    div(class='statgroup-title')
+                        | Top countries
+                        span(class='tc-count') {{ country_count }}
                     p(v-if='!top_countries.length' class='empty') No orders yet.
                     ol(v-else class='country-list')
                         li(v-for='c of top_countries' :key='c.name')
@@ -59,6 +53,13 @@ div(class='dashboard')
 
             //- Filters (all applied client side)
             div(class='filters')
+                div(class='bookfilter')
+                    button(type='button' :class="{active: filter_book === ''}"
+                        @click="filter_book = ''") All
+                    button(type='button' :class="{active: filter_book === 'abolish'}"
+                        @click="filter_book = 'abolish'") Abolish
+                    button(type='button' :class="{active: filter_book === 'bound'}"
+                        @click="filter_book = 'bound'") God's Word
                 select(v-model='filter_status')
                     option(value='') All statuses
                     option(v-for='s of status_options' :key='s.value' :value='s.value') {{ s.label }}
@@ -104,6 +105,8 @@ div(class='dashboard')
                                                 | {{ manual_country(o.country) ? "Send with Lulu" : "Send manually" }}
                                             button(type='button' :disabled='busy' class='danger'
                                                 @click='reject(o)') Reject
+                                            button(type='button' :disabled='busy' class='danger'
+                                                @click='delete_order(o)') Delete
                         tr(v-if='expanded === o.id' class='detail')
                             td(colspan='7')
                                 div(class='detail-grid')
@@ -378,16 +381,16 @@ const filtered_orders = computed(() => {
     })
 })
 
+// Filtered orders minus rejected ones: rejected only ever feeds its own count
+const active_orders = computed(() => filtered_orders.value.filter(o => o.status !== 'cancelled'))
+
 // Headline numbers, grouped by theme, computed from the filtered set
 const stat_groups = computed(() => {
-    const list = filtered_orders.value
+    const list = active_orders.value
     const count = (status:OrderStatus) => list.filter(o => o.status === status).length
     const now = Date.now()
     const within = (days:number) =>
         list.filter(o => now - new Date(o.datetime).getTime() < days * 86400000).length
-
-    // Distinct destination countries in the current set
-    const countries = new Set(list.map(o => o.country)).size
 
     // Amount spent with Lulu so far, kept separate per currency
     const spend = new Map<string, number>()
@@ -399,29 +402,35 @@ const stat_groups = computed(() => {
     const spend_text = [...spend.entries()]
         .map(([currency, total]) => `${total.toFixed(2)} ${currency}`).join(' + ') || '—'
 
+    // Rejected count comes from the full filtered set, not the active one
+    const rejected = filtered_orders.value.filter(o => o.status === 'cancelled').length
+
     return [
         {title: "Volume", tiles: [
-            {label: "Total", value: String(list.length), accent: false},
-            {label: "Last 7 days", value: String(within(7)), accent: false},
-            {label: "Last 30 days", value: String(within(30)), accent: false},
+            {label: "Total", value: String(list.length), accent: false, danger: false},
+            {label: "Last 7 days", value: String(within(7)), accent: false, danger: false},
+            {label: "Last 30 days", value: String(within(30)), accent: false, danger: false},
         ]},
         {title: "Fulfilment", tiles: [
-            {label: "Awaiting action", value: String(count('new')), accent: true},
-            {label: "Sent (Lulu)", value: String(count('sent_lulu')), accent: false},
-            {label: "Sent (manual)", value: String(count('sent_manually')), accent: false},
-            {label: "Rejected", value: String(count('cancelled')), accent: false},
+            {label: "Awaiting action", value: String(count('new')), accent: true, danger: false},
+            {label: "Sent (Lulu)", value: String(count('sent_lulu')), accent: false, danger: false},
+            {label: "Sent (manual)", value: String(count('sent_manually')), accent: false,
+                danger: false},
+            {label: "Rejected", value: String(rejected), accent: false, danger: true},
         ]},
-        {title: "Reach", tiles: [
-            {label: "Countries", value: String(countries), accent: false},
-            {label: "Lulu spend", value: spend_text, accent: false},
+        {title: "Spend", tiles: [
+            {label: "Lulu spend", value: spend_text, accent: false, danger: false},
         ]},
     ]
 })
 
+// Distinct destination countries, shown beside the "Top countries" title
+const country_count = computed(() => new Set(active_orders.value.map(o => o.country)).size)
+
 // Up to ten busiest destination countries, for the panel beside the stats
 const top_countries = computed(() => {
     const per_country = new Map<string, number>()
-    for (const o of filtered_orders.value){
+    for (const o of active_orders.value){
         per_country.set(o.country, (per_country.get(o.country) ?? 0) + 1)
     }
     return [...per_country.entries()]
@@ -449,9 +458,14 @@ function detail_rows(o:OrderSummary):{label:string, value:string}[]{
     ]
 }
 
-// Short date for the dense table: day and month only
+// Short date for the dense table: day and month, plus the year when it isn't the current one
 function format_date(iso:string):string{
-    return new Date(iso).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})
+    const date = new Date(iso)
+    const options:Intl.DateTimeFormatOptions = {month: 'short', day: 'numeric'}
+    if (date.getFullYear() !== new Date().getFullYear()){
+        options.year = 'numeric'
+    }
+    return date.toLocaleDateString(undefined, options)
 }
 
 // Full date and time, for hover titles and the expanded detail
@@ -753,6 +767,7 @@ async function confirm_lulu():Promise<void>{
 
 // Reject an order after a confirm prompt
 async function reject(o:OrderSummary):Promise<void>{
+    menu_open.value = ''
     if (!window.confirm(`Reject the order for ${o.name}?`)){
         return
     }
@@ -761,8 +776,19 @@ async function reject(o:OrderSummary):Promise<void>{
     })
 }
 
-// Shared runner for the three order actions: call the API then reload on success
-async function run_action(id:string, action:'manual'|'lulu'|'cancel',
+// Permanently remove an order after a strong confirm prompt
+async function delete_order(o:OrderSummary):Promise<void>{
+    menu_open.value = ''
+    if (!window.confirm(`Permanently delete the order for ${o.name}? This can't be undone.`)){
+        return
+    }
+    await run_action(o.id, 'delete', message => {
+        error.value = message
+    })
+}
+
+// Shared runner for the order actions: call the API then reload on success
+async function run_action(id:string, action:'manual'|'lulu'|'cancel'|'delete',
         on_error:(message:string) => void):Promise<void>{
     busy.value = true
     try {
@@ -1010,6 +1036,16 @@ button
     gap: 16px
     margin: 24px 0
 
+// The stat groups take two thirds; the countries box takes the last third,
+// dropping below onto its own full-width row when the page gets narrow
+.statgroups
+    flex: 2 1 0
+    min-width: 300px
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    gap: 16px
+
 .statgroup
     border: 1px solid var(--vp-c-divider)
     border-radius: 8px
@@ -1021,6 +1057,15 @@ button
     letter-spacing: 0.04em
     color: var(--vp-c-text-2)
     margin-bottom: 8px
+
+    .tc-count
+        margin-left: 6px
+        padding: 1px 6px
+        border-radius: 999px
+        background: var(--vp-c-bg-soft)
+        border: 1px solid var(--vp-c-divider)
+        color: var(--vp-c-text-1)
+        font-variant-numeric: tabular-nums
 
 .statgroup-tiles
     display: flex
@@ -1038,6 +1083,12 @@ button
         border-color: var(--vp-c-brand-1)
         background: var(--vp-c-brand-soft)
 
+    &.danger
+        border-color: var(--vp-c-danger-1)
+
+        .num
+            color: var(--vp-c-danger-1)
+
     .num
         font-size: 20px
         font-weight: 700
@@ -1049,7 +1100,8 @@ button
         white-space: nowrap
 
 .countries
-    flex: 1 1 260px
+    flex: 1 1 0
+    min-width: 240px
 
 .country-list
     margin: 0
@@ -1083,7 +1135,6 @@ button
 .bookfilter
     display: flex
     gap: 4px
-    margin-top: 8px
 
     button.active
         border-color: var(--vp-c-brand-1)
@@ -1092,6 +1143,7 @@ button
 .filters
     display: flex
     flex-wrap: wrap
+    align-items: center
     gap: 12px
     margin: 16px 0
 
@@ -1157,7 +1209,8 @@ button
         color: var(--vp-c-brand-1)
 
     &.cancelled
-        color: var(--vp-c-text-2)
+        border-color: var(--vp-c-danger-1)
+        color: var(--vp-c-danger-1)
 
 .row-actions
     white-space: nowrap

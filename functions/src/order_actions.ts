@@ -4,8 +4,8 @@ import {get_lulu_access_token, submit_order, validate_order} from './lulu.js'
 import type {Order} from './types.js'
 
 
-// What an admin can do to a new order from the dashboard
-export type OrderAction = 'manual'|'lulu'|'cancel'
+// What an admin can do to an order from the dashboard
+export type OrderAction = 'manual'|'lulu'|'cancel'|'delete'
 
 
 // Load an order that is still awaiting action (returns a string if it can't be actioned)
@@ -56,12 +56,25 @@ export async function get_order_lulu_cost(order_id:string)
 export async function perform_order_action(order_id:string, action:OrderAction)
         :Promise<{status:string}|{error:string}>{
 
+    if (!order_id){
+        return {error: "No order was given"}
+    }
+    const order_ref = book_db.collection('book_orders').doc(order_id)
+
+    // Deleting drops the record entirely, and is allowed whatever state the order is in
+    if (action === 'delete'){
+        if (!(await order_ref.get()).exists){
+            return {error: "This order no longer exists"}
+        }
+        await order_ref.delete()
+        return {status: 'deleted'}
+    }
+
     const result = await load_actionable_order(order_id)
     if (typeof result === 'string'){
         return {error: result}
     }
     const order = result.order
-    const order_ref = book_db.collection('book_orders').doc(order_id)
 
     // Declining an order records it, rather than leaving it as new forever
     if (action === 'cancel'){
