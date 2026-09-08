@@ -29,11 +29,31 @@ div(class='dashboard')
         //- Orders view
         template(v-if="view === 'orders' && !loading")
 
-            //- Headline numbers, following whatever the filters currently show
+            //- Narrow the whole view to one book
+            div(class='bookfilter')
+                button(type='button' :class="{active: filter_book === 'abolish'}"
+                    @click="filter_book = 'abolish'") Abolish
+                button(type='button' :class="{active: filter_book === 'bound'}"
+                    @click="filter_book = 'bound'") God's Word
+                button(type='button' :class="{active: filter_book === ''}"
+                    @click="filter_book = ''") All
+
+            //- Headline numbers, grouped by theme, following whatever the filters currently show
             div(class='stats')
-                div(v-for='s of stat_tiles' :key='s.label' class='stat' :class='{accent: s.accent}')
-                    div(class='num') {{ s.value }}
-                    div(class='label') {{ s.label }}
+                div(v-for='g of stat_groups' :key='g.title' class='statgroup')
+                    div(class='statgroup-title') {{ g.title }}
+                    div(class='statgroup-tiles')
+                        div(v-for='s of g.tiles' :key='s.label' class='stat'
+                            :class='{accent: s.accent}')
+                            div(class='num') {{ s.value }}
+                            div(class='label') {{ s.label }}
+                div(class='statgroup countries')
+                    div(class='statgroup-title') Top countries
+                    p(v-if='!top_countries.length' class='empty') No orders yet.
+                    ol(v-else class='country-list')
+                        li(v-for='c of top_countries' :key='c.name')
+                            span(class='cn') {{ c.name }}
+                            span(class='cc') {{ c.count }}
             p(v-if='filtering' class='stats-note')
                 | Showing {{ filtered_orders.length }} of {{ orders.length }} orders
 
@@ -64,19 +84,26 @@ div(class='dashboard')
                         tr(:id='`order-${o.id}`' class='row'
                             :class='{highlight: o.id === highlight_id, open: expanded === o.id}'
                             @click='toggle(o.id)')
-                            td {{ format_date(o.datetime) }}
-                            td {{ o.name }}
+                            td(class='date' :title='format_datetime(o.datetime)') {{ format_date(o.datetime) }}
+                            td(class='name' :title='o.name') {{ o.name }}
                             td {{ country_name(o.country) }}
                             td
-                                div(v-for='b of o.books' :key='b.id') {{ b.title }} &times;{{ b.quantity }}
+                                div(v-for='b of o.books' :key='b.id') {{ short_book(b.id) }} &times;{{ b.quantity }}
                             td
                                 span(class='badge' :class='o.status') {{ status_label(o.status) }}
                             td {{ o.cost ? `${o.cost} ${o.currency}` : '—' }}
                             td(class='row-actions' @click.stop)
                                 template(v-if="o.status === 'new'")
-                                    button(type='button' :disabled='busy' @click='open_manual(o)') Send manually
-                                    button(type='button' :disabled='busy' @click='open_lulu(o)') Send with Lulu
-                                    button(type='button' :disabled='busy' class='danger' @click='cancel(o)') Cancel
+                                    button(type='button' :disabled='busy' @click='primary_send(o)')
+                                        | {{ manual_country(o.country) ? "Send manually" : "Send with Lulu" }}
+                                    div(class='menu')
+                                        button(type='button' class='menu-toggle' :disabled='busy'
+                                            aria-label="More actions" @click='toggle_menu(o.id)') ⋯
+                                        div(v-if='menu_open === o.id' class='menu-pop')
+                                            button(type='button' :disabled='busy' @click='secondary_send(o)')
+                                                | {{ manual_country(o.country) ? "Send with Lulu" : "Send manually" }}
+                                            button(type='button' :disabled='busy' class='danger'
+                                                @click='reject(o)') Reject
                         tr(v-if='expanded === o.id' class='detail')
                             td(colspan='7')
                                 div(class='detail-grid')
@@ -116,12 +143,13 @@ div(class='dashboard')
 div(v-if="dialog?.kind === 'manual'" class='overlay' @click.self='close_dialog')
     div(class='modal')
         h2 Send manually
+        p(class='manual-book') For {{ manual_book_label }}
         p Copy each field into the Amazon order:
         div(class='copyfields')
             div(v-for='f of dialog.fields' :key='f.label' class='copyfield')
                 div(class='cf-label') {{ f.label }}
                 div(class='cf-value') {{ f.value || '—' }}
-                button(type='button' :disabled='!f.value' @click='copy(f.value)')
+                button(v-if='f.value' type='button' @click='copy(f.value)')
                     | {{ copied === f.value ? "Copied" : "Copy" }}
         p(v-if='dialog.error' class='error') {{ dialog.error }}
         div(class='modal-actions')
@@ -142,6 +170,11 @@ div(v-if="dialog?.kind === 'lulu'" class='overlay' @click.self='close_dialog')
             p(class='lulu-line')
                 | Lulu will charge {{ dialog.cost }} {{ dialog.currency }} to print and post
                 |  this order to {{ country_name(dialog.order.country) }}.
+            p(class='submitted-note') Check the details the customer submitted before sending:
+            div(class='submitted')
+                div(v-for='f of submitted_fields(dialog.order)' :key='f.label' class='sub-row')
+                    span(class='sub-label') {{ f.label }}
+                    span(class='sub-value') {{ f.value || '—' }}
             div(class='modal-actions')
                 button(type='button' class='primary' :disabled='busy' @click='confirm_lulu')
                     | {{ busy ? "Sending…" : "Confirm & send" }}
@@ -171,7 +204,7 @@ div(v-if='admin_dialog' class='overlay' @click.self='admin_dialog = null')
 
 <script lang="ts" setup>
 
-import {computed, nextTick, onMounted, ref} from 'vue'
+import {computed, nextTick, onBeforeUnmount, onMounted, ref} from 'vue'
 
 import {api_url, google_client_id} from './api.js'
 import regions_data from './regions.json'
@@ -248,8 +281,17 @@ const STATUS_LABELS:Record<OrderStatus, string> = {
     new: "New",
     sent_lulu: "Sent (Lulu)",
     sent_manually: "Sent (manual)",
-    cancelled: "Cancelled",
+    cancelled: "Rejected",
 }
+
+// Compact book names for the dense table and dialogs, keyed by product id
+const SHORT_BOOK_TITLES:Record<string, string> = {
+    abolish: "Abolish",
+    bound: "God's Word",
+}
+
+// Destinations we fulfil by hand through Amazon rather than Lulu
+const MANUAL_COUNTRIES = new Set(['US', 'AU', 'PH'])
 
 // Key under which the current tab remembers its sign-in, so a reload doesn't force a re-login
 const TOKEN_KEY = 'sj_orders_token'
@@ -265,6 +307,7 @@ const busy = ref(false)
 const copied = ref('')
 const expanded = ref('')
 const highlight_id = ref('')
+const menu_open = ref('')
 const dialog = ref<Dialog|null>(null)
 
 const view = ref<'orders'|'admins'>('orders')
@@ -275,6 +318,7 @@ const admin_dialog = ref<{email:string, all:boolean, codes:string[], error:strin
 
 const filter_status = ref<''|OrderStatus>('')
 const filter_country = ref('')
+const filter_book = ref<''|'abolish'|'bound'>('')
 const search = ref('')
 
 const signed_in = computed(() => !!id_token.value)
@@ -288,6 +332,11 @@ function country_name(code:string):string{
 // Label for a status value
 function status_label(status:OrderStatus):string{
     return STATUS_LABELS[status]
+}
+
+// Compact name for a book, falling back to the raw product id
+function short_book(id:string):string{
+    return SHORT_BOOK_TITLES[id] ?? id
 }
 
 // Status options for the filter dropdown
@@ -306,7 +355,8 @@ const country_options = computed(() => {
 
 // Whether any filter is currently narrowing the list
 const filtering = computed(() =>
-    !!filter_status.value || !!filter_country.value || !!search.value.trim())
+    !!filter_status.value || !!filter_country.value || !!filter_book.value
+    || !!search.value.trim())
 
 // Orders after the active filters
 const filtered_orders = computed(() => {
@@ -318,6 +368,9 @@ const filtered_orders = computed(() => {
         if (filter_country.value && o.country !== filter_country.value){
             return false
         }
+        if (filter_book.value && !o.books.some(b => b.id === filter_book.value)){
+            return false
+        }
         if (query && !`${o.name} ${o.email}`.toLowerCase().includes(query)){
             return false
         }
@@ -325,20 +378,16 @@ const filtered_orders = computed(() => {
     })
 })
 
-// The row of headline numbers above the list, computed from the filtered set
-const stat_tiles = computed(() => {
+// Headline numbers, grouped by theme, computed from the filtered set
+const stat_groups = computed(() => {
     const list = filtered_orders.value
     const count = (status:OrderStatus) => list.filter(o => o.status === status).length
     const now = Date.now()
     const within = (days:number) =>
         list.filter(o => now - new Date(o.datetime).getTime() < days * 86400000).length
 
-    // Busiest country
-    const per_country = new Map<string, number>()
-    for (const o of list){
-        per_country.set(o.country, (per_country.get(o.country) ?? 0) + 1)
-    }
-    const top = [...per_country.entries()].sort((a, b) => b[1] - a[1])[0]
+    // Distinct destination countries in the current set
+    const countries = new Set(list.map(o => o.country)).size
 
     // Amount spent with Lulu so far, kept separate per currency
     const spend = new Map<string, number>()
@@ -351,18 +400,34 @@ const stat_tiles = computed(() => {
         .map(([currency, total]) => `${total.toFixed(2)} ${currency}`).join(' + ') || '—'
 
     return [
-        {label: "Total", value: String(list.length), accent: false},
-        {label: "Awaiting action", value: String(count('new')), accent: true},
-        {label: "Sent (Lulu)", value: String(count('sent_lulu')), accent: false},
-        {label: "Sent (manual)", value: String(count('sent_manually')), accent: false},
-        {label: "Cancelled", value: String(count('cancelled')), accent: false},
-        {label: "Last 7 days", value: String(within(7)), accent: false},
-        {label: "Last 30 days", value: String(within(30)), accent: false},
-        {label: "Countries", value: String(per_country.size), accent: false},
-        {label: "Top country", value: top ? `${country_name(top[0])} (${top[1]})` : '—',
-            accent: false},
-        {label: "Lulu spend", value: spend_text, accent: false},
+        {title: "Volume", tiles: [
+            {label: "Total", value: String(list.length), accent: false},
+            {label: "Last 7 days", value: String(within(7)), accent: false},
+            {label: "Last 30 days", value: String(within(30)), accent: false},
+        ]},
+        {title: "Fulfilment", tiles: [
+            {label: "Awaiting action", value: String(count('new')), accent: true},
+            {label: "Sent (Lulu)", value: String(count('sent_lulu')), accent: false},
+            {label: "Sent (manual)", value: String(count('sent_manually')), accent: false},
+            {label: "Rejected", value: String(count('cancelled')), accent: false},
+        ]},
+        {title: "Reach", tiles: [
+            {label: "Countries", value: String(countries), accent: false},
+            {label: "Lulu spend", value: spend_text, accent: false},
+        ]},
     ]
+})
+
+// Up to ten busiest destination countries, for the panel beside the stats
+const top_countries = computed(() => {
+    const per_country = new Map<string, number>()
+    for (const o of filtered_orders.value){
+        per_country.set(o.country, (per_country.get(o.country) ?? 0) + 1)
+    }
+    return [...per_country.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([code, count]) => ({name: country_name(code), count}))
 })
 
 
@@ -377,15 +442,20 @@ function detail_rows(o:OrderSummary):{label:string, value:string}[]{
         {label: "Postcode", value: o.postcode},
         {label: "Country", value: country_name(o.country)},
         {label: "Tax ID", value: o.tax_id},
-        {label: "Ordered", value: format_date(o.datetime)},
-        {label: "Confirmed", value: o.confirmed_at ? format_date(o.confirmed_at) : ''},
+        {label: "Ordered", value: format_datetime(o.datetime)},
+        {label: "Confirmed", value: o.confirmed_at ? format_datetime(o.confirmed_at) : ''},
         {label: "Lulu job", value: o.lulu_id ? String(o.lulu_id) : ''},
         {label: "IP", value: o.ip},
     ]
 }
 
-// Format an ISO timestamp for display
+// Short date for the dense table: day and month only
 function format_date(iso:string):string{
+    return new Date(iso).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})
+}
+
+// Full date and time, for hover titles and the expanded detail
+function format_datetime(iso:string):string{
     return new Date(iso).toLocaleString(undefined, {
         year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
     })
@@ -396,10 +466,41 @@ function toggle(id:string):void{
     expanded.value = expanded.value === id ? '' : id
 }
 
+// Whether an order's country is one we fulfil manually through Amazon
+function manual_country(code:string):boolean{
+    return MANUAL_COUNTRIES.has(code)
+}
+
+// Open or close the per-row actions menu
+function toggle_menu(id:string):void{
+    menu_open.value = menu_open.value === id ? '' : id
+}
+
+// The send route we lead with for this order: manual for the manual countries, Lulu otherwise
+function primary_send(o:OrderSummary):void{
+    menu_open.value = ''
+    if (manual_country(o.country)){
+        open_manual(o)
+    } else {
+        open_lulu(o)
+    }
+}
+
+// The other send route, offered from the menu
+function secondary_send(o:OrderSummary):void{
+    menu_open.value = ''
+    if (manual_country(o.country)){
+        open_lulu(o)
+    } else {
+        open_manual(o)
+    }
+}
+
 // Reset every filter
 function clear_filters():void{
     filter_status.value = ''
     filter_country.value = ''
+    filter_book.value = ''
     search.value = ''
 }
 
@@ -553,9 +654,33 @@ function open_manual(o:OrderSummary):void{
             {label: "Phone", value: o.phone},
             {label: "Email", value: o.email},
             {label: "Tax ID", value: o.tax_id},
-            {label: "Books", value: o.books.map(b => `${b.title} x${b.quantity}`).join(', ')},
         ],
     }
+}
+
+// Which book(s) the open manual dialog is for, in short form
+const manual_book_label = computed(() => {
+    if (dialog.value?.kind !== 'manual'){
+        return ''
+    }
+    return dialog.value.order.books
+        .map(b => `${short_book(b.id)} ×${b.quantity}`).join(', ')
+})
+
+// Everything the customer submitted, for a last look before sending with Lulu
+function submitted_fields(o:OrderSummary):{label:string, value:string}[]{
+    return [
+        {label: "Name", value: o.name},
+        {label: "Email", value: o.email},
+        {label: "Phone", value: o.phone},
+        {label: "Street", value: [o.street1, o.street2].filter(Boolean).join(', ')},
+        {label: "City", value: o.city},
+        {label: "State/Province", value: o.region},
+        {label: "Postcode", value: o.postcode},
+        {label: "Country", value: country_name(o.country)},
+        {label: "Tax ID", value: o.tax_id},
+        {label: "Books", value: o.books.map(b => `${short_book(b.id)} ×${b.quantity}`).join(', ')},
+    ]
 }
 
 // Copy a value to the clipboard and briefly flag which one was copied
@@ -626,9 +751,9 @@ async function confirm_lulu():Promise<void>{
     })
 }
 
-// Cancel an order after a confirm prompt
-async function cancel(o:OrderSummary):Promise<void>{
-    if (!window.confirm(`Cancel the order for ${o.name}?`)){
+// Reject an order after a confirm prompt
+async function reject(o:OrderSummary):Promise<void>{
+    if (!window.confirm(`Reject the order for ${o.name}?`)){
         return
     }
     await run_action(o.id, 'cancel', message => {
@@ -781,6 +906,14 @@ async function save_notify():Promise<void>{
 }
 
 
+// Any click that reaches the document (i.e. outside the actions cell) closes the menu
+function close_menu():void{
+    menu_open.value = ''
+}
+onMounted(() => document.addEventListener('click', close_menu))
+onBeforeUnmount(() => document.removeEventListener('click', close_menu))
+
+
 onMounted(async () => {
 
     // A deep link may ask for one specific order
@@ -821,7 +954,7 @@ onMounted(async () => {
 
 .dashboard
     font-family: var(--vp-font-family-base)
-    max-width: 1100px
+    max-width: 1280px
     margin: 0 auto
     padding: 24px
 
@@ -871,34 +1004,90 @@ button
         color: var(--vp-c-danger-1)
 
 .stats
-    display: grid
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
-    gap: 12px
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    gap: 16px
     margin: 24px 0
+
+.statgroup
+    border: 1px solid var(--vp-c-divider)
+    border-radius: 8px
+    padding: 12px
+
+.statgroup-title
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: var(--vp-c-text-2)
+    margin-bottom: 8px
+
+.statgroup-tiles
+    display: flex
+    flex-wrap: wrap
+    gap: 8px
 
 .stat
     border: 1px solid var(--vp-c-divider)
     border-radius: 8px
-    padding: 12px 16px
+    padding: 8px 14px
     background: var(--vp-c-bg-soft)
+    min-width: 92px
 
     &.accent
         border-color: var(--vp-c-brand-1)
         background: var(--vp-c-brand-soft)
 
     .num
-        font-size: 22px
+        font-size: 20px
         font-weight: 700
 
     .label
         font-size: 12px
         color: var(--vp-c-text-2)
         margin-top: 4px
+        white-space: nowrap
+
+.countries
+    flex: 1 1 260px
+
+.country-list
+    margin: 0
+    padding: 0
+    list-style: none
+    columns: 2
+    column-gap: 24px
+    font-size: 13px
+
+    li
+        display: flex
+        justify-content: space-between
+        gap: 12px
+        padding: 3px 0
+        break-inside: avoid
+
+    .cn
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+    .cc
+        color: var(--vp-c-text-2)
+        font-variant-numeric: tabular-nums
 
 .stats-note
     font-size: 13px
     color: var(--vp-c-text-2)
     margin-top: -12px
+
+.bookfilter
+    display: flex
+    gap: 4px
+    margin-top: 8px
+
+    button.active
+        border-color: var(--vp-c-brand-1)
+        color: var(--vp-c-brand-1)
 
 .filters
     display: flex
@@ -934,6 +1123,15 @@ button
         letter-spacing: 0.04em
         color: var(--vp-c-text-2)
 
+    td.date
+        white-space: nowrap
+
+    td.name
+        max-width: 220px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
     .row
         cursor: pointer
 
@@ -964,8 +1162,34 @@ button
 .row-actions
     white-space: nowrap
 
-    button
+    > button, > .menu
         margin-left: 6px
+
+.menu
+    position: relative
+    display: inline-block
+
+.menu-toggle
+    padding: 6px 10px
+    line-height: 1
+
+.menu-pop
+    position: absolute
+    right: 0
+    top: calc(100% + 4px)
+    z-index: 30
+    display: flex
+    flex-direction: column
+    gap: 4px
+    padding: 6px
+    background: var(--vp-c-bg)
+    border: 1px solid var(--vp-c-divider)
+    border-radius: 8px
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15)
+
+    button
+        margin: 0
+        text-align: left
 
 .detail td
     background: var(--vp-c-bg-alt)
@@ -1001,6 +1225,9 @@ button
     h2
         margin: 0 0 12px
 
+.manual-book
+    font-weight: 600
+
 .copyfields
     display: flex
     flex-direction: column
@@ -1022,6 +1249,29 @@ button
 
 .lulu-line
     font-size: 15px
+
+.submitted-note
+    font-size: 13px
+    color: var(--vp-c-text-2)
+    margin-top: 14px
+
+.submitted
+    display: flex
+    flex-direction: column
+    gap: 4px
+    margin: 8px 0 4px
+
+.sub-row
+    display: grid
+    grid-template-columns: 130px 1fr
+    gap: 12px
+    font-size: 14px
+
+    .sub-label
+        color: var(--vp-c-text-2)
+
+    .sub-value
+        word-break: break-word
 
 .modal-actions
     display: flex
