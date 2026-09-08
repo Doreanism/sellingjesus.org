@@ -17,9 +17,19 @@ import existing_items from '../src/podcast.json' with {type: 'json'}
 const markdowner = new MarkdownIt({linkify: true, typographer: true, html: true})
 
 
-// Fetch RSS feed
-const rss_resp = await fetch('https://anchor.fm/s/e3894160/podcast/rss')
-const rss_text = await rss_resp.text()
+// Fetch RSS feed, but fall back to the committed JSON if the feed is unavailable
+let rss_text
+try {
+    const rss_resp = await fetch('https://anchor.fm/s/e3894160/podcast/rss')
+    if (!rss_resp.ok) {
+        throw new Error(`RSS feed error: ${rss_resp.status}`)
+    }
+    rss_text = await rss_resp.text()
+} catch (error) {
+    // Network errors shouldn't break the build; keep the existing episodes
+    console.warn(`WARNING: Skipping podcast update: ${error.message}`)
+    process.exit(0)
+}
 
 
 // Parse RSS as HTML (avoids XML namespace issues and handles unescaped `&`)
