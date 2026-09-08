@@ -86,7 +86,9 @@ div(class='dashboard')
                             :class='{highlight: o.id === highlight_id, open: expanded === o.id}'
                             @click='toggle(o.id)')
                             td(class='date' :title='format_datetime(o.datetime)') {{ format_date(o.datetime) }}
-                            td(class='name' :title='o.name') {{ o.name }}
+                            td(class='name' :title='o.name')
+                                span(v-if='flagged(o)' class='flag' :title='flag_title(o)') ⚠
+                                | {{ o.name }}
                             td {{ country_name(o.country) }}
                             td
                                 div(v-for='b of o.books' :key='b.id') {{ short_book(b.id) }} &times;{{ b.quantity }}
@@ -147,6 +149,16 @@ div(v-if="dialog?.kind === 'manual'" class='overlay' @click.self='close_dialog')
     div(class='modal')
         h2 Send manually
         p(class='manual-book') For {{ manual_book_label }}
+        div(v-if='warning_groups(dialog.order).length' class='order-warning')
+            p(class='ow-title') ⚠ Possible repeat order
+            div(v-for='g of warning_groups(dialog.order)' :key='g.label' class='ow-group')
+                div(class='ow-head') {{ g.label }}
+                div(v-for='m of g.orders' :key='m.id' class='ow-item'
+                    :class="{muted: m.status === 'cancelled'}")
+                    span(class='badge' :class='m.status') {{ status_label(m.status) }}
+                    span(class='ow-date') {{ format_date(m.datetime) }}
+                    span {{ country_name(m.country) }}
+                    button(type='button' class='ow-jump' @click='jump_to(m.id)') show
         p Copy each field into the Amazon order:
         div(class='copyfields')
             div(v-for='f of dialog.fields' :key='f.label' class='copyfield')
@@ -173,6 +185,16 @@ div(v-if="dialog?.kind === 'lulu'" class='overlay' @click.self='close_dialog')
             p(class='lulu-line')
                 | Lulu will charge {{ dialog.cost }} {{ dialog.currency }} to print and post
                 |  this order to {{ country_name(dialog.order.country) }}.
+            div(v-if='warning_groups(dialog.order).length' class='order-warning')
+                p(class='ow-title') ⚠ Possible repeat order
+                div(v-for='g of warning_groups(dialog.order)' :key='g.label' class='ow-group')
+                    div(class='ow-head') {{ g.label }}
+                    div(v-for='m of g.orders' :key='m.id' class='ow-item'
+                        :class="{muted: m.status === 'cancelled'}")
+                        span(class='badge' :class='m.status') {{ status_label(m.status) }}
+                        span(class='ow-date') {{ format_date(m.datetime) }}
+                        span {{ country_name(m.country) }}
+                        button(type='button' class='ow-jump' @click='jump_to(m.id)') show
             p(class='submitted-note') Check the details the customer submitted before sending:
             div(class='submitted')
                 div(v-for='f of submitted_fields(dialog.order)' :key='f.label' class='sub-row')
@@ -438,6 +460,104 @@ const top_countries = computed(() => {
         .slice(0, 10)
         .map(([code, count]) => ({name: country_name(code), count}))
 })
+
+
+// Other orders that look like the same person (email/phone/name+street) or same network (ip)
+interface OrderFlags {
+    recipient:OrderSummary[]
+    network:OrderSummary[]
+}
+
+// Keep only the digits of a phone number, for loose matching
+function phone_digits(value:string):string{
+    return value.replace(/\D/g, '')
+}
+
+// Work out which other loaded orders overlap with this one
+function compute_order_flags(o:OrderSummary):OrderFlags{
+    const norm = (value:string) => value.trim().toLowerCase()
+    const o_phone = phone_digits(o.phone)
+    const o_name = norm(o.name)
+    const o_street = norm(o.street1)
+    const recipient:OrderSummary[] = []
+    const network:OrderSummary[] = []
+    for (const x of orders.value){
+        if (x.id === o.id){
+            continue
+        }
+        const same_email = !!o.email && x.email === o.email
+        const same_phone = o_phone.length >= 7 && phone_digits(x.phone) === o_phone
+        const same_address = !!o_name && !!o_street
+            && norm(x.name) === o_name && norm(x.street1) === o_street
+        if (same_email || same_phone || same_address){
+            recipient.push(x)
+        } else if (!!o.ip && x.ip === o.ip){
+            network.push(x)
+        }
+    }
+    const newest_first = (a:OrderSummary, b:OrderSummary) => b.datetime.localeCompare(a.datetime)
+    return {recipient: recipient.sort(newest_first), network: network.sort(newest_first)}
+}
+
+// Flags for every loaded order, rebuilt only when the list changes
+const order_flags_by_id = computed(() => {
+    const map = new Map<string, OrderFlags>()
+    for (const o of orders.value){
+        map.set(o.id, compute_order_flags(o))
+    }
+    return map
+})
+
+// Flags for one order (empty if it stands alone)
+function order_flags(o:OrderSummary):OrderFlags{
+    return order_flags_by_id.value.get(o.id) ?? {recipient: [], network: []}
+}
+
+// Whether an order overlaps with any other
+function flagged(o:OrderSummary):boolean{
+    const flags = order_flags(o)
+    return flags.recipient.length > 0 || flags.network.length > 0
+}
+
+// One-line summary of an order's overlaps, for the row marker's hover text
+function flag_title(o:OrderSummary):string{
+    const flags = order_flags(o)
+    const parts:string[] = []
+    if (flags.recipient.length){
+        parts.push(`${flags.recipient.length} from the same email, phone, or address`)
+    }
+    if (flags.network.length){
+        parts.push(`${flags.network.length} from the same IP address`)
+    }
+    return `Possible repeat order — ${parts.join('; ')}`
+}
+
+// Overlap groups shown in the send dialogs (empty when the order stands alone)
+function warning_groups(o:OrderSummary):{label:string, orders:OrderSummary[]}[]{
+    const flags = order_flags(o)
+    const groups:{label:string, orders:OrderSummary[]}[] = []
+    if (flags.recipient.length){
+        groups.push({label: "Same email, phone, or address", orders: flags.recipient})
+    }
+    if (flags.network.length){
+        groups.push({label: "Same IP address", orders: flags.network})
+    }
+    return groups
+}
+
+// Close any dialog and bring another order into view in the list
+function jump_to(id:string):void{
+    close_dialog()
+    menu_open.value = ''
+    highlight_id.value = id
+    expanded.value = id
+    if (!filtered_orders.value.some(x => x.id === id)){
+        clear_filters()
+    }
+    nextTick(() => {
+        document.getElementById(`order-${id}`)?.scrollIntoView({block: 'center', behavior: 'smooth'})
+    })
+}
 
 
 // Fields shown when a row is expanded
@@ -1184,6 +1304,10 @@ button
         text-overflow: ellipsis
         white-space: nowrap
 
+    td.name .flag
+        margin-right: 4px
+        cursor: help
+
     .row
         cursor: pointer
 
@@ -1280,6 +1404,51 @@ button
 
 .manual-book
     font-weight: 600
+
+.order-warning
+    border: 1px solid var(--vp-c-danger-1)
+    border-radius: 8px
+    background: var(--vp-c-danger-soft)
+    padding: 10px 12px
+    margin: 14px 0
+    font-size: 13px
+
+    .ow-title
+        margin: 0
+        font-weight: 600
+        color: var(--vp-c-danger-1)
+
+    .ow-group
+        margin-top: 8px
+
+    .ow-head
+        font-size: 11px
+        text-transform: uppercase
+        letter-spacing: 0.04em
+        color: var(--vp-c-text-2)
+        margin-bottom: 3px
+
+    .ow-item
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 8px
+        padding: 2px 0
+
+        &.muted
+            opacity: 0.55
+
+        .ow-date
+            color: var(--vp-c-text-2)
+
+    .ow-jump
+        margin-left: auto
+        padding: 0
+        border: none
+        background: none
+        color: var(--vp-c-brand-1)
+        font: inherit
+        cursor: pointer
 
 .copyfields
     display: flex
