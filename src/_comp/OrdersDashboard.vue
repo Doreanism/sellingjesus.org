@@ -164,6 +164,7 @@ div(v-if="dialog?.kind === 'manual'" class='overlay' @click.self='close_dialog')
                 div(v-for='m of g.orders' :key='m.id' class='ow-item'
                     :class="{muted: m.status === 'cancelled'}")
                     span(class='badge' :class='m.status') {{ status_label(m.status) }}
+                    span(class='ow-book') {{ m.books.map(b => short_book(b.id)).join(', ') }}
                     span(class='ow-date') {{ format_date(m.datetime) }}
                     span {{ country_name(m.country) }}
                     button(type='button' class='ow-jump' @click='jump_to(m.id)') show
@@ -200,6 +201,7 @@ div(v-if="dialog?.kind === 'lulu'" class='overlay' @click.self='close_dialog')
                     div(v-for='m of g.orders' :key='m.id' class='ow-item'
                         :class="{muted: m.status === 'cancelled'}")
                         span(class='badge' :class='m.status') {{ status_label(m.status) }}
+                        span(class='ow-book') {{ m.books.map(b => short_book(b.id)).join(', ') }}
                         span(class='ow-date') {{ format_date(m.datetime) }}
                         span {{ country_name(m.country) }}
                         button(type='button' class='ow-jump' @click='jump_to(m.id)') show
@@ -485,16 +487,18 @@ function phone_digits(value:string):string{
     return value.replace(/\D/g, '')
 }
 
-// Work out which other loaded orders overlap with this one
+// Work out which other loaded orders overlap with this one, only counting orders that
+// share at least one book: a repeat is about getting a second copy of the same title
 function compute_order_flags(o:OrderSummary):OrderFlags{
     const norm = (value:string) => value.trim().toLowerCase()
     const o_phone = phone_digits(o.phone)
     const o_name = norm(o.name)
     const o_street = norm(o.street1)
+    const o_book_ids = new Set(o.books.map(b => b.id))
     const recipient:OrderSummary[] = []
     const network:OrderSummary[] = []
     for (const x of orders.value){
-        if (x.id === o.id){
+        if (x.id === o.id || !x.books.some(b => o_book_ids.has(b.id))){
             continue
         }
         const same_email = !!o.email && x.email === o.email
@@ -1511,6 +1515,9 @@ button
 
         &.muted
             opacity: 0.55
+
+        .ow-book
+            font-weight: 600
 
         .ow-date
             color: var(--vp-c-text-2)
