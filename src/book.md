@@ -7,7 +7,7 @@ image: /_assets/social_book.jpg
 
 
 <script lang='ts' setup>
-import BookForm from './_comp/BookForm.vue'
+import OrderForm from './_comp/OrderForm.vue'
 </script>
 
 <style lang='sass' scoped>
@@ -74,7 +74,7 @@ The book is available at the following online retailers for the minimum price th
 
 If you would like a free printed copy, we're happy to pay for the printing and shipping for you. This offer is open to anyone. If you need more than one copy, please [contact us](/about#contact).
 
-<BookForm></BookForm>
+<OrderForm product="abolish"></OrderForm>
 
 
 ## Print the book yourself

@@ -5,6 +5,16 @@ node_modules/
 /.env
 /.vitepress/cache/
 /.vitepress/.temp/
+
+/functions/lib/
+/functions/.env
+/functions/.env.local
+*-key.json
+*firebase-adminsdk*.json
+/.firebase/
+/firebase-debug.log
+/firestore-debug.log
+
 /src/learn/resources_processed.json
 /src/learn/conversations_processed.json
 /src/learn/corinthians_processed.json

@@ -1,6 +1,6 @@
-// Execute to generate src/_comp/regions.json
+// Execute to generate the region data used by both the site and the functions
 
-import {writeFileSync} from 'node:fs'
+import {mkdirSync, writeFileSync} from 'node:fs'
 
 import iso3166 from 'iso3166-2-db/i18n/dispute/UN/en.json' with {type: 'json'}
 
@@ -22,4 +22,8 @@ const countries = Object.entries(iso3166).map(([code, data]) => {
 })
 countries.sort((a, b) => a.name.localeCompare(b.name))
 
-writeFileSync('src/_comp/regions.json', JSON.stringify(countries))
+// The functions need their own copy, as firebase only uploads the functions directory
+const json = JSON.stringify(countries)
+writeFileSync('src/_comp/regions.json', json)
+mkdirSync('functions/src/data', {recursive: true})
+writeFileSync('functions/src/data/regions.json', json)

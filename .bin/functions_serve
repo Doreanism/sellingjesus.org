@@ -1,0 +1,7 @@
+#!/bin/bash
+# Serve functions via the firebase emulators
+set -e
+cd "$(dirname "$(dirname "$0")")"
+
+.bin/functions_build
+node_modules/.bin/firebase emulators:start --only functions,firestore "$@"

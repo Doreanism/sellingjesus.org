@@ -6,6 +6,7 @@
     "@types/create-react-class": "^15.6.8",
     "@types/jsdom": "^21.1.6",
     "@volar/vue-language-plugin-pug": "^1.6.5",
+    "firebase-tools": "^15.29.0",
     "html-escaper": "^3.0.3",
     "iso3166-2-db": "^2.3.11",
     "jsdom": "^26.1.0",

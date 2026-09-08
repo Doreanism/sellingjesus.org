@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig_base.jsonc",
+    "compilerOptions": {
+        "module": "NodeNext",
+        "esModuleInterop": true,
+        "moduleResolution": "nodenext",
+        "noUnusedLocals": true,
+        "rootDir": "src",
+        "outDir": "lib",
+        "sourceMap": true,
+        "target": "es2022",
+        "resolveJsonModule": true,
+        "types": ["node"]
+    },
+    "include": [
+        "src"
+    ]
+}

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Deploy functions and firestore rules
+set -e
+cd "$(dirname "$(dirname "$0")")"
+
+# Ensure have logged in
+node_modules/.bin/firebase login
+
+# Ensure deploying a fresh build
+node .bin/gen_regions.mjs
+.bin/functions_build
+
+node_modules/.bin/firebase deploy --only functions,firestore

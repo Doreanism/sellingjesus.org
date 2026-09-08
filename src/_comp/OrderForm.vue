@@ -83,6 +83,8 @@ form(v-else ref='form' :class='{attempted}')
 import {computed, nextTick, onMounted, ref, watch} from 'vue'
 
 import countries from './regions.json'
+import {api_url, turnstile_sitekey} from './api.js'
+import type {ProductId} from './products.js'
 
 
 declare global {
@@ -90,6 +92,10 @@ declare global {
         turnstile:any
     }
 }
+
+
+// Which book this form orders (each book has its own page and form)
+const props = defineProps<{product:ProductId}>()
 
 
 const form = ref<HTMLFormElement>()
@@ -179,7 +185,6 @@ const submit = async () => {
     // Trim everything and see if still valid (have to when sending data anyway)
     input_name.value = input_name.value.trim()
     input_email.value = input_email.value.trim()
-    // input_country.value = input_country.value.trim()
     input_city.value = input_city.value.trim()
     input_postcode.value = input_postcode.value.trim()
     input_street1.value = input_street1.value.trim()
@@ -194,8 +199,10 @@ const submit = async () => {
     }
 
     // Prepare data to send
+    // NOTE The backend accepts several books per order, but each page only offers its own
     const data = {
         turnstile: input_turnstile.value,
+        products: [props.product],
         name: input_name.value,
         email: input_email.value,
         address_country: input_country.value,
@@ -209,15 +216,11 @@ const submit = async () => {
         address_tax_id: show_tax_id.value ? input_tax_id.value : '',
     }
 
-    // Determine functions URL
-    const url = import.meta.env.DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/record_order'
-        : 'https://record-order-eyjvbqmvpa-uw.a.run.app'
-
     // Send request
     progress.value = true
     let resp:Response
     try {
-        resp = await fetch(url, {
+        resp = await fetch(api_url + '/order', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -297,7 +300,7 @@ async function load_turnstile(){
 // Render turnstile at div with class 'turnstile'
 async function render_turnstile(){
     self.turnstile.render('.turnstile', {
-        sitekey: '0x4AAAAAABoYqRsX2W9RrFK4',
+        sitekey: turnstile_sitekey,
         callback: function(token:string){
             input_turnstile.value = token
         },
@@ -313,7 +316,6 @@ onMounted(async () => {
 function weeks_until(date:Date){
     const diff_ms = date.getTime() - new Date().getTime()
     const days = Math.round(diff_ms / 1000 / 60 / 60 / 24)
-    console.log(`days: ${days}`)
     return Math.round(days / 7)
 }
 
@@ -332,19 +334,16 @@ watch(input_country, async () => {
         return
     }
 
-    // Using Amazon for AU and US
-    if (input_country.value === 'US' || input_country.value === 'AU'){
+    // Orders sent by hand from an Amazon listing arrive much quicker
+    if (['US', 'AU'].includes(input_country.value)){
         estimate.value = "Delivery will take around 1 week"
         return
     }
 
-    // Determine function URL
-    const url = import.meta.env.DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/estimate_delivery'
-        : 'https://estimate-delivery-eyjvbqmvpa-uw.a.run.app'
-
     // Send request
     try {
-        const resp = await fetch(url + '?country=' + input_country.value)
+        const resp = await fetch(
+            `${api_url}/estimate?country=${input_country.value}&products=${props.product}`)
         if (resp.ok){
             const data:{max_delivery_date:string|null} = await resp.json()
             if (!data.max_delivery_date){

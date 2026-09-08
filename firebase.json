@@ -1,0 +1,27 @@
+{
+    "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
+    "functions": [
+        {
+            "runtime": "nodejs22",
+            "source": "functions",
+            "codebase": "default",
+            "ignore": [
+                "node_modules",
+                ".git",
+                "firebase-debug.log",
+                "firebase-debug.*.log",
+                "*.local"
+            ]
+        }
+    ],
+    "firestore": {
+        "database": "book-orders",
+        "rules": "firestore.rules",
+        "indexes": "firestore.indexes.json"
+    },
+    "emulators": {
+        "functions": {"port": 5001},
+        "firestore": {"port": 8085},
+        "ui": {"enabled": true}
+    }
+}
