@@ -5,7 +5,7 @@ import type {Order} from './types.js'
 
 
 // What an admin can do to an order from the dashboard
-export type OrderAction = 'manual'|'lulu'|'cancel'|'delete'
+export type OrderAction = 'manual'|'lulu'|'cancel'|'delete'|'restore'
 
 
 // Load an order that is still awaiting action (returns a string if it can't be actioned)
@@ -68,6 +68,22 @@ export async function perform_order_action(order_id:string, action:OrderAction)
         }
         await order_ref.delete()
         return {status: 'deleted'}
+    }
+
+    // Restoring puts a rejected order back to "new" so it can be actioned again
+    if (action === 'restore'){
+        const existing = await order_ref.get()
+        if (!existing.exists){
+            return {error: "This order no longer exists"}
+        }
+        if ((existing.data() as Order).state.status !== 'cancelled'){
+            return {error: "Only a rejected order can be restored"}
+        }
+        await order_ref.update({
+            'state.status': 'new',
+            'state.confirmed_at': null,
+        })
+        return {status: 'new'}
     }
 
     const result = await load_actionable_order(order_id)

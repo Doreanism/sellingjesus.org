@@ -98,7 +98,7 @@ async function handle_route(request:Request, response:Response, route:string):Pr
         const body = request.body as Record<string, unknown>
         const action = String(body['action'] ?? '')
         if (action !== 'manual' && action !== 'lulu' && action !== 'cancel'
-                && action !== 'delete'){
+                && action !== 'delete' && action !== 'restore'){
             response.status(400).send({error: "Unknown action"})
             return
         }

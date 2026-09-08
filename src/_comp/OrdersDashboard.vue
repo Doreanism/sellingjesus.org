@@ -42,7 +42,7 @@ div(class='dashboard')
                 div(class='statgroup countries')
                     div(class='statgroup-title')
                         | Top countries
-                        span(class='tc-count') {{ country_count }}
+                        span(class='tc-count') {{ country_count }} total
                     p(v-if='!top_countries.length' class='empty') No orders yet.
                     ol(v-else class='country-list')
                         li(v-for='c of top_countries' :key='c.name')
@@ -109,6 +109,10 @@ div(class='dashboard')
                                                 @click='reject(o)') Reject
                                             button(type='button' :disabled='busy' class='danger'
                                                 @click='delete_order(o)') Delete
+                                template(v-else-if="o.status === 'cancelled'")
+                                    button(type='button' :disabled='busy' @click='restore(o)') Restore
+                                    button(type='button' :disabled='busy' class='danger'
+                                        @click='delete_order(o)') Delete
                         tr(v-if='expanded === o.id' class='detail')
                             td(colspan='7')
                                 div(class='detail-grid')
@@ -958,8 +962,18 @@ async function delete_order(o:OrderSummary):Promise<void>{
     })
 }
 
+// Put a rejected order back to "new" so it can be actioned again
+async function restore(o:OrderSummary):Promise<void>{
+    if (!window.confirm(`Restore the order for ${o.name} to new?`)){
+        return
+    }
+    await run_action(o.id, 'restore', message => {
+        error.value = message
+    })
+}
+
 // Shared runner for the order actions: call the API then reload on success
-async function run_action(id:string, action:'manual'|'lulu'|'cancel'|'delete',
+async function run_action(id:string, action:'manual'|'lulu'|'cancel'|'delete'|'restore',
         on_error:(message:string) => void):Promise<void>{
     busy.value = true
     try {
