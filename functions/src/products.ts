@@ -32,7 +32,7 @@ export const PRODUCTS = {
         page_count: 272,
         interior_url: 'https://sellingjesus.org/book_bound/Gods-Word-Is-Not-Bound.pdf',
         cover_url:    'https://sellingjesus.org/book_bound/Gods-Word-Is-Not-Bound-cover-lulu.pdf',
-        enabled: false,
+        enabled: true,
     },
 } satisfies Record<string, Product>
 

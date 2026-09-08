@@ -15,6 +15,10 @@ form(v-else ref='form' :class='{attempted}')
 
     h3 Order free copy
 
+    //- Styled as a blue VitePress notice box (see .custom-block.notice below)
+    div.custom-block.info.notice
+        p Please note, as we have to review these orders manually, delivery can take longer than usual. At least 2 weeks or more depending on the country.
+
     p Your contact information is required in case there are issues with delivery and will be passed on to our printing and shipping services. It will not be used for any other purpose than delivering the book to you.
 
     div.contact
@@ -334,9 +338,9 @@ watch(input_country, async () => {
         return
     }
 
-    // Orders sent by hand from an Amazon listing arrive much quicker
+    // Orders sent manually
     if (['US', 'AU'].includes(input_country.value)){
-        estimate.value = "Delivery will take around 1 week"
+        estimate.value = "Delivery will take 2-3 weeks"
         return
     }
 
@@ -458,6 +462,13 @@ select
 .submit, .done
     margin-top: 24px
     text-align: center
+
+//- Recolour the builtin VitePress info box to the theme's indigo/blue
+.custom-block.notice
+    --vp-custom-block-info-bg: var(--vp-c-indigo-soft)
+    --vp-custom-block-info-border: var(--vp-c-indigo-1)
+    --vp-custom-block-info-text: var(--vp-c-text-1)
+    margin: 36px 0
 
 .error
     color: hsl(0, 50%, 60%)

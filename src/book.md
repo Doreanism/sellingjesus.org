@@ -42,8 +42,8 @@ image: /_assets/social_book.jpg
 # Books
 
 Our first book, _Abolish the Jesus Trade_, covers the commercialization of Christianity in general.
-<!-- \
-Our second book, _God's Word Is Not Bound_, focuses on the commercialization of Scripture. -->
+\
+Our second book, _God's Word Is Not Bound_, focuses on the commercialization of Scripture.
 
 <div class="books">
 <a href="/abolish-the-jesus-trade">
@@ -51,9 +51,9 @@ Our second book, _God's Word Is Not Bound_, focuses on the commercialization of 
 <h2>Abolish the Jesus Trade</h2>
 <p>Spread the Joy of Freely Giving</p>
 </a>
-<!-- <a href="/word-not-bound">
+<a href="/word-not-bound">
 <img src="/book_bound/preview.jpg" alt="God's Word Is Not Bound cover">
 <h2>God’s Word Is Not Bound</h2>
 <p>Copyright &amp; the Stewardship of Scripture</p>
-</a> -->
+</a>
 </div>
