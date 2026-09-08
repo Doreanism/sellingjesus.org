@@ -239,7 +239,8 @@ import regions_data from './regions.json'
 interface GoogleId {
     accounts:{
         id:{
-            initialize(config:{client_id:string, callback:(resp:{credential:string}) => void}):void
+            initialize(config:{client_id:string, callback:(resp:{credential:string}) => void,
+                auto_select?:boolean}):void
             renderButton(parent:HTMLElement, options:Record<string, unknown>):void
             disableAutoSelect():void
         }
@@ -318,12 +319,15 @@ const SHORT_BOOK_TITLES:Record<string, string> = {
 // Destinations we fulfil by hand through Amazon rather than Lulu
 const MANUAL_COUNTRIES = new Set(['US', 'AU', 'PH'])
 
-// Key under which the current tab remembers its sign-in, so a reload doesn't force a re-login
-const TOKEN_KEY = 'sj_orders_token'
+// localStorage key holding the session token, so a reload or a return days later stays signed in
+const SESSION_KEY = 'sj_orders_session'
+
+// Renew the session once it's within this long of expiring
+const RENEW_WITHIN_MS = 7 * 24 * 60 * 60 * 1000
 
 
 const signin_button = ref<HTMLElement>()
-const id_token = ref('')
+const auth_token = ref('')
 const admin_email = ref('')
 const orders = ref<OrderSummary[]>([])
 const loading = ref(false)
@@ -346,7 +350,7 @@ const filter_country = ref('')
 const filter_book = ref<''|'abolish'|'bound'>('')
 const search = ref('')
 
-const signed_in = computed(() => !!id_token.value)
+const signed_in = computed(() => !!auth_token.value)
 
 
 // Turn a country code into its name, falling back to the raw code
@@ -650,6 +654,20 @@ function decode_email(jwt:string):string{
     }
 }
 
+// Read the (display only) claims out of one of our own session tokens
+function read_session(token:string):{email:string, exp:number}|null{
+    try {
+        const part = (token.split('.')[1] ?? '').replace(/-/g, '+').replace(/_/g, '/')
+        const payload = JSON.parse(atob(part)) as {email?:string, exp?:number}
+        if (!payload.email || typeof payload.exp !== 'number'){
+            return null
+        }
+        return {email: payload.email, exp: payload.exp}
+    } catch {
+        return null
+    }
+}
+
 // Read an {error} message from a failed response, if there is one
 async function read_error(resp:Response):Promise<string>{
     try {
@@ -665,7 +683,7 @@ async function api_call<T>(path:string, body?:unknown):Promise<T>{
     const resp = await fetch(api_url + path, {
         method: body === undefined ? 'GET' : 'POST',
         headers: {
-            'Authorization': `Bearer ${id_token.value}`,
+            'Authorization': `Bearer ${auth_token.value}`,
             ...body === undefined ? {} : {'Content-Type': 'application/json'},
         },
         ...body === undefined ? {} : {body: JSON.stringify(body)},
@@ -691,6 +709,7 @@ async function load_orders():Promise<void>{
         orders.value = data.orders
         await nextTick()
         scroll_to_highlight()
+        void renew_session_if_stale()
     } catch (caught){
         // api_call already reports auth failures via sign_out
         if (signed_in.value){
@@ -746,17 +765,49 @@ function render_signin():void{
     }
 }
 
-// Google hands us a signed id token for the chosen account
-function on_credential(resp:{credential:string}):void{
-    id_token.value = resp.credential
+// Google hands us a signed id token; trade it for a session token, then load the dashboard
+async function on_credential(resp:{credential:string}):Promise<void>{
+    // A stored session may already have signed us in before auto-select fired
+    if (read_session(auth_token.value)){
+        return
+    }
     admin_email.value = decode_email(resp.credential)
-    sessionStorage.setItem(TOKEN_KEY, resp.credential)
-    load_orders()
+    await exchange_session(resp.credential)
+    if (signed_in.value){
+        await load_orders()
+    }
+}
+
+// Swap a bearer token (a fresh Google credential, or a still-valid session) for a new
+// session token that lasts weeks, and remember it across reloads and browser restarts
+async function exchange_session(bearer:string):Promise<void>{
+    auth_token.value = bearer
+    try {
+        const data = await api_call<{token:string, email:string}>('/admin/session', {})
+        auth_token.value = data.token
+        admin_email.value = data.email
+        localStorage.setItem(SESSION_KEY, data.token)
+    } catch (caught){
+        // api_call already signs out on a rejected token; anything else just leaves the
+        // shorter-lived bearer in place, which still works until it lapses
+        if (signed_in.value){
+            error.value = (caught as Error).message
+        }
+    }
+}
+
+// Quietly extend the session while it's still valid but getting close to expiry
+async function renew_session_if_stale():Promise<void>{
+    const claims = read_session(auth_token.value)
+    if (!claims || claims.exp - Date.now() > RENEW_WITHIN_MS){
+        return
+    }
+    await exchange_session(auth_token.value)
 }
 
 // Drop the current session and show the button again
 function sign_out():void{
-    id_token.value = ''
+    auth_token.value = ''
     admin_email.value = ''
     orders.value = []
     dialog.value = null
@@ -765,7 +816,7 @@ function sign_out():void{
     admin_dialog.value = null
     new_admin_email.value = ''
     view.value = 'orders'
-    sessionStorage.removeItem(TOKEN_KEY)
+    localStorage.removeItem(SESSION_KEY)
     window.google?.accounts.id.disableAutoSelect()
     nextTick(render_signin)
 }
@@ -1080,15 +1131,19 @@ onMounted(async () => {
     window.google?.accounts.id.initialize({
         client_id: google_client_id,
         callback: on_credential,
+        // Re-sign in without a click when the session eventually lapses (unless explicitly signed out)
+        auto_select: true,
     })
 
-    // Resume this tab's session if it has one, otherwise show the button
-    const saved = sessionStorage.getItem(TOKEN_KEY)
-    if (saved){
-        id_token.value = saved
-        admin_email.value = decode_email(saved)
+    // Resume a stored session if there is one, otherwise show the button
+    const saved = localStorage.getItem(SESSION_KEY)
+    const claims = saved ? read_session(saved) : null
+    if (saved && claims && claims.exp > Date.now()){
+        auth_token.value = saved
+        admin_email.value = claims.email
         await load_orders()
     } else {
+        localStorage.removeItem(SESSION_KEY)
         render_signin()
     }
 })

@@ -11,6 +11,9 @@ export const TURNSTILE_SECRET = defineSecret('TURNSTILE_SECRET')
 export const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 export const RESEND_API_KEY = defineSecret('RESEND_API_KEY')
 
+// Signs the dashboard's own session tokens, so a Google sign-in lasts weeks not one hour
+export const SESSION_SECRET = defineSecret('SESSION_SECRET')
+
 
 // Params (stored in functions/.env, either non-sensitive or only used during development)
 export const LULU_AUTH_SANDBOX = defineString('LULU_AUTH_SANDBOX')
@@ -33,4 +36,5 @@ export const ALL_SECRETS = [
     TURNSTILE_SECRET,
     LULU_AUTH_PROD,
     RESEND_API_KEY,
+    SESSION_SECRET,
 ]

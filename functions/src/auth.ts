@@ -5,6 +5,7 @@ import type {Request} from 'firebase-functions/v2/https'
 
 import {GOOGLE_CLIENT_ID} from './config.js'
 import {is_admin} from './admins.js'
+import {is_session_token, verify_session_token} from './session.js'
 
 
 // Raised when a request isn't from a signed-in admin, carrying the status to respond with
@@ -31,7 +32,17 @@ export async function require_admin(request:Request):Promise<string>{
         throw new AuthError(401, "Sign in required")
     }
 
-    // Check the token really was issued by Google for our client id
+    // A session token from a prior sign-in is trusted without a Google round-trip,
+    // but the admin list is still consulted so access can be revoked at any time
+    if (is_session_token(token)){
+        const session_email = verify_session_token(token)
+        if (session_email && await is_admin(session_email)){
+            return session_email
+        }
+        throw new AuthError(401, "Sign in has expired, please sign in again")
+    }
+
+    // Otherwise it must be a fresh Google id token, issued for our client id
     let email:string|undefined
     let verified:boolean|undefined
     try {

@@ -10,6 +10,7 @@ import {ALL_SECRETS} from './config.js'
 import {allowed_domains} from './common.js'
 import {AuthError, require_admin} from './auth.js'
 import {add_admin, list_admins, remove_admin, set_admin_notify} from './admins.js'
+import {create_session_token} from './session.js'
 import {get_order_lulu_cost, perform_order_action} from './order_actions.js'
 import type {OrderAction} from './order_actions.js'
 import {estimate_order_delivery, list_orders, record_order} from './orders.js'
@@ -65,6 +66,14 @@ async function handle_route(request:Request, response:Response, route:string):Pr
         } else {
             response.status(200).send(result)
         }
+        return
+    }
+
+    // Admin dashboard: trade a Google sign-in (or a still-valid session) for a fresh
+    // session token, so the dashboard stays signed in for weeks rather than an hour
+    if (route === '/admin/session' && request.method === 'POST'){
+        const email = await require_admin(request)
+        response.status(200).send({email, ...create_session_token(email)})
         return
     }
 
