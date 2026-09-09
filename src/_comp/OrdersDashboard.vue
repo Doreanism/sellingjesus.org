@@ -195,6 +195,7 @@ div(v-if="dialog?.kind === 'lulu'" class='overlay' @click.self='close_dialog')
             p(class='lulu-line')
                 | Lulu will charge {{ dialog.cost }} {{ dialog.currency }} to print and post
                 |  this order to {{ country_name(dialog.order.country) }}.
+            p(v-if='dialog.warning' class='cost-warning') ⚠ {{ dialog.warning }}
             div(v-if='warning_groups(dialog.order).length' class='order-warning')
                 p(class='ow-title') ⚠ Possible repeat order
                 div(v-for='g of warning_groups(dialog.order)' :key='g.label' class='ow-group')
@@ -234,11 +235,13 @@ div(v-if="dialog?.kind === 'books'" class='overlay' @click.self='close_dialog')
         p(class='be-total') Total copies: {{ books_total }}
         p(class='be-note') The print price is rechecked with Lulu when you save.
         p(v-if='dialog.error' class='error') {{ dialog.error }}
+        p(v-if='dialog.warning' class='cost-warning') ⚠ Saved, but {{ dialog.warning }}
         div(class='modal-actions')
             button(type='button' class='primary'
                 :disabled='busy || !books_total || !books_changed' @click='save_books')
                 | {{ busy ? "Saving…" : "Save books" }}
-            button(type='button' :disabled='busy' @click='close_dialog') Cancel
+            button(type='button' :disabled='busy' @click='close_dialog')
+                | {{ dialog.warning ? "Close" : "Cancel" }}
 
 //- Notify preferences: all countries, or a hand-picked list
 div(v-if='admin_dialog' class='overlay' @click.self='admin_dialog = null')
@@ -327,8 +330,9 @@ interface AdminRow {
 type Dialog =
     {kind:'manual', order:OrderSummary, fields:{label:string, value:string}[], error:string}
     | {kind:'lulu', order:OrderSummary, loading:boolean, cost:number|null, currency:string,
-        error:string}
-    | {kind:'books', order:OrderSummary, quantities:Record<string, number>, error:string}
+        error:string, warning:string}
+    | {kind:'books', order:OrderSummary, quantities:Record<string, number>, error:string,
+        warning:string}
 
 
 // Country code -> display name, for turning stored codes into readable labels
@@ -948,10 +952,11 @@ async function confirm_manual():Promise<void>{
 
 // Open the Lulu dialog and ask what the print job would cost
 async function open_lulu(o:OrderSummary):Promise<void>{
-    dialog.value = {kind: 'lulu', order: o, loading: true, cost: null, currency: '', error: ''}
+    dialog.value = {kind: 'lulu', order: o, loading: true, cost: null, currency: '', error: '',
+        warning: ''}
     try {
-        const data = await api_call<{cost?:number, currency?:string, error?:string}>(
-            '/admin/orders/lulu-cost', {id: o.id})
+        const data = await api_call<{cost?:number, currency?:string, error?:string,
+            warning?:string}>('/admin/orders/lulu-cost', {id: o.id})
         if (dialog.value?.kind !== 'lulu'){
             return
         }
@@ -960,6 +965,7 @@ async function open_lulu(o:OrderSummary):Promise<void>{
         } else {
             dialog.value.cost = data.cost
             dialog.value.currency = data.currency ?? ''
+            dialog.value.warning = data.warning ?? ''
         }
     } catch (caught){
         if (dialog.value?.kind === 'lulu'){
@@ -991,7 +997,7 @@ function open_books(o:OrderSummary):void{
     for (const p of PRODUCT_LIST){
         quantities[p.id] = o.books.find(b => b.id === p.id)?.quantity ?? 0
     }
-    dialog.value = {kind: 'books', order: o, quantities, error: ''}
+    dialog.value = {kind: 'books', order: o, quantities, error: '', warning: ''}
 }
 
 // Nudge one book's quantity within the allowed range
@@ -1042,15 +1048,27 @@ async function save_books():Promise<void>{
     }
     busy.value = true
     d.error = ''
+    d.warning = ''
     try {
-        const result = await api_call<{status?:string, error?:string}>(
+        const result = await api_call<{status?:string, error?:string, warning?:string}>(
             '/admin/orders/books', {id: d.order.id, books})
         if (result.error || !result.status){
             d.error = result.error || "That didn't work"
             return
         }
-        close_dialog()
         await load_orders()
+
+        // Saved fine, but keep the dialog open on an unusual price so the warning is actually seen
+        if (!result.warning){
+            close_dialog()
+            return
+        }
+        d.warning = result.warning
+        // Point the dialog at the saved order, so the same edit can't be submitted again
+        const saved = orders.value.find(o => o.id === d.order.id)
+        if (saved){
+            d.order = saved
+        }
     } catch (caught){
         d.error = (caught as Error).message
     } finally {
@@ -1592,6 +1610,16 @@ button
 
 .manual-book
     font-weight: 600
+
+.cost-warning
+    border: 1px solid var(--vp-c-danger-1)
+    border-radius: 8px
+    background: var(--vp-c-danger-soft)
+    padding: 10px 12px
+    margin: 14px 0
+    font-size: 13px
+    font-weight: 600
+    color: var(--vp-c-danger-1)
 
 .order-warning
     border: 1px solid var(--vp-c-danger-1)
