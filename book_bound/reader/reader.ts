@@ -40,8 +40,7 @@
     // Pro's small x-height sets a size smaller than the faces those studies measured, so 21px
     const SIZES = [16, 17, 18, 19, 20, 21, 22, 24, 26]
     const DEFAULT_SIZE = 21
-    const smaller = document.getElementById('smaller')
-    const larger = document.getElementById('larger')
+    const slider = document.getElementById('size') as HTMLInputElement|null
 
     // Stored as the size itself, so the scale can be changed without shifting anyone's choice
     let size = SIZES.indexOf(Number(localStorage.getItem('size')))
@@ -49,20 +48,25 @@
         size = SIZES.indexOf(DEFAULT_SIZE)
     }
 
+    // The slider steps through the scale by index, so the sizes needn't be evenly spaced
+    if (slider){
+        slider.min = '0'
+        slider.max = String(SIZES.length - 1)
+    }
+
     const apply_size = ():void => {
         root.style.setProperty('--size', `${SIZES[size]}px`)
         localStorage.setItem('size', String(SIZES[size]))
-        smaller?.toggleAttribute('disabled', size === 0)
-        larger?.toggleAttribute('disabled', size === SIZES.length - 1)
+        if (slider){
+            slider.value = String(size)
+        }
     }
 
-    const step_size = (by:number) => () => {
-        size = Math.min(Math.max(size + by, 0), SIZES.length - 1)
+    slider?.addEventListener('input', () => {
+        size = Number(slider.value)
         apply_size()
-    }
+    })
 
-    smaller?.addEventListener('click', step_size(-1))
-    larger?.addEventListener('click', step_size(1))
     apply_size()
 
     // The sidebar becomes a drawer once the screen is too narrow to keep it open
@@ -73,6 +77,11 @@
 
     drawer.addEventListener('click', () => {
         set_drawer(!rail.classList.contains('open'))
+    })
+
+    // The open drawer covers the button that opened it, so it needs a close of its own
+    document.getElementById('rail_close')?.addEventListener('click', () => {
+        set_drawer(false)
     })
 
     // Track which chapter and section is being read, so the sidebar follows along

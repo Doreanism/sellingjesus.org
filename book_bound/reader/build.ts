@@ -158,7 +158,7 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title></title>
 <meta name="description" content="">
 <meta name="author" content="">
@@ -178,6 +178,7 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
 <span></span><span></span><span></span>
 </button>
 <nav id="rail" aria-label="Contents">
+<button id="rail_close" type="button" aria-label="Close contents">&#215;</button>
 <div class="rail_head">
 <a class="site" href="/">Selling Jesus</a>
 <a class="title" href="/word-not-bound"></a>
@@ -186,9 +187,10 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
 </div>
 <button id="theme" type="button" aria-label="Toggle dark mode"></button>
 <div class="type_size">
-<span>Text size</span>
-<button id="smaller" type="button" aria-label="Decrease text size">A&#8722;</button>
-<button id="larger" type="button" aria-label="Increase text size">A+</button>
+<label for="size">Text size</label>
+<span class="size_small">A</span>
+<input id="size" type="range" step="1">
+<span class="size_large">A</span>
 </div>
 <div class="downloads">
 <div class="downloads_title">Download</div>

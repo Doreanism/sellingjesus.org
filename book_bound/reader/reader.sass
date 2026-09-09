@@ -38,6 +38,9 @@
 
 html
     scroll-behavior: smooth
+    // The reader sets its own type size, so the browser shouldn't inflate it as well
+    -webkit-text-size-adjust: 100%
+    text-size-adjust: 100%
 
 body
     background: var(--bg)
@@ -114,8 +117,7 @@ a
         margin-top: 14px
 
 // The reader's controls sit on the rail, so they need to read as buttons rather than as labels
-#theme,
-.type_size button
+#theme
     background: var(--bg)
     border: 1px solid var(--rule)
     border-radius: 6px
@@ -124,43 +126,58 @@ a
     font: inherit
     font-size: 0.9em
     font-weight: 600
+    margin: 0 28px 12px
     padding: 9px 14px
+    width: calc(100% - 56px)
 
     &:hover
         background: var(--accent)
         border-color: var(--accent)
         color: var(--bg)
 
-    // Once the type can't step any further the button should stop inviting a click
-    &[disabled]
-        cursor: default
-        opacity: 0.4
+// Only shown once the sidebar becomes a drawer, as an open drawer covers the button that opened it
+#rail_close
+    background: none
+    border: none
+    color: var(--text-soft)
+    cursor: pointer
+    display: none
+    font: inherit
+    font-size: 32px
+    line-height: 1
+    padding: 0 12px
+    position: absolute
+    right: 12px
+    top: 12px
 
-        &:hover
-            background: var(--bg)
-            border-color: var(--rule)
-            color: var(--text)
+    &:hover
+        color: var(--accent)
 
-#theme
-    margin: 0 28px 12px
-    width: calc(100% - 56px)
-
-// Steps the book's type up and down, leaving the sidebar's own size alone
+// Slides the book's type up and down, leaving the sidebar's own size alone
 .type_size
     align-items: center
+    // Colours the slider's track and thumb without having to restyle either of them
+    accent-color: var(--accent)
     display: flex
     gap: 8px
     margin: 0 28px 22px
 
-    span
+    label
         color: var(--text-soft)
-        flex: 1
         font-size: 0.85em
+        margin-right: 4px
 
-    button
-        line-height: 1
-        min-width: 52px
-        padding: 9px 10px
+    // The two ends of the scale, shown at the sizes they stand for
+    .size_small
+        font-size: 0.75em
+
+    .size_large
+        font-size: 1.15em
+
+    input
+        cursor: pointer
+        flex: 1
+        min-width: 0
 
 .toc
     border-top: 1px solid var(--rule)
@@ -506,6 +523,13 @@ aside[data-note]
 
     #drawer
         display: block
+
+    #rail_close
+        display: block
+
+    // Keep the heading clear of the close button now sitting in the corner
+    .rail_head
+        padding-right: 60px
 
     #rail
         transform: translateX(-100%)
