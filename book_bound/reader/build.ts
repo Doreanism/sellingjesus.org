@@ -27,6 +27,13 @@ const OUT_DIR = process.argv[2] ?? join(ROOT, `src/_public${BASE}`)
 // Where the existing downloads of this book are served from
 const DOWNLOADS = '/book_bound/Gods-Word-Is-Not-Bound'
 
+// Taken from the book's own page at src/word-not-bound.md, so the two share sharing previews
+// WARN The image must include the domain, as WhatsApp won't accept a bare path
+const TITLE = 'God’s Word Is Not Bound'
+const DESCRIPTION = 'A free book examining copyright and the stewardship of Scripture, and'
+    + ' whether the Word of God can rightly be owned, restricted, and sold.'
+const SOCIAL_IMAGE = 'https://sellingjesus.org/_assets/social_book_bound.jpg'
+
 // Attributes that only make sense for a fixed-size printed page, so are dropped for the web
 const DROP_ATTRIBUTES = ['style', 'width', 'height', 'epub:type']
 
@@ -145,7 +152,6 @@ function build_toc(epub:Epub, out:Document):Element{
 function build_page(epub:Epub, styles:string, script:string, epub_hash:string):string{
 
     const authors = epub.creators.join(', ')
-    const description = `${epub.title}: ${epub.subtitle}. By ${authors}.`
 
     // Start from a skeleton so the book content can be inserted as nodes rather than as strings
     const dom = new JSDOM(`<!DOCTYPE html>
@@ -156,6 +162,10 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
 <title></title>
 <meta name="description" content="">
 <meta name="author" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="${SOCIAL_IMAGE}">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="/_assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -195,10 +205,13 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
 </html>`)
     const out = dom.window.document
 
-    // Fill in the metadata taken from the epub
-    out.title = epub.title
-    out.querySelector('meta[name="description"]')!.setAttribute('content', description)
+    // Fill in the page's metadata, matching the book's own page on the site
+    out.title = TITLE
+    out.querySelector('meta[name="description"]')!.setAttribute('content', DESCRIPTION)
     out.querySelector('meta[name="author"]')!.setAttribute('content', authors)
+    // Sharing previews ignore <title> and the meta description, so repeat them for Open Graph
+    out.querySelector('meta[property="og:title"]')!.setAttribute('content', TITLE)
+    out.querySelector('meta[property="og:description"]')!.setAttribute('content', DESCRIPTION)
     out.querySelector('.rail_head .title')!.textContent = epub.title
     out.querySelector('.rail_head .subtitle')!.textContent = epub.subtitle
     out.querySelector('.rail_head .authors')!.textContent = authors

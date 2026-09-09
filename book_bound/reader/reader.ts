@@ -36,19 +36,22 @@
     })
 
     // The book's type size, stepped by the sidebar's controls and remembered between visits
-    const SIZES = [16, 17, 18, 19, 20, 22, 24, 26]
-    const DEFAULT_SIZE = SIZES.indexOf(19)
+    // Studies of long-form reading on screens put the comfortable range at 18-21px, and Crimson
+    // Pro's small x-height sets a size smaller than the faces those studies measured, so 21px
+    const SIZES = [16, 17, 18, 19, 20, 21, 22, 24, 26]
+    const DEFAULT_SIZE = 21
     const smaller = document.getElementById('smaller')
     const larger = document.getElementById('larger')
 
-    let size = Number(localStorage.getItem('size') ?? DEFAULT_SIZE)
-    if (!Number.isInteger(size) || size < 0 || size >= SIZES.length){
-        size = DEFAULT_SIZE
+    // Stored as the size itself, so the scale can be changed without shifting anyone's choice
+    let size = SIZES.indexOf(Number(localStorage.getItem('size')))
+    if (size === -1){
+        size = SIZES.indexOf(DEFAULT_SIZE)
     }
 
     const apply_size = ():void => {
         root.style.setProperty('--size', `${SIZES[size]}px`)
-        localStorage.setItem('size', String(size))
+        localStorage.setItem('size', String(SIZES[size]))
         smaller?.toggleAttribute('disabled', size === 0)
         larger?.toggleAttribute('disabled', size === SIZES.length - 1)
     }
