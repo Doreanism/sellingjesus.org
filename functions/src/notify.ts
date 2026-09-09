@@ -4,10 +4,17 @@ import {admins_to_notify} from './admins.js'
 import {PRODUCTS} from './products.js'
 import type {ProductId} from './products.js'
 import type {Order} from './types.js'
+import region_data from './data/regions.json' with {type: 'json'}
 
 
 // Where the dashboard lives, for linking an admin straight to the new order
 const DASHBOARD_URL = 'https://sellingjesus.org/orders'
+
+
+// Turn an ISO country code into its readable name (falling back to the code if unknown)
+function country_name(code:string):string{
+    return region_data.find(c => c.code === code)?.name ?? code
+}
 
 
 // A short notification with just enough to triage, leaving the rest behind the dashboard link
@@ -17,7 +24,7 @@ function format_notification(order:Order, order_id:string):string{
         .join(', ')
     return [
         `Books: ${books}`,
-        `Country: ${order.address.country}`,
+        `Country: ${country_name(order.address.country)}`,
         `Name: ${order.name}`,
         '',
         `${DASHBOARD_URL}?id=${order_id}`,
@@ -51,7 +58,7 @@ async function send_email(to:string, subject:string, message:string):Promise<voi
 export async function notify_order(order_id:string, order:Order):Promise<void>{
 
     const message = format_notification(order, order_id)
-    const subject = `Book order (${order.address.country}) — ${order.name}`
+    const subject = `Book order (${country_name(order.address.country)}) — ${order.name}`
 
     // Never email real people while developing
     if (DEV){
