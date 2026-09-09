@@ -85,6 +85,82 @@
         set_drawer(false)
     })
 
+    // Reaching past the drawer for the page is a way of dismissing it too
+    // NOTE The button that opened it is excluded, or its own click would close it again at once
+    document.addEventListener('click', event => {
+        const target = event.target as Node
+        if (rail.classList.contains('open')
+                && !rail.contains(target) && !drawer.contains(target)){
+            set_drawer(false)
+        }
+    })
+
+    // The drawer can also be swiped back out of the way, as a drawer on a phone is expected to
+    // NOTE The rail's touch-action leaves vertical panning to the browser, so the contents scroll
+    const SWIPE_AXIS = 8
+    const SWIPE_CLOSE = 60
+    let start_x = 0
+    let start_y = 0
+    let offset = 0
+    let tracking = false
+    let dragging = false
+
+    // While a finger is down the drawer follows it directly, so the snap back or away animates
+    const drag_to = (x:number|null):void => {
+        rail.style.transition = x === null ? '' : 'none'
+        rail.style.transform = x === null ? '' : `translateX(${x}px)`
+    }
+
+    rail.addEventListener('touchstart', event => {
+        if (!rail.classList.contains('open') || event.touches.length !== 1){
+            return
+        }
+        tracking = true
+        dragging = false
+        offset = 0
+        start_x = event.touches[0].clientX
+        start_y = event.touches[0].clientY
+    }, {passive: true})
+
+    rail.addEventListener('touchmove', event => {
+        if (!tracking){
+            return
+        }
+        const dx = event.touches[0].clientX - start_x
+        const dy = event.touches[0].clientY - start_y
+
+        // Settle on an axis once, so scrolling the contents is never mistaken for a swipe
+        if (!dragging){
+            if (Math.abs(dy) > Math.abs(dx)){
+                tracking = false
+                return
+            }
+            if (Math.abs(dx) < SWIPE_AXIS){
+                return
+            }
+            dragging = true
+        }
+
+        // Only closing follows the finger, as the drawer has nowhere further to open to
+        offset = Math.min(dx, 0)
+        drag_to(offset)
+    }, {passive: true})
+
+    const end_swipe = ():void => {
+        if (dragging){
+            drag_to(null)
+            // A nudge shouldn't close it, so the drawer only leaves once dragged far enough
+            if (offset < -SWIPE_CLOSE){
+                set_drawer(false)
+            }
+        }
+        tracking = false
+        dragging = false
+    }
+
+    rail.addEventListener('touchend', end_swipe, {passive: true})
+    rail.addEventListener('touchcancel', end_swipe, {passive: true})
+
     // Track which chapter and section is being read, so the sidebar follows along
     const links = new Map<string, HTMLAnchorElement>()
     for (const a of rail.querySelectorAll('a[href^="#"]')){

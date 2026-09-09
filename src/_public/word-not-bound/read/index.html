@@ -60,6 +60,7 @@ body {
   font-size: var(--size);
   line-height: 1.62;
   margin: 0;
+  overflow-wrap: break-word;
   padding-left: var(--rail);
 }
 
@@ -264,6 +265,7 @@ a {
 #book {
   margin: 0 auto;
   max-width: 35em;
+  overflow-x: hidden;
   padding: 3.5rem 1.4rem 40vh;
 }
 
@@ -374,6 +376,7 @@ li {
 
 .title-display,
 .decoration,
+h1.chapter-title,
 .chapter-preamble,
 .chapter-decoration,
 .chapter-author,
@@ -523,7 +526,7 @@ aside[data-note] p {
   display: none;
   font-size: 0.8em;
   line-height: 1.45;
-  max-width: 30rem;
+  max-width: min(30rem, 100vw - 24px);
   padding: 14px 16px;
   position: absolute;
   z-index: 20;
@@ -555,6 +558,8 @@ aside[data-note] p {
     padding-right: 60px;
   }
   #rail {
+    width: min(var(--rail), 100vw - 3rem);
+    touch-action: pan-y;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     z-index: 35;
@@ -4175,6 +4180,73 @@ Commercializing the Word of God</h1>
     document.getElementById('rail_close')?.addEventListener('click', () => {
         set_drawer(false);
     });
+    // Reaching past the drawer for the page is a way of dismissing it too
+    // NOTE The button that opened it is excluded, or its own click would close it again at once
+    document.addEventListener('click', event => {
+        const target = event.target;
+        if (rail.classList.contains('open')
+            && !rail.contains(target) && !drawer.contains(target)) {
+            set_drawer(false);
+        }
+    });
+    // The drawer can also be swiped back out of the way, as a drawer on a phone is expected to
+    // NOTE The rail's touch-action leaves vertical panning to the browser, so the contents scroll
+    const SWIPE_AXIS = 8;
+    const SWIPE_CLOSE = 60;
+    let start_x = 0;
+    let start_y = 0;
+    let offset = 0;
+    let tracking = false;
+    let dragging = false;
+    // While a finger is down the drawer follows it directly, so the snap back or away animates
+    const drag_to = (x) => {
+        rail.style.transition = x === null ? '' : 'none';
+        rail.style.transform = x === null ? '' : `translateX(${x}px)`;
+    };
+    rail.addEventListener('touchstart', event => {
+        if (!rail.classList.contains('open') || event.touches.length !== 1) {
+            return;
+        }
+        tracking = true;
+        dragging = false;
+        offset = 0;
+        start_x = event.touches[0].clientX;
+        start_y = event.touches[0].clientY;
+    }, { passive: true });
+    rail.addEventListener('touchmove', event => {
+        if (!tracking) {
+            return;
+        }
+        const dx = event.touches[0].clientX - start_x;
+        const dy = event.touches[0].clientY - start_y;
+        // Settle on an axis once, so scrolling the contents is never mistaken for a swipe
+        if (!dragging) {
+            if (Math.abs(dy) > Math.abs(dx)) {
+                tracking = false;
+                return;
+            }
+            if (Math.abs(dx) < SWIPE_AXIS) {
+                return;
+            }
+            dragging = true;
+        }
+        // Only closing follows the finger, as the drawer has nowhere further to open to
+        offset = Math.min(dx, 0);
+        drag_to(offset);
+    }, { passive: true });
+    const end_swipe = () => {
+        if (dragging) {
+            drag_to(null);
+            // A nudge shouldn't close it, so the drawer only leaves once dragged far enough
+            if (offset < -SWIPE_CLOSE) {
+                set_drawer(false);
+            }
+        }
+        tracking = false;
+        dragging = false;
+    };
+    rail.addEventListener('touchend', end_swipe, { passive: true });
+    rail.addEventListener('touchcancel', end_swipe, { passive: true });
     // Track which chapter and section is being read, so the sidebar follows along
     const links = new Map();
     for (const a of rail.querySelectorAll('a[href^="#"]')) {

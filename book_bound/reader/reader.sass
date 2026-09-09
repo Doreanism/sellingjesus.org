@@ -49,6 +49,8 @@ body
     font-size: var(--size)
     line-height: 1.62
     margin: 0
+    // The footnotes cite bare urls, some long enough to set the page wider than a phone's screen
+    overflow-wrap: break-word
     // The sidebar is fixed, so the book is inset past it and then centres in what's left
     padding-left: var(--rail)
 
@@ -259,6 +261,9 @@ a
     margin: 0 auto
     // In em so the measure keeps the same words per line as the type size changes
     max-width: 35em
+    // Keeps a stray few pixels of overhang from setting the page wider than the screen
+    // NOTE Tables carry their own scroller, so nothing that needs the room is being clipped
+    overflow-x: hidden
     padding: 3.5rem 1.4rem 40vh
 
 .cover
@@ -358,6 +363,7 @@ li
 // The front matter and each chapter opening are centred display type, as in print
 .title-display,
 .decoration,
+h1.chapter-title,
 .chapter-preamble,
 .chapter-decoration,
 .chapter-author,
@@ -499,7 +505,8 @@ aside[data-note]
     display: none
     font-size: 0.8em
     line-height: 1.45
-    max-width: 30rem
+    // Never wider than the screen, or the script has nowhere left to place it
+    max-width: min(30rem, calc(100vw - 24px))
     padding: 14px 16px
     position: absolute
     z-index: 20
@@ -535,6 +542,10 @@ aside[data-note]
         padding-right: 60px
 
     #rail
+        // A phone can be narrower than the rail, and a strip of the page shows what's behind it
+        width: min(var(--rail), calc(100vw - 3rem))
+        // Vertical panning stays with the browser, leaving horizontal swipes to close the drawer
+        touch-action: pan-y
         transform: translateX(-100%)
         transition: transform 0.2s ease
         z-index: 35
