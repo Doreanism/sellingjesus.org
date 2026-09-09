@@ -1,6 +1,7 @@
 
 import {book_db} from './common.js'
-import {get_lulu_access_token, submit_order, validate_order} from './lulu.js'
+import {COST_LIMIT, COST_LIMIT_ADMIN, cost_limit_in, get_lulu_access_token, submit_order,
+    validate_order} from './lulu.js'
 import {PRODUCTS, is_product_id} from './products.js'
 import type {Order, OrderBooks} from './types.js'
 
@@ -11,6 +12,17 @@ const MAX_BOOK_QUANTITY = 10
 
 // What an admin can do to an order from the dashboard
 export type OrderAction = 'manual'|'lulu'|'cancel'|'delete'|'restore'
+
+
+// Warn the admin when a price is past what a customer would have been allowed to spend
+// NOTE Admins can go up to COST_LIMIT_ADMIN, but should still know when a price is unusual
+function cost_warning(cost:number, currency:string):string{
+    const limit = cost_limit_in(currency, COST_LIMIT)
+    if (cost <= limit){
+        return ''
+    }
+    return `${cost} ${currency} is above the usual ${Math.round(limit)} ${currency} limit`
+}
 
 
 // Load an order that is still awaiting action (returns a string if it can't be actioned)
@@ -37,7 +49,7 @@ async function load_actionable_order(order_id:string):Promise<string|{order:Orde
 
 // Ask Lulu what it would cost to print and post an order (or a user-facing error string)
 export async function get_order_lulu_cost(order_id:string)
-        :Promise<{cost:number, currency:string}|{error:string}>{
+        :Promise<{cost:number, currency:string, warning:string}|{error:string}>{
 
     const result = await load_actionable_order(order_id)
     if (typeof result === 'string'){
@@ -49,11 +61,11 @@ export async function get_order_lulu_cost(order_id:string)
         return {error: "Couldn't connect to Lulu, please try again"}
     }
 
-    const validation = await validate_order(access_token, result.order)
+    const validation = await validate_order(access_token, result.order, COST_LIMIT_ADMIN)
     if (typeof validation === 'string'){
         return {error: validation}
     }
-    return validation
+    return {...validation, warning: cost_warning(validation.cost, validation.currency)}
 }
 
 
@@ -122,7 +134,7 @@ export async function perform_order_action(order_id:string, action:OrderAction)
     }
 
     // Double check the order is still valid and not too expensive
-    const validation = await validate_order(access_token, order)
+    const validation = await validate_order(access_token, order, COST_LIMIT_ADMIN)
     if (typeof validation === 'string'){
         return {error: validation}
     }
@@ -178,7 +190,7 @@ function parse_order_books(value:unknown):string|OrderBooks{
 
 // Replace the books on a new order, re-checking the print price with Lulu
 export async function set_order_books(order_id:string, books_input:unknown)
-        :Promise<{status:string}|{error:string}>{
+        :Promise<{status:string, warning:string}|{error:string}>{
 
     const books = parse_order_books(books_input)
     if (typeof books === 'string'){
@@ -195,7 +207,8 @@ export async function set_order_books(order_id:string, books_input:unknown)
     if (!access_token){
         return {error: "Couldn't connect to Lulu, please try again"}
     }
-    const validation = await validate_order(access_token, {...result.order, books})
+    const validation = await validate_order(access_token, {...result.order, books},
+        COST_LIMIT_ADMIN)
     if (typeof validation === 'string'){
         return {error: validation}
     }
@@ -205,5 +218,5 @@ export async function set_order_books(order_id:string, books_input:unknown)
         'state.cost': validation.cost,
         'state.currency': validation.currency,
     })
-    return {status: 'new'}
+    return {status: 'new', warning: cost_warning(validation.cost, validation.currency)}
 }

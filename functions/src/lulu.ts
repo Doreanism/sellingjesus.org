@@ -116,8 +116,22 @@ function order_to_lulu_request(id:string, order:Order, validation:boolean){
 }
 
 
+// Most a customer's own order may cost, in AUD
+// NOTE High as will manually verify anyway, normally 26 US, 32 AU, 40 PH
+export const COST_LIMIT = 50
+
+// Most an admin may raise an order to when editing it in the dashboard, in AUD
+export const COST_LIMIT_ADMIN = 100
+
+
+// Convert an AUD cost limit to the account's own currency
+export function cost_limit_in(currency:string, limit_aud:number):number{
+    return currency === 'USD' ? limit_aud / 1.5 : limit_aud
+}
+
+
 // Validate order details and cost, and return a string if a user-resolvable error
-export async function validate_order(token:string, order:Order)
+export async function validate_order(token:string, order:Order, limit_aud:number=COST_LIMIT)
         :Promise<string|{cost:number, currency:string}>{
 
     // Prepare request data (don't need order id for validation)
@@ -138,10 +152,7 @@ export async function validate_order(token:string, order:Order)
     // NOTE Tuned for a single book, which is all the UI ever submits, since each book has its
     //      own page and form. Would need to scale by item count if combined ordering is added.
     const currency = resp_data['currency'] as string  // This should always be account's currency
-    let limit = 50  // AUD (high as will manually verify anyway, normally 26 US, 32 AU, 40 PH)
-    if (currency === 'USD'){
-        limit = limit / 1.5
-    }
+    const limit = cost_limit_in(currency, limit_aud)
     const dollars = parseFloat(resp_data['total_cost_incl_tax'] as string)
     if (dollars > limit){
         return `Sorry, it's too expensive to ship to that address (${dollars} ${currency})`
