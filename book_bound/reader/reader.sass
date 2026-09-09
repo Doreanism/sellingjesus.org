@@ -1,0 +1,531 @@
+
+// Styles for the standalone web edition of "God's Word Is Not Bound"
+// NOTE Most class names come from the epub itself, so are preserved rather than renamed
+
+
+// Light theme is the default, with dark applied either by choice or by system preference
+\:root
+    --bg: #fbfaf7
+    --bg-raised: #f2efe9
+    --text: #23201c
+    --text-soft: #6b645b
+    --rule: #ddd7cc
+    --accent: #8a6d3b
+    --rail: 24rem
+    // The reader's own type size control overrides this
+    --size: 19px
+
+\:root[data-theme='dark']
+    --bg: #161513
+    --bg-raised: #201e1b
+    --text: #ddd8d0
+    --text-soft: #948d82
+    --rule: #37342f
+    --accent: #c9a86a
+
+@media (prefers-color-scheme: dark)
+    \:root:not([data-theme='light'])
+        --bg: #161513
+        --bg-raised: #201e1b
+        --text: #ddd8d0
+        --text-soft: #948d82
+        --rule: #37342f
+        --accent: #c9a86a
+
+
+*
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+body
+    background: var(--bg)
+    color: var(--text)
+    font-family: 'Crimson Pro', 'Iowan Old Style', Palatino, Georgia, 'Times New Roman', serif
+    font-size: var(--size)
+    line-height: 1.62
+    margin: 0
+    // The sidebar is fixed, so the book is inset past it and then centres in what's left
+    padding-left: var(--rail)
+
+a
+    color: inherit
+
+// Keyboard users get a way past the sidebar
+.skip
+    background: var(--bg-raised)
+    border-radius: 0 0 4px 0
+    left: 0
+    padding: 12px 20px
+    position: fixed
+    top: 0
+    transform: translateY(-150%)
+    z-index: 40
+
+    &:focus
+        transform: none
+
+
+// Sidebar
+
+#rail
+    background: var(--bg-raised)
+    border-right: 1px solid var(--rule)
+    bottom: 0
+    display: flex
+    flex-direction: column
+    // Set here so the sidebar keeps its own size rather than following the book's
+    font-size: 20px
+    left: 0
+    overflow-y: auto
+    padding: 32px 0 40px
+    position: fixed
+    top: 0
+    width: var(--rail)
+
+.rail_head
+    padding: 0 28px 20px
+
+    .site
+        color: var(--text-soft)
+        display: block
+        font-size: 0.8em
+        letter-spacing: 0.14em
+        margin-bottom: 18px
+        text-decoration: none
+        text-transform: uppercase
+
+    .title
+        display: block
+        font-size: 1.45em
+        font-weight: 600
+        line-height: 1.2
+        text-decoration: none
+
+    .subtitle
+        color: var(--text-soft)
+        font-size: 0.92em
+        margin-top: 6px
+
+    .authors
+        color: var(--text-soft)
+        font-size: 0.8em
+        margin-top: 14px
+
+// The reader's controls sit on the rail, so they need to read as buttons rather than as labels
+#theme,
+.type_size button
+    background: var(--bg)
+    border: 1px solid var(--rule)
+    border-radius: 6px
+    color: var(--text)
+    cursor: pointer
+    font: inherit
+    font-size: 0.9em
+    font-weight: 600
+    padding: 9px 14px
+
+    &:hover
+        background: var(--accent)
+        border-color: var(--accent)
+        color: var(--bg)
+
+    // Once the type can't step any further the button should stop inviting a click
+    &[disabled]
+        cursor: default
+        opacity: 0.4
+
+        &:hover
+            background: var(--bg)
+            border-color: var(--rule)
+            color: var(--text)
+
+#theme
+    margin: 0 28px 12px
+    width: calc(100% - 56px)
+
+// Steps the book's type up and down, leaving the sidebar's own size alone
+.type_size
+    align-items: center
+    display: flex
+    gap: 8px
+    margin: 0 28px 22px
+
+    span
+        color: var(--text-soft)
+        flex: 1
+        font-size: 0.85em
+
+    button
+        line-height: 1
+        min-width: 52px
+        padding: 9px 10px
+
+.toc
+    border-top: 1px solid var(--rule)
+    flex: 1
+    font-size: 1em
+    list-style: none
+    margin: 0
+    padding: 20px 28px 0
+
+    ol
+        list-style: none
+        margin: 0
+        padding: 0
+
+    a
+        display: block
+        line-height: 1.35
+        padding: 8px 0
+        text-decoration: none
+
+        &:hover
+            color: var(--accent)
+
+    // Part dividers head a group rather than read as another chapter
+    > .part > a
+        color: var(--text-soft)
+        font-size: 0.82em
+        letter-spacing: 0.14em
+        margin-top: 22px
+        text-transform: uppercase
+
+    .current > a,
+    .here > a
+        color: var(--accent)
+
+.downloads
+    border-top: 1px solid var(--rule)
+    font-size: 0.85em
+    margin-top: 24px
+    padding: 18px 28px 0
+
+    .downloads_title
+        color: var(--text-soft)
+        letter-spacing: 0.14em
+        margin-bottom: 8px
+        text-transform: uppercase
+
+    a
+        display: inline-block
+        margin-right: 14px
+
+// Only shown once the sidebar collapses into a drawer
+#drawer
+    background: var(--bg-raised)
+    border: 1px solid var(--rule)
+    border-radius: 4px
+    cursor: pointer
+    display: none
+    height: 42px
+    left: 16px
+    padding: 11px 9px
+    position: fixed
+    top: 16px
+    width: 42px
+    z-index: 30
+
+    span
+        background: var(--text)
+        display: block
+        height: 2px
+
+        + span
+            margin-top: 5px
+
+
+// The book
+
+#book
+    margin: 0 auto
+    // In em so the measure keeps the same words per line as the type size changes
+    max-width: 35em
+    padding: 3.5rem 1.4rem 40vh
+
+.cover
+    margin-bottom: 64px
+    text-align: center
+
+img
+    height: auto
+    margin: 1.2em 0
+    max-width: 100%
+
+// Where a caption shares the container, the space goes outside so the caption stays with it
+[data-caption]
+    margin: 1.2em 0
+
+    img
+        margin: 0
+
+// The front matter's headings only exist to label sections in an ereader's contents
+h1.frontmatter-heading.unlisted
+    display: none
+
+// The public domain mark is a graphic rather than part of the page's type
+section#ch001-title-page > p > img
+    border-radius: 8px
+    margin: 1.6em 0
+
+// Each chapter should feel like turning to a fresh page rather than reading straight on
+#book > [data-chapter] + [data-chapter]
+    margin-top: 9rem
+
+// The front matter especially needs room before the book proper begins
+#book > #ch001-title-page + [data-chapter]
+    margin-top: 15rem
+
+section.part-title
+    border-top: 1px solid var(--rule)
+    padding-top: 96px
+    text-align: center
+
+h1
+    font-size: 1.85em
+    font-weight: 600
+    line-height: 1.15
+    margin: 0 0 0.6em
+    text-wrap: balance
+
+h1.part-title
+    letter-spacing: 0.16em
+
+h2
+    font-size: 1.2em
+    font-weight: 600
+    margin: 2em 0 0.6em
+
+h3
+    font-size: 1.02em
+    font-weight: 600
+    margin: 1.8em 0 0.5em
+
+p
+    margin: 0
+
+    + p
+        text-indent: 1.2em
+
+// Anything set off from the prose restarts it, so no indent is wanted after it
+.chapter-preamble + p,
+.part-preamble + p,
+h1 + p,
+h2 + p,
+h3 + p,
+blockquote + p,
+ul + p,
+ol + p,
+.table-scroll + p,
+.decoration + p
+    text-indent: 0
+
+blockquote
+    border-left: 2px solid var(--rule)
+    font-size: 0.95em
+    margin: 1.4em 0
+    padding-left: 1.4em
+
+// Pandoc splits long quotations, so the continuation shouldn't read as a new paragraph
+.quote-continuation
+    text-indent: 0
+
+ul, ol
+    margin: 1.2em 0
+    padding-left: 1.4em
+
+li
+    margin-bottom: 0.5em
+
+// The front matter and each chapter opening are centred display type, as in print
+.title-display,
+.decoration,
+.chapter-preamble,
+.chapter-decoration,
+.chapter-author,
+.chapter-subtitle,
+.chapter-epigraph,
+.part-preamble,
+.part-decoration,
+.part-subtitle,
+section#ch001-title-page > p,
+section#ch002-epigraph > p
+    text-align: center
+    text-indent: 0
+
+.title-display
+    font-size: 1.5em
+    font-weight: 600
+    line-height: 1.2
+
+.chapter-preamble,
+.part-preamble
+    margin-bottom: 2.4em
+
+.chapter-decoration,
+.part-decoration,
+.decoration
+    color: var(--text-soft)
+    margin: 1em 0
+
+// The divider artwork is black line art on transparency, so it vanishes against a dark page
+// NOTE Only the purely decorative images -- the diagrams and photographs must be left alone
+\:root[data-theme='dark'] img[role='presentation']
+    filter: invert(1)
+
+@media (prefers-color-scheme: dark)
+    \:root:not([data-theme='light']) img[role='presentation']
+        filter: invert(1)
+
+.chapter-author
+    font-size: 0.9em
+    letter-spacing: 0.1em
+    margin-top: 0.8em
+    text-transform: uppercase
+
+.chapter-subtitle
+    color: var(--text-soft)
+
+.chapter-epigraph
+    color: var(--text-soft)
+    font-size: 0.9em
+    margin-top: 1.6em
+
+.group-heading
+    font-weight: 600
+
+// A print flourish that works just as well on screen
+.dropcap
+    float: left
+    font-size: 3.1em
+    font-weight: 600
+    line-height: 0.82
+    padding: 0.05em 0.08em 0 0
+
+.greek,
+.hebrew
+    font-size: 1.05em
+
+.hebrew
+    font-size: 1.1em
+
+
+// Tables
+
+.table-scroll
+    margin: 1.6em 0
+    overflow-x: auto
+
+table
+    border-collapse: collapse
+    font-size: 0.86em
+    width: 100%
+
+th, td
+    border: 1px solid var(--rule)
+    padding: 8px 12px
+    vertical-align: top
+
+    p
+        text-indent: 0
+
+
+// Footnotes
+
+.footnote-ref
+    font-size: 0.72em
+    padding: 0 0.1em
+    text-decoration: none
+    vertical-align: super
+
+    &:hover
+        color: var(--accent)
+
+.footnotes
+    border-top: 1px solid var(--rule)
+    color: var(--text-soft)
+    font-size: 0.78em
+    margin-top: 64px
+    padding-top: 8px
+
+    hr
+        display: none
+
+// The epub leaves the note's number to the reading app, so the page sets it out itself
+// NOTE Not scoped to .footnotes so a note shown in the popover is numbered too
+aside[data-note]
+    margin: 0.7em 0
+    padding-left: 2.2em
+    position: relative
+
+    &::before
+        content: attr(data-note) '.'
+        left: 0
+        position: absolute
+        text-align: right
+        width: 1.6em
+
+    p
+        text-indent: 0
+
+.footnote-back
+    text-decoration: none
+
+// The note shown beside its reference, so reading isn't interrupted
+#popover
+    background: var(--bg-raised)
+    border: 1px solid var(--rule)
+    border-radius: 4px
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16)
+    color: var(--text)
+    display: none
+    font-size: 0.8em
+    line-height: 1.45
+    max-width: 30rem
+    padding: 14px 16px
+    position: absolute
+    z-index: 20
+
+    &.visible
+        display: block
+
+    p
+        text-indent: 0
+
+    .footnote-back
+        display: none
+
+
+// Narrow screens turn the sidebar into a drawer
+
+@media (max-width: 60rem)
+    body
+        font-size: 18px
+        padding-left: 0
+
+    #drawer
+        display: block
+
+    #rail
+        transform: translateX(-100%)
+        transition: transform 0.2s ease
+        z-index: 35
+
+        &.open
+            transform: none
+
+    #book
+        padding: 5rem 1.4rem 30vh
+
+@media print
+    body
+        padding-left: 0
+
+    #rail, #drawer, #popover, .skip
+        display: none
+
+    #book
+        max-width: none
+        padding: 0
+

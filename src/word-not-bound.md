@@ -59,6 +59,11 @@ Some of the material in this volume was first delivered at Doreancon 2025, a con
 Contributors: Conley Owens, Andrew Case, Michael Coughlin, Jon Here, and Jonathan Melin.
 
 
+## Read it online
+
+<VPButton text="Read now" href="/word-not-bound/read" target='_blank'></VPButton>
+
+
 ## Get the free ebook
 
 <VPButton text="Download EPUB" href="/book_bound/Gods-Word-Is-Not-Bound.epub" target='_blank'></VPButton>

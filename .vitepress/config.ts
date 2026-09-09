@@ -1,4 +1,5 @@
 
+import fs from 'fs'
 import path from 'path'
 
 import MarkdownPluginFootnote from 'markdown-it-footnote'
@@ -53,6 +54,33 @@ const more_menu_items = [
 ]
 
 
+// Where the generated web edition of the book is served from
+const reader_url = '/word-not-bound/read'
+
+
+// Serve the standalone book reader while developing
+// NOTE It's a public file, so static hosts serve it as a directory index in production, but
+// Vite's dev server hands extensionless urls to VitePress's router before reaching public files
+const reader_dev_route = {
+    name: 'reader-dev-route',
+    configureServer(server:{middlewares:{use:(fn:(req:{url?:string},
+            res:{setHeader:(k:string, v:string) => void, end:(body:Buffer) => void},
+            next:() => void) => void) => void}}){
+        // Added here rather than in a returned function so it runs before Vite's own fallback
+        server.middlewares.use((req, res, next) => {
+            const url = req.url?.split('?')[0]
+            const file = path.resolve(__dirname, `../src/_public${reader_url}/index.html`)
+            if ((url === reader_url || url === `${reader_url}/`) && fs.existsSync(file)){
+                res.setHeader('Content-Type', 'text/html')
+                res.end(fs.readFileSync(file))
+                return
+            }
+            next()
+        })
+    },
+}
+
+
 export default defineConfig({
     cleanUrls: true,  // Don't force `.html` on urls
     outDir: 'dist',
@@ -78,6 +106,7 @@ export default defineConfig({
     ],
     vite: {
         publicDir: '_public',
+        plugins: [reader_dev_route],
         resolve: {
             alias: [
                 {find: '@', replacement: path.resolve(__dirname, '../src')},

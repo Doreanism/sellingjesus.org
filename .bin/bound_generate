@@ -1,0 +1,6 @@
+#!/bin/bash
+# Generate the web edition of "God's Word Is Not Bound" from its epub
+set -e
+cd "$(dirname "$(dirname "$0")")"
+
+node book_bound/reader/build.ts
