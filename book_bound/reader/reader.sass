@@ -517,8 +517,11 @@ aside[data-note]
 // Narrow screens turn the sidebar into a drawer
 
 @media (max-width: 60rem)
+    // Matches the default the script picks for narrow screens, so the first paint doesn't jump
+    \:root
+        --size: 18px
+
     body
-        font-size: 18px
         padding-left: 0
 
     #drawer

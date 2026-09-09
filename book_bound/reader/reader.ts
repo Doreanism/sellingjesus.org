@@ -35,11 +35,12 @@
         apply_theme(next)
     })
 
-    // The book's type size, stepped by the sidebar's controls and remembered between visits
+    // The book's type size, set by the sidebar's slider and remembered between visits
     // Studies of long-form reading on screens put the comfortable range at 18-21px, and Crimson
     // Pro's small x-height sets a size smaller than the faces those studies measured, so 21px
     const SIZES = [16, 17, 18, 19, 20, 21, 22, 24, 26]
-    const DEFAULT_SIZE = 21
+    // A phone's narrow measure fits too few words per line at the size a wide screen wants
+    const DEFAULT_SIZE = window.matchMedia('(max-width: 60rem)').matches ? 18 : 21
     const slider = document.getElementById('size') as HTMLInputElement|null
 
     // Stored as the size itself, so the scale can be changed without shifting anyone's choice
