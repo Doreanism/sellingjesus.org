@@ -6,6 +6,7 @@ import {fileURLToPath} from 'url'
 
 import {JSDOM} from 'jsdom'
 import * as sass from 'sass'
+import sharp from 'sharp'
 import ts from 'typescript'
 
 import {read_epub} from './epub.ts'
@@ -35,7 +36,30 @@ const DESCRIPTION = 'A free book examining copyright and the stewardship of Scri
 const SOCIAL_IMAGE = 'https://sellingjesus.org/_assets/social_book_bound.jpg'
 
 // Attributes that only make sense for a fixed-size printed page, so are dropped for the web
+// NOTE Images get width/height back afterwards, as their real pixel size rather than a print one
 const DROP_ATTRIBUTES = ['style', 'width', 'height', 'epub:type']
+
+
+// The pixel dimensions of each image in the epub, keyed by its filename
+type ImageSizes = Map<string, {width:number, height:number}>
+
+
+// Measure every image, so the page can reserve the room each one is going to need
+// WARN Without this a lazy image takes up no height until it loads, and everything below it is
+//      pushed down as it arrives -- which lands a click on a chapter short of where it was aimed
+async function measure_images(epub:Epub):Promise<ImageSizes>{
+    const sizes:ImageSizes = new Map()
+    for (const path in epub.files){
+        if (!path.startsWith(`${epub.root}/media/`)){
+            continue
+        }
+        const meta = await sharp(Buffer.from(epub.files[path]!)).metadata()
+        if (meta.width && meta.height){
+            sizes.set(path.split('/').pop()!, {width: meta.width, height: meta.height})
+        }
+    }
+    return sizes
+}
 
 
 // Namespace a chapter's ids so they stay unique once every chapter shares one page
@@ -52,12 +76,24 @@ function namespace_ids(doc:SpineDoc):void{
 
 // Point images at the media dir sitting beside the generated page
 // NOTE Absolute so they still resolve whether the url is requested with a trailing slash or not
-function relocate_images(doc:SpineDoc):void{
+function relocate_images(doc:SpineDoc, sizes:ImageSizes):void{
     for (const img of doc.doc.querySelectorAll('img[src]')){
-        img.setAttribute('src', `${BASE}/media/${img.getAttribute('src')!.split('/').pop()}`)
+        const file = img.getAttribute('src')!.split('/').pop()!
+        img.setAttribute('src', `${BASE}/media/${file}`)
         // Everything below the first screen can load lazily
         img.setAttribute('loading', 'lazy')
         img.setAttribute('decoding', 'async')
+        // The real dimensions give the browser an aspect ratio to hold the space with
+        set_size(img, sizes.get(file))
+    }
+}
+
+
+// Give an image its intrinsic size, which the stylesheet's height:auto then scales to the measure
+function set_size(img:Element, size:{width:number, height:number}|undefined):void{
+    if (size){
+        img.setAttribute('width', String(size.width))
+        img.setAttribute('height', String(size.height))
     }
 }
 
@@ -95,12 +131,13 @@ function strip_attributes(doc:SpineDoc):void{
 
 // Transform one chapter in place, then hand back its top-level sections
 // WARN Every operation here is on attributes or whole nodes -- text nodes are never touched
-function transform_chapter(doc:SpineDoc):Element[]{
+function transform_chapter(doc:SpineDoc, sizes:ImageSizes):Element[]{
     namespace_ids(doc)
-    relocate_images(doc)
     number_footnotes(doc)
     mark_captions(doc)
     strip_attributes(doc)
+    // After the strip, so the images keep the dimensions given here rather than the epub's
+    relocate_images(doc, sizes)
 
     // The epub keeps a chapter's notes in a sibling section, which only makes sense per-file
     const notes = doc.doc.body.querySelector(':scope > .footnotes')
@@ -149,7 +186,8 @@ function build_toc(epub:Epub, out:Document):Element{
 
 
 // Assemble the whole page
-function build_page(epub:Epub, styles:string, script:string, epub_hash:string):string{
+function build_page(epub:Epub, sizes:ImageSizes, styles:string, script:string,
+        epub_hash:string):string{
 
     const authors = epub.creators.join(', ')
 
@@ -217,7 +255,9 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
     out.querySelector('.rail_head .title')!.textContent = epub.title
     out.querySelector('.rail_head .subtitle')!.textContent = epub.subtitle
     out.querySelector('.rail_head .authors')!.textContent = authors
-    out.querySelector('.cover img')!.setAttribute('alt', `Cover of ${epub.title}`)
+    const cover = out.querySelector('.cover img')!
+    cover.setAttribute('alt', `Cover of ${epub.title}`)
+    set_size(cover, sizes.get(epub.cover.split('/').pop()!))
 
     // Record where the page came from, so verification can prove the two are still in step
     out.head.prepend(out.createComment(
@@ -231,7 +271,7 @@ function build_page(epub:Epub, styles:string, script:string, epub_hash:string):s
     // Insert the book itself, in reading order
     const book = out.querySelector('#book')!
     for (const chapter of epub.chapters){
-        for (const section of transform_chapter(chapter)){
+        for (const section of transform_chapter(chapter, sizes)){
             book.appendChild(out.importNode(section, true))
         }
     }
@@ -257,11 +297,12 @@ function write_media(epub:Epub):void{
 
 
 // Generate the reader
-function main():void{
+async function main():Promise<void>{
 
     const epub_bytes = readFileSync(EPUB_PATH)
     const epub_hash = createHash('sha256').update(epub_bytes).digest('hex')
     const epub = read_epub(EPUB_PATH)
+    const sizes = await measure_images(epub)
 
     // Compile the page's own styles and behaviour
     const styles = sass.compile(join(HERE, 'reader.sass'), {style: 'expanded'}).css
@@ -273,12 +314,12 @@ function main():void{
     rmSync(OUT_DIR, {recursive: true, force: true})
     mkdirSync(OUT_DIR, {recursive: true})
     write_media(epub)
-    writeFileSync(join(OUT_DIR, 'index.html'), build_page(epub, styles, script, epub_hash))
+    writeFileSync(join(OUT_DIR, 'index.html'), build_page(epub, sizes, styles, script, epub_hash))
 
     console.log(`Generated ${OUT_DIR.slice(ROOT.length + 1)}/index.html`
         + ` (${epub.chapters.length} spine documents)`)
 }
 
 
-main()
+await main()
 
