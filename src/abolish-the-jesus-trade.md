@@ -42,11 +42,13 @@ This book is a collection of the articles on our website. We recommend reading s
 ## Get the free ebook
 
 <VPButton text="Download EPUB" href="/book/Abolish-the-Jesus-Trade.epub" target='_blank'></VPButton>
-<VPButton text="Kindle" href="https://mybook.to/jUnlDm0" target='_blank'></VPButton>
-<VPButton text="Apple Books" href="https://books.apple.com/us/book/abolish-the-jesus-trade-spread-the-joy-of-freely-giving/id6749104733" target='_blank'></VPButton>
-<VPButton text="Everand" href="https://www.everand.com/book/892778812/Abolish-the-Jesus-Trade-Spread-the-Joy-of-Freely-Giving" target='_blank'></VPButton>
-<VPButton text="Kobo" href="https://www.kobo.com/mx/en/ebook/abolish-the-jesus-trade-spread-the-joy-of-freely-giving" target='_blank'></VPButton>
-<VPButton text="Barnes & Noble" href="https://www.barnesandnoble.com/w/abolish-the-jesus-trade-andrew-case/1147890065?ean=2940181980631" target='_blank'></VPButton>
+<VPButton text="Kindle *" theme="alt" href="https://mybook.to/jUnlDm0" target='_blank'></VPButton>
+<VPButton text="Apple Books" theme="alt" href="https://books.apple.com/us/book/abolish-the-jesus-trade-spread-the-joy-of-freely-giving/id6749104733" target='_blank'></VPButton>
+<VPButton text="Everand" theme="alt" href="https://www.everand.com/book/892778812/Abolish-the-Jesus-Trade-Spread-the-Joy-of-Freely-Giving" target='_blank'></VPButton>
+<VPButton text="Kobo" theme="alt" href="https://www.kobo.com/mx/en/ebook/abolish-the-jesus-trade-spread-the-joy-of-freely-giving" target='_blank'></VPButton>
+<VPButton text="Barnes & Noble" theme="alt" href="https://www.barnesandnoble.com/w/abolish-the-jesus-trade-andrew-case/1147890065?ean=2940181980631" target='_blank'></VPButton>
+
+\* Amazon enforces a minimum price in some countries for the Kindle edition.
 
 You can read EPUB files using Apple Books (iOS), Google Play Books (Android), or [Calibre](https://calibre-ebook.com/download) (Mac, Windows, Linux).
 
