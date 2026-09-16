@@ -123,7 +123,8 @@ div(class='dashboard')
                                 div(class='detail-grid')
                                     div(v-for='d of detail_rows(o)' :key='d.label')
                                         span(class='dl') {{ d.label }}
-                                        span {{ d.value || '—' }}
+                                        a(v-if='d.href' :href='d.href' target='_blank' rel='noopener') {{ d.value || '—' }}
+                                        span(v-else) {{ d.value || '—' }}
 
         //- Admins view: anyone here can add, remove, or retarget notifications for others
         template(v-if="view === 'admins'")
@@ -616,16 +617,20 @@ function jump_to(id:string):void{
 }
 
 
+// Combine an order's address fields into one line, for display and for Google Maps searches
+function full_address(o:OrderSummary):string{
+    return [o.street1, o.street2, o.city, o.region, o.postcode, country_name(o.country)]
+        .filter(Boolean).join(', ')
+}
+
 // Fields shown when a row is expanded
-function detail_rows(o:OrderSummary):{label:string, value:string}[]{
+function detail_rows(o:OrderSummary):{label:string, value:string, href?:string}[]{
+    const address = full_address(o)
     return [
         {label: "Email", value: o.email},
         {label: "Phone", value: o.phone},
-        {label: "Street", value: [o.street1, o.street2].filter(Boolean).join(', ')},
-        {label: "City", value: o.city},
-        {label: "State/Province", value: o.region},
-        {label: "Postcode", value: o.postcode},
-        {label: "Country", value: country_name(o.country)},
+        {label: "Address", value: address,
+            href: address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}` : undefined},
         {label: "Tax ID", value: o.tax_id},
         {label: "Ordered", value: format_datetime(o.datetime)},
         {label: "Confirmed", value: o.confirmed_at ? format_datetime(o.confirmed_at) : ''},
