@@ -8,6 +8,7 @@ image: /_assets/social_book_bound.jpg
 
 <script lang='ts' setup>
 import OrderForm from './_comp/OrderForm.vue'
+import PodcastPlayer from './_comp/PodcastPlayer.vue'
 </script>
 
 <style lang='sass' scoped>
@@ -57,6 +58,11 @@ If Scripture is truly a gift entrusted to the Church, how should it be shared wi
 Some of the material in this volume was first delivered at Doreancon 2025, a conference hosted by Silicon Valley Reformed Baptist Church in Sunnyvale, California. Find out more about future dorean conferences at [doreancon.org](https://doreancon.org).
 
 Contributors: Conley Owens, Andrew Case, Michael Coughlin, Jon Here, and Jonathan Melin.
+
+
+### Listen to the introduction
+
+<PodcastPlayer id="af3833e9-18db-4ea1-b9a9-f6c7ffe7740a"></PodcastPlayer>
 
 
 ## Read it online
