@@ -1,9 +1,4 @@
 
-// Import Crimson Pro as will clear all content from <head> which is where it's usually imported
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap')
-
-
-
 // WEB ONLY
 
 @media screen
@@ -117,6 +112,16 @@ table
 
 
 // FONTS
+
+// Crimson Pro static instances (Google's variable version has overlapping contours that cancel
+// each other out in the PDF, e.g. the crossbar of "4")
+$crimson_pro_faces: regular normal 400, italic italic 400, bold normal 700, bold_italic italic 700
+@each $file, $style, $weight in $crimson_pro_faces
+    @font-face
+        font-family: 'Crimson Pro'
+        font-style: $style
+        font-weight: $weight
+        src: url(/_assets/fonts/crimson_pro_#{$file}.woff2) format('woff2')
 
 @font-face
     font-family: 'Noto Serif Hebrew'
