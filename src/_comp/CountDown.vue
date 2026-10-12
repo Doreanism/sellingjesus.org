@@ -33,8 +33,8 @@ const diff_in_ms = computed(() => event_time.getTime() - now.value.getTime())
 
 // Whether should takedown widget (event finished a while ago)
 const takedown = computed(() => {
-    const month_in_ms = 30 * 24 * 60 * 60 * 1000
-    return now.value.getTime() - event_time.getTime() > month_in_ms
+    const week_in_ms = 7 * 24 * 60 * 60 * 1000
+    return now.value.getTime() - event_time.getTime() > week_in_ms
 })
 
 
