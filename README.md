@@ -16,6 +16,11 @@ npm install
 ```
 
 
+## Site search
+
+Search (Ctrl/⌘ K) covers the full text of every page and the web edition of God's Word Is Not Bound. Its data is generated from the built pages at the end of each build (`.vitepress/search.ts`), so run `.bin/build` once for search to work under `.bin/serve`. To make a page come up for a search term it doesn't feature prominently, add it to `keywords` in that file.
+
+
 ## Publishing podcast episodes
 
  1. `.bin/update_podcast` to add the new episode to podcast.json which can then be committed
