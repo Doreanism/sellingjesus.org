@@ -101,9 +101,11 @@ export function score(q:string, d:Doc):number|null{
         if (d.t.includes(` ${w} `)) s += 14
         else if (d.t.includes(` ${w}`)) s += 10
         else if (d.m.includes(prefix ? ` ${w}` : ` ${w} `)) s += 5
+        // Every word must match somewhere (most docs don't, so the text is only scanned once for them)
+        else if (!d.x.includes(` ${w}`)) return null
         else if (d.x.includes(` ${w} `)) s += 3
-        else if (prefix && d.x.includes(` ${w}`)) s += 2
-        else return null  // Every word must match somewhere
+        else if (prefix) s += 2
+        else return null
     }
     // The whole phrase, where it's most prominent (pages may or may not repeat their title in the body)
     if (d.t.startsWith(` ${q}`)) s += 60
@@ -139,6 +141,21 @@ const START = `(?<![${LETTER}])`
 const REST = `[${LETTER}'’]*`
 const GAP = `[^${LETTER}]+`
 
+// The first match of a pattern that starts a word
+// NOTE Rather than starting the pattern with START, as a lookbehind makes Safari's regex engine scan
+//      long text around 50x slower (START is fine for short text such as titles and snippets)
+const letter = new RegExp(`[${LETTER}]`, 'i')
+export function at_word_start(pattern:string, text:string):RegExpExecArray|null{
+    const re = new RegExp(pattern, 'gi')
+    for (let m = re.exec(text); m; m = re.exec(text)){
+        if (!letter.test(text[m.index - 1] ?? '')){
+            return m
+        }
+        re.lastIndex = m.index + 1
+    }
+    return null
+}
+
 export function mark(text:string, q:string):string{
     const ws = terms(q)
     if (!ws.length){
@@ -152,16 +169,21 @@ export function mark(text:string, q:string):string{
 }
 
 // Where the words appear in the text as written: the whole phrase if present, else the first word
-export function find(raw:string, q:string):RegExpExecArray|null{
+// NOTE x (the text as words()) is checked first, as a regex that doesn't match must scan the whole
+//      text, which for long pages is most of the time a search takes
+export function find(raw:string, q:string, x?:string):RegExpExecArray|null{
     const ws = terms(q)
-    if (ws.length > 1){
-        const phrase = new RegExp(`${START}${ws.map(word_re).join(GAP)}${REST}`, 'i').exec(raw)
+    if (ws.length > 1 && (x === undefined || x.includes(` ${q}`))){
+        const phrase = at_word_start(`${ws.map(word_re).join(GAP)}${REST}`, raw)
         if (phrase){
             return phrase
         }
     }
     for (const w of ws){
-        const m = new RegExp(`${START}${word_re(w)}${REST}`, 'i').exec(raw)
+        if (x !== undefined && !x.includes(` ${w}`)){
+            continue  // E.g. only in the title or keywords
+        }
+        const m = at_word_start(`${word_re(w)}${REST}`, raw)
         if (m){
             return m
         }
@@ -182,7 +204,7 @@ export function target(d:Doc, q:string):Result{
     if (in_title(d, q) || !d.raw){
         return {d, href: d.href}
     }
-    const m = find(d.raw, q)
+    const m = find(d.raw, q, d.x)
     if (!m){
         return {d, href: d.href}
     }

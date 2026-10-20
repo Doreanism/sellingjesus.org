@@ -5,7 +5,8 @@
 import fs from 'fs'
 import path from 'path'
 
-import {JSDOM} from 'jsdom'
+// NOTE linkedom rather than jsdom as it parses the site's pages around 5x faster
+import {parseHTML} from 'linkedom'
 
 
 // Where the search data is written to within the output dir
@@ -95,7 +96,7 @@ function url_for(file:string):string{
 
 
 function page_entry(html:string, url:string, site_title:string, site_desc:string):PageEntry|null{
-    const doc = new JSDOM(html).window.document
+    const doc = parseHTML(html).document
     if (doc.querySelector('meta[name="robots"][content*="noindex"]')){
         return null
     }
@@ -137,7 +138,7 @@ function page_entry(html:string, url:string, site_title:string, site_desc:string
 
 // One entry per section of the standalone web edition of "God's Word Is Not Bound"
 function book_entries(html:string, url:string):BookEntry[]{
-    const doc = new JSDOM(html).window.document
+    const doc = parseHTML(html).document
     const entries:BookEntry[] = []
     for (const section of doc.querySelectorAll('section[id][class*="level"]')){
         const heading_el = section.querySelector(':scope > h1, :scope > h2, :scope > h3, :scope > h4')
@@ -199,10 +200,13 @@ export async function build_search(out_dir:string, site_title:string, site_desc:
     let book:BookEntry[] = []
     for (const file of files){
         const url = url_for(file)
+        if (url !== book_url && excluded.test(url)){
+            continue  // Before reading, as some are large (e.g. the print edition of the book)
+        }
         const html = fs.readFileSync(path.join(out_dir, file), 'utf8')
         if (url === book_url){
             book = book_entries(html, url)
-        } else if (!excluded.test(url)){
+        } else {
             const entry = page_entry(html, url, site_title, site_desc)
             if (entry){
                 pages.push(entry)

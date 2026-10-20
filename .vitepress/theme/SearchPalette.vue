@@ -27,12 +27,6 @@ Teleport(v-if='mounted' to='body')
                 placeholder="Search articles, podcasts, videos…" autocomplete='off' spellcheck='false'
                 enterkeyhint='go' @input='on_input' @keydown='on_input_key')
             button.close(type='button' aria-label="Close" @click='close') Esc
-        //- NOTE No italics, as loading the italic font would lay out the whole page again
-        div.scope(role='group' aria-label="Also search")
-            span Also search
-            label
-                input(:checked='book_on' type='checkbox' @change='on_scope')
-                |  The book “God’s Word Is Not Bound”
         ul#palette-list(ref='list' role='listbox' aria-label="Results" @click='on_click'
             @mousemove='on_move' @scroll.passive='on_scroll')
 
@@ -45,7 +39,7 @@ import {ref, onMounted, onBeforeUnmount, nextTick} from 'vue'
 import {useRouter} from 'vitepress'
 
 import {type Doc, type Result, words, esc, mark, search, narrows, target, line, pages_docs, add_text,
-    book_docs} from './search_core'
+    book_docs, at_word_start} from './search_core'
 
 
 // Set in config.ts, the same for every page of a build, so search files can be cached forever
@@ -57,7 +51,6 @@ const input = ref<HTMLInputElement>()
 const list = ref<HTMLUListElement>()
 const mounted = ref(false)
 const is_open = ref(false)
-const book_on = ref(true)  // Whether to also search the book
 const mac = ref(false)
 
 // The list shown before typing (built in so it shows instantly, even before data loads)
@@ -93,7 +86,7 @@ let failed = new Set<string>()  // Not retried until next opened (e.g. if offlin
 let with_text = false
 let adding_text:Promise<void>|undefined
 
-const enabled = () => ['pages', 'text', ...(book_on.value ? ['book'] : [])]
+const names = Object.keys(sources)  // In the order they're downloaded
 const docs_of = (name:string) => name === 'text' ? [] : loaded[name] as Doc[]
 
 // Store loaded data, resolving once it's ready to search
@@ -128,7 +121,7 @@ function load(name:string):Promise<unknown>{
 // Start downloading as soon as someone looks like they're about to search
 // NOTE One at a time, smallest and most needed first, so none is slowed by sharing the connection
 async function warm(after_each?:() => void){
-    for (const name of enabled().filter(n => !failed.has(n))){
+    for (const name of names.filter(n => !failed.has(n))){
         const was_loaded = name in loaded
         const ok = await load(name).then(() => true, () => false)
         if (!was_loaded){
@@ -160,8 +153,10 @@ function option(r:Result, i:number, q:string):string{
     const {d, href} = r
     const desc = q ? line(r, q) : esc(d.desc ?? '')
     const here = d.href === current_path() ? `<span class="here">You're here</span>` : ''
+    // NOTE target stops VitePress's router (which runs first) handling clicks, as its scroll to the
+    //      top of the new page undoes on_click's scroll to the words found
     return `<li role="option" id="p-opt-${i}" aria-selected="false" data-i="${i}">`
-        + `<a href="${esc(href)}" tabindex="-1"${d.source === 'book' ? ' target="_self"' : ''}>`
+        + `<a href="${esc(href)}" tabindex="-1" target="_self">`
         + `<span class="pt">${mark(d.title, q)}${here}</span><span class="ps">${esc(d.section)}</span>`
         + (desc ? `<span class="pd">${desc}</span>` : '') + '</a></li>'
 }
@@ -189,7 +184,6 @@ async function render(){
         render_menu()
         return
     }
-    const names = enabled()
     const pending = names.filter(n => !loaded[n] && !failed.has(n))
 
     if (!loaded['pages']){
@@ -307,17 +301,6 @@ function on_move(event:MouseEvent){
     }
 }
 
-function on_scope(event:Event){
-    book_on.value = (event.target as HTMLInputElement).checked
-    try {
-        localStorage.setItem('search-book', book_on.value ? '1' : '0')
-    } catch {}
-    warm()
-    render()
-    input.value!.focus()
-}
-
-
 // GOING TO A RESULT
 
 function go(new_tab:boolean){
@@ -393,7 +376,8 @@ function show_here(text:string){
     }
 }
 
-// First visible occurrence of text, in any case and spacing, as a range across text nodes
+// First visible occurrence of text (at the start of a word), in any case and spacing, as a range
+// across text nodes
 function find_on_page(text:string, root:HTMLElement):Range|null{
     const nodes:Text[] = []
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode: node => {
@@ -409,7 +393,7 @@ function find_on_page(text:string, root:HTMLElement):Range|null{
     const all = nodes.map(n => n.data).join('')
     const pattern = text.trim().split(/\s+/).map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
         .join('[\\s\\u200b\\u2060]+')
-    const m = new RegExp(pattern, 'i').exec(all)
+    const m = at_word_start(pattern, all)  // E.g. so "ox" isn't found in an earlier "box"
     if (!m){
         return null
     }
@@ -525,16 +509,13 @@ function on_document_key(event:KeyboardEvent){
 onMounted(() => {
     mounted.value = true
     mac.value = /Mac|iPhone|iPad/.test(navigator.platform)
-    try {
-        book_on.value = localStorage.getItem('search-book') !== '0'
-    } catch {}
     document.addEventListener('keydown', on_document_key)
     document.addEventListener('focusin', on_document_focus)
 
     // Returning searchers: prepare the data from the browser's cache while idle (never downloads)
     const idle = window.requestIdleCallback ?? ((f:() => void) => setTimeout(f, 1000))
     idle(() => {
-        for (const name of enabled()){
+        for (const name of names){
             if (!loading[name]){
                 sources[name]!({cache: 'only-if-cached', mode: 'same-origin'})
                     .then(data => loaded_data(name, data))
@@ -651,22 +632,6 @@ onBeforeUnmount(() => {
         border-radius: 4px
         font-size: 12px
         color: var(--vp-c-text-2)
-
-.scope
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    gap: 4px 12px
-    padding: 8px 16px
-    font-size: 13px
-    color: var(--vp-c-text-2)
-    border-bottom: 1px solid var(--vp-c-divider)
-
-    label
-        display: flex
-        align-items: center
-        gap: 6px
-        cursor: pointer
 
 #palette-list
     overflow-y: auto
