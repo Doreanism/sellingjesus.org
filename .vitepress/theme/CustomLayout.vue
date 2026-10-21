@@ -2,6 +2,8 @@
 <template lang='pug'>
 
 Layout(:class='page_id')
+    template(#nav-bar-content-before)
+        SearchPalette
     template(#nav-bar-content-after)
         ClientOnly
             TranslateButton.translate-nav
@@ -38,6 +40,7 @@ import {computed} from 'vue'
 import {useData, useRoute} from 'vitepress'
 
 import ArticleIntro from './ArticleIntro.vue'
+import SearchPalette from './SearchPalette.vue'
 import VideoPlayer from '../../src/_comp/VideoPlayer.vue'
 import TranslateButton from '../../src/_comp/TranslateButton.vue'
 import CountDown from '../../src/_comp/CountDown.vue'

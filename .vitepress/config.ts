@@ -7,6 +7,7 @@ import MarkdownContainer from 'markdown-it-container'
 import {defineConfig} from 'vitepress'
 
 import settings from '../settings.json'
+import {build_search, search_dir} from './search'
 import videos_doc from '../src/videos_doc.json'
 import videos_humor from '../src/videos_humor.json'
 import videos_reactions from '../src/videos_reactions.json'
@@ -58,6 +59,36 @@ const more_menu_items = [
 const reader_url = '/word-not-bound/read'
 
 
+// Changes every build so search data can be cached forever (see theme/SearchPalette.vue)
+// NOTE Must be evaluated once per build so every page requests the same urls
+const search_version = Date.now().toString(36)
+
+
+// Search data only exists after a build, so serve the last build's while developing
+const search_dev_route = {
+    name: 'search-dev-route',
+    configureServer(server:{middlewares:{use:(fn:(req:{url?:string},
+            res:{setHeader:(k:string, v:string) => void, end:(body:Buffer|string) => void},
+            next:() => void) => void) => void}}){
+        server.middlewares.use((req, res, next) => {
+            const url = req.url?.split('?')[0]
+            if (!url?.startsWith(`/${search_dir}/`)){
+                next()
+                return
+            }
+            const file = path.resolve(__dirname, `../dist${url}`)
+            res.setHeader('Content-Type', 'application/json')
+            if (fs.existsSync(file)){
+                res.end(fs.readFileSync(file))
+            } else {
+                console.warn(`[search] ${file} doesn't exist, run a build for search to work in dev`)
+                res.end('[]')
+            }
+        })
+    },
+}
+
+
 // Serve the standalone book reader while developing
 // NOTE It's a public file, so static hosts serve it as a directory index in production, but
 // Vite's dev server hands extensionless urls to VitePress's router before reaching public files
@@ -106,7 +137,10 @@ export default defineConfig({
     ],
     vite: {
         publicDir: '_public',
-        plugins: [reader_dev_route],
+        plugins: [reader_dev_route, search_dev_route],
+        define: {
+            __SEARCH_VERSION__: JSON.stringify(search_version),
+        },
         resolve: {
             alias: [
                 {find: '@', replacement: path.resolve(__dirname, '../src')},
@@ -173,19 +207,6 @@ export default defineConfig({
             {link: 'https://www.instagram.com/selling.jesus/', icon: 'instagram'},
             {link: 'https://twitter.com/Selling_Jesus', icon: 'x'},
         ],
-        search: {
-            provider: 'local',
-            options: {
-                // Include article titles in search indexing
-                _render(src, env, md){
-                    const html = md.render(src, env)
-                    if (env.frontmatter?.title){
-                        return md.render(`# ${env.frontmatter.title}`) + html
-                    }
-                    return html
-                },
-            },
-        },
         sidebar: {
             '/videos/documentary/': videos_sidebar,
             '/videos/humor/': videos_sidebar,
@@ -202,6 +223,13 @@ export default defineConfig({
                 },
             ],
         },
+    },
+
+    async buildEnd(site_config){
+        // Not needed for builds of the book's print editions
+        if (!process.env.VITE_BOOK){
+            await build_search(site_config.outDir, "Selling Jesus", settings.description, reader_url)
+        }
     },
 
     transformPageData(page_data){
