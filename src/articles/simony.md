@@ -6,7 +6,9 @@ date: 2024-01-29T00:00:00.000Z
 image: /media/articles/simony.jpg
 ---
 
-<Badge type='tip' text="New Book"></Badge> <small>*The author has since published a whole book on this topic, which is available at [simony.info](https://simony.info).*</small>
+::: tip NEW BOOK
+The author has since published a whole book on this topic, which is available at **[simony.info](https://simony.info)**.
+:::
 
 <podcast-player id="19a5263a-0d7f-46e3-af57-c6f4c9435fbc"></podcast-player>
 
