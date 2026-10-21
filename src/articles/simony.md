@@ -6,7 +6,7 @@ date: 2024-01-29T00:00:00.000Z
 image: /media/articles/simony.jpg
 ---
 
-::: tip NEW FREE BOOK
+::: tip FREE BOOK
 The author has since published a whole book on this topic.
 
 <VPButton href="https://simony.info" text="The Doctrine of Simony"></VPButton>
