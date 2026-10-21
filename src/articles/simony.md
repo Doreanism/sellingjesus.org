@@ -9,7 +9,7 @@ image: /media/articles/simony.jpg
 ::: tip NEW BOOK
 The author has since published a whole book on this topic.
 
-<VPButton href="https://simony.info" text="simony.info"></VPButton>
+<VPButton href="https://simony.info" text="The Doctrine of Simony"></VPButton>
 :::
 
 <podcast-player id="19a5263a-0d7f-46e3-af57-c6f4c9435fbc"></podcast-player>
