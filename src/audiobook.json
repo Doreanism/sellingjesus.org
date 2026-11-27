@@ -1,0 +1,163 @@
+{
+    "base": "https://d3g603zk1tyzgn.cloudfront.net/audiobooks/gods-word-is-not-bound/",
+    "cover": "cover.jpg",
+    "full": {
+        "file": "gods-word-is-not-bound.mp3",
+        "duration": 28333,
+        "size": 441719099
+    },
+    "chapters": [
+        {
+            "file": "01-front-matter.mp3",
+            "title": "Front Matter",
+            "author": null,
+            "duration": 106,
+            "size": 1636127,
+            "section": null
+        },
+        {
+            "file": "02-introduction.mp3",
+            "title": "Introduction",
+            "author": "Andrew Case",
+            "duration": 2059,
+            "size": 32656921,
+            "section": "ch003-introduction"
+        },
+        {
+            "file": "03-part-one.mp3",
+            "title": "Part One",
+            "author": null,
+            "duration": 7,
+            "size": 124294,
+            "section": null
+        },
+        {
+            "file": "04-the-pricelessness-of-the-word.mp3",
+            "title": "The Pricelessness of the Word",
+            "author": "Michael Coughlin",
+            "duration": 1133,
+            "size": 17515031,
+            "section": "ch006-the-pricelessness-of-the-word"
+        },
+        {
+            "file": "05-who-owns-the-manuscripts.mp3",
+            "title": "Who Owns the Manuscripts and Critical Texts?",
+            "author": "Conley Owens",
+            "duration": 1603,
+            "size": 25220387,
+            "section": "ch007-who-owns-the-manuscripts-and-critical-texts"
+        },
+        {
+            "file": "06-the-rise-of-the-bible-societies.mp3",
+            "title": "The Rise of the Bible Societies and the First Copyrighted Bible in America",
+            "author": "Andrew Case",
+            "duration": 3205,
+            "size": 49711150,
+            "section": "ch008-the-rise-of-the-bible-societies-and-the-first-copyrighted-bible-in-america"
+        },
+        {
+            "file": "07-adaptation-and-inspiration.mp3",
+            "title": "Adaptation & Inspiration",
+            "author": "Conley Owens",
+            "duration": 1525,
+            "size": 23525532,
+            "section": "ch009-adaptation-inspiration"
+        },
+        {
+            "file": "08-does-copyright-protect-scripture.mp3",
+            "title": "Does Copyright Actually Protect the Text of Scripture from Corruption?",
+            "author": "Andrew Case",
+            "duration": 1511,
+            "size": 23330408,
+            "section": "ch010-does-copyright-actually-protect-the-text-of-scripture-from-corruption"
+        },
+        {
+            "file": "09-the-sin-of-balaam.mp3",
+            "title": "The Sin of Balaam",
+            "author": "Conley Owens",
+            "duration": 1770,
+            "size": 27606701,
+            "section": "ch011-the-sin-of-balaam"
+        },
+        {
+            "file": "10-bible-publishers-stewards-or-gatekeepers.mp3",
+            "title": "Bible Publishers: Stewards or Gatekeepers?",
+            "author": "Jon Here",
+            "duration": 1236,
+            "size": 19259834,
+            "section": "ch012-bible-publishers-stewards-or-gatekeepers"
+        },
+        {
+            "file": "11-the-sunnyvale-statement.mp3",
+            "title": "The Sunnyvale Statement on the Stewardship of Scripture",
+            "author": null,
+            "duration": 1195,
+            "size": 18363230,
+            "section": "ch013-the-sunnyvale-statement-on-the-stewardship-of-scripture"
+        },
+        {
+            "file": "12-part-two.mp3",
+            "title": "Part Two",
+            "author": null,
+            "duration": 7,
+            "size": 118747,
+            "section": null
+        },
+        {
+            "file": "13-the-dorean-principle.mp3",
+            "title": "The Dorean Principle",
+            "author": "Andrew Case",
+            "duration": 1999,
+            "size": 32143120,
+            "section": "ch015-the-dorean-principle"
+        },
+        {
+            "file": "14-copyright-and-jesus-command-to-freely-give.mp3",
+            "title": "Copyright & Jesus’ Command to Freely Give",
+            "author": "Conley Owens",
+            "duration": 2188,
+            "size": 34508750,
+            "section": "ch016-copyright-jesus-command-to-freely-give"
+        },
+        {
+            "file": "15-copyright-as-a-perversion-of-justice.mp3",
+            "title": "Copyright as a Perversion of Justice",
+            "author": "Andrew Case",
+            "duration": 3781,
+            "size": 58897911,
+            "section": "ch017-copyright-as-a-perversion-of-justice"
+        },
+        {
+            "file": "16-2-corinthians-2-17.mp3",
+            "title": "2 Corinthians 2:17: Commercializing the Word of God",
+            "author": "Conley Owens & Andrew Case",
+            "duration": 2361,
+            "size": 37313173,
+            "section": "ch018-corinthians-217-commercializing-the-word-of-god"
+        },
+        {
+            "file": "17-the-myth-of-institutional-innocence.mp3",
+            "title": "The Myth of Institutional Innocence",
+            "author": "Andrew Case",
+            "duration": 1819,
+            "size": 27753454,
+            "section": "ch019-the-myth-of-institutional-innocence"
+        },
+        {
+            "file": "18-the-kjv-is-not-the-solution.mp3",
+            "title": "The KJV Is Not the Solution",
+            "author": "Andrew Case",
+            "duration": 473,
+            "size": 7327399,
+            "section": "ch020-the-kjv-is-not-the-solution"
+        },
+        {
+            "file": "19-conclusion.mp3",
+            "title": "Conclusion",
+            "author": "Andrew Case",
+            "duration": 356,
+            "size": 5527618,
+            "section": "ch021-conclusion-9"
+        }
+    ]
+}

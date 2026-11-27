@@ -525,6 +525,69 @@ aside[data-note]
         display: none
 
 
+// The audiobook
+
+// Sits with a chapter's opening, so set in the sidebar's size rather than following the book's
+.listen
+    background: var(--bg)
+    border: 1px solid var(--rule)
+    border-radius: 999px
+    color: var(--text)
+    cursor: pointer
+    display: block
+    font: inherit
+    font-size: 17px
+    margin: 1.4em auto 0
+    padding: 6px 18px
+
+    &:hover,
+    &[aria-pressed='true']
+        background: var(--accent)
+        border-color: var(--accent)
+        color: var(--bg)
+
+// Spans the page beside the sidebar, so the book can still be read while listening
+#listener
+    align-items: center
+    background: var(--bg-raised)
+    border-top: 1px solid var(--rule)
+    bottom: 0
+    display: flex
+    font-size: 17px
+    gap: 16px
+    left: var(--rail)
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px))
+    position: fixed
+    right: 0
+    z-index: 25
+
+    &[hidden]
+        display: none
+
+    .listener_title
+        flex: 0 1 auto
+        font-weight: 600
+        line-height: 1.25
+        max-width: 16em
+
+    audio
+        flex: 1
+        min-width: 0
+
+    .listener_close
+        background: none
+        border: none
+        color: var(--text-soft)
+        cursor: pointer
+        font: inherit
+        font-size: 28px
+        line-height: 1
+        padding: 0 4px
+
+        &:hover
+            color: var(--accent)
+
+
 // Narrow screens turn the sidebar into a drawer
 
 @media (max-width: 60rem)
@@ -560,11 +623,26 @@ aside[data-note]
     #book
         padding: 5rem 1.4rem 30vh
 
+    // Too little room beside the player for the title, so it sits above it instead
+    #listener
+        flex-wrap: wrap
+        gap: 4px 12px
+        left: 0
+
+        // The close button stays on the title's line, leaving the player a line to itself
+        .listener_title
+            flex-basis: calc(100% - 48px)
+            max-width: none
+            order: -1
+
+        .listener_close
+            order: -1
+
 @media print
     body
         padding-left: 0
 
-    #rail, #drawer, #popover, .skip
+    #rail, #drawer, #popover, .skip, #listener, .listen
         display: none
 
     #book

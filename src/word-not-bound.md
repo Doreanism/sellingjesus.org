@@ -8,7 +8,7 @@ image: /_assets/social_book_bound.jpg
 
 <script lang='ts' setup>
 import OrderForm from './_comp/OrderForm.vue'
-import PodcastPlayer from './_comp/PodcastPlayer.vue'
+import AudiobookPlayer from './_comp/AudiobookPlayer.vue'
 </script>
 
 <style lang='sass' scoped>
@@ -60,14 +60,14 @@ Some of the material in this volume was first delivered at Doreancon 2025, a con
 Contributors: Conley Owens, Andrew Case, Michael Coughlin, Jon Here, and Jonathan Melin.
 
 
-### Listen to the introduction
-
-<PodcastPlayer id="af3833e9-18db-4ea1-b9a9-f6c7ffe7740a"></PodcastPlayer>
-
-
 ## Read it online
 
 <VPButton text="Read now" href="/word-not-bound/read" target='_blank'></VPButton>
+
+
+## Listen to the audiobook
+
+<AudiobookPlayer></AudiobookPlayer>
 
 
 ## Get the free ebook

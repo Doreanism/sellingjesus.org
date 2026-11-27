@@ -274,5 +274,108 @@
         }
     })
 
+    setup_audiobook()
+
 })()
+
+
+// One chapter of the audiobook, as embedded in the page by build.ts
+interface AudiobookChapter {
+    file:string
+    title:string
+    section:string|null  // The chapter's id in the page, if it has one worth a button
+}
+
+
+// Let each chapter be listened to, from a bar along the bottom that keeps playing while reading
+function setup_audiobook():void{
+
+    const data = document.getElementById('audiobook')?.textContent
+    if (!data){
+        return
+    }
+    const {base, chapters} = JSON.parse(data) as {base:string, chapters:AudiobookChapter[]}
+
+    // The bar stays hidden until something is played
+    const bar = document.createElement('div')
+    bar.id = 'listener'
+    bar.hidden = true
+    const title = document.createElement('div')
+    title.className = 'listener_title'
+    const audio = document.createElement('audio')
+    audio.controls = true
+    audio.preload = 'none'
+    const close = document.createElement('button')
+    close.type = 'button'
+    close.className = 'listener_close'
+    close.setAttribute('aria-label', "Stop listening")
+    close.textContent = '×'
+    bar.append(title, audio, close)
+    document.body.appendChild(bar)
+
+    let current = -1
+    const buttons = new Map<number, HTMLButtonElement>()
+
+    // Each button shows whether its own chapter is the one playing
+    const refresh = ():void => {
+        for (const [i, button] of buttons){
+            const playing = i === current && !audio.paused
+            button.textContent = playing ? "❚❚ Pause" : "▶ Listen"
+            button.setAttribute('aria-pressed', String(playing))
+        }
+    }
+
+    const play = (i:number):void => {
+        if (i !== current){
+            current = i
+            audio.src = base + chapters[i]!.file
+            title.textContent = chapters[i]!.title
+        }
+        bar.hidden = false
+        void audio.play()
+    }
+
+    // Put a button under each chapter's heading, alongside its author
+    chapters.forEach((chapter, i) => {
+        const section = chapter.section ? document.getElementById(chapter.section) : null
+        const heading = section?.querySelector(':scope > h1')
+        if (!section || !heading){
+            return
+        }
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'listen'
+        button.addEventListener('click', () => {
+            if (i === current && !audio.paused){
+                audio.pause()
+            } else {
+                play(i)
+            }
+        })
+        buttons.set(i, button)
+        const preamble = section.querySelector(':scope > .chapter-preamble')
+        if (preamble){
+            preamble.appendChild(button)
+        } else {
+            heading.after(button)
+        }
+    })
+
+    audio.addEventListener('play', refresh)
+    audio.addEventListener('pause', refresh)
+
+    // Carry on into the next chapter, as an audiobook is meant to be listened to straight through
+    audio.addEventListener('ended', () => {
+        if (current < chapters.length - 1){
+            play(current + 1)
+        }
+    })
+
+    close.addEventListener('click', () => {
+        audio.pause()
+        bar.hidden = true
+    })
+
+    refresh()
+}
 

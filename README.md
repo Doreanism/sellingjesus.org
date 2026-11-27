@@ -21,6 +21,11 @@ npm install
 Search (Ctrl/⌘ K) covers the full text of every page and the web edition of God's Word Is Not Bound. Its data is generated from the built pages at the end of each build (`.vitepress/search.ts`), so run `.bin/build` once for search to work under `.bin/serve`. To make a page come up for a search term it doesn't feature prominently, add it to `keywords` in that file.
 
 
+## Audiobook of God's Word Is Not Bound
+
+The MP3s are served by CloudFront from `cdn/audiobooks/gods-word-is-not-bound/` in the `sellingjesus` S3 bucket (too large for Netlify). `src/audiobook.json` lists each chapter's file, title, duration, size and web reader section, and drives the player on the book page, the podcast feed (`/word-not-bound/audiobook.xml`, written at build) and the reader's listen buttons. After changing it, run `.bin/bound_generate` so the reader picks it up. If a file is replaced in S3, invalidate it in CloudFront as files are cached for a week.
+
+
 ## Publishing podcast episodes
 
  1. `.bin/update_podcast` to add the new episode to podcast.json which can then be committed

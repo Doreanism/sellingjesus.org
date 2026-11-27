@@ -28,6 +28,13 @@ const OUT_DIR = process.argv[2] ?? join(ROOT, `src/_public${BASE}`)
 // Where the existing downloads of this book are served from
 const DOWNLOADS = '/book_bound/Gods-Word-Is-Not-Bound'
 
+// The audiobook's chapters, which the page offers to play alongside the text
+const AUDIOBOOK = JSON.parse(readFileSync(join(ROOT, 'src/audiobook.json'), 'utf8')) as {
+    base:string
+    full:{file:string}
+    chapters:{file:string, title:string, section:string|null}[]
+}
+
 // Taken from the book's own page at src/word-not-bound.md, so the two share sharing previews
 // WARN The image must include the domain, as WhatsApp won't accept a bare path
 const TITLE = 'God’s Word Is Not Bound'
@@ -209,6 +216,7 @@ function build_page(epub:Epub, sizes:ImageSizes, styles:string, script:string,
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&#38;display=swap">
 <style></style>
+<script type="application/json" id="audiobook"></script>
 </head>
 <body>
 <a class="skip" href="#book">Skip to the book</a>
@@ -235,6 +243,7 @@ function build_page(epub:Epub, sizes:ImageSizes, styles:string, script:string,
 <a href="${DOWNLOADS}.pdf">PDF</a>
 <a href="${DOWNLOADS}.epub">EPUB</a>
 <a href="${DOWNLOADS}.docx">DOCX</a>
+<a href="${AUDIOBOOK.base}${AUDIOBOOK.full.file}">MP3</a>
 </div>
 </nav>
 <main id="book">
@@ -275,6 +284,14 @@ function build_page(epub:Epub, sizes:ImageSizes, styles:string, script:string,
             book.appendChild(out.importNode(section, true))
         }
     }
+
+    // Hand the audiobook's chapters to the script, which adds the controls for them
+    // NOTE Added by the script rather than here, as verification requires #book's text be the epub's
+    // WARN "<" is escaped so no title can close the script element early
+    out.querySelector('#audiobook')!.textContent = JSON.stringify({
+        base: AUDIOBOOK.base,
+        chapters: AUDIOBOOK.chapters.map(({file, title, section}) => ({file, title, section})),
+    }).replace(/</g, '\\u003c')
 
     // Inline the styles and behaviour so the page stands alone
     out.querySelector('head style')!.textContent = `\n${styles}\n`

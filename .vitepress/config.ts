@@ -8,6 +8,7 @@ import {defineConfig} from 'vitepress'
 
 import settings from '../settings.json'
 import {build_search, search_dir} from './search'
+import {audiobook_feed_path, build_audiobook_feed} from '../src/audiobook_feed'
 import videos_doc from '../src/videos_doc.json'
 import videos_humor from '../src/videos_humor.json'
 import videos_reactions from '../src/videos_reactions.json'
@@ -229,6 +230,9 @@ export default defineConfig({
         // Not needed for builds of the book's print editions
         if (!process.env.VITE_BOOK){
             await build_search(site_config.outDir, "Selling Jesus", settings.description, reader_url)
+            const feed = path.join(site_config.outDir, audiobook_feed_path)
+            fs.mkdirSync(path.dirname(feed), {recursive: true})
+            fs.writeFileSync(feed, build_audiobook_feed())
         }
     },
 
